@@ -89,7 +89,7 @@
                             </div>
                         </div>
                         <div class="block-content">
-                            <table class="table table-striped table-hover table-borderless table-vcenter font-size-sm" v-else>
+                            <table class="table table-striped table-hover table-borderless table-vcenter font-size-sm">
                                 <thead>
                                 <tr class="text-uppercase">
                                     <th class="font-w700">Workshop naam</th>
@@ -99,8 +99,8 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Mock</td>
-                                        <td>Mock</td>
+                                        <td>Lorem ipsum</td>
+                                        <td>22-22-2020</td>
                                         <td>
                                             <button class="btn light btn-light text-primary" data-toggle="click-ripple">
                                                 <i class="fa fa-search"></i>
@@ -108,8 +108,8 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>Mock</td>
-                                        <td>Mock</td>
+                                        <td>Lorem ipsum</td>
+                                        <td>22-22-2020</td>
                                         <td>
                                             <button class="btn light btn-light text-primary" data-toggle="click-ripple">
                                                 <i class="fa fa-search"></i>
@@ -117,8 +117,8 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>Mock</td>
-                                        <td>Mock</td>
+                                        <td>Lorem ipsum</td>
+                                        <td>22-22-2020</td>
                                         <td>
                                             <button class="btn light btn-light text-primary" data-toggle="click-ripple">
                                                 <i class="fa fa-search"></i>
@@ -126,8 +126,8 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>Mock</td>
-                                        <td>Mock</td>
+                                        <td>Lorem ipsum</td>
+                                        <td>22-22-2020</td>
                                         <td>
                                             <button class="btn light btn-light text-primary" data-toggle="click-ripple">
                                                 <i class="fa fa-search"></i>
@@ -135,8 +135,8 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>Mock</td>
-                                        <td>Mock</td>
+                                        <td>Lorem ipsum</td>
+                                        <td>22-22-2020</td>
                                         <td>
                                             <button class="btn light btn-light text-primary" data-toggle="click-ripple">
                                                 <i class="fa fa-search"></i>
