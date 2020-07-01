@@ -61,4 +61,6 @@ public/fonts/css/
 
 public/fonts/js/
 
-*.json
+
+
+public/mix-manifest.json
