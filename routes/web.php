@@ -29,3 +29,6 @@ Route::get('workshop/show','DemoController@showWorkshop')->name('workshop.show')
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/me','DemoController@showProfile')->name('me');
+Route::get('/faq','DemoController@showFAQ')->name('faq');

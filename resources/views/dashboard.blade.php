@@ -13,7 +13,7 @@
                     </ol>
                 </nav>
             </div>
-       </div>
+        </div>
     </div>
     <!-- END Hero -->
 
@@ -77,7 +77,7 @@
                 </div>
             </div>
             <div class="row row-deck">
-                <div class="col-xl-12 invisible" data-toggle="appear">
+                <div class="col-xl-6 invisible" data-toggle="appear">
                     <!-- Users -->
                     <div class="block block-rounded block-mode-loading-refresh">
                         <div class="block-header block-header-default">
@@ -98,51 +98,102 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>Lorem ipsum</td>
-                                        <td>22-22-2020</td>
-                                        <td>
-                                            <button class="btn light btn-light text-primary" data-toggle="click-ripple">
-                                                <i class="fa fa-search"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Lorem ipsum</td>
-                                        <td>22-22-2020</td>
-                                        <td>
-                                            <button class="btn light btn-light text-primary" data-toggle="click-ripple">
-                                                <i class="fa fa-search"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Lorem ipsum</td>
-                                        <td>22-22-2020</td>
-                                        <td>
-                                            <button class="btn light btn-light text-primary" data-toggle="click-ripple">
-                                                <i class="fa fa-search"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Lorem ipsum</td>
-                                        <td>22-22-2020</td>
-                                        <td>
-                                            <button class="btn light btn-light text-primary" data-toggle="click-ripple">
-                                                <i class="fa fa-search"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Lorem ipsum</td>
-                                        <td>22-22-2020</td>
-                                        <td>
-                                            <button class="btn light btn-light text-primary" data-toggle="click-ripple">
-                                                <i class="fa fa-search"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
+                                <tr>
+                                    <td>Lorem ipsum</td>
+                                    <td>22-22-2020</td>
+                                    <td>
+                                        <button class="btn light btn-light text-primary" data-toggle="click-ripple">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Lorem ipsum</td>
+                                    <td>22-22-2020</td>
+                                    <td>
+                                        <button class="btn light btn-light text-primary" data-toggle="click-ripple">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Lorem ipsum</td>
+                                    <td>22-22-2020</td>
+                                    <td>
+                                        <button class="btn light btn-light text-primary" data-toggle="click-ripple">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="row py-2">
+                                <div class="col">
+                                    <div class="text-right">
+                                        <button class="btn btn-sm btn-primary text-white"
+                                                data-toggle="click-ripple">
+                                            Bekijken
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Users -->
+                </div>
+                <div class="col-xl-6 invisible" data-toggle="appear">
+                    <!-- Users -->
+                    <div class="block block-rounded block-mode-loading-refresh">
+                        <div class="block-header block-header-default">
+                            <h3 class="block-title">Workshops ranking op favoriet</h3>
+                            <div class="block-options">
+                                <button class="btn light btn-light text-primary" data-toggle="click-ripple">
+                                    <i class="si si-refresh"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="block-content">
+                            <table class="table table-striped table-hover table-borderless table-vcenter font-size-sm">
+                                <thead>
+                                <tr class="text-uppercase">
+                                    <th class="font-w700">Workshop naam</th>
+                                    <th class="d-none d-sm-table-cell font-w700"># favorieten</th>
+                                    <th class="d-none d-sm-table-cell font-w700">Periode</th>
+                                    <th class="font-w700 text-center" style="width: 60px;"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <tr>
+                                    <td>Lorem ipsum</td>
+                                    <td>12</td>
+                                    <td>22-22-2020</td>
+                                    <td>
+                                        <button class="btn light btn-light text-primary" data-toggle="click-ripple">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Lorem ipsum</td>
+                                    <td>8</td>
+                                    <td>22-22-2020</td>
+                                    <td>
+                                        <button class="btn light btn-light text-primary" data-toggle="click-ripple">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Lorem ipsum</td>
+                                    <td>2</td>
+                                    <td>22-22-2020</td>
+                                    <td>
+                                        <button class="btn light btn-light text-primary" data-toggle="click-ripple">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </td>
+                                </tr>
                                 </tbody>
                             </table>
                             <div class="row py-2">
@@ -160,6 +211,5 @@
                     <!-- END Users -->
                 </div>
             </div>
-    </div>
-    <!-- END Page Content -->
+            <!-- END Page Content -->
 @endsection

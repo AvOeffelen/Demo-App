@@ -1,7 +1,7 @@
 <div class="bg-body-dark">
     <div class="content">
         <div class="text-center py-3">
-            <h1 class="h3 font-w700 mb-2">BRAVIS SAMEN VITAAL</h1>
+            <h1 class="h3 font-w700 mb-2">KLANT SAMEN VITAAL</h1>
             <h2 class="h5 font-w400 text-muted">Cur lamia nocere?</h2>
         </div>
     </div>

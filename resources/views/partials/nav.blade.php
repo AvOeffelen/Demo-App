@@ -63,9 +63,23 @@
                 </a>
             </li>
             <li class="nav-main-item">
+                <a class="nav-main-link{{ request()->is('me') ? ' active' : '' }}" href="{{route('me')}}">
+                    <i class="nav-main-link-icon fa fa-user"></i>
+                    <span class="nav-main-link-name">Mijn profiel</span>
+                    {{--                    <span class="nav-main-link-badge badge badge-pill badge-success">5</span>--}}
+                </a>
+            </li>
+            <li class="nav-main-item">
                 <a class="nav-main-link{{ request()->is('workshop/show') ? ' active' : '' }}" href="{{route('workshop.show')}}">
                     <i class="nav-main-link-icon fa fa-search"></i>
                     <span class="nav-main-link-name">Workshop item</span>
+                    {{--                    <span class="nav-main-link-badge badge badge-pill badge-success">5</span>--}}
+                </a>
+            </li>
+            <li class="nav-main-item">
+                <a class="nav-main-link" href="https://www.johan.nl" target="_blank">
+                    <i class="nav-main-link-icon fa fa-clipboard-list"></i>
+                    <span class="nav-main-link-name">Vragenlijst invullen</span>
                     {{--                    <span class="nav-main-link-badge badge badge-pill badge-success">5</span>--}}
                 </a>
             </li>
@@ -80,6 +94,13 @@
                 <a class="nav-main-link{{ request()->is('register') ? ' active' : '' }}" href="{{route('register')}}" target="_blank">
                     <i class="nav-main-link-icon fa fa-user-plus"></i>
                     <span class="nav-main-link-name">Registreren</span>
+                    {{--                    <span class="nav-main-link-badge badge badge-pill badge-success">5</span>--}}
+                </a>
+            </li>
+            <li class="nav-main-item">
+                <a class="nav-main-link{{ request()->is('faq') ? ' active' : '' }}" href="{{route('faq')}}">
+                    <i class="nav-main-link-icon fa fa-question"></i>
+                    <span class="nav-main-link-name">FAQ</span>
                     {{--                    <span class="nav-main-link-badge badge badge-pill badge-success">5</span>--}}
                 </a>
             </li>

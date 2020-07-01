@@ -64,6 +64,10 @@
                         <i class="fa fa-fw fa-angle-down ml-1 d-none d-sm-inline-block"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right p-0" aria-labelledby="page-header-user-dropdown">
+                        <a class="dropdown-item" href="{{url('/me')}}">
+                            <i class="far fa-fw fa-user mr-1"></i> Profiel
+                        </a>
+                        <div role="separator" class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#"
                            onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

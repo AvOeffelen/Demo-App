@@ -31,7 +31,6 @@
         <p>
             Integer auctor cursus mauris vitae fermentum. Mauris egestas leo vel tellus dignissim laoreet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi auctor quam quis elit accumsan imperdiet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus scelerisque ultrices leo, eu malesuada velit dictum ac. Vivamus vitae molestie erat. Nullam dignissim nisl quis commodo aliquam. Nullam at sem tempus, molestie eros vitae, ultricies magna. Donec nec enim eu velit pulvinar vehicula eu nec enim. Maecenas hendrerit congue quam, eu tempor enim vulputate sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec aliquet ante ut pulvinar imperdiet. Curabitur fringilla vitae lectus sed tristique. Suspendisse rutrum ante lorem, in laoreet tellus accumsan quis.
         </p>
-
         <h2 class="h5 font-w400 text-muted">Alinea titel</h2>
         <p>
             Integer malesuada mi id ullamcorper aliquam. Aenean sit amet magna sit amet orci venenatis porttitor vel sit amet erat. Integer sodales consequat justo. In nec pulvinar augue, vel molestie leo.
@@ -50,6 +49,22 @@
             </div>
         </div>
         Agenda hier...
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<div class="row py-3">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 text-center">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-center">
+                    <h1 class="h4 font-w600 mb-2 display-5">Acties</h1>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary"><i class="fa fa-thumbs-up"></i></button>
+        <button class="btn btn-primary"><i class="fa fa-thumbs-down"></i></button>
+        <button class="btn btn-primary"><i class="fa fa-star"></i></button>
     </div>
     <div class="col-md-2"></div>
 </div>

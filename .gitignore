@@ -60,3 +60,5 @@ public/media/*
 public/fonts/css/
 
 public/fonts/js/
+
+*.json

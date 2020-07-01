@@ -9,8 +9,8 @@
                     <!-- Header -->
                     <div class="mb-3 text-center">
                         <div class="mb-3 text-center">
-                            <a class="py-3" href="#">
-                                <img src="https://www.bravissamenvitaal.nl/wp-content/uploads/2019/06/f44afac618516bf81aec41836dc9efa4-300x90.png">
+                            <a class="link-fx font-w700 font-size-h1" href="#">
+                                <span class="text-dark">KLANTSAMEN</span><span class="text-primary">VITAAL</span>
                             </a>
                             <p class="text-uppercase font-w700 font-size-sm text-muted py-3">Log in</p>
                         </div>

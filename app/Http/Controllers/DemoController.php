@@ -20,4 +20,15 @@ class DemoController extends Controller
     {
         return view('workshop.workshop.template.workshop.index');
     }
+
+    public function showProfile()
+    {
+
+        return view('profile.index');
+    }
+
+    public function showFAQ()
+    {
+        return view('faq.index');
+    }
 }
