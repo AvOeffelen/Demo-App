@@ -36,3 +36,27 @@ public/media/photos/
 public/media/various/
 
 public/media/videos/
+
+.idea/
+
+package-lock.json
+
+*.lock
+
+public/css/
+
+*.eot
+
+public/fonts/fontawesome/
+
+public/fonts/simple-line-icons/
+
+public/js/
+
+public/media/avatars/
+
+public/media/favicons/
+public/media/*
+public/fonts/css/
+
+public/fonts/js/

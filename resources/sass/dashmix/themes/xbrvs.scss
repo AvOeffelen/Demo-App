@@ -1,0 +1,42 @@
+//
+// xBRVS Theme
+// --------------------------------------------------
+
+// Include base files
+@import 'base';
+
+// Generate color theme
+@include color-theme($theme-xbrvs-primary,
+    $theme-xbrvs-light,
+    $theme-xbrvs-lighter,
+    $theme-xbrvs-dark,
+    $theme-xbrvs-darker,
+    $theme-xbrvs-body-bg,
+    $theme-xbrvs-body-bg-dark,
+    $theme-xbrvs-body-bg-light,
+    $theme-xbrvs-body-color,
+    $theme-xbrvs-body-color-dark,
+    $theme-xbrvs-body-color-light,
+    $theme-xbrvs-link-color,
+    $theme-xbrvs-link-hover-color,
+    $theme-xbrvs-headings-color,
+    $theme-xbrvs-input-btn-focus-color,
+    $theme-xbrvs-input-btn-focus-box-shadow,
+    $theme-xbrvs-input-bg,
+    $theme-xbrvs-input-color,
+    $theme-xbrvs-input-border-color,
+    $theme-xbrvs-input-focus-bg,
+    $theme-xbrvs-input-focus-color,
+    $theme-xbrvs-input-focus-border-color,
+    $theme-xbrvs-header-bg,
+    $theme-xbrvs-header-dark-bg,
+    $theme-xbrvs-sidebar-bg,
+    $theme-xbrvs-sidebar-dark-bg,
+    $theme-xbrvs-side-overlay-bg,
+    $theme-xbrvs-main-nav-link-icon-color,
+    $theme-xbrvs-main-nav-link-hover-bg,
+    $theme-xbrvs-main-nav-submenu-bg,
+    $theme-xbrvs-main-nav-link-icon-dark-color,
+    $theme-xbrvs-main-nav-link-dark-hover-bg,
+    $theme-xbrvs-main-nav-submenu-dark-bg,
+    $theme-xbrvs-btn-alt-primary-bg);
