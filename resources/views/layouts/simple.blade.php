@@ -6,8 +6,9 @@
 
         <title>Dashmix - Bootstrap 4 Admin Template &amp; UI Framework</title>
 
-        <meta name="description" content="Dashmix - Bootstrap 4 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
-        <meta name="author" content="pixelcave">
+        <meta name="description"
+              content="Dit is een DEMO App.. Dit bevat geen functionaliteiten.">
+        <meta name="author" content="RMNDDESIGN">
         <meta name="robots" content="noindex, nofollow">
 
         <!-- CSRF Token -->

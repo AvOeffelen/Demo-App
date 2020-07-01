@@ -7,8 +7,8 @@
     <title>{{config('app.name')}}</title>
 
     <meta name="description"
-          content="Bezorgfiets is de leverancier voor E-bikes die gebruikt worden bezorgbedrijven">
-    <meta name="author" content="Bezorgfiets">
+          content="Dit is een DEMO App.. Dit bevat geen functionaliteiten.">
+    <meta name="author" content="RMNDDESIGN">
     <meta name="robots" content="noindex, nofollow">
 
     <link rel="shortcut icon" href="{{ asset('media/favicons/favicon-32x32.png') }}">
