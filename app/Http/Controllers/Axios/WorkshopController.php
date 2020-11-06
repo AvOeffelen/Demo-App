@@ -9,9 +9,14 @@ use Illuminate\Http\Request;
 
 class WorkshopController extends Controller
 {
-    public function store(StoreWorkshopRequest $request)
+    /**
+     * @param StoreWorkshopRequest $request
+     *
+     * @return Workshop
+     */
+    public function store(StoreWorkshopRequest $request): Workshop
     {
-        Workshop::created([
+        return Workshop::created([
             'name' => $request->get('name'),
             'workshop_category_id' => $request->get('workshop_category_id'),
             'description' => $request->get('description'),
