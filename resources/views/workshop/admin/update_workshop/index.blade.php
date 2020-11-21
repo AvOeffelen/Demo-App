@@ -10,17 +10,16 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">KLANTSAMENVITAAL</li>
                         <li class="breadcrumb-item" aria-current="page">Workshop</li>
-                        <li class="breadcrumb-item active" aria-current="page">Workshop toevoegen</li>
+                        <li class="breadcrumb-item active" aria-current="page">Workshop Updaten</li>
                     </ol>
                 </nav>
             </div>
         </div>
     </div>
     <!-- END Hero -->
-
     <!-- Page Content -->
     <div class="content content-full">
-        <workshop-create></workshop-create>
+        <workshop-update :workshop="{{$workshop}}"></workshop-update>
     </div>
     <!-- END Page Content -->
 @endsection

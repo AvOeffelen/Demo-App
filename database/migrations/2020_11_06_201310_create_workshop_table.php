@@ -15,9 +15,11 @@ class CreateWorkshopTable extends Migration
     {
         Schema::create('workshop', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('title');
             $table->unsignedBigInteger('workshop_category_id')->default(1);
-            $table->text('description');
+            $table->foreign('workshop_category_id')
+                ->references('id')->on('workshop_category');
+            $table->text('text');
             $table->string('agenda_link')->nullable();
             $table->timestamp('start');
             $table->timestamp('end');

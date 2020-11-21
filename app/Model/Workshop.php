@@ -9,9 +9,9 @@ class Workshop extends Model
     protected $table = 'workshop';
 
     protected $fillable = [
-        'name',
+        'title',
         'workshop_category_id',
-        'description',
+        'text',
         'agenda_link',
         'start',
         'end',
@@ -29,4 +29,20 @@ class Workshop extends Model
         'created_at',
         'updated_at',
     ];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function UserFavorites()
+    {
+        return $this->belongsToMany(User::class, 'user_like_workshop','workshop_id','user_id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function Category()
+    {
+        return $this->belongsTo(WorkshopCategory::class,'workshop_category_id');
+    }
 }

@@ -70,13 +70,6 @@
                 </a>
             </li>
             <li class="nav-main-item">
-                <a class="nav-main-link{{ request()->is('workshop/show') ? ' active' : '' }}" href="{{route('workshop.show')}}">
-                    <i class="nav-main-link-icon fa fa-search"></i>
-                    <span class="nav-main-link-name">Workshop item</span>
-                    {{--                    <span class="nav-main-link-badge badge badge-pill badge-success">5</span>--}}
-                </a>
-            </li>
-            <li class="nav-main-item">
                 <a class="nav-main-link" href="https://www.johan.nl" target="_blank">
                     <i class="nav-main-link-icon fa fa-clipboard-list"></i>
                     <span class="nav-main-link-name">Vragenlijst invullen</span>
