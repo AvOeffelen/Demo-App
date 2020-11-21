@@ -1,8 +1,9 @@
 @extends('layouts.user')
 
 @section('content')
-    @include('profile.template.index')
-    <!-- END Page Content -->
+    <div class="content content-full">
+        <profile></profile>
+    </div>
 @endsection
 @section('js_after')
 @endsection

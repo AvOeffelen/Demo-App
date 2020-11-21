@@ -34,7 +34,7 @@
 <body>
 
 <div id="page-container" class="sidebar side-scroll page-header-fixed page-header-dark main-content-narrow">
-    <nav id="sidebar" >
+    <nav id="sidebar">
         @include('partials.user_nav')
     </nav>
     <header id="page-header" aria-label="Main Navigation">

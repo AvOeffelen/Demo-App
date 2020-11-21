@@ -19,9 +19,21 @@
 <div class="content-side content-side-full">
     <ul class="nav-main">
         <li class="nav-main-item">
-            <a class="nav-main-link {{ request()->is('dashboard') ? ' active' : '' }}" href="/dashboard">
+            <a class="nav-main-link" href="/dashboard">
                 <i class="nav-main-link-icon fa fa-chalkboard-teacher"></i>
                 <span class="nav-main-link-name">Workshops</span>
+            </a>
+        </li>
+        <li class="nav-main-item">
+            <a class="nav-main-link" href="https://www.johan.nl" target="_blank">
+                <i class="nav-main-link-icon fa fa-clipboard-list"></i>
+                <span class="nav-main-link-name">Vragenlijst invullen</span>
+            </a>
+        </li>
+        <li class="nav-main-item">
+            <a class="nav-main-link" href="{{route('faq')}}">
+                <i class="nav-main-link-icon fa fa-question"></i>
+                <span class="nav-main-link-name">FAQ</span>
             </a>
         </li>
     </ul>
