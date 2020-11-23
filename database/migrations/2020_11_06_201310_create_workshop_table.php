@@ -21,8 +21,8 @@ class CreateWorkshopTable extends Migration
                 ->references('id')->on('workshop_category');
             $table->text('text');
             $table->string('agenda_link')->nullable();
-            $table->timestamp('start');
-            $table->timestamp('end');
+            $table->timestamp('start')->nullable();
+            $table->timestamp('end')->nullable();
             $table->string('image_location')->nullable();
             $table->string('image_name')->nullable();
             $table->timestamps();
