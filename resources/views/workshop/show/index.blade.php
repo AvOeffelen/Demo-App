@@ -1,4 +1,4 @@
-@extends('layouts.backend')
+@extends('layouts.user')
 
 @section('content')
     <!-- Page Content -->
