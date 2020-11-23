@@ -16,7 +16,7 @@ class CreateWorkshopTable extends Migration
         Schema::create('workshop', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->unsignedBigInteger('workshop_category_id')->default(1);
+            $table->unsignedBigInteger('workshop_category_id')->default('1');
             $table->foreign('workshop_category_id')
                 ->references('id')->on('workshop_category');
             $table->text('text');

@@ -15,8 +15,8 @@ class CreateWorkshopCategoryTable extends Migration
     {
         Schema::create('workshop_category', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('tag');
+            $table->string('name')->nullable();
+            $table->string('tag')->nullable();
             $table->timestamps();
         });
     }
