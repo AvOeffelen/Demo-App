@@ -70,7 +70,7 @@
                         <div class="row py-3">
                             <div class="col-md-12">
                                 <label for="agenda-link">Agenda link</label>
-                                <ckeditor :editor="editorType" v-model="workshop.link"></ckeditor>
+                                <ckeditor :editor="editorType" v-model="workshop.agenda_link"></ckeditor>
                             </div>
                         </div>
                     </form>
@@ -110,7 +110,7 @@ export default {
                 dateFormat: 'd-m-Y',
                 defaultDate: "today",
                 locale: Dutch,
-            }
+            },
         };
     },
     mounted(){
@@ -123,7 +123,6 @@ export default {
          * submit the form
          */
         submit() {
-            console.log("posting");
             let url = '/axios/workshop/put';
             axios.put(url, this.workshop)
                 .then(response => {
