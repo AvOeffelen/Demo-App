@@ -7,7 +7,7 @@
                 </div>
                 <b-tabs content-class="py-5" align="center"
                         id="horizontal-navigation-hover-centered py-5 px-1"
-                        class=" h5 d-none d-lg-block mt-2 mt-lg-0 nav nav-main nav-main-horizontal nav-main-horizontal-center"
+                        class=" h5 d-lg-block mt-2 mt-lg-0 nav nav-main nav-main-horizontal nav-main-horizontal-center"
                         v-if="loading == false">
                     <b-tab :title="category.name" v-for="(category, key) in this.categories" :key="key">
                         <b-row>
