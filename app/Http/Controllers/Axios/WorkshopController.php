@@ -23,7 +23,7 @@ class WorkshopController extends Controller
             'title' => $request->get('title'),
             'workshop_category_id' => $request->get('category_id'),
             'text' => $request->get('text'),
-            'agenda_link' => $request->get('link'),
+            'agenda_link' => $request->get('agenda_link'),
             'start' => $request->get('start'),
             'end' => $request->get('end'),
             'image_location' => $request->get('image_location'),

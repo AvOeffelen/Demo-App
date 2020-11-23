@@ -51,7 +51,7 @@
                             </div>
                         </div>
                     </div>
-                    <div v-if="workshop.link != ''" v-html="workshop.link"></div>
+                    <div v-if="workshop.agenda_link != ''" v-html="workshop.agenda_link"></div>
                 </div>
                 <div class="col-md-2"></div>
             </div>

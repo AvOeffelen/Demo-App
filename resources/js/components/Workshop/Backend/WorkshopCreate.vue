@@ -68,7 +68,7 @@
                         <div class="row py-3">
                             <div class="col-md-12">
                                 <label for="agenda-link">Agenda link</label>
-                                <ckeditor :editor="editorType" v-model="workshop.link"></ckeditor>
+                                <ckeditor :editor="editorType" v-model="workshop.agenda_link"></ckeditor>
                             </div>
                         </div>
                     </form>
@@ -102,7 +102,7 @@ export default {
                 title: '',
                 sub_title: '',
                 text:'',
-                link:'',
+                agenda_link:'',
                 category_id: 1,
                 start:  new Date(),
                 end:  new Date(),
@@ -154,7 +154,7 @@ export default {
         },
         reset() {
             this.workshop.title = '';
-            this.workshop.link = '';
+            this.workshop.agenda_link = '';
             this.workshop.text = '';
             this.workshop.sub_title = '';
             this.workshop.category_id = 1;
