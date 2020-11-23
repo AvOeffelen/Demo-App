@@ -144,7 +144,10 @@ export default {
             let url = '/axios/workshop/post';
             axios.post(url, this.workshop)
                 .then(response => {
-
+                    if(response.status === 200){
+                        this.reset();
+                        window.location = 'backend/workshop/overview';
+                    }
                 })
                 .catch(error => {
 
