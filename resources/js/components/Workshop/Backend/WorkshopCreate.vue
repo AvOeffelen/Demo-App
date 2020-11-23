@@ -144,9 +144,8 @@ export default {
             let url = '/axios/workshop/post';
             axios.post(url, this.workshop)
                 .then(response => {
-                    if(response.status === 200){
+                    if(response.status === 201){
                         this.reset();
-                        window.location = 'backend/workshop/overview';
                     }
                 })
                 .catch(error => {
@@ -155,6 +154,8 @@ export default {
         },
         reset() {
             this.workshop.title = '';
+            this.workshop.link = '';
+            this.workshop.text = '';
             this.workshop.sub_title = '';
             this.workshop.category_id = 1;
             this.workshop.start = '';
