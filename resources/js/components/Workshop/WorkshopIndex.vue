@@ -15,10 +15,10 @@
                                    v-if="category.workshop[0]">
                                 <a
                                     class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image"
-                                    v-bind:style="[category.workshop[0].image_location  ?
-                                    {'background': 'url(' + category.workshop[0].image_location + ')'} :
+                                    v-bind:style="[category.workshop[0].image_name ?
+                                    {'background': 'url(' + category.workshop[0].image_name + ')'} :
                                      {'background-image': 'url('+ default_image +')'}]"
-                                    v-bind:href="'/workshop/'+category.workshop[0].id+'/show'"
+                                    v-bind:href="'/workshop/'+category.workshop[0].id +'/show'"
                                     data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
                                         <div class="ribbon-box">
@@ -36,10 +36,10 @@
                                 </a>
                             </b-col>
                             <b-col cols="12" sm="12" md="12" lg="6" xl="6"
-                                   v-if="category.workshop[1] && category.workshop[2]">
+                                   v-if="category.workshop[1]">
                                 <a class="block block-transparent bg-image"
-                                   v-bind:style="[category.workshop[1].image_location ?
-                                    {'background': 'url(' + category.workshop[1].image_location + ')'} :
+                                   v-bind:style="[category.workshop[1].image_name ?
+                                    {'background': 'url(' + category.workshop[1].image_name + ')'} :
                                      {'background-image': 'url('+ default_image +')'}]"
                                    v-bind:href="'/workshop/'+category.workshop[1].id+'/show'"
                                    data-toggle="click-ripple">
@@ -57,31 +57,33 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a class="block block-transparent bg-image"
-                                   v-bind:style="[category.workshop[2].image_location  ?
-                                    {'background': 'url(' + category.workshop[2].image_location + ')'} :
+                                <div v-if="category.workshop[2]">
+                                    <a class="block block-transparent bg-image"
+                                       v-bind:style="[category.workshop[2].image_name  ?
+                                    {'background': 'url(' + category.workshop[2].image_name + ')'} :
                                      {'background-image': 'url('+ default_image +')'}]"
-                                   v-bind:href="'/workshop/'+category.workshop[1].id+'/show'"
-                                   data-toggle="click-ripple">
-                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
-                                        <div class="ribbon-box">
-                                            {{ category.name }}
+                                       v-bind:href="'/workshop/'+category.workshop[2].id+'/show'"
+                                       data-toggle="click-ripple">
+                                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                                            <div class="ribbon-box">
+                                                {{ category.name }}
+                                            </div>
+                                            <div class="pt-4 pb-6 px-md-3">
+                                                <h3 class="h1 font-w700 text-white mb-1">{{
+                                                        category.workshop[2].title
+                                                    }}</h3>
+                                                <h5 class="font-w400 text-body-color-light">{{
+                                                        category.workshop[2].title
+                                                    }}</h5>
+                                            </div>
                                         </div>
-                                        <div class="pt-4 pb-6 px-md-3">
-                                            <h3 class="h1 font-w700 text-white mb-1">{{
-                                                    category.workshop[2].title
-                                                }}</h3>
-                                            <h5 class="font-w400 text-body-color-light">{{
-                                                    category.workshop[2].title
-                                                }}</h5>
-                                        </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
                             </b-col>
                             <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="category.workshop[3]">
                                 <a class="block block-transparent bg-image"
-                                   v-bind:style="[category.workshop[3].image_location  ?
-                                    {'background': 'url(' + category.workshop[3].image_location + ')'} :
+                                   v-bind:style="[category.workshop[3].image_name  ?
+                                    {'background': 'url(' + category.workshop[3].image_name + ')'} :
                                      {'background-image': 'url('+ default_image +')'}]"
                                    v-bind:href="'/workshop/'+category.workshop[3].id+'/show'"
                                    data-toggle="click-ripple">
@@ -102,8 +104,8 @@
                             </b-col>
                             <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="category.workshop[4]">
                                 <a class="block block-transparent bg-image"
-                                   v-bind:style="[category.workshop[4].image_location  ?
-                                    {'background': 'url(' + category.workshop[4].image_location + ')'} :
+                                   v-bind:style="[category.workshop[4].image_name  ?
+                                    {'background': 'url(' + category.workshop[4].image_name + ')'} :
                                      {'background-image': 'url('+ default_image +')'}]"
                                    v-bind:href="'/workshop/'+category.workshop[4].id+'/show'"
                                    data-toggle="click-ripple">
@@ -124,8 +126,8 @@
                             </b-col>
                             <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="category.workshop[5]">
                                 <a class="block block-transparent bg-image"
-                                   v-bind:style="[category.workshop[5].image_location  ?
-                                    {'background': 'url(' + category.workshop[5].image_location + ')'} :
+                                   v-bind:style="[category.workshop[5].image_name  ?
+                                    {'background': 'url(' + category.workshop[5].image_name + ')'} :
                                      {'background-image': 'url('+ default_image +')'}]"
                                    v-bind:href="'/workshop/'+category.workshop[5].id+'/show'"
                                    data-toggle="click-ripple">
@@ -153,8 +155,8 @@
                                 xl="6"
                                 :key="index">
                                 <a class="block block-transparent bg-image"
-                                   v-bind:style="[workshop.image_location  ?
-                                    {'background': 'url(' + workshop.image_location + ')'} :
+                                   v-bind:style="[workshop.image_name  ?
+                                    {'background': 'url(' + workshop.image_name + ')'} :
                                      {'background-image': 'url('+ default_image +')'}]"
                                    v-bind:href="'/workshop/'+ workshop.id+'/show'"
                                    data-toggle="click-ripple">
@@ -197,12 +199,9 @@ export default {
     },
     methods: {
         getCategories() {
-            console.log("loading......");
             axios.get('/axios/workshop/get-categories')
                 .then(response => {
-                    console.log("got emmmm");
                     this.categories = response.data;
-                    console.log(this.categories);
                     this.loading = false;
                 })
                 .catch(error => {
@@ -213,7 +212,6 @@ export default {
             axios.get('/axios/workshop/get-all')
                 .then(response => {
                     this.workshops = response.data;
-                    console.log(this.workshops);
                 })
                 .catch(error => {
 

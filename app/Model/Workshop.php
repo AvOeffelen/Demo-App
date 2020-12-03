@@ -2,6 +2,7 @@
 
 namespace App\Model;
 
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 
 class Workshop extends Model
@@ -33,13 +34,13 @@ class Workshop extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
-    public function UserFavorites()
+    public function userFavorites()
     {
         return $this->belongsToMany(User::class, 'user_like_workshop','workshop_id','user_id');
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function Category()
     {

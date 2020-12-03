@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="content content-full">
-        <profile></profile>
+        <profile :user="{{auth()->user()}}"></profile>
     </div>
 @endsection
 @section('js_after')
