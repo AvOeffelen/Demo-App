@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 // Example Routes
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index')->middleware('web');
 
 Route::get('workshop/add','DemoController@showAdminWorkshopAdd')->name('admin.add.workshop');
 Route::get('workshop','WorkshopController@showWorkshops')->name('workshop');
