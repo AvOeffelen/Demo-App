@@ -1,0 +1,166 @@
+<template>
+    <div>
+        <b-row class="row">
+            <b-col md="12" lg="12" xl="12" sm="12" cols="12" class="col-md-12">
+                <div class="block">
+                    <div class="block-header block-header-default">
+                        <h3 class="block-title"></h3>
+                    </div>
+                    <div class="block-content">
+                        <b-row class="py-3">
+                            <b-col cols="6" sm="6" md="6" lg="6" xl="6">
+                                <label v-bind:class="[this.errors.title ? 'text-primary':'' ]">
+                                    Titel
+                                </label>
+                                <b-input v-model="article.title" type="text" class="form-control" name="title"
+                                         v-bind:class="[this.errors.title ? 'decoratedErrorField':'' ]"/>
+                                <p v-if="this.errors.title" class="text-primary">{{ this.errors['title'][0] }}</p>
+                            </b-col>
+                            <b-col cols="6" sm="6" md="6" lg="6" xl="6">
+                                <label for="example-hosting-vps">Categorie</label>
+                                <select class="custom-select" id="example-hosting-vps" name="example-hosting-vps">
+                                    <option v-for="(category,key) in this.categories" :value="category.id" :key="key"
+                                            v-model="article.category_id">
+                                        {{ category.name }}
+                                    </option>
+                                </select>
+                            </b-col>
+                        </b-row>
+                        <!--                        TODO:: Build switch here.-->
+                        <b-row class="py-3">
+                            <b-col cols="12">
+                                <b-row>
+                                    <b-col sm="12" md="12" xl="12" lg="12" cols="12">
+                                        <b-row>
+                                            <b-col sm="6" md="6" xl="6" lg="6" cols="6">
+                                                <span v-if="uploadImage !== false">Afbeelding</span>
+                                                <span v-else>Video</span>
+                                            </b-col>
+                                            <b-col sm="6" md="6" xl="6" lg="6" cols="6" class="text-right">
+                                                <b-form-checkbox switch size="lg"
+                                                                 v-model="uploadImage"></b-form-checkbox>
+                                            </b-col>
+                                        </b-row>
+                                    </b-col>
+                                </b-row>
+                                <b-row>
+                                    <b-col cols="12"
+                                           sm="12"
+                                           md="12"
+                                           xl="12"
+                                           lg="12"
+                                           class="custom-file py-2"
+                                           v-if="uploadImage !== false">
+                                        <div>
+                                            <!-- Populating custom file input label with the selected filename (data-toggle="custom-file-input" is initialized in Helpers.coreBootstrapCustomFileInput()) -->
+                                            <b-form-file
+                                                v-model="image"
+                                                @change="testFunc()"
+                                                accept="image/*"
+                                                placeholder="Kies of drop een afbeelding hier"
+                                                drop-placeholder="Drop afbeelding hier"
+                                            />
+                                        </div>
+                                    </b-col>
+                                    <b-col cols="12"
+                                           sm="12"
+                                           md="12"
+                                           xl="12"
+                                           lg="12"
+                                           class="custom-file py-2"
+                                           v-else>
+                                        <b-textarea v-model="article.video_link"
+                                                    v-bind:placeholder="'Embedded video link'"></b-textarea>
+                                    </b-col>
+                                </b-row>
+                            </b-col>
+                        </b-row>
+                        <div class="row py-3">
+                            <div class="col-md-12">
+                                <label v-bind:class="[this.errors.text ? 'text-primary':'' ]">Text</label>
+                                <ckeditor :editor="editorType" id="workshop-text" class="ck-content-text"
+                                          v-bind:class="[this.errors.text ? 'decoratedErrorField':'' ]"
+                                          v-model="article.text"></ckeditor>
+                                <p v-if="this.errors.text" class="text-primary">{{ this.errors['text'][0] }}</p>
+                            </div>
+                        </div>
+                        <b-row class="py-3">
+                            <b-col>
+                                <div class="text-right">
+                                    <button class="btn btn-alt-danger btn-sm" @click="reset()">Reset</button>
+                                    <button class="btn btn-alt-danger btn-sm" @click="cancel">Annuleer</button>
+                                    <button class="btn btn-primary btn-sm" @click="openPreviewModal">Bekijk voorbeeld
+                                    </button>
+                                    <b-button @click="submit" class="btn btn-alt-success btn-sm">Opslaan</b-button>
+                                </div>
+                            </b-col>
+                        </b-row>
+                    </div>
+                </div>
+            </b-col>
+        </b-row>
+        <preview-modal :article="this.article" v-if="showPreview == true"></preview-modal>
+    </div>
+</template>
+
+<script>
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import {FormFilePlugin} from 'bootstrap-vue';
+
+Vue.use(FormFilePlugin)
+
+export default {
+    name: "ArticleCreate",
+    data() {
+        return {
+            article: {
+                title: '',
+                has_video: false,
+                category_id: 1,
+                text: '',
+                video_link: '',
+                image_link: '',
+            },
+            categories: [],
+            errors: [],
+            showPreview: false,
+            editorType: ClassicEditor,
+            uploadImage: true,
+        }
+    },
+    mounted() {
+        this.getCategories();
+    },
+    methods: {
+        submit() {
+            axios.post('/axios/article/post', this.article)
+                .then(response => {
+                    if (response.status === 200) {
+                        window.location = '/backend/article/overview';
+                    }
+                })
+                .catch(error => {
+                    if (error.response.status == 422) {
+                        this.errors = error.response.data.errors;
+                    }
+                });
+        },
+        reset() {
+        },
+        cancel() {
+        },
+        openPreviewModal() {
+        },
+        getCategories() {
+            axios.get('/axios/article/get-categories').then(response => {
+                this.categories = response.data
+            });
+        }
+    },
+
+}
+</script>
+
+<style scoped>
+
+</style>

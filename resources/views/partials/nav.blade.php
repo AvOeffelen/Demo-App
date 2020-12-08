@@ -69,6 +69,33 @@
                 </ul>
             </li>
             <li class="nav-main-item">
+                <a class="nav-main-link nav-main-link-submenu"
+                   data-toggle="submenu" aria-haspopup="true"
+                   aria-expanded="false"
+                   href="#">
+                    <i class="nav-main-link-icon fa fa-chalkboard-teacher"></i>
+                    <span class="nav-main-link-name">Artikelen</span>
+                </a>
+                <ul class="nav-main-submenu">
+                    <li class="nav-main-item">
+                        <a class="nav-main-link{{ request()->is('backend/article/overview') ? ' active' : '' }}"
+                           href="{{route('article.show.overview')}}">
+                            <i class="nav-main-link-icon fa fa-clipboard"></i>
+                            <span class="nav-main-link-name">Overzicht</span>
+                            {{--                    <span class="nav-main-link-badge badge badge-pill badge-success">5</span>--}}
+                        </a>
+                    </li>
+                    <li class="nav-main-item">
+                        <a class="nav-main-link{{ request()->is('backend/article.create') ? ' active' : '' }}"
+                           href="{{route('article.show.create')}}">
+                            <i class="nav-main-link-icon fa fa-plus-circle"></i>
+                            <span class="nav-main-link-name">toevoegen</span>
+                            {{--                    <span class="nav-main-link-badge badge badge-pill badge-success">5</span>--}}
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-main-item">
                 <a class="nav-main-link{{ request()->is('faq') ? ' active' : '' }}" href="{{route('faq')}}">
                     <i class="nav-main-link-icon fa fa-question"></i>
                     <span class="nav-main-link-name">FAQ</span>

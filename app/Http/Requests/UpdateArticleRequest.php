@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
 
-class StoreWorkshopRequest extends FormRequest
+class UpdateArticleRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -28,21 +28,7 @@ class StoreWorkshopRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required',
-            'text' => 'required',
-            'agenda_link' => 'required',
-            'category_id' => 'required',
-            'start' => 'required',
-            'end' => 'required',
-        ];
-    }
-
-    public function messages()
-    {
-        return [
-          'title.required' => "De workshop titel is verplicht.",
-          'text.required' => "De workshop text is verplicht.",
-          'agenda_link.required' => "De workshop agenda is verplicht.",
+            //
         ];
     }
 }

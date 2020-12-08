@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 // Example Routes
 Route::get('/', 'HomeController@index')->middleware('web');
 
+//TODO:: fix this route.
 Route::get('workshop/add','DemoController@showAdminWorkshopAdd')->name('admin.add.workshop');
 Route::get('workshop','WorkshopController@showWorkshops')->name('workshop');
 Route::get('workshop/{workshop}/show','WorkshopController@show')->name('workshop.show');
@@ -30,6 +31,9 @@ Route::get('/faq','DemoController@showFAQ')->name('faq');
 Route::group(['prefix' => 'backend/','middleware'=> ['web']], function () {
     Route::get('workshop/overview','WorkshopController@showOverview')->name('workshop.overview');
     Route::get('workshop/overview/{workshop}/update','WorkshopController@updateWorkshop')->name('workshop.update');
+
+    Route::get('article/overview','ArticleController@showOverview')->name('article.show.overview');
+    Route::get('article/create','ArticleController@showCreate')->name('article.show.create');
 });
 
 
@@ -58,4 +62,14 @@ Route::group(['prefix' => 'axios/workshop', 'namespace' => 'Axios','middleware'=
 
 Route::group(['prefix' => 'axios/me', 'namespace' => 'Axios'], function () {
     route::get('/favorited','UserController@getFavorited')->name('user.favorited');
+});
+
+Route::group(['prefix' => 'axios/article', 'namespace' => 'Axios'], function() {
+    Route::post('/post','ArticleController@store')->name('article.store');
+    Route::put('/put','ArticleController@store')->name('article.put');
+
+    route::post('/image/upload','ArticleController@uploadImage')->name('article.store.image');
+
+    route::get('get-all','ArticleController@getAllArticles')->name('article.get.all');
+    route::get('get-categories','ArticleController@getCategories')->name('article.get.category');
 });
