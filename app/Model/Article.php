@@ -13,7 +13,7 @@ class Article extends Model
     protected $table = 'article';
 
     protected $fillable = [
-        'name',
+        'title',
         'has_video',
         'category_id',
         'sub_category_id',
@@ -30,6 +30,6 @@ class Article extends Model
      */
     public function Category()
     {
-        return $this->hasMany(Category::class);
+        return $this->belongsTo(Category::class);
     }
 }

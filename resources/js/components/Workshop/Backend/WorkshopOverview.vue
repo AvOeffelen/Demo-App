@@ -133,7 +133,6 @@ export default {
             axios.get('/axios/workshop/get-all')
                 .then(response => {
                     this.items = response.data;
-                    console.log("items",this.items);
                     this.totalRows = this.items.length
                 }).catch(error => {
 

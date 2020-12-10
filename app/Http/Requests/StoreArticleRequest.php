@@ -27,7 +27,18 @@ class StoreArticleRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => 'required',
+            'text' => 'required',
+            'category_id' => 'required',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'title.required' => "De titel is verplicht.",
+            'text.required' => "Het textveld is verplicht.",
+            'category_id.required' => "De categorie is verplicht.",
         ];
     }
 }

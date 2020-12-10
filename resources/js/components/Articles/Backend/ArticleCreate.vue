@@ -55,7 +55,6 @@
                                             <!-- Populating custom file input label with the selected filename (data-toggle="custom-file-input" is initialized in Helpers.coreBootstrapCustomFileInput()) -->
                                             <b-form-file
                                                 v-model="image"
-                                                @change="testFunc()"
                                                 accept="image/*"
                                                 placeholder="Kies of drop een afbeelding hier"
                                                 drop-placeholder="Drop afbeelding hier"
@@ -121,6 +120,7 @@ export default {
                 video_link: '',
                 image_link: '',
             },
+            image: null,
             categories: [],
             errors: [],
             showPreview: false,
@@ -136,13 +136,42 @@ export default {
             axios.post('/axios/article/post', this.article)
                 .then(response => {
                     if (response.status === 200) {
-                        window.location = '/backend/article/overview';
+                        console.log("status 200")
+                        if (this.uploadImage === true) {
+                            console.log("article id",response.data.article.id)
+                            this.imageUpload(response.data.article.id);
+                        } else {
+                            window.location = '/backend/article/overview';
+                        }
                     }
                 })
                 .catch(error => {
                     if (error.response.status == 422) {
                         this.errors = error.response.data.errors;
                     }
+                });
+        },
+        imageUpload(articleId) {
+            console.log("starting upload.")
+            let url = '/axios/article/image/upload';
+            let data = new FormData();
+
+            let config = {
+                header: {
+                    'Content-Type': 'image/*'
+                }
+            }
+            data.append('article_id', articleId)
+            data.append('image', this.image);
+
+            axios.post(url, data, config)
+                .then(response => {
+                    if (response.status === 200) {
+                        window.location = '/backend/article/overview';
+                    }
+                })
+                .catch(error => {
+                    console.log("couldnt upload image.. i have no clue what happend");
                 });
         },
         reset() {

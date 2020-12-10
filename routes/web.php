@@ -72,4 +72,5 @@ Route::group(['prefix' => 'axios/article', 'namespace' => 'Axios'], function() {
 
     route::get('get-all','ArticleController@getAllArticles')->name('article.get.all');
     route::get('get-categories','ArticleController@getCategories')->name('article.get.category');
+    route::delete('{article}/delete','ArticleController@delete')->name('article.delete');
 });
