@@ -23,23 +23,23 @@
                                     <div class="form-group">
                                         <label for="name">Voornaam <span class="text-danger">*</span></label>
                                         <input type="text"
-                                               class="form-control form-control-alt form-control-lg {{ $errors->has('name') ? 'is-invalid' : '' }}"
-                                               id="name" name="name" placeholder="Voornaam" value="{{ old('name') }}">
-                                        @if ($errors->has('name'))
+                                               class="form-control form-control-alt form-control-lg {{ $errors->has('firstname') ? 'is-invalid' : '' }}"
+                                               id="name" name="firstname" placeholder="Voornaam" value="{{ old('firstname') }}">
+                                        @if ($errors->has('firstname'))
                                             <span class="help-block">
-                                                <strong class="text-danger">{{ $errors->first('name') }}</strong>
+                                                <strong class="text-danger">{{ $errors->first('firstname') }}</strong>
                                             </span>
                                         @endif
                                     </div>
                                     <div class="form-group">
                                         <label for="addition">Tussenvoegsel</label>
                                         <input type="text"
-                                               class="form-control form-control-alt form-control-lg {{ $errors->has('addition') ? 'is-invalid' : '' }}"
-                                               id="addition" name="addition" value="{{ old('addition') }}"
+                                               class="form-control form-control-alt form-control-lg {{ $errors->has('infix') ? 'is-invalid' : '' }}"
+                                               id="addition" name="infix" value="{{ old('infix') }}"
                                                placeholder="Tussenvoegsel">
-                                        @if ($errors->has('addition'))
+                                        @if ($errors->has('infix'))
                                             <span class="help-block">
-                                                <strong class="text-danger">{{ $errors->first('addition') }}</strong>
+                                                <strong class="text-danger">{{ $errors->first('infix') }}</strong>
                                             </span>
                                         @endif
                                     </div>
@@ -87,12 +87,12 @@
                                                placeholder="Password">
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <button class="btn btn-block btn-hero-lg btn-hero-primary"  type="submit">
+                                        <i class="fa fa-fw fa-sign-in-alt mr-1"></i> Registreer
+                                    </button>
+                                </div>
                             </form>
-                            <div class="form-group">
-                                <button class="btn btn-block btn-hero-lg btn-hero-primary" >
-                                    <i class="fa fa-fw fa-sign-in-alt mr-1"></i> Registreer
-                                </button>
-                            </div>
                         </div>
                     </div>
                     <!-- END Sign In Form -->

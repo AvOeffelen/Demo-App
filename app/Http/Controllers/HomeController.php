@@ -17,12 +17,15 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return view('home');
+        if(auth()->user()->isAdmin()){
+
+            return response()->view('workshop.admin.overview.index');
+        }
+
+        return response()->view('workshop.overview.index');
     }
 }

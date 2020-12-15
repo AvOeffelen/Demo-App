@@ -13,16 +13,6 @@
                          fixed
                          @row-selected="onRowSelected"
                 >
-                    <!--                    <template v-slot:cell(selected)="{ rowSelected }" style="width:25px;" class="d-sm-none d-none">-->
-                    <!--                        <template v-if="rowSelected" style="width:25px;">-->
-                    <!--                            <span aria-hidden="true"><i class="fa fa-check"></i></span>-->
-                    <!--                            <span class="sr-only">Selected</span>-->
-                    <!--                        </template>-->
-                    <!--                        <template v-else style="width:25px;">-->
-                    <!--                            <span aria-hidden="true">&nbsp;</span>-->
-                    <!--                            <span class="sr-only">Not selected</span>-->
-                    <!--                        </template>-->
-                    <!--                    </template>-->
                     <template v-slot:cell(id)="row" class="d-sm-none d-none">
                         {{ row.index + 1 }}
                     </template>
@@ -30,7 +20,7 @@
                               :style="{ width: fields.fields === 'actions' ? '25px' : '180px' }">
                         <a v-bind:href="'/backend/workshop/overview/'+ row.item.id +'/update'" class="btn btn-primary"
                            variant="primary" @click="updateWorkshop(row.item)"><i class="fa fa-fw fa-pencil-alt"></i></a>
-                        <b-button variant="primary" @click="openPreviewModal(row.item)"><i class="fa fa-search"></i>
+                        <b-button  variant="primary" @click="openPreviewModal(row.item)"><i class="fa fa-search"></i>
                         </b-button>
                         <b-button variant="primary" @click="openConfirmationModal(row.item)"><i class="fa fa-trash"></i>
                         </b-button>
@@ -84,7 +74,7 @@ export default {
                 {
                     key: 'id',
                     label: 'ID',
-                    sortable: true
+                    sortable: false
                 },
                 {
                     key: 'title',
@@ -92,7 +82,7 @@ export default {
                     sortable: true,
                 },
                 {
-                    key: 'workshop_category_id',
+                    key: 'category.name',
                     label: 'Categorie',
                     sortable: true,
                 },

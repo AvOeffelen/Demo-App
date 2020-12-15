@@ -20,7 +20,7 @@ class CreateWorkshopTable extends Migration
             $table->foreign('workshop_category_id')
                 ->references('id')->on('workshop_category');
             $table->text('text');
-            $table->string('agenda_link')->nullable();
+            $table->text('agenda_link')->nullable();
             $table->timestamp('start')->nullable();
             $table->timestamp('end')->nullable();
             $table->string('image_location')->nullable();

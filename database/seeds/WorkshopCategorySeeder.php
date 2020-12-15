@@ -24,5 +24,20 @@ class WorkshopCategorySeeder extends Seeder
             'name' => 'Ontwikkeling',
             'tag' => 'growth'
         ]);
+        DB::table('category')->insert([
+            'name' => 'Actueel',
+        ]);
+        DB::table('category')->insert([
+            'name' => 'Fysieke vitaliteit',
+        ]);
+        DB::table('category')->insert([
+            'name' => 'Mentale vitaliteit',
+        ]);
+        DB::table('category')->insert([
+            'name' => 'Ontwikkeling',
+        ]);
+        DB::table('category')->insert([
+            'name' => '1 op 1',
+        ]);
     }
 }

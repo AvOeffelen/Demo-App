@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Auth;
 
 class StoreWorkshopRequest extends FormRequest
 {
@@ -13,7 +14,10 @@ class StoreWorkshopRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        if(Auth::user()->isAdmin()){
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -25,12 +29,21 @@ class StoreWorkshopRequest extends FormRequest
     {
         return [
             'title' => 'required',
-            'sub_title' => 'required',
             'text' => 'required',
-            'link' => 'required',
+            'agenda_link' => 'required',
             'category_id' => 'required',
             'start' => 'required',
             'end' => 'required',
+            'image' => 'nullable|mimes:jpg,png,jpeg,gif'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+          'title.required' => "De workshop titel is verplicht.",
+          'text.required' => "De workshop text is verplicht.",
+          'agenda_link.required' => "De workshop agenda is verplicht.",
         ];
     }
 }

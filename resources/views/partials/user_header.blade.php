@@ -35,7 +35,7 @@
     </div>
     <div>
         @if(!auth()->user())
-            <a type="button" class="btn btn-dual" aria-expanded="false">
+            <a class="btn btn-dual" href="{{url('login')}}">
                 <i class="fa fa-fw fa-lock d-sm-none"></i>
                 <span class="d-none d-sm-inline-block">Log in</span>
             </a>
@@ -44,7 +44,7 @@
                 <button type="button" class="btn btn-dual" id="page-header-user-dropdown" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                     <i class="fa fa-fw fa-user d-sm-none"></i>
-                    <span class="d-none d-sm-inline-block">xx</span>
+                    <span class="d-none d-sm-inline-block">{{auth()->user()->getFullname()}}</span>
                     <i class="fa fa-fw fa-angle-down ml-1 d-none d-sm-inline-block"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-right p-0" aria-labelledby="page-header-user-dropdown">
@@ -52,11 +52,15 @@
                         <i class="far fa-fw fa-user mr-1"></i> Profiel
                     </a>
                     <div role="separator" class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#"
+                    <a class="dropdown-item" href="{{ route('logout') }}"
                        onclick="event.preventDefault();
-                                                         document.getElementById('logout-form').submit();">
-                        <i class="far fa-fw fa-arrow-alt-circle-left mr-1"></i> Log uit
+                                                     document.getElementById('logout-form').submit();">
+                        <i class="far fa-fw fa-arrow-alt-circle-left mr-1"></i> Sign Out
                     </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
                 </div>
             </div>
         @endif

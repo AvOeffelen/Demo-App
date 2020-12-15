@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Auth;
 
 class UpdateWorkshopRequest extends FormRequest
 {
@@ -13,7 +14,10 @@ class UpdateWorkshopRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+       if(Auth::user()->isAdmin()){
+           return true;
+       }
+       return false;
     }
 
     /**
@@ -24,7 +28,23 @@ class UpdateWorkshopRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => 'required',
+            'text' => 'required',
+            'agenda_link' => 'required',
+            'workshop_category_id' => 'required',
+            'start' => 'required',
+            'end' => 'required',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'title.required' => "De workshop titel is verplicht.",
+            'workshop_category_id.required' => "De workshop titel is verplicht.",
+            'sub_title.required' => "De workshop ondertitel is verplicht.",
+            'text.required' => "De workshop text is verplicht.",
+            'agenda_link.required' => "De workshop agenda is verplicht.",
         ];
     }
 }
