@@ -3,11 +3,12 @@
 namespace App\Http\Controllers\Axios;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ArticleFileUploadRequest;
+use App\Http\Requests\FileUploadRequest;
 use App\Http\Requests\StoreArticleRequest;
 use App\Http\Requests\UpdateArticleRequest;
 use App\Model\Article;
 use App\Model\Category;
-use http\Client\Response;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
@@ -26,27 +27,28 @@ class ArticleController extends Controller
     }
 
 
-
     /**
-     * @param Request $request
+     * @param $image
+     * @param Article $article
      *
-     * @return Article
+     * @return bool
      */
-    public function uploadImage(Request $request): Article
+    public function uploadImage($image, Article $article): bool
     {
+        try {
 
-        $article = Article::findOrFail($request->get('article_id'));
+            $fileName = Str::random(15) . '.' . $image->getClientOriginalExtension();
 
-        $file = $request->file('image');
+            $image->storePubliclyAs('images', $fileName, 'public');
 
-        $fileName =  Str::random(15).'.'.$file->getClientOriginalExtension();
+            $article->image_link = 'storage/images/' . $fileName;
+            $article->save();
 
-        $file->storePubliclyAs('images',$fileName,'public');
+            return true;
+        } catch (\Exception $e) {
 
-        $article->image_link = 'storage/images/' . $fileName;
-        $article->save();
-
-        return $article;
+            return false;
+        }
     }
 
     /**
@@ -56,13 +58,23 @@ class ArticleController extends Controller
      */
     public function store(StoreArticleRequest $request): JsonResponse
     {
+        $hasVideo = false;
+        $uploadingImage = $request->get('uploadImage');
+        if($uploadingImage === "false"){
+            $hasVideo = true;
+        }
+
         $article = Article::create([
             'title' => $request->get('title'),
-            'has_video' => $request->get('has_video'),
+            'has_video' => $hasVideo,
             'category_id' => $request->get('category_id'),
             'text' => $request->get('text'),
             'video_link' => $request->get('video_link'),
         ]);
+
+        if($uploadingImage === "true"){
+            $this->uploadImage($request->file('image'), $article);
+        }
 
         return response()->json(['article' => $article], 200);
     }
@@ -76,7 +88,7 @@ class ArticleController extends Controller
     {
         $article = Article::updateOrCreate([
             'id' => $request->get('id'),
-        ],[
+        ], [
             'title' => $request->get('title'),
             'category_id' => $request->get('category_id'),
             'image_link' => $request->get('image_link'),
@@ -98,13 +110,34 @@ class ArticleController extends Controller
         try {
             $article->delete();
             return response()->json(['message' => 'Successfully deleted'], 200);
-        } catch (\Exception $exception){
+        } catch (\Exception $exception) {
             return $exception;
         }
     }
 
-    public function getAllArticles(): String
+    public function getAllArticles(): string
     {
         return Article::with('Category')->get()->toJson();
+    }
+
+    public function getAllCategories()
+    {
+        $content = Category::with('Article')->where('name','!=','1 op 1')->where('name','!=','Actueel')->get();
+
+        return $content;
+    }
+
+    public function getOneOnOneCategory()
+    {
+        $content = Category::with('Article')->where('name','=','1 op 1')->get();
+
+        return $content;
+    }
+
+    public function getTopicalCategory()
+    {
+        $content = Category::with('Article')->where('name','=','Actueel')->get();
+
+        return $content;
     }
 }

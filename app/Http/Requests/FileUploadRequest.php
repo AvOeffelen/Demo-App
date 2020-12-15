@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
 
-class StoreArticleRequest extends FormRequest
+class FileUploadRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -19,6 +19,7 @@ class StoreArticleRequest extends FormRequest
         }
         return false;
     }
+
     /**
      * Get the validation rules that apply to the request.
      *
@@ -27,20 +28,7 @@ class StoreArticleRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required',
-            'text' => 'required',
-            'category_id' => 'required',
-            'video_link' => 'nullable',
-            'image' => 'sometimes|required|mimes:jpg,png,jpeg,gif'
-        ];
-    }
-
-    public function messages()
-    {
-        return [
-            'title.required' => "De titel is verplicht.",
-            'text.required' => "Het textveld is verplicht.",
-            'category_id.required' => "De categorie is verplicht.",
+            'image' => 'required|mimes:jpg,png,jpeg,gif'
         ];
     }
 }

@@ -24,35 +24,54 @@
                             </select>
                         </div>
                     </div>
-                    <b-row>
-                        <b-col lg="12" md="12" sm="12" xl="12">
-                            <div class="">
-                                <label for="sub_title" v-bind:class="[this.errors.sub_title ? 'text-primary':'' ]">Workshop
-                                    sub titel
-                                </label>
-                                <b-input v-model="workshop.sub_title" type="text" class="form-control"
-                                         v-bind:class="[this.errors.sub_title ? 'decoratedErrorField':'' ]"
-                                         name="sub_title"/>
-                                <p v-if="this.errors.sub_title" class="text-primary">
-                                    {{ this.errors['sub_title'][0] }}
-                                </p>
-                            </div>
-                        </b-col>
-                    </b-row>
                     <div class="row py-3">
                         <div class="col-md-6">
-                            <label>Start datum</label>
-                            <div class="input-group">
-                                <flat-pickr v-model="workshop.start" :config="flatpickrConfig"
-                                            placeholder="Selecteer datum"></flat-pickr>
-                            </div>
+                            <label for="start">Start datum</label>
+                            <b-input-group class="mb-3">
+                                <b-form-input
+                                    id="start"
+                                    v-model="workshop.start"
+                                    type="text"
+                                    placeholder="Start datum"
+                                    autocomplete="off"
+                                    disabled
+                                ></b-form-input>
+                                <b-input-group-append>
+                                    <b-form-datepicker
+                                        v-model="workshop.start"
+                                        button-variant="primary"
+                                        button-only
+                                        right
+                                        locale="en-US"
+                                        aria-controls="example-input"
+                                        @context="onContextStart"
+                                    ></b-form-datepicker>
+                                </b-input-group-append>
+                            </b-input-group>
                         </div>
                         <div class="col-md-6">
-                            <label>Eind datum</label>
-                            <div class="input-group">
-                                <flat-pickr v-model="workshop.end" :config="flatpickrConfig"
-                                            placeholder="Selecteer datum"></flat-pickr>
-                            </div>
+                            <label for="end">Eind datum</label>
+                            <b-input-group class="mb-3">
+                                <b-form-input
+                                    id="end"
+                                    v-model="workshop.end"
+                                    type="text"
+                                    placeholder="Eind datum"
+                                    autocomplete="off"
+                                    disabled
+                                ></b-form-input>
+                                <b-input-group-append>
+                                    <b-form-datepicker
+                                        v-model="workshop.end"
+                                        button-variant="primary"
+                                        button-only
+                                        right
+                                        locale="en-US"
+                                        aria-controls="start"
+                                        @context="onContextEnd"
+                                    ></b-form-datepicker>
+                                </b-input-group-append>
+                            </b-input-group>
                         </div>
                     </div>
                     <b-row class="py-3">
@@ -63,7 +82,6 @@
                                     <!-- Populating custom file input label with the selected filename (data-toggle="custom-file-input" is initialized in Helpers.coreBootstrapCustomFileInput()) -->
                                     <b-form-file
                                         v-model="image"
-                                        @change="testFunc()"
                                         accept="image/*"
                                         placeholder="Kies of drop een afbeelding hier"
                                         drop-placeholder="Drop afbeelding hier"
@@ -125,12 +143,11 @@ export default {
             categories: [],
             workshop: {
                 title: '',
-                sub_title: '',
                 text: '',
                 agenda_link: '',
                 category_id: 1,
-                start: new Date(),
-                end: new Date(),
+                start: null,
+                end:null,
             },
             image: null,
             editorType: ClassicEditor,
@@ -153,6 +170,40 @@ export default {
         });
     },
     methods: {
+        /**
+         * submit the form
+         */
+        submit() {
+            let config = {
+                header: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            }
+
+            let data = new FormData();
+
+            data.append('image',this.image);
+            data.append('title',this.workshop.title);
+            data.append('category_id',this.workshop.category_id);
+            data.append('text',this.workshop.text);
+            data.append('agenda_link',this.workshop.agenda_link);
+            data.append('start',this.workshop.start);
+            data.append('end',this.workshop.end);
+            let url = '/axios/workshop/post';
+            axios.post(url, data)
+                .then(response => {
+                    if(response.status === 200){
+                        setTimeout(()=>{
+                            window.location = '/backend/workshop/overview';
+                        },1000)
+                    }
+                })
+                .catch(error => {
+                    if (error.response.status == 422) {
+                        this.errors = error.response.data.errors;
+                    }
+                });
+        },
         getCategories() {
             axios.get('/axios/workshop/get-categories')
                 .then(response => {
@@ -162,54 +213,10 @@ export default {
 
                 });
         },
-        postImage(workshop) {
-
-            let data = new FormData();
-
-            let config = {
-                header: {
-                    'Content-Type': 'image/*'
-                }
-            }
-            data.append('workshop_id', workshop.id)
-            data.append('image', this.image);
-            let url = '/axios/workshop/image/upload';
-            axios.post(url, data, config)
-                .then(response => {
-                    if (response.status === 200) {
-                        window.location = '/backend/workshop/overview';
-                    }
-                })
-                .catch(error => {
-                    console.log("couldnt upload image.. i have no clue what happend");
-                });
-        },
-        /**
-         * submit the form
-         */
-        submit() {
-            let url = '/axios/workshop/post';
-            axios.post(url, this.workshop)
-                .then(response => {
-                    if (response.status === 201) {
-                        if (this.image != null) {
-                            this.postImage(response.data)
-                        } else {
-                            window.location = '/backend/workshop/overview';
-                        }
-                    }
-                })
-                .catch(error => {
-                    if (error.response.status == 422) {
-                        this.errors = error.response.data.errors;
-                    }
-                });
-        },
         reset() {
             this.workshop.title = '';
             this.workshop.agenda_link = '';
             this.workshop.text = '';
-            this.workshop.sub_title = '';
             this.workshop.category_id = 1;
             this.workshop.start = '';
             this.workshop.end = '';
@@ -221,8 +228,17 @@ export default {
         openPreviewModal() {
             this.showPreview = true;
         },
-        testFunc() {
-            console.log(this.workshop.image)
+        onContextEnd(ctx) {
+            // The date formatted in the locale, or the `label-no-date-selected` string
+            // this.workshop.end = ctx.selectedFormatted
+            // The following will be an empty string until a valid date is entered
+            this.workshop.end = ctx.selectedYMD
+        },
+        onContextStart(ctx) {
+            // The date formatted in the locale, or the `label-no-date-selected` string
+            // this.workshop.end = ctx.selectedFormatted
+            // The following will be an empty string until a valid date is entered
+            this.workshop.start = ctx.selectedYMD
         }
     }
 }

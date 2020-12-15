@@ -28,6 +28,6 @@ class Category extends Model
      */
     public function Article()
     {
-        return $this->hasMany(Aritcle::class);
+        return $this->hasMany(Article::class);
     }
 }

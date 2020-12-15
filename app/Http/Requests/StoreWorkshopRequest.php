@@ -34,6 +34,7 @@ class StoreWorkshopRequest extends FormRequest
             'category_id' => 'required',
             'start' => 'required',
             'end' => 'required',
+            'image' => 'nullable|mimes:jpg,png,jpeg,gif'
         ];
     }
 

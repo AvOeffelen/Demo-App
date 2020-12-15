@@ -20,6 +20,13 @@ Route::get('workshop/add','DemoController@showAdminWorkshopAdd')->name('admin.ad
 Route::get('workshop','WorkshopController@showWorkshops')->name('workshop');
 Route::get('workshop/{workshop}/show','WorkshopController@show')->name('workshop.show');
 
+
+Route::get('articles','ArticleController@showArticles')->name('articles');
+Route::get('one-on-one','ArticleController@showOneOnOne')->name('oneOnOne');
+Route::get('topical','ArticleController@topical')->name('topical');
+
+Route::get('article/{article}/show','ArticleController@show')->name('article.show');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -73,4 +80,8 @@ Route::group(['prefix' => 'axios/article', 'namespace' => 'Axios'], function() {
     route::get('get-all','ArticleController@getAllArticles')->name('article.get.all');
     route::get('get-categories','ArticleController@getCategories')->name('article.get.category');
     route::delete('{article}/delete','ArticleController@delete')->name('article.delete');
+
+    route::get('get-all-standard-categories','ArticleController@getAllCategories')->name('article.get.all-standard.categories');
+    route::get('get-one-on-one-categories','ArticleController@getOneOnOneCategory')->name('article.get.OneOnOne.categories');
+    route::get('get-topical-categories','ArticleController@getTopicalCategory')->name('article.get.topical.categories');
 });

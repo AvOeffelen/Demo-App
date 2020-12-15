@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Axios;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\FileUploadRequest;
 use App\Http\Requests\StoreWorkshopRequest;
 use App\Http\Requests\UpdateWorkshopRequest;
+use App\Model\Article;
 use App\Model\Workshop;
 use App\Model\WorkshopCategory;
 use Carbon\Carbon;
@@ -28,34 +30,41 @@ class WorkshopController extends Controller
             'workshop_category_id' => $request->get('category_id'),
             'text' => $request->get('text'),
             'agenda_link' => $request->get('agenda_link'),
-            'start' => $request->get('start'),
-            'end' => $request->get('end'),
+            'start' => Carbon::parse($request->get('start')),
+            'end' => Carbon::parse($request->get('end')),
         ]);
 
-        return $workshop;
+        if($request->get('image') != null){
+            $this->uploadImage($request->file('image'), $workshop);
+        }
+
+        return response()->json(['workshop' => $workshop], 200);
     }
+
 
     /**
-     * @param Request $request
-     * @return Workshop
+     * @param $image
+     * @param Workshop $workshop
+     *
+     * @return bool
      */
-    public function uploadImage(Request $request): Workshop
+    public function uploadImage($image, Workshop $workshop): bool
     {
+        try {
 
-        $workshop = Workshop::findOrFail($request->get('workshop_id'));
+            $fileName = Str::random(15) . '.' . $image->getClientOriginalExtension();
 
-        $file = $request->file('image');
+            $image->storePubliclyAs('images', $fileName, 'public');
 
-        $fileName =  Str::random(15).'.'.$file->getClientOriginalExtension();
+            $workshop->image_name = 'storage/images/' . $fileName;
+            $workshop->save();
 
-        $file->storePubliclyAs('images',$fileName,'public');
+            return true;
+        } catch (\Exception $e) {
 
-        $workshop->image_name = 'storage/images/' . $fileName;
-        $workshop->save();
-
-        return $workshop;
+            return false;
+        }
     }
-
     /**
      * @param UpdateWorkshopRequest $request
      *

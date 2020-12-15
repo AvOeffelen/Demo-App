@@ -26,7 +26,6 @@
                                 </select>
                             </b-col>
                         </b-row>
-                        <!--                        TODO:: Build switch here.-->
                         <b-row class="py-3">
                             <b-col cols="12">
                                 <b-row>
@@ -58,7 +57,8 @@
                                                 accept="image/*"
                                                 placeholder="Kies of drop een afbeelding hier"
                                                 drop-placeholder="Drop afbeelding hier"
-                                            />
+                                                v-bind:class="[this.errors.image ? 'decoratedErrorField':'' ]"/>
+                                            <p v-if="this.errors.image" class="text-primary">{{ this.errors['image'][0] }}</p>
                                         </div>
                                     </b-col>
                                     <b-col cols="12"
@@ -133,17 +133,32 @@ export default {
     },
     methods: {
         submit() {
-            axios.post('/axios/article/post', this.article)
+            let config = {
+                header: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            }
+
+            let data = new FormData();
+
+            if(this.uploadImage){
+                data.append('image', this.image)
+            }
+
+            data.append('uploadImage',this.uploadImage);
+            data.append('title',this.article.title);
+            data.append('has_video',this.article.has_video);
+            data.append('category_id',this.article.category_id);
+            data.append('text',this.article.text);
+            data.append('video_link',this.article.video_link);
+
+            axios.post('/axios/article/post', data)
                 .then(response => {
-                    if (response.status === 200) {
-                        console.log("status 200")
-                        if (this.uploadImage === true) {
-                            console.log("article id",response.data.article.id)
-                            this.imageUpload(response.data.article.id);
-                        } else {
-                            window.location = '/backend/article/overview';
-                        }
-                    }
+                   if(response.status === 200){
+                       setTimeout(()=>{
+                           window.location = '/backend/article/overview';
+                       },1000);
+                   }
                 })
                 .catch(error => {
                     if (error.response.status == 422) {
@@ -152,7 +167,6 @@ export default {
                 });
         },
         imageUpload(articleId) {
-            console.log("starting upload.")
             let url = '/axios/article/image/upload';
             let data = new FormData();
 
@@ -161,17 +175,19 @@ export default {
                     'Content-Type': 'image/*'
                 }
             }
-            data.append('article_id', articleId)
+            // data.append('article_id', articleId)
             data.append('image', this.image);
 
-            axios.post(url, data, config)
+            axios.post(url, {data}, config)
                 .then(response => {
                     if (response.status === 200) {
                         window.location = '/backend/article/overview';
                     }
                 })
                 .catch(error => {
-                    console.log("couldnt upload image.. i have no clue what happend");
+                    if (error.response.status == 422) {
+                        this.errors = error.response.data.errors;
+                    }
                 });
         },
         reset() {
@@ -190,6 +206,10 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+
+.decoratedErrorField {
+    border: 2px solid #fc0c1d;
+}
 
 </style>
