@@ -82,10 +82,17 @@ class ArticleController extends Controller
     /**
      * @param UpdateArticleRequest $request
      *
-     * @return Article
+     * @return JsonResponse
      */
-    public function update(UpdateArticleRequest $request): Article
+    public function update(UpdateArticleRequest $request): JsonResponse
     {
+        $hasVideo = false;
+        $uploadingImage = $request->get('uploadImage');
+        $changedImage = $request->get('changed_image');
+        if($uploadingImage === "false"){
+            $hasVideo = true;
+        }
+
         $article = Article::updateOrCreate([
             'id' => $request->get('id'),
         ], [
@@ -93,11 +100,16 @@ class ArticleController extends Controller
             'category_id' => $request->get('category_id'),
             'image_link' => $request->get('image_link'),
             'video_link' => $request->get('video_link'),
+            'has_video' => $hasVideo,
+            'text' => $request->get('text'),
         ]);
 
-        return $article;
-    }
+        if($uploadingImage === "true" && $changedImage === "true"){
+            $this->uploadImage($request->file('image_link'), $article);
+        }
 
+        return response()->json(['message' => 'success'],200);
+    }
 
     /**
      * @param Article $article
@@ -139,5 +151,10 @@ class ArticleController extends Controller
         $content = Category::with('Article')->where('name','=','Actueel')->get();
 
         return $content;
+    }
+
+    public function showArticleUpdate(Article $article)
+    {
+        return response()->view('article.backend.crud.update',['article' => $article]);
     }
 }

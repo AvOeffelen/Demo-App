@@ -41,6 +41,7 @@ Route::group(['prefix' => 'backend/','middleware'=> ['web']], function () {
 
     Route::get('article/overview','ArticleController@showOverview')->name('article.show.overview');
     Route::get('article/create','ArticleController@showCreate')->name('article.show.create');
+    Route::get('article/overview/{article}/update','ArticleController@showArticleUpdate')->name('article.update.show');
 });
 
 
@@ -48,7 +49,7 @@ Route::group(['prefix' => 'backend/','middleware'=> ['web']], function () {
 Route::group(['prefix' => 'axios/workshop', 'namespace' => 'Axios','middleware'=> ['web']], function () {
     route::post('/post','WorkshopController@store')->name('workshop.store');
     route::post('/image/upload','WorkshopController@uploadImage')->name('workshop.store.image');
-    route::put('/put','WorkshopController@update')->name('workshop.update');
+    route::post('/put','WorkshopController@update')->name('workshop.update');
     route::delete('{workshop}/delete','WorkshopController@delete')->name('workshop.delete');
 
 
@@ -73,7 +74,7 @@ Route::group(['prefix' => 'axios/me', 'namespace' => 'Axios'], function () {
 
 Route::group(['prefix' => 'axios/article', 'namespace' => 'Axios'], function() {
     Route::post('/post','ArticleController@store')->name('article.store');
-    Route::put('/put','ArticleController@store')->name('article.put');
+    Route::post('/put','ArticleController@update')->name('article.put');
 
     route::post('/image/upload','ArticleController@uploadImage')->name('article.store.image');
 

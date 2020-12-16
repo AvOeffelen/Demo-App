@@ -34,18 +34,52 @@
                         </div>
                         <div class="row py-3">
                             <div class="col-md-6">
-                                <label>Start datum</label>
-                                <div class="input-group">
-                                    <flat-pickr v-model="workshop.start" :config="flatpickrConfig"
-                                                placeholder="Selecteer datum"></flat-pickr>
-                                </div>
+                                <label for="start">Start datum</label>
+                                <b-input-group class="mb-3">
+                                    <b-form-input
+                                        id="start"
+                                        v-model="workshop.start"
+                                        type="text"
+                                        placeholder="Start datum"
+                                        autocomplete="off"
+                                        disabled
+                                    ></b-form-input>
+                                    <b-input-group-append>
+                                        <b-form-datepicker
+                                            v-model="workshop.start"
+                                            button-variant="primary"
+                                            button-only
+                                            right
+                                            locale="en-US"
+                                            aria-controls="example-input"
+                                            @context="onContextStart"
+                                        ></b-form-datepicker>
+                                    </b-input-group-append>
+                                </b-input-group>
                             </div>
                             <div class="col-md-6">
-                                <label>Eind datum</label>
-                                <div class="input-group">
-                                    <flat-pickr v-model="workshop.end" :config="flatpickrConfig"
-                                                placeholder="Selecteer datum"></flat-pickr>
-                                </div>
+                                <label for="end">Eind datum</label>
+                                <b-input-group class="mb-3">
+                                    <b-form-input
+                                        id="end"
+                                        v-model="workshop.end"
+                                        type="text"
+                                        placeholder="Eind datum"
+                                        autocomplete="off"
+                                        disabled
+                                    ></b-form-input>
+                                    <b-input-group-append>
+                                        <b-form-datepicker
+                                            v-model="workshop.end"
+                                            button-variant="primary"
+                                            button-only
+                                            right
+                                            locale="en-US"
+                                            aria-controls="start"
+                                            @context="onContextEnd"
+                                        ></b-form-datepicker>
+                                    </b-input-group-append>
+                                </b-input-group>
                             </div>
                         </div>
                         <b-row class="py-3">
@@ -56,7 +90,6 @@
                                         <!-- Populating custom file input label with the selected filename (data-toggle="custom-file-input" is initialized in Helpers.coreBootstrapCustomFileInput()) -->
                                         <b-form-file
                                             v-model="image"
-                                            @change="testFunc()"
                                             accept="image/*"
                                             placeholder="Kies of drop een afbeelding hier"
                                             drop-placeholder="Drop afbeelding hier"
@@ -107,7 +140,6 @@
 
 <script>
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import {Dutch} from 'flatpickr/dist/l10n/nl.js';
 
 export default {
     name: "WorkshopUpdate",
@@ -118,14 +150,6 @@ export default {
         return {
             editorType: ClassicEditor,
             showPreview: false,
-            flatpickrConfig: {
-                wrap: true, // set wrap to true only when using 'input-group'
-                altFormat: 'd-m-Y',
-                altInput: true,
-                dateFormat: 'd-m-Y',
-                defaultDate: "today",
-                locale: Dutch,
-            },
             errors: false,
             image: null,
             categories:[]
@@ -147,39 +171,35 @@ export default {
 
                 });
         },
-        postImage(workshop){
-
-            let data = new FormData();
-
-            let config = {
-                header : {
-                    'Content-Type' : 'image/*'
-                }
-            }
-            data.append('workshop_id',workshop.id)
-            data.append('image',this.image);
-            let url = '/axios/workshop/image/upload';
-            axios.post(url, data,config)
-                .then(response => {
-                    if (response.status === 200) {
-                        window.location = '/backend/workshop/overview';
-                    }
-                })
-                .catch(error => {
-                    console.log("couldnt upload image.. i have no clue what happend");
-                });
-        },
         /**
          * submit the form
          */
         submit() {
-            let url = '/axios/workshop/put';
-            axios.put(url, this.workshop)
+            this.errors = [];
+            let data = new FormData();
+
+            if(this.image != null){
+                data.append('image_link', this.image)
+                data.append('changed_image', "true")
+            }else if(this.workshop.image_name !== null){
+                data.append('image_name', this.workshop.image_name)
+            }
+
+            data.append('uploadImage', this.uploadImage);
+            data.append('id', this.workshop.id);
+            data.append('title', this.workshop.title);
+            data.append('start', this.workshop.start);
+            data.append('end', this.workshop.end);
+            data.append('agenda_link', this.workshop.agenda_link);
+            data.append('workshop_category_id', this.workshop.workshop_category_id);
+            data.append('text', this.workshop.text);
+
+            axios.post('/axios/workshop/put', data)
                 .then(response => {
-                    if( this.image != null){
-                        this.postImage(response.data)
-                    }else {
-                        window.location = '/backend/workshop/overview';
+                    if (response.status === 200) {
+                        setTimeout(() => {
+                            window.location = '/backend/workshop/overview';
+                        }, 1000);
                     }
                 })
                 .catch(error => {
@@ -188,20 +208,24 @@ export default {
                     }
                 });
         },
-        reset() {
-            this.workshop.title = '';
-            this.workshop.sub_title = '';
-            this.workshop.workshop_category_id = 1;
-            this.workshop.start = '';
-            this.workshop.end = '';
-            this.workshop.image = '';
-        },
         cancel() {
             window.location = '/backend/workshop/overview';
         },
         openPreviewModal() {
             this.showPreview = true;
         },
+        onContextEnd(ctx) {
+            // The date formatted in the locale, or the `label-no-date-selected` string
+            // this.workshop.end = ctx.selectedFormatted
+            // The following will be an empty string until a valid date is entered
+            this.workshop.end = ctx.selectedYMD
+        },
+        onContextStart(ctx) {
+            // The date formatted in the locale, or the `label-no-date-selected` string
+            // this.workshop.end = ctx.selectedFormatted
+            // The following will be an empty string until a valid date is entered
+            this.workshop.start = ctx.selectedYMD
+        }
     }
 }
 </script>

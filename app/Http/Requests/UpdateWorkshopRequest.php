@@ -34,6 +34,7 @@ class UpdateWorkshopRequest extends FormRequest
             'workshop_category_id' => 'required',
             'start' => 'required',
             'end' => 'required',
+            'image' => 'sometimes|required|mimes:jpg,png,jpeg,gif'
         ];
     }
 

@@ -58,7 +58,9 @@
                                                 placeholder="Kies of drop een afbeelding hier"
                                                 drop-placeholder="Drop afbeelding hier"
                                                 v-bind:class="[this.errors.image ? 'decoratedErrorField':'' ]"/>
-                                            <p v-if="this.errors.image" class="text-primary">{{ this.errors['image'][0] }}</p>
+                                            <p v-if="this.errors.image" class="text-primary">{{
+                                                    this.errors['image'][0]
+                                                }}</p>
                                         </div>
                                     </b-col>
                                     <b-col cols="12"
@@ -98,18 +100,20 @@
                 </div>
             </b-col>
         </b-row>
-        <preview-modal :article="this.article" v-if="showPreview == true"></preview-modal>
+        <article-preview :article="this.article" v-if="showPreview == true"></article-preview>
     </div>
 </template>
 
 <script>
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import {FormFilePlugin} from 'bootstrap-vue';
+import ArticlePreview from "./ArticlePreview";
 
 Vue.use(FormFilePlugin)
 
 export default {
     name: "ArticleCreate",
+    components: {ArticlePreview},
     data() {
         return {
             article: {
@@ -130,35 +134,35 @@ export default {
     },
     mounted() {
         this.getCategories();
+
+        this.$root.$on('closeModal', () => {
+            this.showPreviewModal = false;
+            this.article = null;
+            console.log("tst");
+        });
     },
     methods: {
         submit() {
-            let config = {
-                header: {
-                    'Content-Type': 'multipart/form-data'
-                }
-            }
-
             let data = new FormData();
 
-            if(this.uploadImage){
+            if (this.uploadImage) {
                 data.append('image', this.image)
             }
 
-            data.append('uploadImage',this.uploadImage);
-            data.append('title',this.article.title);
-            data.append('has_video',this.article.has_video);
-            data.append('category_id',this.article.category_id);
-            data.append('text',this.article.text);
-            data.append('video_link',this.article.video_link);
+            data.append('uploadImage', this.uploadImage);
+            data.append('title', this.article.title);
+            data.append('has_video', this.article.has_video);
+            data.append('category_id', this.article.category_id);
+            data.append('text', this.article.text);
+            data.append('video_link', this.article.video_link);
 
             axios.post('/axios/article/post', data)
                 .then(response => {
-                   if(response.status === 200){
-                       setTimeout(()=>{
-                           window.location = '/backend/article/overview';
-                       },1000);
-                   }
+                    if (response.status === 200) {
+                        setTimeout(() => {
+                            window.location = '/backend/article/overview';
+                        }, 1000);
+                    }
                 })
                 .catch(error => {
                     if (error.response.status == 422) {

@@ -28,9 +28,10 @@ class UpdateArticleRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required',
-            'text' => 'required',
+            'title' => 'required|min:3',
+            'text' => 'required|min:10',
             'category_id' => 'required',
+            'image' => 'sometimes|required|mimes:jpg,png,jpeg,gif'
         ];
     }
 

@@ -72,19 +72,24 @@ class WorkshopController extends Controller
      */
     public function update(UpdateWorkshopRequest $request): Workshop
     {
+        $changedImage = $request->get('changed_image');
+
         $workshop = Workshop::updateOrCreate([
             'id' => $request->get('id'),
         ],
             [
                 'title' => $request->get('title'),
                 'workshop_category_id' => $request->get('workshop_category_id'),
-                'description' => $request->get('description'),
                 'agenda_link' => $request->get('agenda_link'),
                 'start' => $request->get('start'),
                 'end' => $request->get('end'),
                 'image_location' => $request->get('image_location'),
                 'image_name' => $request->get('image_name'),
             ]);
+
+        if($changedImage === "true"){
+            $this->uploadImage($request->file('image_link'), $workshop);
+        }
 
         return $workshop;
     }
