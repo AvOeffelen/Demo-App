@@ -59,8 +59,8 @@
                         </a>
                     </li>
                     <li class="nav-main-item">
-                        <a class="nav-main-link{{ request()->is('workshop/add') ? ' active' : '' }}"
-                           href="{{url('workshop/add')}}">
+                        <a class="nav-main-link{{ request()->is('backend/workshop/add') ? ' active' : '' }}"
+                           href="{{url('backend/workshop/add')}}">
                             <i class="nav-main-link-icon fa fa-plus-circle"></i>
                             <span class="nav-main-link-name">toevoegen</span>
                             {{--                    <span class="nav-main-link-badge badge badge-pill badge-success">5</span>--}}

@@ -75,8 +75,15 @@
                 </div>
                 <div class="col-md-2"></div>
             </div>
+            <b-row v-if="article.button_link != null">
+                <b-col align-self="center">
+                    <div class="text-center">
+                        <b-button @click="buttonFunction(article.button_link)" class="btn-primary btn" target="_blank">{{article.button_text}}</b-button>
+                    </div>
+                </b-col>
+            </b-row>
             <template #modal-footer>
-                <b-button variant="alt-danger" class="btn btn-sm" @click="closeModal()">sluiten</b-button>
+                <b-button variant="alt-danger" class="btn btn-sm" @click="closeModal">sluiten</b-button>
             </template>
         </b-modal>
     </div>
@@ -99,11 +106,17 @@ export default {
         closeModal() {
             this.$root.$emit('closeModal');
             this.$emit('close');
+        },
+        buttonFunction(link){
+            window.open("https://"+link);
         }
     }
 }
 </script>
 
 <style scoped>
-
+/deep/ .preview-modal-header {
+    background: #fc0c1d;
+    color: white;
+}
 </style>

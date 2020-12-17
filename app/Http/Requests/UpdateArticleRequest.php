@@ -31,6 +31,9 @@ class UpdateArticleRequest extends FormRequest
             'title' => 'required|min:3',
             'text' => 'required|min:10',
             'category_id' => 'required',
+            'video_link' => 'nullable|min:3',
+            'button_text' => 'nullable|min:3',
+            'button_link' => 'nullable|min:3',
             'image' => 'sometimes|required|mimes:jpg,png,jpeg,gif'
         ];
     }

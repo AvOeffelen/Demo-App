@@ -38,10 +38,19 @@
             </div>
             <div class="col-md-2"></div>
         </div>
+        <b-row v-if="article.button_link != null">
+            <b-col align-self="center">
+                <div class="text-center">
+                    <b-button @click="buttonFunction(article.button_link)" class="btn-primary btn" target="_blank">{{article.button_text}}</b-button>
+                </div>
+            </b-col>
+        </b-row>
     </div>
 </template>
 
 <script>
+import { LinkPlugin } from 'bootstrap-vue'
+Vue.use(LinkPlugin)
 export default {
     name: "ShowArticle",
     props: [
@@ -56,6 +65,9 @@ export default {
     created() {
     },
     methods: {
+        buttonFunction(link){
+            window.open("https://"+link);
+        }
     },
 }
 </script>

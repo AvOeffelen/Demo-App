@@ -85,6 +85,24 @@
                                 <p v-if="this.errors.text" class="text-primary">{{ this.errors['text'][0] }}</p>
                             </div>
                         </div>
+                        <div class="row py-3">
+                            <div class="col-md-6">
+                                <label v-bind:class="[this.errors.button_link ? 'text-primary':'' ]">
+                                    Button link
+                                </label>
+                                <b-input v-model="article.button_link" type="text" class="form-control" name="title"
+                                         v-bind:class="[this.errors.button_link ? 'decoratedErrorField':'' ]"/>
+                                <p v-if="this.errors.button_link" class="text-primary">{{ this.errors['button_link'][0] }}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <label v-bind:class="[this.errors.button_text ? 'text-primary':'' ]">
+                                    Button text
+                                </label>
+                                <b-input v-model="article.button_text" type="text" class="form-control" name="title"
+                                         v-bind:class="[this.errors.button_text ? 'decoratedErrorField':'' ]"/>
+                                <p v-if="this.errors.button_text" class="text-primary">{{ this.errors['button_text'][0] }}</p>
+                            </div>
+                        </div>
                         <b-row class="py-3">
                             <b-col>
                                 <div class="text-right">
@@ -123,6 +141,7 @@ export default {
                 text: '',
                 video_link: '',
                 image_link: '',
+                button_link: ''
             },
             image: null,
             categories: [],
@@ -136,9 +155,8 @@ export default {
         this.getCategories();
 
         this.$root.$on('closeModal', () => {
-            this.showPreviewModal = false;
-            this.article = null;
-            console.log("tst");
+            this.closeModal();
+            this.showPreview = false;
         });
     },
     methods: {
@@ -155,6 +173,8 @@ export default {
             data.append('category_id', this.article.category_id);
             data.append('text', this.article.text);
             data.append('video_link', this.article.video_link);
+            data.append('button_link', this.article.button_link);
+            data.append('button_text', this.article.button_text);
 
             axios.post('/axios/article/post', data)
                 .then(response => {
@@ -199,12 +219,16 @@ export default {
         cancel() {
         },
         openPreviewModal() {
+            this.showPreview = true;
         },
         getCategories() {
             axios.get('/axios/article/get-categories').then(response => {
                 this.categories = response.data
             });
-        }
+        },
+        closeModal() {
+            this.$emit('close');
+        },
     },
 
 }

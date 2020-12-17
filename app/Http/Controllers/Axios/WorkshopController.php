@@ -13,6 +13,7 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use phpDocumentor\Reflection\Types\Boolean;
 
@@ -101,7 +102,9 @@ class WorkshopController extends Controller
      */
     public function delete(Workshop $workshop)
     {
+        $articleFile = str_replace("storage/",'public/',$workshop->image_name);
 
+        Storage::delete($articleFile);
         try {
             $workshop->delete();
             return response()->json(['message' => 'Successfully deleted'], 200);

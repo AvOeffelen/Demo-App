@@ -12,6 +12,7 @@ use App\Model\Category;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class ArticleController extends Controller
@@ -118,6 +119,9 @@ class ArticleController extends Controller
      */
     public function delete(Article $article)
     {
+        $articleFile = str_replace("storage/",'public/',$article->image_link);
+
+        Storage::delete($articleFile);
 
         try {
             $article->delete();
@@ -127,9 +131,11 @@ class ArticleController extends Controller
         }
     }
 
-    public function getAllArticles(): string
+    public function getAllArticles()
     {
-        return Article::with('Category')->get()->toJson();
+        $articles = Article::with('Category')->get();
+
+        return $articles;
     }
 
     public function getAllCategories()
