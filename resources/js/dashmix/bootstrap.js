@@ -1,10 +1,3 @@
-/*
- *  Document   : bootstrap.js
- *  Author     : pixelcave
- *  Description: Import global dependencies
- *
- */
-
 // Import all vital core JS files..
 import jQuery from 'jquery';
 import SimpleBar from 'simplebar';
@@ -18,3 +11,7 @@ import 'jquery-scroll-lock';
 window.$ = window.jQuery  = jQuery;
 window.SimpleBar          = SimpleBar;
 window.Cookies            = Cookies;
+
+window.axios = require('axios');
+
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';

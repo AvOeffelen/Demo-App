@@ -27,11 +27,11 @@
                                         <input type="password" class="form-control form-control-lg form-control-alt" id="login-password" name="password" placeholder="Password">
                                     </div>
                                 </div>
-                            </form>
-                            <div class="form-group">
                                 <button class="btn btn-block btn-hero-lg btn-hero-primary">
                                     <i class="fa fa-fw fa-sign-in-alt mr-1"></i> Log in
                                 </button>
+                            </form>
+                            <div class="form-group">
                                 <p class="mt-3 mb-0 d-lg-flex justify-content-lg-between">
                                     <a class="btn btn-sm btn-light d-block d-lg-inline-block mb-1" href="#">
                                         <i class="fa fa-exclamation-triangle text-muted mr-1"></i> Forgot password

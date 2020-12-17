@@ -1,17 +1,41 @@
-/*
- *  Document   : app.js
- *  Author     : pixelcave
- *  Description: Main entry point
- *
- */
-
 // Import global dependencies
 import './bootstrap';
+window.Vue = require('vue');
 
+
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import CKEditor from '@ckeditor/ckeditor5-vue';
+import VueFlatPickr from 'vue-flatpickr-component';
+import VueRouter from 'vue-router'
+
+
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+import 'flatpickr/dist/flatpickr.css';
+
+// Install BootstrapVue
+Vue.use(VueFlatPickr);
+Vue.use(BootstrapVue);
+Vue.use(VueRouter);
+Vue.use( CKEditor );
 // Import required modules
 import Tools from './modules/tools';
 import Helpers from './modules/helpers';
 import Template from './modules/template';
+import WorkshopUpdate from "../components/Workshop/Backend/WorkshopUpdate";
+
+Vue.component('WorkshopUpdate',require('../components/Workshop/Backend/WorkshopUpdate').default);
+Vue.component('WorkshopCreate',require('../components/Workshop/Backend/WorkshopCreate').default);
+Vue.component('WorkshopOverview',require('../components/Workshop/Backend/WorkshopOverview').default);
+Vue.component('WorkshopUpdate',require('../components/Workshop/Backend/WorkshopUpdate').default);
+Vue.component('PreviewModal',require('../components/Workshop/Backend/PreviewModal').default);
+
+// //ExampleComponent -- example-component
+const files = require.context('../', true, /\.vue$/i)
+files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+
+const app = new Vue({
+    el: '#main-container',
+});
 
 // App extends Template
 export default class App extends Template {

@@ -3,7 +3,7 @@
 @section('content')
     <!-- Page Content -->
     <div class="content content-full">
-        @include('workshop.workshop.template.index')
+        <workshop-page></workshop-page>
     </div>
     <!-- END Page Content -->
 @endsection

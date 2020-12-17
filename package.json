@@ -28,5 +28,15 @@
         "simplebar": "^5.1.0",
         "vue": "^2.5.17",
         "vue-template-compiler": "^2.6.10"
+    },
+    "dependencies": {
+        "@ckeditor/ckeditor5-build-classic": "^23.1.0",
+        "@ckeditor/ckeditor5-vue": "^1.0.3",
+        "@fortawesome/vue-fontawesome": "^2.0.0",
+        "bootstrap-vue": "^2.15.0",
+        "vue-flatpickr-component": "^8.1.6",
+        "vue-multiselect": "^2.1.6",
+        "vue-router": "^3.4.9",
+        "vue-toastification": "^1.7.6"
     }
 }

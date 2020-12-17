@@ -18,12 +18,12 @@
                 <!-- Toggle Sidebar Style -->
                 <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
                 <!-- Class Toggle, functionality initialized in Helpers.coreToggleClass() -->
-{{--                <a class="js-class-toggle text-white-75" data-target="#sidebar-style-toggler"--}}
-{{--                   data-class="fa-toggle-off fa-toggle-on" data-toggle="layout" data-action="sidebar_style_toggle"--}}
-{{--                   href="javascript:void(0)">--}}
-{{--                    <i class="fa fa-toggle-off" id="sidebar-style-toggler"></i>--}}
-{{--                </a>--}}
-                <!-- END Toggle Sidebar Style -->
+            {{--                <a class="js-class-toggle text-white-75" data-target="#sidebar-style-toggler"--}}
+            {{--                   data-class="fa-toggle-off fa-toggle-on" data-toggle="layout" data-action="sidebar_style_toggle"--}}
+            {{--                   href="javascript:void(0)">--}}
+            {{--                    <i class="fa fa-toggle-off" id="sidebar-style-toggler"></i>--}}
+            {{--                </a>--}}
+            <!-- END Toggle Sidebar Style -->
 
                 <!-- Close Sidebar, Visible only on mobile screens -->
                 <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
@@ -42,60 +42,58 @@
     <div class="content-side content-side-full">
         <ul class="nav-main">
             <li class="nav-main-item">
-                <a class="nav-main-link{{ request()->is('dashboard') ? ' active' : '' }}" href="/dashboard">
-                    <i class="nav-main-link-icon fa fa-tachometer-alt"></i>
-                    <span class="nav-main-link-name">Dashboard</span>
-                    {{--                    <span class="nav-main-link-badge badge badge-pill badge-success">5</span>--}}
-                </a>
-            </li>
-            <li class="nav-main-item">
-                <a class="nav-main-link{{ request()->is('workshop/add') ? ' active' : '' }}" href="{{url('workshop/add')}}">
-                    <i class="nav-main-link-icon fa fa-plus-circle"></i>
-                    <span class="nav-main-link-name">Workshops toevoegen</span>
-                    {{--                    <span class="nav-main-link-badge badge badge-pill badge-success">5</span>--}}
-                </a>
-            </li>
-            <li class="nav-main-item">
-                <a class="nav-main-link{{ request()->is('workshop') ? ' active' : '' }}" href="{{route('workshop')}}">
+                <a class="nav-main-link nav-main-link-submenu"
+                   data-toggle="submenu" aria-haspopup="true"
+                   aria-expanded="false"
+                   href="#">
                     <i class="nav-main-link-icon fa fa-chalkboard-teacher"></i>
-                    <span class="nav-main-link-name">Workshops</span>
-                    {{--                    <span class="nav-main-link-badge badge badge-pill badge-success">5</span>--}}
+                    <span class="nav-main-link-name">Workshop</span>
                 </a>
+                <ul class="nav-main-submenu">
+                    <li class="nav-main-item">
+                        <a class="nav-main-link{{ request()->is('backend/workshop/overview') ? ' active' : '' }}"
+                           href="{{route('workshop.overview')}}">
+                            <i class="nav-main-link-icon fa fa-clipboard"></i>
+                            <span class="nav-main-link-name">Overzicht</span>
+                            {{--                    <span class="nav-main-link-badge badge badge-pill badge-success">5</span>--}}
+                        </a>
+                    </li>
+                    <li class="nav-main-item">
+                        <a class="nav-main-link{{ request()->is('backend/workshop/add') ? ' active' : '' }}"
+                           href="{{url('backend/workshop/add')}}">
+                            <i class="nav-main-link-icon fa fa-plus-circle"></i>
+                            <span class="nav-main-link-name">toevoegen</span>
+                            {{--                    <span class="nav-main-link-badge badge badge-pill badge-success">5</span>--}}
+                        </a>
+                    </li>
+                </ul>
             </li>
             <li class="nav-main-item">
-                <a class="nav-main-link{{ request()->is('me') ? ' active' : '' }}" href="{{route('me')}}">
-                    <i class="nav-main-link-icon fa fa-user"></i>
-                    <span class="nav-main-link-name">Mijn profiel</span>
-                    {{--                    <span class="nav-main-link-badge badge badge-pill badge-success">5</span>--}}
+                <a class="nav-main-link nav-main-link-submenu"
+                   data-toggle="submenu" aria-haspopup="true"
+                   aria-expanded="false"
+                   href="#">
+                    <i class="nav-main-link-icon fa fa-chalkboard-teacher"></i>
+                    <span class="nav-main-link-name">Artikelen</span>
                 </a>
-            </li>
-            <li class="nav-main-item">
-                <a class="nav-main-link{{ request()->is('workshop/show') ? ' active' : '' }}" href="{{route('workshop.show')}}">
-                    <i class="nav-main-link-icon fa fa-search"></i>
-                    <span class="nav-main-link-name">Workshop item</span>
-                    {{--                    <span class="nav-main-link-badge badge badge-pill badge-success">5</span>--}}
-                </a>
-            </li>
-            <li class="nav-main-item">
-                <a class="nav-main-link" href="https://www.johan.nl" target="_blank">
-                    <i class="nav-main-link-icon fa fa-clipboard-list"></i>
-                    <span class="nav-main-link-name">Vragenlijst invullen</span>
-                    {{--                    <span class="nav-main-link-badge badge badge-pill badge-success">5</span>--}}
-                </a>
-            </li>
-            <li class="nav-main-item">
-                <a class="nav-main-link{{ request()->is('login') ? ' active' : '' }}" href="{{route('login')}}" target="_blank">
-                    <i class="nav-main-link-icon fa fa-sign-in-alt"></i>
-                    <span class="nav-main-link-name">Login</span>
-                    {{--                    <span class="nav-main-link-badge badge badge-pill badge-success">5</span>--}}
-                </a>
-            </li>
-            <li class="nav-main-item">
-                <a class="nav-main-link{{ request()->is('register') ? ' active' : '' }}" href="{{route('register')}}" target="_blank">
-                    <i class="nav-main-link-icon fa fa-user-plus"></i>
-                    <span class="nav-main-link-name">Registreren</span>
-                    {{--                    <span class="nav-main-link-badge badge badge-pill badge-success">5</span>--}}
-                </a>
+                <ul class="nav-main-submenu">
+                    <li class="nav-main-item">
+                        <a class="nav-main-link{{ request()->is('backend/article/overview') ? ' active' : '' }}"
+                           href="{{route('article.show.overview')}}">
+                            <i class="nav-main-link-icon fa fa-clipboard"></i>
+                            <span class="nav-main-link-name">Overzicht</span>
+                            {{--                    <span class="nav-main-link-badge badge badge-pill badge-success">5</span>--}}
+                        </a>
+                    </li>
+                    <li class="nav-main-item">
+                        <a class="nav-main-link{{ request()->is('backend/article.create') ? ' active' : '' }}"
+                           href="{{route('article.show.create')}}">
+                            <i class="nav-main-link-icon fa fa-plus-circle"></i>
+                            <span class="nav-main-link-name">toevoegen</span>
+                            {{--                    <span class="nav-main-link-badge badge badge-pill badge-success">5</span>--}}
+                        </a>
+                    </li>
+                </ul>
             </li>
             <li class="nav-main-item">
                 <a class="nav-main-link{{ request()->is('faq') ? ' active' : '' }}" href="{{route('faq')}}">

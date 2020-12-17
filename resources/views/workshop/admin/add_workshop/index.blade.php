@@ -10,7 +10,7 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">KLANTSAMENVITAAL</li>
                         <li class="breadcrumb-item" aria-current="page">Workshop</li>
-                        <li class="breadcrumb-item active" aria-current="page">Workshop toevoegen</li>
+                        <li class="breadcrumb-item active" aria-current="page">Toevoegen</li>
                     </ol>
                 </nav>
             </div>
@@ -20,17 +20,7 @@
 
     <!-- Page Content -->
     <div class="content content-full">
-        @include('workshop.admin.add_workshop.template.index')
+        <workshop-create></workshop-create>
     </div>
     <!-- END Page Content -->
-@endsection
-@section('js_after')
-
-    <script src="{{ mix('/js/plugins/ckeditor/ckeditor.js') }}"></script>
-    <script src="{{ mix('/js/plugins/flatpickr/flatpickr.js') }}"></script>
-    <script>
-        import 'flatpickr/dist/flatpickr.css';
-    </script>
-
-    <script>jQuery(function(){ Dashmix.helpers(['ckeditor','flatpickr']); });</script>
 @endsection
