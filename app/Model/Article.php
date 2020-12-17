@@ -20,6 +20,8 @@ class Article extends Model
         'text',
         'video_link',
         'image_link',
+        'button_text',
+        'button_link',
         'updated_at',
         'created_at'
 

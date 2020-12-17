@@ -12,6 +12,7 @@ use App\Model\Category;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class ArticleController extends Controller
@@ -82,10 +83,17 @@ class ArticleController extends Controller
     /**
      * @param UpdateArticleRequest $request
      *
-     * @return Article
+     * @return JsonResponse
      */
-    public function update(UpdateArticleRequest $request): Article
+    public function update(UpdateArticleRequest $request): JsonResponse
     {
+        $hasVideo = false;
+        $uploadingImage = $request->get('uploadImage');
+        $changedImage = $request->get('changed_image');
+        if($uploadingImage === "false"){
+            $hasVideo = true;
+        }
+
         $article = Article::updateOrCreate([
             'id' => $request->get('id'),
         ], [
@@ -93,11 +101,16 @@ class ArticleController extends Controller
             'category_id' => $request->get('category_id'),
             'image_link' => $request->get('image_link'),
             'video_link' => $request->get('video_link'),
+            'has_video' => $hasVideo,
+            'text' => $request->get('text'),
         ]);
 
-        return $article;
-    }
+        if($uploadingImage === "true" && $changedImage === "true"){
+            $this->uploadImage($request->file('image_link'), $article);
+        }
 
+        return response()->json(['message' => 'success'],200);
+    }
 
     /**
      * @param Article $article
@@ -106,6 +119,9 @@ class ArticleController extends Controller
      */
     public function delete(Article $article)
     {
+        $articleFile = str_replace("storage/",'public/',$article->image_link);
+
+        Storage::delete($articleFile);
 
         try {
             $article->delete();
@@ -115,9 +131,11 @@ class ArticleController extends Controller
         }
     }
 
-    public function getAllArticles(): string
+    public function getAllArticles()
     {
-        return Article::with('Category')->get()->toJson();
+        $articles = Article::with('Category')->get();
+
+        return $articles;
     }
 
     public function getAllCategories()
@@ -139,5 +157,10 @@ class ArticleController extends Controller
         $content = Category::with('Article')->where('name','=','Actueel')->get();
 
         return $content;
+    }
+
+    public function showArticleUpdate(Article $article)
+    {
+        return response()->view('article.backend.crud.update',['article' => $article]);
     }
 }

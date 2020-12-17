@@ -26,6 +26,6 @@ class HomeController extends Controller
             return response()->view('workshop.admin.overview.index');
         }
 
-        return response()->view('workshop.overview.index');
+        return response()->view('dashboard.frontend.index');
     }
 }

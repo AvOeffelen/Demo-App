@@ -19,7 +19,7 @@
                     <template v-slot:cell(actions)="row" class="d-sm-none d-none"
                               :style="{ width: fields.fields === 'actions' ? '25px' : '180px' }">
                         <a v-bind:href="'/backend/workshop/overview/'+ row.item.id +'/update'" class="btn btn-primary"
-                           variant="primary" @click="updateWorkshop(row.item)"><i class="fa fa-fw fa-pencil-alt"></i></a>
+                           variant="primary"><i class="fa fa-fw fa-pencil-alt"></i></a>
                         <b-button  variant="primary" @click="openPreviewModal(row.item)"><i class="fa fa-search"></i>
                         </b-button>
                         <b-button variant="primary" @click="openConfirmationModal(row.item)"><i class="fa fa-trash"></i>

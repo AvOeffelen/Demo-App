@@ -57,8 +57,7 @@
             <div>
                 @if(!auth()->user())
                     <a class="btn btn-dual" href="{{url('login')}}">
-                        <i class="fa fa-fw fa-lock d-sm-none"></i>
-                        <span class="d-none d-sm-inline-block">Log in</span>
+                        <span class="d-sm-inline-block d-sm-none">Log in</span>
                     </a>
                 @else
                     <div class="dropdown d-inline-block">

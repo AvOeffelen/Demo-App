@@ -26,6 +26,8 @@ class CreateArticleTable extends Migration
             $table->text('text');
             $table->text('video_link')->nullable();
             $table->text('image_link')->nullable();
+            $table->text('button_link')->nullable();
+            $table->text('button_text')->nullable();
             $table->timestamps();
         });
     }

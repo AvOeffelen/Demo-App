@@ -31,4 +31,9 @@ class DemoController extends Controller
     {
         return view('faq.index');
     }
+
+    public function testboard()
+    {
+        return view('dashboard.frontend.index');
+    }
 }

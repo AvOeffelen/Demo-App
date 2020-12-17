@@ -58,7 +58,9 @@
                                                 placeholder="Kies of drop een afbeelding hier"
                                                 drop-placeholder="Drop afbeelding hier"
                                                 v-bind:class="[this.errors.image ? 'decoratedErrorField':'' ]"/>
-                                            <p v-if="this.errors.image" class="text-primary">{{ this.errors['image'][0] }}</p>
+                                            <p v-if="this.errors.image" class="text-primary">{{
+                                                    this.errors['image'][0]
+                                                }}</p>
                                         </div>
                                     </b-col>
                                     <b-col cols="12"
@@ -83,6 +85,24 @@
                                 <p v-if="this.errors.text" class="text-primary">{{ this.errors['text'][0] }}</p>
                             </div>
                         </div>
+                        <div class="row py-3">
+                            <div class="col-md-6">
+                                <label v-bind:class="[this.errors.button_link ? 'text-primary':'' ]">
+                                    Button link
+                                </label>
+                                <b-input v-model="article.button_link" type="text" class="form-control" name="title"
+                                         v-bind:class="[this.errors.button_link ? 'decoratedErrorField':'' ]"/>
+                                <p v-if="this.errors.button_link" class="text-primary">{{ this.errors['button_link'][0] }}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <label v-bind:class="[this.errors.button_text ? 'text-primary':'' ]">
+                                    Button text
+                                </label>
+                                <b-input v-model="article.button_text" type="text" class="form-control" name="title"
+                                         v-bind:class="[this.errors.button_text ? 'decoratedErrorField':'' ]"/>
+                                <p v-if="this.errors.button_text" class="text-primary">{{ this.errors['button_text'][0] }}</p>
+                            </div>
+                        </div>
                         <b-row class="py-3">
                             <b-col>
                                 <div class="text-right">
@@ -98,18 +118,20 @@
                 </div>
             </b-col>
         </b-row>
-        <preview-modal :article="this.article" v-if="showPreview == true"></preview-modal>
+        <article-preview :article="this.article" v-if="showPreview == true"></article-preview>
     </div>
 </template>
 
 <script>
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import {FormFilePlugin} from 'bootstrap-vue';
+import ArticlePreview from "./ArticlePreview";
 
 Vue.use(FormFilePlugin)
 
 export default {
     name: "ArticleCreate",
+    components: {ArticlePreview},
     data() {
         return {
             article: {
@@ -119,6 +141,7 @@ export default {
                 text: '',
                 video_link: '',
                 image_link: '',
+                button_link: ''
             },
             image: null,
             categories: [],
@@ -130,35 +153,36 @@ export default {
     },
     mounted() {
         this.getCategories();
+
+        this.$root.$on('closeModal', () => {
+            this.closeModal();
+            this.showPreview = false;
+        });
     },
     methods: {
         submit() {
-            let config = {
-                header: {
-                    'Content-Type': 'multipart/form-data'
-                }
-            }
-
             let data = new FormData();
 
-            if(this.uploadImage){
+            if (this.uploadImage) {
                 data.append('image', this.image)
             }
 
-            data.append('uploadImage',this.uploadImage);
-            data.append('title',this.article.title);
-            data.append('has_video',this.article.has_video);
-            data.append('category_id',this.article.category_id);
-            data.append('text',this.article.text);
-            data.append('video_link',this.article.video_link);
+            data.append('uploadImage', this.uploadImage);
+            data.append('title', this.article.title);
+            data.append('has_video', this.article.has_video);
+            data.append('category_id', this.article.category_id);
+            data.append('text', this.article.text);
+            data.append('video_link', this.article.video_link);
+            data.append('button_link', this.article.button_link);
+            data.append('button_text', this.article.button_text);
 
             axios.post('/axios/article/post', data)
                 .then(response => {
-                   if(response.status === 200){
-                       setTimeout(()=>{
-                           window.location = '/backend/article/overview';
-                       },1000);
-                   }
+                    if (response.status === 200) {
+                        setTimeout(() => {
+                            window.location = '/backend/article/overview';
+                        }, 1000);
+                    }
                 })
                 .catch(error => {
                     if (error.response.status == 422) {
@@ -195,12 +219,16 @@ export default {
         cancel() {
         },
         openPreviewModal() {
+            this.showPreview = true;
         },
         getCategories() {
             axios.get('/axios/article/get-categories').then(response => {
                 this.categories = response.data
             });
-        }
+        },
+        closeModal() {
+            this.$emit('close');
+        },
     },
 
 }

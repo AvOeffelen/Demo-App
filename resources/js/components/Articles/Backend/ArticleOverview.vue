@@ -18,8 +18,8 @@
                     </template>
                     <template v-slot:cell(actions)="row" class="d-sm-none d-none"
                               :style="{ width: fields.fields === 'actions' ? '25px' : '180px' }">
-                        <a v-bind:href="'/backend/workshop/overview/'+ row.item.id +'/update'" class="btn btn-primary"
-                           variant="primary" @click="updateWorkshop(row.item)"><i class="fa fa-fw fa-pencil-alt"></i></a>
+                        <a v-bind:href="'/backend/article/overview/'+ row.item.id +'/update'" class="btn btn-primary"
+                           variant="primary"><i class="fa fa-fw fa-pencil-alt"></i></a>
                         <b-button  variant="primary" @click="openPreviewModal(row.item)"><i class="fa fa-search"></i>
                         </b-button>
                         <b-button variant="primary" @click="openConfirmationModal(row.item)"><i class="fa fa-trash"></i>
@@ -56,16 +56,17 @@
                 </b-row>
             </b-col>
         </b-row>
-<!--        <preview-modal :workshop="workshop" v-if="showPreviewModal"></preview-modal>-->
+        <article-preview :article="article" v-if="showPreviewModal"></article-preview>
         <confirmation-modal v-if="showConfirmationModal" :item="workshop"></confirmation-modal>
     </div>
 </template>
 
 <script>
 import ConfirmationModal from "../../ConfirmationModal";
+import ArticlePreview from "./ArticlePreview";
 export default {
     name: "ArticleOverview",
-    components: {ConfirmationModal},
+    components: {ArticlePreview, ConfirmationModal},
     data() {
         return {
             fields: [
@@ -77,6 +78,11 @@ export default {
                 {
                     key: 'title',
                     label: 'Titel',
+                    sortable: true,
+                },
+                {
+                    key: 'has_video',
+                    label: 'Bevat video',
                     sortable: true,
                 },
                 {
@@ -97,7 +103,7 @@ export default {
             currentPage: 1,
             perPage: 10,
             pageOptions: [10, 15, 25, 50, 75],
-            workshop: null,
+            article: null,
             showPreviewModal: false,
             showConfirmationModal: false,
         };
@@ -105,15 +111,15 @@ export default {
     mounted() {
         this.$root.$on('closeModal', () => {
             this.showPreviewModal = false;
-            this.workshop = null;
+            this.article = null;
             console.log("tst");
         });
         this.$root.$on('closeConfirmationModal', () => {
             this.showConfirmationModal = false;
-            this.workshop = null;
+            this.article = null;
         });
         this.$root.$on('confirm', (item) => {
-            this.workshop = null;
+            this.article = null;
             this.showConfirmationModal = false;
             this.deleteWorkshop(item);
         });
@@ -125,6 +131,7 @@ export default {
         getArticles() {
             axios.get('/axios/article/get-all')
                 .then(response => {
+                    console.log("response",response);
                     this.items = response.data;
                     this.totalRows = this.items.length
                 }).catch(error => {
@@ -134,9 +141,9 @@ export default {
         onRowSelected(items) {
             this.selected = items
         },
-        openPreviewModal(workshop) {
+        openPreviewModal(article) {
             this.showPreviewModal = true;
-            this.workshop = workshop;
+            this.article = article;
         },
         openConfirmationModal(workshop) {
             this.workshop = workshop;

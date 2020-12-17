@@ -39,4 +39,9 @@ class ArticleController extends Controller
     {
         return response()->view('article.frontend.article.index', ['article' => $article]);
     }
+
+    public function showArticleUpdate(Article $article)
+    {
+        return response()->view('article.backend.crud.update',['article' => $article]);
+    }
 }

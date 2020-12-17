@@ -10,7 +10,7 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">KLANTSAMENVITAAL</li>
                         <li class="breadcrumb-item" aria-current="page">Workshop</li>
-                        <li class="breadcrumb-item active" aria-current="page">Workshop toevoegen</li>
+                        <li class="breadcrumb-item active" aria-current="page">Toevoegen</li>
                     </ol>
                 </nav>
             </div>

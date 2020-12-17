@@ -52,4 +52,9 @@ class WorkshopController extends Controller
     {
         return response()->view('workshop.show.index', ['workshop' => $workshop]);
     }
+
+    public function showCreate()
+    {
+        return view('workshop.admin.add_workshop.index');
+    }
 }
