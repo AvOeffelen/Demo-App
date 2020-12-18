@@ -22,9 +22,9 @@ class WorkshopController extends Controller
     /**
      * @param StoreWorkshopRequest $request
      *
-     * 
+     * @return JsonResponse
      */
-    public function store(StoreWorkshopRequest $request)
+    public function store(StoreWorkshopRequest $request): JsonResponse
     {
         $workshop = Workshop::create([
             'title' => $request->get('title'),
