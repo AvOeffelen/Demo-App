@@ -81,6 +81,37 @@
                     </a>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-6 col-xl-6 col-lg-6 col-12 col-xs-12 invisible" data-toggle="appear">
+                   <a class="
+                            block
+                            block-transparent
+                            block-link-pop
+                            w-100
+                            h-300
+                            d-md-flex
+                            align-items-md-stretch
+                            bg-image"
+                        style="
+                        background-image : url(https://www.bravissamenvitaal.nl/wp-content/uploads/2020/02/iStock-1058457940-2-495x400.jpg); 
+                        background-position: center; 
+                        background-repeat: none;
+                        "
+                        href="{{route('download.calender')}}"
+                        target="_blank"
+                        data-toggle="click-ripple"
+                    >
+                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                            <div class="ribbon-box">
+                                Ribbon.
+                            </div>
+                            <div class="pt-4 pb-6 px-md-3">
+                                <h3 class="h1 font-w700 text-white mb-1">Titel</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 @endsection
