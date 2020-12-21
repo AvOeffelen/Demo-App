@@ -15,13 +15,24 @@ use Illuminate\Support\Facades\Route;
 // Example Routes
 Route::get('/', 'HomeController@index');
 
-Route::get('/test','DemoController@testboard');
+Route::get('workshop','WorkshopController@showWorkshops')->name('workshop');
+Route::get('workshop/{workshop}/show','WorkshopController@show')->name('workshop.show');
+
+Route::get('articles','ArticleController@showArticles')->name('articles');
+Route::get('one-on-one','ArticleController@showOneOnOne')->name('oneOnOne');
+Route::get('topical','ArticleController@topical')->name('topical');
+
+Route::get('article/{article}/show','ArticleController@show')->name('article.show');
+Route::get('/faq','FAQController@showFAQ')->name('faq');
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 
 Route::get('/download','ActivityCalenderController@downloadActivityCalender')->name('download.calender');
 
 Auth::routes();
 
-Route::group(['prefix' => 'backend/','middleware'=> ['web']], function () {
+Route::group(['prefix' => 'backend/','middleware'=> ['web','admin']], function () {
     Route::get('workshop/overview','WorkshopController@showOverview')->name('workshop.overview');
     Route::get('workshop/overview/{workshop}/update','WorkshopController@updateWorkshop')->name('workshop.update');
 
@@ -39,23 +50,7 @@ Route::group(['prefix' => 'axios/workshop', 'namespace' => 'Axios','middleware'=
 });
 
 Route::group(['middleware'=> ['web','default']], function () {
-    Route::get('/', 'HomeController@index');
-
-    Route::get('workshop','WorkshopController@showWorkshops')->name('workshop');
-    Route::get('workshop/{workshop}/show','WorkshopController@show')->name('workshop.show');
-
-    Route::get('articles','ArticleController@showArticles')->name('articles');
-    Route::get('one-on-one','ArticleController@showOneOnOne')->name('oneOnOne');
-    Route::get('topical','ArticleController@topical')->name('topical');
-
-    Route::get('article/{article}/show','ArticleController@show')->name('article.show');
-
     Route::get('/me','UserController@showProfile')->name('me');
-    Route::get('/faq','FAQController@showFAQ')->name('faq');
-
-    Route::get('/home', 'HomeController@index')->name('home');
-
-
 });
 
 
