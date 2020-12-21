@@ -93,18 +93,3 @@ Route::group(['prefix' => 'axios/article', 'namespace' => 'Axios','middleware'=>
     route::get('get-one-on-one-categories','ArticleController@getOneOnOneCategory')->name('article.get.OneOnOne.categories');
     route::get('get-topical-categories','ArticleController@getTopicalCategory')->name('article.get.topical.categories');
 });
-
-
-Route::group(['prefix' => 'axios/workshop', 'namespace' => 'Axios'], function () {
-    route::get('/get-all','WorkshopController@getAllWorkshops')->name('workshop.get');
-    route::get('/get-categories','WorkshopController@getAllCategories')->name('categories.get');
-    route::get('/get-physical','WorkshopController@getAllPhysicalVitalityWorkshops')->name('workshop.get.physical');
-    route::get('/get-mental','WorkshopController@getAllMentalVitalityWorkshops')->name('workshop.get.mental');
-    route::get('/get-growth','WorkshopController@getAllGrowthWorkshops')->name('workshop.get.growth');
-
-    route::get('/get-all','ArticleController@getAllArticles')->name('article.get.all');
-    route::get('get-categories','ArticleController@getCategories')->name('article.get.category');
-    route::get('get-all-standard-categories','ArticleController@getAllCategories')->name('article.get.all-standard.categories');
-    route::get('get-one-on-one-categories','ArticleController@getOneOnOneCategory')->name('article.get.OneOnOne.categories');
-    route::get('get-topical-categories','ArticleController@getTopicalCategory')->name('article.get.topical.categories');
-});
