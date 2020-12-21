@@ -16,8 +16,13 @@
                                 <a
                                     class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image"
                                     v-bind:style="[category.workshop[0].image_name ?
-                                    {'background': 'url(' + category.workshop[0].image_name + ')'} :
-                                     {'background-image': 'url('+ default_image +')'}]"
+                                    {
+                                        'background': 'url(' + category.workshop[0].image_name + ')',
+                                        'background-position':'center',
+                                        'background-size':'cover',
+                                        'background-repeat': 'no-repeat'
+                                    } :
+                                     {'background-image': 'url('+ default_image +');'}]"
                                     v-bind:href="'/workshop/'+category.workshop[0].id +'/show'"
                                     data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
@@ -28,9 +33,6 @@
                                             <h3 class="h1 font-w700 text-white mb-1">{{
                                                     category.workshop[0].title
                                                 }}</h3>
-                                            <h5 class="font-w400 text-body-color-light">{{
-                                                    category.workshop[0].title
-                                                }}</h5>
                                         </div>
                                     </div>
                                 </a>
@@ -39,7 +41,10 @@
                                    v-if="category.workshop[1]">
                                 <a class="block block-transparent bg-image"
                                    v-bind:style="[category.workshop[1].image_name ?
-                                    {'background': 'url(' + category.workshop[1].image_name + ')'} :
+                                    {'background': 'url(' + category.workshop[1].image_name + ')',
+                                        'background-position':'center',
+                                        'background-size':'cover',
+                                        'background-repeat': 'no-repeat'} :
                                      {'background-image': 'url('+ default_image +')'}]"
                                    v-bind:href="'/workshop/'+category.workshop[1].id+'/show'"
                                    data-toggle="click-ripple">
@@ -51,16 +56,16 @@
                                             <h3 class="h1 font-w700 text-white mb-1">{{
                                                     category.workshop[1].title
                                                 }}</h3>
-                                            <h5 class="font-w400 text-body-color-light">{{
-                                                    category.workshop[1].title
-                                                }}</h5>
                                         </div>
                                     </div>
                                 </a>
                                 <div v-if="category.workshop[2]">
                                     <a class="block block-transparent bg-image"
                                        v-bind:style="[category.workshop[2].image_name  ?
-                                    {'background': 'url(' + category.workshop[2].image_name + ')'} :
+                                    {'background': 'url(' + category.workshop[2].image_name + ')',
+                                        'background-position':'center',
+                                        'background-size':'cover',
+                                        'background-repeat': 'no-repeat'} :
                                      {'background-image': 'url('+ default_image +')'}]"
                                        v-bind:href="'/workshop/'+category.workshop[2].id+'/show'"
                                        data-toggle="click-ripple">
@@ -72,9 +77,6 @@
                                                 <h3 class="h1 font-w700 text-white mb-1">{{
                                                         category.workshop[2].title
                                                     }}</h3>
-                                                <h5 class="font-w400 text-body-color-light">{{
-                                                        category.workshop[2].title
-                                                    }}</h5>
                                             </div>
                                         </div>
                                     </a>
@@ -83,7 +85,10 @@
                             <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="category.workshop[3]">
                                 <a class="block block-transparent bg-image"
                                    v-bind:style="[category.workshop[3].image_name  ?
-                                    {'background': 'url(' + category.workshop[3].image_name + ')'} :
+                                    {'background': 'url(' + category.workshop[3].image_name + ')',
+                                        'background-position':'center',
+                                        'background-size':'cover',
+                                        'background-repeat': 'no-repeat'} :
                                      {'background-image': 'url('+ default_image +')'}]"
                                    v-bind:href="'/workshop/'+category.workshop[3].id+'/show'"
                                    data-toggle="click-ripple">
@@ -95,9 +100,6 @@
                                             <h3 class="h1 font-w700 text-white mb-1">{{
                                                     category.workshop[3].title
                                                 }}</h3>
-                                            <h5 class="font-w400 text-body-color-light">{{
-                                                    category.workshop[3].title
-                                                }}</h5>
                                         </div>
                                     </div>
                                 </a>
@@ -105,7 +107,10 @@
                             <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="category.workshop[4]">
                                 <a class="block block-transparent bg-image"
                                    v-bind:style="[category.workshop[4].image_name  ?
-                                    {'background': 'url(' + category.workshop[4].image_name + ')'} :
+                                    {'background': 'url(' + category.workshop[4].image_name + ')',
+                                        'background-position':'center',
+                                        'background-size':'cover',
+                                        'background-repeat': 'no-repeat'} :
                                      {'background-image': 'url('+ default_image +')'}]"
                                    v-bind:href="'/workshop/'+category.workshop[4].id+'/show'"
                                    data-toggle="click-ripple">
@@ -117,9 +122,6 @@
                                             <h3 class="h1 font-w700 text-white mb-1">{{
                                                     category.workshop[4].title
                                                 }}</h3>
-                                            <h5 class="font-w400 text-body-color-light">{{
-                                                    category.workshop[4].title
-                                                }}</h5>
                                         </div>
                                     </div>
                                 </a>
@@ -127,7 +129,10 @@
                             <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="category.workshop[5]">
                                 <a class="block block-transparent bg-image"
                                    v-bind:style="[category.workshop[5].image_name  ?
-                                    {'background': 'url(' + category.workshop[5].image_name + ')'} :
+                                    {'background': 'url(' + category.workshop[5].image_name + ')',
+                                        'background-position':'center',
+                                        'background-size':'cover',
+                                        'background-repeat': 'no-repeat'} :
                                      {'background-image': 'url('+ default_image +')'}]"
                                    v-bind:href="'/workshop/'+category.workshop[5].id+'/show'"
                                    data-toggle="click-ripple">
@@ -139,9 +144,6 @@
                                             <h3 class="h1 font-w700 text-white mb-1">{{
                                                     category.workshop[5].title
                                                 }}</h3>
-                                            <h5 class="font-w400 text-body-color-light">{{
-                                                    category.workshop[5].title
-                                                }}</h5>
                                         </div>
                                     </div>
                                 </a>
@@ -156,7 +158,10 @@
                                 :key="index">
                                 <a class="block block-transparent bg-image"
                                    v-bind:style="[workshop.image_name  ?
-                                    {'background': 'url(' + workshop.image_name + ')'} :
+                                    {'background': 'url(' + workshop.image_name + ')',
+                                        'background-position':'center',
+                                        'background-size':'cover',
+                                        'background-repeat': 'no-repeat'} :
                                      {'background-image': 'url('+ default_image +')'}]"
                                    v-bind:href="'/workshop/'+ workshop.id+'/show'"
                                    data-toggle="click-ripple">
@@ -166,7 +171,6 @@
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1">{{ workshop.title }}</h3>
-                                            <h5 class="font-w400 text-body-color-light">{{ workshop.title }}</h5>
                                         </div>
                                     </div>
                                 </a>
@@ -248,6 +252,5 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style>
 </style>
