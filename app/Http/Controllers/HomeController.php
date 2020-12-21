@@ -13,7 +13,6 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
     }
 
     /**
@@ -21,11 +20,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if(auth()->user()->isAdmin()){
-
-            return response()->view('workshop.admin.overview.index');
-        }
-
         return response()->view('dashboard.frontend.index');
     }
+
 }
