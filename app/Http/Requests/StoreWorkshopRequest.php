@@ -31,10 +31,10 @@ class StoreWorkshopRequest extends FormRequest
             'title' => 'required',
             'text' => 'required',
             'agenda_link' => 'required',
-            'category_id' => 'required',
+            'workshop_category_id' => 'required',
             'start' => 'required',
             'end' => 'required',
-            'image' => 'nullable|mimes:jpg,png,jpeg,gif'
+            'image' => 'sometimes|file|mimes:jpg,png,jpeg,gif'
         ];
     }
 
