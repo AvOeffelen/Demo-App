@@ -7,7 +7,10 @@
                 <b-col align-self="center" cols="12" md="6" lg="6" sm="12">
                     <div class="text-center w-100">
                         <div class="" v-bind:style="[workshop.image_name ?
-                                    {'background': 'url(' +'../../'+ workshop.image_name + ') center'} :
+                                    {'background': 'url(' +'../../'+ workshop.image_name + ')',
+                                        'background-position':'center',
+                                        'background-size':'cover',
+                                        'background-repeat': 'no-repeat'} :
                                      {'background-image': 'url('+ default_image +')'}]"
                              style=" width:100%; height: 600px;">
                         </div>
