@@ -17,6 +17,8 @@ Route::get('/', 'HomeController@index');
 
 Route::get('/test','DemoController@testboard');
 
+Route::get('/download','ActivityCalenderController@downloadActivityCalender')->name('download.calender');
+
 Auth::routes();
 
 Route::group(['prefix' => 'backend/','middleware'=> ['web']], function () {

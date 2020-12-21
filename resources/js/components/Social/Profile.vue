@@ -4,7 +4,7 @@
             <div class="bg-black-25">
                 <div class="content content-full">
                     <div class="py-5 text-center">
-                        <a class="img-link" href="be_pages_generic_profile.html">
+                        <a class="img-link">
                             <img class="img-avatar img-avatar96 img-avatar-thumb"
                                  v-bind:src="'https://eu.ui-avatars.com/api/?name='+user.firstname+'+'+user.infix+'+'+user.lastname+'?size=128?bold=true?color=FFFFFF'"
                                  alt="">

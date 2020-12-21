@@ -15,23 +15,18 @@
                                 <span class="text-white-75">{{config('app.name')}}</span>
                             </span>
         </a>
-{{--        <ul class="nav-main nav-main-horizontal nav-main-hover d-none d-lg-block ml-3 d-inline-block d-sm-none bv-d-xs-down-none d-md-none">--}}
-{{--            <li class="nav-main-item">--}}
-{{--                <a class="btn btn-dual" href="{{route('workshop')}}">--}}
-{{--                    <span class="nav-main-link-name">Workshops</span>--}}
-{{--                </a>--}}
-{{--            </li>--}}
-{{--            <li class="nav-main-item">--}}
-{{--                <a class="btn btn-dual" href="https://www.johan.nl" target="_blank">--}}
-{{--                    <span class="nav-main-link-name">Vragenlijst invullen</span>--}}
-{{--                </a>--}}
-{{--            </li>--}}
-{{--            <li class="nav-main-item">--}}
-{{--                <a class="btn btn-dual" href="#" target="">--}}
-{{--                    <span class="nav-main-link-name">FAQ</span>--}}
-{{--                </a>--}}
-{{--            </li>--}}
-{{--        </ul>--}}
+        <ul class="nav-main nav-main-horizontal nav-main-hover d-none d-lg-block ml-3 d-inline-block d-sm-none bv-d-xs-down-none d-md-none">
+            <li class="nav-main-item">
+                <a class="btn btn-dual" href="{{url('/')}}">
+                    <span class="nav-main-link-name">Home</span>
+                </a>
+            </li>
+            <li class="nav-main-item">
+                <a class="btn btn-dual" href="{{url('faq')}}">
+                    <span class="nav-main-link-name">FAQ</span>
+                </a>
+            </li>
+        </ul>
     </div>
     <div>
         @if(!auth()->user())
