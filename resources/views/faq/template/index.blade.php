@@ -10,6 +10,9 @@
                 <p class="text-muted">
                    Wij begrijpen natuurlijk dat je vragen hebt. We hebben hier de meest voorkomende opgesomd.
                 </p>
+                <div class="text-center py-5">
+                    <img class="h-250" src="https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/FAQ_Bravis_KlantSamenVitaal.nl_V1.png" />
+                </div>
             </div>
             <div class="col-lg-8">
                 <div id="faq1" role="tablist" aria-multiselectable="true">
