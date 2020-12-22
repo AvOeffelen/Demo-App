@@ -16,9 +16,10 @@
                         </div>
                         <div class="col-md-6">
                             <label for="example-hosting-vps">Workshop categorie</label>
-                            <select class="custom-select" id="example-hosting-vps" name="example-hosting-vps">
-                                <option v-for="(category,key) in this.categories" :value="category.id"
-                                        v-model="workshop.workshop_category_id">
+                            <select class="custom-select" id="example-hosting-vps" name="example-hosting-vps"  v-model="workshop.workshop_category_id">
+                                <option v-for="(category,key) in this.categories"
+                                        v-bind:value="category.id"
+                                        :key="key">
                                     {{ category.name }}
                                 </option>
                             </select>
@@ -145,7 +146,7 @@ export default {
                 title: '',
                 text: '',
                 agenda_link: '',
-                category_id: 1,
+                workshop_category_id: 1,
                 start: null,
                 end:null,
             },
@@ -181,10 +182,11 @@ export default {
             }
 
             let data = new FormData();
-
-            data.append('image',this.image);
+            if(this.image != null){
+                data.append('image',this.image);
+            }
             data.append('title',this.workshop.title);
-            data.append('category_id',this.workshop.category_id);
+            data.append('workshop_category_id',this.workshop.workshop_category_id);
             data.append('text',this.workshop.text);
             data.append('agenda_link',this.workshop.agenda_link);
             data.append('start',this.workshop.start);
@@ -217,7 +219,7 @@ export default {
             this.workshop.title = '';
             this.workshop.agenda_link = '';
             this.workshop.text = '';
-            this.workshop.category_id = 1;
+            this.workshop.workshop_category_id = 1;
             this.workshop.start = '';
             this.workshop.end = '';
             this.image = null;

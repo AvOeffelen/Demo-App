@@ -13,9 +13,9 @@
                         <div class="row py-3">
                             <div class="col-md-6">
                                 <label for="title" v-bind:class="[this.errors.title ? 'text-primary':'' ]">
-                                    Workshop titel
+                                    Titel
                                 </label>
-                                <b-input v-model="workshop.title"
+                                <b-input v-model="tempWorkshop.title"
                                          v-bind:class="[this.errors.title ? 'decoratedErrorField':'' ]"
                                          type="text"
                                          class="form-control"
@@ -24,9 +24,9 @@
                                 <p v-if="this.errors.title" class="text-primary">{{ this.errors['title'][0] }}</p>
                             </div>
                             <div class="col-md-6">
-                                <label for="example-hosting-vps">Workshop categorie</label>
-                                <select class="custom-select" id="example-hosting-vps" name="example-hosting-vps">
-                                    <option v-for="(category,key) in this.categories" :value="category.id" v-model="workshop.workshop_category_id">
+                                <label for="example-hosting-vps">Categorie</label>
+                                <select class="custom-select" id="example-hosting-vps" name="example-hosting-vps"  v-model="workshop.workshop_category_id">
+                                    <option v-for="(category,key) in this.categories" :value="category.id" :key="key">
                                         {{ category.name }}
                                     </option>
                                 </select>
@@ -38,7 +38,7 @@
                                 <b-input-group class="mb-3">
                                     <b-form-input
                                         id="start"
-                                        v-model="workshop.start"
+                                        v-model="tempWorkshop.start"
                                         type="text"
                                         placeholder="Start datum"
                                         autocomplete="off"
@@ -46,7 +46,7 @@
                                     ></b-form-input>
                                     <b-input-group-append>
                                         <b-form-datepicker
-                                            v-model="workshop.start"
+                                            v-model="tempWorkshop.start"
                                             button-variant="primary"
                                             button-only
                                             right
@@ -62,7 +62,7 @@
                                 <b-input-group class="mb-3">
                                     <b-form-input
                                         id="end"
-                                        v-model="workshop.end"
+                                        v-model="tempWorkshop.end"
                                         type="text"
                                         placeholder="Eind datum"
                                         autocomplete="off"
@@ -70,7 +70,7 @@
                                     ></b-form-input>
                                     <b-input-group-append>
                                         <b-form-datepicker
-                                            v-model="workshop.end"
+                                            v-model="tempWorkshop.end"
                                             button-variant="primary"
                                             button-only
                                             right
@@ -105,7 +105,7 @@
                                 </label>
                                 <ckeditor :editor="editorType" class="ck-content-text"
                                           v-bind:class="[this.errors.text ? 'decoratedErrorField':'' ]"
-                                          v-model="workshop.text"></ckeditor>
+                                          v-model="tempWorkshop.text"></ckeditor>
                                 <p v-if="this.errors.text" class="text-primary">{{ this.errors['text'][0] }}</p>
                             </div>
                         </div>
@@ -116,7 +116,7 @@
                                 </label>
                                 <textarea id="agenda-link" class="form-control"
                                           v-bind:class="[this.errors.link ? 'text-primary':'' ]"
-                                          v-model="workshop.agenda_link"></textarea>
+                                          v-model="tempWorkshop.agenda_link"></textarea>
                                 <p v-if="this.errors.link" class="text-primary">{{ this.errors['link'][0] }}</p>
                             </div>
                         </div>
@@ -134,7 +134,7 @@
                 </div>
             </div>
         </div>
-        <preview-modal :workshop="this.workshop" v-if="showPreview == true"></preview-modal>
+        <preview-modal :workshop="this.tempWorkshop" v-if="showPreview == true"></preview-modal>
     </div>
 </template>
 
@@ -152,10 +152,12 @@ export default {
             showPreview: false,
             errors: false,
             image: null,
-            categories:[]
+            categories:[],
+            tempWorkshop:null,
         };
     },
     mounted() {
+        this.tempWorkshop = this.workshop;
         this.getCategories();
         this.$root.$on('closeModal', () => {
             this.showPreview = false;
@@ -186,13 +188,13 @@ export default {
             }
 
             data.append('uploadImage', this.uploadImage);
-            data.append('id', this.workshop.id);
-            data.append('title', this.workshop.title);
-            data.append('start', this.workshop.start);
-            data.append('end', this.workshop.end);
-            data.append('agenda_link', this.workshop.agenda_link);
-            data.append('workshop_category_id', this.workshop.workshop_category_id);
-            data.append('text', this.workshop.text);
+            data.append('id', this.tempWorkshop.id);
+            data.append('title', this.tempWorkshop.title);
+            data.append('start', this.tempWorkshop.start);
+            data.append('end', this.tempWorkshop.end);
+            data.append('agenda_link', this.tempWorkshop.agenda_link);
+            data.append('workshop_category_id', this.tempWorkshop.workshop_category_id);
+            data.append('text', this.tempWorkshop.text);
 
             axios.post('/axios/workshop/put', data)
                 .then(response => {
@@ -218,13 +220,13 @@ export default {
             // The date formatted in the locale, or the `label-no-date-selected` string
             // this.workshop.end = ctx.selectedFormatted
             // The following will be an empty string until a valid date is entered
-            this.workshop.end = ctx.selectedYMD
+            this.tempWorkshop.end = ctx.selectedYMD
         },
         onContextStart(ctx) {
             // The date formatted in the locale, or the `label-no-date-selected` string
             // this.workshop.end = ctx.selectedFormatted
             // The following will be an empty string until a valid date is entered
-            this.workshop.start = ctx.selectedYMD
+            this.tempWorkshop.start = ctx.selectedYMD
         }
     }
 }
