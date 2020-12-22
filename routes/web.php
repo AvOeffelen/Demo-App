@@ -25,7 +25,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('topical','ArticleController@topical')->name('topical');
 
     Route::get('article/{article}/show','ArticleController@show')->name('article.show');
-    Route::get('/faq','FAQController@showFAQ')->name('faq');
+    Route::get('/faq','PageController@showFAQ')->name('faq');
+    Route::get('/generatie-management','PageController@showGenManagement')->name('gen.management');
 
     Route::get('/home', 'HomeController@index')->name('home');
 

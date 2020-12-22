@@ -68,8 +68,10 @@ class ArticleController extends Controller
         $article = Article::create([
             'title' => $request->get('title'),
             'has_video' => $hasVideo,
-            'category_id' => $request->get('category_id'),
+            'category_id' => (int) $request->get('category_id'),
             'text' => $request->get('text'),
+            'button_text' => $request->get('button_text'),
+            'button_link' => $request->get('button_link'),
             'video_link' => $request->get('video_link'),
         ]);
 
@@ -98,9 +100,11 @@ class ArticleController extends Controller
             'id' => $request->get('id'),
         ], [
             'title' => $request->get('title'),
-            'category_id' => $request->get('category_id'),
+            'category_id' => (int) $request->get('category_id'),
             'image_link' => $request->get('image_link'),
             'video_link' => $request->get('video_link'),
+            'button_text' => $request->get('button_text'),
+            'button_link' => $request->get('button_link'),
             'has_video' => $hasVideo,
             'text' => $request->get('text'),
         ]);
