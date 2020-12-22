@@ -22,23 +22,24 @@ class WorkshopController extends Controller
     /**
      * @param StoreWorkshopRequest $request
      *
-     * @return JsonResponse
      */
-    public function store(StoreWorkshopRequest $request): JsonResponse
+    public function store(StoreWorkshopRequest $request)
     {
+        $image = $request->file('image');
         $workshop = Workshop::create([
             'title' => $request->get('title'),
-            'workshop_category_id' => $request->get('category_id'),
+            'workshop_category_id' => (int) $request->get('workshop_category_id'),
             'text' => $request->get('text'),
             'agenda_link' => $request->get('agenda_link'),
             'start' => Carbon::parse($request->get('start')),
             'end' => Carbon::parse($request->get('end')),
         ]);
 
-        if($request->get('image') != null){
+        if($image != null){
             $this->uploadImage($request->file('image'), $workshop);
-        }
 
+        }
+        $workshop = $workshop->fresh();
         return response()->json(['workshop' => $workshop], 200);
     }
 
@@ -80,7 +81,7 @@ class WorkshopController extends Controller
         ],
             [
                 'title' => $request->get('title'),
-                'workshop_category_id' => $request->get('workshop_category_id'),
+                'workshop_category_id' => (int) $request->get('workshop_category_id'),
                 'agenda_link' => $request->get('agenda_link'),
                 'start' => $request->get('start'),
                 'end' => $request->get('end'),
