@@ -24,12 +24,12 @@
                             block-transparent
                             block-link-pop
                             w-100
-                            h-300
+                            h-250
                             d-md-flex
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Activiteitenkalender_online-12082020-845x684-1-300x243-1.png); 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak_01.jpg); 
                         background-position: center; 
                         background-repeat: none;
                         "
@@ -53,12 +53,12 @@
                             block-transparent
                             block-link-pop
                             w-100
-                            h-300
+                            h-250
                             d-md-flex
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/istockphoto-847172346-1024x1024-1.jpg); 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/WORKSHOPS_Bravis_KlantSamenVitaal.nl_V1.png); 
                         background-position: center; 
                         background-repeat: none;
                         "
@@ -71,7 +71,7 @@
                                 Workshops.
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1">Workshops</h3>
+                                <h3 class="h1 font-w700 text-white mb-1"></h3>
                             </div>
                         </div>
                     </a>
@@ -84,12 +84,12 @@
                             block-transparent
                             block-link-pop
                             w-100
-                            h-300
+                            h-250
                             d-md-flex
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/istockphoto-1205480426-1024x1024-1.jpg); 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak_03.jpg); 
                         background-position: center; 
                         background-repeat: none;
                         "
@@ -99,10 +99,10 @@
                     >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
                             <div class="ribbon-box">
-                                1 op 1
+                                Persoonlijke begeleiding
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1">1 op 1</h3>
+                                <h3 class="h1 font-w700 text-white mb-1">Persoonlijke begeleiding</h3>
                             </div>
                         </div>
                     </a>
@@ -113,12 +113,12 @@
                             block-transparent
                             block-link-pop
                             w-100
-                            h-300
+                            h-250
                             d-md-flex
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/istockphoto-1216081971-1024x1024-1.jpg); 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/COVID-19_Bravis_KlantSamenVitaal.nl_V1.png); 
                         background-position: center; 
                         background-repeat: none;
                         "
@@ -128,10 +128,10 @@
                     >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
                             <div class="ribbon-box">
-                                Covid-19
+                                (na)zorg Corona
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1">Covid-19</h3>
+                                <h3 class="h1 font-w700 text-white mb-1"></h3>
                             </div>
                         </div>
                     </a>
@@ -144,12 +144,12 @@
                             block-transparent
                             block-link-pop
                             w-100
-                            h-300
+                            h-250
                             d-md-flex
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/istockphoto-1203097687-1024x1024-1.jpg); 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak_05.jpg); 
                         background-position: center; 
                         background-repeat: none;
                         "
@@ -159,10 +159,10 @@
                     >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
                             <div class="ribbon-box">
-                                vragenlijsten
+                                Vragenlijsten
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1">vragenlijsten</h3>
+                                <h3 class="h1 font-w700 text-white mb-1">Vragenlijsten</h3>
                             </div>
                         </div>
                     </a>
@@ -173,12 +173,12 @@
                             block-transparent
                             block-link-pop
                             w-100
-                            h-300
+                            h-250
                             d-md-flex
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/iStock-1175309338-scaled.jpg); 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/INSPIRATIEMATERIAAL_Bravis_KlantSamenVitaal.nl_V1.png); 
                         background-position: center; 
                         background-repeat: none;
                         "
@@ -191,7 +191,7 @@
                                 Inspiratiemateriaal
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1">Inspiratiemateriaal</h3>
+                                <h3 class="h1 font-w700 text-white mb-1"></h3>
                             </div>
                         </div>
                     </a>
@@ -204,12 +204,12 @@
                             block-transparent
                             block-link-pop
                             w-100
-                            h-300
+                            h-250
                             d-md-flex
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/be-1.png); 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak_07.jpg); 
                         background-position: center; 
                         background-repeat: none;
                         "
@@ -233,12 +233,12 @@
                             block-transparent
                             block-link-pop
                             w-100
-                            h-300
+                            h-250
                             d-md-flex
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/istockphoto-1209693436-1024x1024-1.jpg); 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/ACTUEEL_Bravis_KlantSamenVitaal.nl_V1.png); 
                         background-position: center; 
                         background-repeat: none;
                         "
@@ -251,7 +251,7 @@
                                 Actueel
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1">Actueel</h3>
+                                <h3 class="h1 font-w700 text-white mb-1"></h3>
                             </div>
                         </div>
                     </a>

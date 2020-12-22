@@ -5,7 +5,10 @@
             <b-col align-self="center" cols="12" md="6" lg="6" sm="12">
                 <div class="text-center w-100">
                     <div class="" v-bind:style="[workshop.image_name ?
-                                    {'background': 'url(' +'../../'+ workshop.image_name + ')'} :
+                                    {'background': 'url(' +'../../'+ workshop.image_name + ')',
+                                        'background-position':'center',
+                                        'background-size':'cover',
+                                        'background-repeat': 'no-repeat'} :
                                      {'background-image': 'url('+ default_image +')'}]"
                          style=" width:100%; height: 600px;">
                     </div>
@@ -24,11 +27,11 @@
                     </div>
                 </div>
                 <b-row>
-                    <b-col cols="0" md="3" lg="3" sm="0"></b-col>
-                    <b-col align-self="center" cols="12" md="6" lg="6" sm="12">
+                    <b-col cols="0" md="1" lg="1" sm="0"></b-col>
+                    <b-col align-self="center" cols="12" md="12" lg="10" sm="10">
                         <div v-html="workshop.text"></div>
                     </b-col>
-                    <b-col cols="0" md="3" lg="3" sm="0"></b-col>
+                    <b-col cols="0" md="1" lg="1" sm="0"></b-col>
                 </b-row>
             </div>
             <div class="col-md-2"></div>

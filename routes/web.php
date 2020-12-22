@@ -15,13 +15,28 @@ use Illuminate\Support\Facades\Route;
 // Example Routes
 Route::get('/', 'HomeController@index');
 
-Route::get('/test','DemoController@testboard');
+Route::group(['middleware' => ['web']], function () {
 
-Route::get('/download','ActivityCalenderController@downloadActivityCalender')->name('download.calender');
+    Route::get('workshop','WorkshopController@showWorkshops')->name('workshop');
+    Route::get('workshop/{workshop}/show','WorkshopController@show')->name('workshop.show');
+
+    Route::get('articles','ArticleController@showArticles')->name('articles');
+    Route::get('one-on-one','ArticleController@showOneOnOne')->name('oneOnOne');
+    Route::get('topical','ArticleController@topical')->name('topical');
+
+    Route::get('article/{article}/show','ArticleController@show')->name('article.show');
+    Route::get('/faq','PageController@showFAQ')->name('faq');
+    Route::get('/generatie-management','PageController@showGenManagement')->name('gen.management');
+
+    Route::get('/home', 'HomeController@index')->name('home');
+
+
+    Route::get('/download','ActivityCalenderController@downloadActivityCalender')->name('download.calender');
+});
 
 Auth::routes();
 
-Route::group(['prefix' => 'backend/','middleware'=> ['web']], function () {
+Route::group(['prefix' => 'backend/','middleware'=> ['web','admin']], function () {
     Route::get('workshop/overview','WorkshopController@showOverview')->name('workshop.overview');
     Route::get('workshop/overview/{workshop}/update','WorkshopController@updateWorkshop')->name('workshop.update');
 
@@ -39,23 +54,7 @@ Route::group(['prefix' => 'axios/workshop', 'namespace' => 'Axios','middleware'=
 });
 
 Route::group(['middleware'=> ['web','default']], function () {
-    Route::get('/', 'HomeController@index');
-
-    Route::get('workshop','WorkshopController@showWorkshops')->name('workshop');
-    Route::get('workshop/{workshop}/show','WorkshopController@show')->name('workshop.show');
-
-    Route::get('articles','ArticleController@showArticles')->name('articles');
-    Route::get('one-on-one','ArticleController@showOneOnOne')->name('oneOnOne');
-    Route::get('topical','ArticleController@topical')->name('topical');
-
-    Route::get('article/{article}/show','ArticleController@show')->name('article.show');
-
     Route::get('/me','UserController@showProfile')->name('me');
-    Route::get('/faq','FAQController@showFAQ')->name('faq');
-
-    Route::get('/home', 'HomeController@index')->name('home');
-
-
 });
 
 
@@ -68,12 +67,6 @@ Route::group(['prefix' => 'axios/workshop', 'namespace' => 'Axios','middleware'=
     route::post('{workshop}/dislike','WorkshopController@dislike')->name('workshop.dislike');
 
     route::post('{workshop}/like','WorkshopController@like')->name('workshop.like');
-
-    route::get('/get-all','WorkshopController@getAllWorkshops')->name('workshop.get');
-    route::get('/get-categories','WorkshopController@getAllCategories')->name('categories.get');
-    route::get('/get-physical','WorkshopController@getAllPhysicalVitalityWorkshops')->name('workshop.get.physical');
-    route::get('/get-mental','WorkshopController@getAllMentalVitalityWorkshops')->name('workshop.get.mental');
-    route::get('/get-growth','WorkshopController@getAllGrowthWorkshops')->name('workshop.get.growth');
 });
 
 Route::group(['prefix' => 'axios/me', 'namespace' => 'Axios','middleware'=> ['web','default']], function () {
@@ -88,11 +81,19 @@ Route::group(['prefix' => 'axios/article', 'namespace' => 'Axios','middleware'=>
 
     route::delete('{article}/delete','ArticleController@delete')->name('article.delete');
 });
-Route::group(['prefix' => 'axios/article', 'namespace' => 'Axios','middleware'=> ['web','default']], function() {
 
+Route::group(['prefix' => 'axios/article', 'namespace' => 'Axios','middleware'=> ['web']], function() {
     route::get('/get-all','ArticleController@getAllArticles')->name('article.get.all');
     route::get('get-categories','ArticleController@getCategories')->name('article.get.category');
     route::get('get-all-standard-categories','ArticleController@getAllCategories')->name('article.get.all-standard.categories');
     route::get('get-one-on-one-categories','ArticleController@getOneOnOneCategory')->name('article.get.OneOnOne.categories');
     route::get('get-topical-categories','ArticleController@getTopicalCategory')->name('article.get.topical.categories');
+});
+
+Route::group(['prefix' => 'axios/workshop', 'namespace' => 'Axios','middleware'=> ['web']], function () {
+    route::get('/get-all','WorkshopController@getAllWorkshops')->name('workshop.get');
+    route::get('/get-categories','WorkshopController@getAllCategories')->name('categories.get');
+    route::get('/get-physical','WorkshopController@getAllPhysicalVitalityWorkshops')->name('workshop.get.physical');
+    route::get('/get-mental','WorkshopController@getAllMentalVitalityWorkshops')->name('workshop.get.mental');
+    route::get('/get-growth','WorkshopController@getAllGrowthWorkshops')->name('workshop.get.growth');
 });

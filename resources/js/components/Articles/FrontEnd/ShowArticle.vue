@@ -6,7 +6,10 @@
                 <div class="text-center w-100">
                     <div v-if="article.has_video === 0">
                         <div class="" v-bind:style="[article.image_link ?
-                                    {'background': 'url(' +'../../'+ article.image_link + ')'} :
+                                    {'background': 'url(' +'../../'+ article.image_link + ')',
+                                        'background-position':'center',
+                                        'background-size':'cover',
+                                        'background-repeat': 'no-repeat'} :
                                      {'background-image': 'url('+ default_image +')'}]"
                              style=" width:100%; height: 600px;">
                         </div>

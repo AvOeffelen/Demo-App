@@ -18,9 +18,10 @@
                             </b-col>
                             <b-col cols="6" sm="6" md="6" lg="6" xl="6">
                                 <label for="example-hosting-vps">Categorie</label>
-                                <select class="custom-select" id="example-hosting-vps" name="example-hosting-vps">
-                                    <option v-for="(category,key) in this.categories" :value="category.id" :key="key"
-                                            v-model="article.category_id">
+                                <select class="custom-select" id="example-hosting-vps" name="example-hosting-vps" v-model="article.category_id">
+                                    <option v-for="(category,key) in this.categories" 
+                                    :value="category.id" 
+                                    :key="key">
                                         {{ category.name }}
                                     </option>
                                 </select>
