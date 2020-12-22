@@ -17,13 +17,8 @@ class UserSeeder extends Seeder
             'firstname' => Str::random(10),
             'infix' => Str::random(3),
             'lastname' => Str::random(10),
-<<<<<<< Updated upstream
             'email' => 'arrieality@gmail.com',
             'password' => Hash::make('Hoihoihoi1'),
-=======
-            'email' => 'info@krijgsmansolutions.nl',
-            'password' => Hash::make('testing'),
->>>>>>> Stashed changes
         ]);
     }
 }
