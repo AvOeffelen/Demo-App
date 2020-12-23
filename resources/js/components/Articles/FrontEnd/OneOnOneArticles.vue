@@ -11,7 +11,7 @@
                         <a v-if="categories[0].article[0].has_video === 0"
                            class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image"
                            v-bind:style="[categories[0].article[0].image_link ?
-                                    {'background': 'url(' + categories[0].article[0].image_link + ')'} :
+                                    {'background': 'url(../' + categories[0].article[0].image_link + ')'} :
                                      {'background-image': 'url('+ default_image +')'}]"
                            v-bind:href="'/article/'+categories[0].article[0].id +'/show'"
                            data-toggle="click-ripple">
