@@ -19,8 +19,8 @@
                             <b-col cols="6" sm="6" md="6" lg="6" xl="6">
                                 <label for="example-hosting-vps">Categorie</label>
                                 <select class="custom-select" id="example-hosting-vps" name="example-hosting-vps" v-model="article.category_id">
-                                    <option v-for="(category,key) in this.categories" 
-                                    :value="category.id" 
+                                    <option v-for="(category,key) in this.categories"
+                                    :value="category.id"
                                     :key="key">
                                         {{ category.name }}
                                     </option>
@@ -179,11 +179,11 @@ export default {
 
             axios.post('/axios/article/post', data)
                 .then(response => {
-                    if (response.status === 200) {
-                        setTimeout(() => {
-                            window.location = '/backend/article/overview';
-                        }, 1000);
-                    }
+                    // if (response.status === 200) {
+                    //     setTimeout(() => {
+                    //         window.location = '/backend/article/overview';
+                    //     }, 1000);
+                    // }
                 })
                 .catch(error => {
                     if (error.response.status == 422) {
