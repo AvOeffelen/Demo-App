@@ -11,11 +11,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-<<<<<<< HEAD
-=======
-        //useless shit
->>>>>>> development
         $this->call(WorkshopCategorySeeder::class);
         $this->call(UserSeeder::class);
+//        $this->call(ArticleSeeder::class);
     }
 }
