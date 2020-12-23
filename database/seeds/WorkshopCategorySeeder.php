@@ -11,6 +11,10 @@ class WorkshopCategorySeeder extends Seeder
      */
     public function run()
     {
+<<<<<<< HEAD
+=======
+        //useless comment
+>>>>>>> development
         DB::table('workshop_category')->insert([
             'name' => 'Fysieke vitaliteit',
             'tag' => 'physical'
