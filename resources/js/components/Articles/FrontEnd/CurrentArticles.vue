@@ -7,143 +7,143 @@
                 </div>
                 <b-row>
                     <b-col cols="12" sm="12" md="12" lg="6" xl="6" class="d-md-flex align-items-md-stretch"
-                                   v-if="categories.article[0]">
+                                   v-if="categories[0].article[0]">
                                 <a
                                     class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image"
-                                    v-bind:style="[categories.article[0].image_name ?
+                                    v-bind:style="[categories[0].article[0].image_link ?
                                     {
-                                        'background': 'url(' + categories.article[0].image_name + ')',
+                                        'background': 'url(' + categories[0].article[0].image_link + ')',
                                         'background-position':'center',
                                         'background-size':'cover',
                                         'background-repeat': 'no-repeat'
                                     } :
                                      {'background-image': 'url('+ default_image +');'}]"
-                                    v-bind:href="'/article/'+categories.article[0].id +'/show'"
+                                    v-bind:href="'/article/'+categories[0].article[0].id +'/show'"
                                     data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
                                         <div class="ribbon-box">
-                                            {{ categories.name }}
+                                            {{ categories[0].name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1">{{
-                                                    categories.article[0].title
+                                                    categories[0].article[0].title
                                                 }}</h3>
                                         </div>
                                     </div>
                                 </a>
                             </b-col>
                             <b-col cols="12" sm="12" md="12" lg="6" xl="6"
-                                   v-if="categories.article[1]">
+                                   v-if="categories[0].article[1]">
                                 <a class="block block-transparent bg-image"
-                                   v-bind:style="[categories.article[1].image_name ?
-                                    {'background': 'url(' + categories.article[1].image_name + ')',
+                                   v-bind:style="[categories[0].article[1].image_link ?
+                                    {'background': 'url(' + categories[0].article[1].image_link + ')',
                                         'background-position':'center',
                                         'background-size':'cover',
                                         'background-repeat': 'no-repeat'} :
                                      {'background-image': 'url('+ default_image +')'}]"
-                                   v-bind:href="'/article/'+categories.article[1].id+'/show'"
+                                   v-bind:href="'/article/'+categories[0].article[1].id+'/show'"
                                    data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
                                         <div class="ribbon-box">
-                                            {{ categories.name }}
+                                            {{ categories[0].name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1">{{
-                                                    categories.article[1].title
+                                                    categories[0].article[1].title
                                                 }}</h3>
                                         </div>
                                     </div>
                                 </a>
-                                <div v-if="categories.article[2]">
+                                <div v-if="categories[0].article[2]">
                                     <a class="block block-transparent bg-image"
-                                       v-bind:style="[categories.article[2].image_name  ?
-                                    {'background': 'url(' + categories.article[2].image_name + ')',
+                                       v-bind:style="[categories[0].article[2].image_link  ?
+                                    {'background': 'url(' + categories[0].article[2].image_link + ')',
                                         'background-position':'center',
                                         'background-size':'cover',
                                         'background-repeat': 'no-repeat'} :
                                      {'background-image': 'url('+ default_image +')'}]"
-                                       v-bind:href="'/article/'+categories.article[2].id+'/show'"
+                                       v-bind:href="'/article/'+categories[0].article[2].id+'/show'"
                                        data-toggle="click-ripple">
                                         <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
                                             <div class="ribbon-box">
-                                                {{ categories.name }}
+                                                {{ categories[0].name }}
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1">{{
-                                                        categories.article[2].title
+                                                        categories[0].article[2].title
                                                     }}</h3>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
                             </b-col>
-                            <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="categories.article[3]">
+                            <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="categories[0].article[3]">
                                 <a class="block block-transparent bg-image"
-                                   v-bind:style="[categories.article[3].image_name  ?
-                                    {'background': 'url(' + categories.article[3].image_name + ')',
+                                   v-bind:style="[categories[0].article[3].image_link  ?
+                                    {'background': 'url(' + categories[0].article[3].image_link + ')',
                                         'background-position':'center',
                                         'background-size':'cover',
                                         'background-repeat': 'no-repeat'} :
                                      {'background-image': 'url('+ default_image +')'}]"
-                                   v-bind:href="'/article/'+categories.article[3].id+'/show'"
+                                   v-bind:href="'/article/'+categories[0].article[3].id+'/show'"
                                    data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
                                         <div class="ribbon-box">
-                                            {{ categories.name }}
+                                            {{ categories[0].name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1">{{
-                                                    categories.article[3].title
+                                                    categories[0].article[3].title
                                                 }}</h3>
                                         </div>
                                     </div>
                                 </a>
                             </b-col>
-                            <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="categories.article[4]">
+                            <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="categories[0].article[4]">
                                 <a class="block block-transparent bg-image"
-                                   v-bind:style="[categories.article[4].image_name  ?
-                                    {'background': 'url(' + categories.article[4].image_name + ')',
+                                   v-bind:style="[categories[0].article[4].image_link  ?
+                                    {'background': 'url(' + categories[0].article[4].image_link + ')',
                                         'background-position':'center',
                                         'background-size':'cover',
                                         'background-repeat': 'no-repeat'} :
                                      {'background-image': 'url('+ default_image +')'}]"
-                                   v-bind:href="'/article/'+categories.article[4].id+'/show'"
+                                   v-bind:href="'/article/'+categories[0].article[4].id+'/show'"
                                    data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
                                         <div class="ribbon-box">
-                                            {{ categories.name }}
+                                            {{ categories[0].name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1">{{
-                                                    categories.article[4].title
+                                                    categories[0].article[4].title
                                                 }}</h3>
                                         </div>
                                     </div>
                                 </a>
                             </b-col>
-                            <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="categories.article[5]">
+                            <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="categories[0].article[5]">
                                 <a class="block block-transparent bg-image"
-                                   v-bind:style="[categories.article[5].image_name  ?
-                                    {'background': 'url(' + categories.article[5].image_name + ')',
+                                   v-bind:style="[categories[0].article[5].image_link  ?
+                                    {'background': 'url(' + categories[0].article[5].image_link + ')',
                                         'background-position':'center',
                                         'background-size':'cover',
                                         'background-repeat': 'no-repeat'} :
                                      {'background-image': 'url('+ default_image +')'}]"
-                                   v-bind:href="'/article/'+categories.article[5].id+'/show'"
+                                   v-bind:href="'/article/'+categories[0].article[5].id+'/show'"
                                    data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
                                         <div class="ribbon-box">
-                                            {{ categories.name }}
+                                            {{ categories[0].name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1">{{
-                                                    categories.article[5].title
+                                                    categories[0].article[5].title
                                                 }}</h3>
                                         </div>
                                     </div>
                                 </a>
                             </b-col>
-                    <b-col
+                    <!-- <b-col
                         v-for="(article,index) in categories[0].article.slice(6)"
                         cols="12"
                         sm="12"
@@ -171,7 +171,7 @@
                                 </div>
                             </div>
                         </a>
-                    </b-col>
+                    </b-col> -->
                 </b-row>
             </div>
         </div>
