@@ -1,13 +1,23 @@
 <template>
     <div>
         <b-row class="row">
-            <b-col cols="0" md="3" lg="3" sm="0"></b-col>
-            <b-col align-self="center" cols="12" md="6" lg="6" sm="12">
+            <b-col align-self="center" cols="12" md="12" lg="12" sm="12">
                 <div class="text-center w-100">
-                    <img v-bind:src="'../../' + article.image_link" />
+                    <div v-if="article.has_video === 1">
+                        <div v-html="article.video_link"></div>
+                    </div>
+                    <div v-else-if="article.image_link != null">
+                        <div class="article-show-image">
+                            <img class="" v-bind:src="'../../' + article.image_link" />
+                        </div>
+                    </div>
+                    <div v-else>
+                        <div class="article-show-image">
+                            <img v-bind:src="default_image" />
+                        </div>
+                    </div>
                 </div>
             </b-col>
-            <b-col cols="0" md="3" lg="3" sm="0"></b-col>
         </b-row>
         <div class="row py-3">
             <div class="col-md-2"></div>
@@ -62,6 +72,6 @@ export default {
     },
 }
 </script>
-<style scoped>
+<style>
 
 </style>
