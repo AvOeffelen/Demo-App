@@ -8,8 +8,27 @@
                 <b-row>
                     <b-col cols="12" sm="12" md="12" lg="6" xl="6" class="d-md-flex align-items-md-stretch"
                            v-if="categories[0].article[0]">
-                        <a v-if="categories[0].article[0].has_video === 0"
-                           class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image"
+                        <a v-if="categories[0].article[0].has_video === 1"
+                           class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image "
+                           v-bind:style="{'background-image':`url(${video_image})`,
+                                        'background-position':'center',
+                                        'background-size':'cover',
+                                        'background-repeat': 'no-repeat' }"
+                           v-bind:href="'/article/'+categories[0].article[0].id +'/show'"
+                           data-toggle="click-ripple">
+                            <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                                <div class="ribbon-box">
+                                    Video
+                                </div>
+                                <div class="pt-4 pb-6 px-md-3">
+                                    <h3 class="h1 font-w700 text-white mb-1">{{
+                                            categories[0].article[0].title
+                                        }}</h3>
+                                </div>
+                            </div>
+                        </a>
+                        <a v-else
+                        class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image"
                            v-bind:style="[categories[0].article[0].image_link ?
                                     {'background': 'url(' + categories[0].article[0].image_link + ')',
                                         'background-position':'center',
@@ -21,25 +40,6 @@
                             <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
                                 <div class="ribbon-box">
                                     Artikel
-                                </div>
-                                <div class="pt-4 pb-6 px-md-3">
-                                    <h3 class="h1 font-w700 text-white mb-1">{{
-                                            categories[0].article[0].title
-                                        }}</h3>
-                                </div>
-                            </div>
-                        </a>
-                        <a v-else
-                           class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image "
-                           v-bind:style="{'background-image':`url(${video_image})`,
-                                        'background-position':'center',
-                                        'background-size':'cover',
-                                        'background-repeat': 'no-repeat' }"
-                           v-bind:href="'/article/'+categories[0].article[0].id +'/show'"
-                           data-toggle="click-ripple">
-                            <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
-                                <div class="ribbon-box">
-                                    Video
                                 </div>
                                 <div class="pt-4 pb-6 px-md-3">
                                     <h3 class="h1 font-w700 text-white mb-1">{{
