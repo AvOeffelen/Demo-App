@@ -60,7 +60,10 @@ class ArticleController extends Controller
     public function store(StoreArticleRequest $request): JsonResponse
     {
         $hasVideo = false;
+        $uploadSucceed = true;
+
         $uploadingImage = $request->get('uploadImage');
+
         if($uploadingImage === "false"){
             $hasVideo = true;
         }
@@ -68,17 +71,26 @@ class ArticleController extends Controller
         $article = Article::create([
             'title' => $request->get('title'),
             'has_video' => $hasVideo,
-            'category_id' => $request->get('category_id'),
+            'category_id' => (int) $request->get('category_id'),
             'text' => $request->get('text'),
+            'button_text' => $request->get('button_text'),
+            'button_link' => $request->get('button_link'),
             'video_link' => $request->get('video_link'),
         ]);
 
         if($uploadingImage === "true"){
-            $this->uploadImage($request->file('image'), $article);
+            $image = $request->file('image');
+
+            $uploadSucceed = $this->uploadImage($image , $article);
         }
 
-        return response()->json(['article' => $article], 200);
+        if(! $uploadSucceed) {
+            return response()->json(['message' => 'Internal server error'],500);
+        }
+
+        return response()->json(['article' => $article]);
     }
+
 
     /**
      * @param UpdateArticleRequest $request
