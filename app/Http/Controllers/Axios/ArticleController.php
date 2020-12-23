@@ -172,6 +172,13 @@ class ArticleController extends Controller
         return $content;
     }
 
+    public function getCovidCategory()
+    {
+        $content = Category::with('Article')->where('name','=','Covid')->get();
+
+        return $content;
+    }
+
     public function showArticleUpdate(Article $article)
     {
         return response()->view('article.backend.crud.update',['article' => $article]);
