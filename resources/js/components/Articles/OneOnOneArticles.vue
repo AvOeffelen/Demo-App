@@ -3,7 +3,7 @@
         <div class="bg-body-dark">
             <div class="content">
                 <div class="text-center py-3">
-                    <h1 class="h3 font-w700 mb-2">1 Op 1 Artikelen</h1>
+                    <h1 class="h3 font-w700 mb-2">Persoonlijke begeleiding</h1>
                 </div>
                 <b-row>
                     <b-col cols="12" sm="12" md="12" lg="6" xl="6" class="d-md-flex align-items-md-stretch"
@@ -11,7 +11,7 @@
                         <a v-if="categories[0].article[0].has_video === 0"
                            class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image"
                            v-bind:style="[categories[0].article[0].image_link ?
-                                    {'background': 'url(../' + categories[0].article[0].image_link + ')'} :
+                                    {'background': 'url(' + categories[0].article[0].image_link + ')'} :
                                      {'background-image': 'url('+ default_image +')'}]"
                            v-bind:href="'/article/'+categories[0].article[0].id +'/show'"
                            data-toggle="click-ripple">
