@@ -8,41 +8,46 @@
                 <b-row>
                     <b-col cols="12" sm="12" md="12" lg="6" xl="6" class="d-md-flex align-items-md-stretch"
                            v-if="categories[0].article[0]">
-                        <a v-if="categories[0].article[0].has_video === 0"
-                           class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image"
-                           v-bind:style="[categories[0].article[0].image_link ?
+                        <div v-if="categories[0].article[0].has_video === null">
+                            <a
+                                class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image"
+                                v-bind:style="[categories[0].article[0].image_link ?
                                     {'background': 'url(' + categories[0].article[0].image_link + ')'} :
                                      {'background-image': 'url('+ default_image +')'}]"
-                           v-bind:href="'/article/'+categories[0].article[0].id +'/show'"
-                           data-toggle="click-ripple">
-                            <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
-                                <div class="ribbon-box">
-                                    Artikel
+                                v-bind:href="'/article/'+categories[0].article[0].id +'/show'"
+                                data-toggle="click-ripple">
+                                <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                                    <div class="ribbon-box">
+                                        Artikel
+                                    </div>
+                                    <div class="pt-4 pb-6 px-md-3">
+                                        <h3 class="h1 font-w700 text-white mb-1">{{
+                                                categories[0].article[0].title
+                                            }}</h3>
+                                    </div>
                                 </div>
-                                <div class="pt-4 pb-6 px-md-3">
-                                    <h3 class="h1 font-w700 text-white mb-1">{{
-                                            categories[0].article[0].title
-                                        }}</h3>
+                            </a>
+                        </div>
+                        <div v-else>
+                            <a
+                                class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image "
+                                v-bind:style="{'background-image':`url(${video_image})`, 'background-size':'cover' }"
+                                v-bind:href="'/article/'+categories[0].article[0].id +'/show'"
+                                data-toggle="click-ripple">
+                                <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                                    <div class="ribbon-box">
+                                        Video
+                                    </div>
+                                    <div class="pt-4 pb-6 px-md-3">
+                                        <h3 class="h1 font-w700 text-white mb-1">{{
+                                                categories[0].article[0].title
+                                            }}</h3>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                        <a v-else
-                           class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image "
-                           v-bind:style="{'background-image':`url(${video_image})`, 'background-size':'cover' }"
-                           v-bind:href="'/article/'+categories[0].article[0].id +'/show'"
-                           data-toggle="click-ripple">
-                            <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
-                                <div class="ribbon-box">
-                                    Video
-                                </div>
-                                <div class="pt-4 pb-6 px-md-3">
-                                    <h3 class="h1 font-w700 text-white mb-1">{{
-                                            categories[0].article[0].title
-                                        }}</h3>
-                                </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </b-col>
+                    <b-col v-else></b-col>
                     <b-col cols="12" sm="12" md="12" lg="6" xl="6"
                            v-if="categories[0].article[1]">
                         <a v-if="categories[0].article[1].has_video === 0"
@@ -116,6 +121,7 @@
                             </a>
                         </div>
                     </b-col>
+                    <b-col v-else></b-col>
                     <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="categories[0].article[3]">
                         <a v-if="categories[0].article[3].has_video === 0"
                            class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image"
