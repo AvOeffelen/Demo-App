@@ -6,12 +6,6 @@
         <div class="content content-full">
             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
                 <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Dashboard</h1>
-                <nav class="flex-sm-00-auto ml-sm-3" aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item">App</li>
-                        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-                    </ol>
-                </nav>
             </div>
         </div>
     </div>
@@ -29,7 +23,7 @@
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak_01.jpg); 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak_01.jpg; 
                         background-position: center; 
                         background-repeat: none;
                         "
@@ -58,12 +52,11 @@
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/WORKSHOPS_Bravis_KlantSamenVitaal.nl_V1.png); 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak_02.jpg); 
                         background-position: center; 
                         background-repeat: none;
                         "
                         href="{{url('workshop')}}"
-                        target="_blank"
                         data-toggle="click-ripple"
                     >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
@@ -71,7 +64,7 @@
                                 Workshops.
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1"></h3>
+                                <h3 class="h1 font-w700 text-white mb-1">Workshops</h3>
                             </div>
                         </div>
                     </a>
@@ -94,7 +87,6 @@
                         background-repeat: none;
                         "
                         href="{{url('one-on-one')}}"
-                        target="_blank"
                         data-toggle="click-ripple"
                     >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
@@ -118,12 +110,11 @@
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/COVID-19_Bravis_KlantSamenVitaal.nl_V1.png); 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak_04.jpg); 
                         background-position: center; 
                         background-repeat: none;
                         "
                         href="{{url('covid')}}"
-                        target="_blank"
                         data-toggle="click-ripple"
                     >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
@@ -131,7 +122,7 @@
                                 (na)zorg Corona
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1"></h3>
+                                <h3 class="h1 font-w700 text-white mb-1">(na)zorg Corona</h3>
                             </div>
                         </div>
                     </a>
@@ -178,12 +169,11 @@
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/INSPIRATIEMATERIAAL_Bravis_KlantSamenVitaal.nl_V1.png); 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak_06.jpg); 
                         background-position: center; 
                         background-repeat: none;
                         "
                         href="{{url('articles')}}"
-                        target="_blank"
                         data-toggle="click-ripple"
                     >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
@@ -191,7 +181,7 @@
                                 Inspiratiemateriaal
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1"></h3>
+                                <h3 class="h1 font-w700 text-white mb-1">Inspiratiemateriaal</h3>
                             </div>
                         </div>
                     </a>
@@ -238,12 +228,11 @@
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/ACTUEEL_Bravis_KlantSamenVitaal.nl_V1.png); 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak_08.jpg); 
                         background-position: center; 
                         background-repeat: none;
                         "
                         href="{{url('topical')}}"
-                        target="_blank"
                         data-toggle="click-ripple"
                     >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
@@ -251,7 +240,7 @@
                                 Actueel
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1"></h3>
+                                <h3 class="h1 font-w700 text-white mb-1">Actueel</h3>
                             </div>
                         </div>
                     </a>
