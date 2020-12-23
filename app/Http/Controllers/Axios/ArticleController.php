@@ -60,7 +60,10 @@ class ArticleController extends Controller
     public function store(StoreArticleRequest $request): JsonResponse
     {
         $hasVideo = false;
+        $uploadSucceed = true;
+
         $uploadingImage = $request->get('uploadImage');
+
         if($uploadingImage === "false"){
             $hasVideo = true;
         }
@@ -76,10 +79,16 @@ class ArticleController extends Controller
         ]);
 
         if($uploadingImage === "true"){
-            $this->uploadImage($request->file('image'), $article);
+            $image = $request->file('image');
+
+            $uploadSucceed = $this->uploadImage($image , $article);
         }
 
-        return response()->json(['article' => $article], 200);
+        if(! $uploadSucceed) {
+            return response()->json(['message' => 'Internal server error'],500);
+        }
+
+        return response()->json(['article' => $article]);
     }
 
     /**
