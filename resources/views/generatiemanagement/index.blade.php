@@ -23,7 +23,7 @@
                     Hierbij kun je denken aan: overgangsvraagstukken, loopbaanvraagstukken die per generatie kunnen verschillen, pensioenvraagstukken, van belang afhankelijk van de levensfase, balans werk en privé, mantelzorg, jonge werkenden ouders, etc 
                     Ga op zoek naar wat bij jou past!
                     Mocht je graag iets toegevoegd willen zien, laat het ons dan weten.
-                    Stuur een mail naar <a HREF="mailto:LATERVERVANGENCBA@CBA.COM">Webmaster</>
+                    Stuur een mail naar <a HREF="mailto:info@vitalavie.nl">info@vitalavie.nl</>
                 </alinea>
             </div>
         </div>
