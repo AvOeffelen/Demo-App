@@ -4,16 +4,11 @@
             <b-col cols="0" md="3" lg="3" sm="0"></b-col>
             <b-col align-self="center" cols="12" md="6" lg="6" sm="12">
                 <div class="text-center w-100">
-                    <div v-if="article.has_video === 0">
-                        <div v-bind:style="[
-                                        article.image_link ?
-                                            {'background': 'url(' +'../../'+ article.image_link + ')'} :
-                                            {'background-image': 'url('+ default_image +')'}
-                                     ]">
-                        </div>
-                    </div>
-                    <div v-else>
-                        <div v-html="article.video_link"></div>
+                    <div v-bind:style="[
+                                    article.image_link ?
+                                        {'background': 'url(' +'../../'+ article.image_link + ')'} :
+                                        {'background-image': 'url('+ default_image +')'}
+                                 ]">
                     </div>
                 </div>
             </b-col>
