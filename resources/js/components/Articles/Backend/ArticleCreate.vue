@@ -179,11 +179,11 @@ export default {
 
             axios.post('/axios/article/post', data)
                 .then(response => {
-                    // if (response.status === 200) {
-                    //     setTimeout(() => {
-                    //         window.location = '/backend/article/overview';
-                    //     }, 1000);
-                    // }
+                    if (response.status === 200) {
+                        setTimeout(() => {
+                            window.location = '/backend/article/overview';
+                        }, 1000);
+                    }
                 })
                 .catch(error => {
                     if (error.response.status == 422) {
