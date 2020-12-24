@@ -3,7 +3,7 @@
         <div class="bg-body-dark">
             <div class="content">
                 <div class="text-center py-3">
-                    <h1 class="h3 font-w700 mb-2">1 Op 1 Artikelen</h1>
+                    <h1 class="h3 font-w700 mb-2">Persoonlijke begeleiding</h1>
                 </div>
                 <b-row>
           <b-col

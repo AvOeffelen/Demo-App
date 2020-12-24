@@ -5,7 +5,7 @@
     <div class="bg-body-light">
         <div class="content content-full">
             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
-                <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Dashboard</h1>
+                <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Home</h1>
             </div>
         </div>
     </div>
@@ -23,8 +23,8 @@
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak01.jpg; 
-                        background-position: center; 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak01.jpg;
+                        background-position: center;
                         background-repeat: none;
                         "
                         href="{{route('download.calender')}}"
@@ -52,8 +52,8 @@
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak02.jpg); 
-                        background-position: center; 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak02.jpg);
+                        background-position: center;
                         background-repeat: none;
                         "
                         href="{{url('workshop')}}"
@@ -82,8 +82,8 @@
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak03.jpg); 
-                        background-position: center; 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak03.jpg);
+                        background-position: center;
                         background-repeat: none;
                         "
                         href="{{url('one-on-one')}}"
@@ -110,8 +110,8 @@
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak04.jpg); 
-                        background-position: center; 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak04.jpg);
+                        background-position: center;
                         background-repeat: none;
                         "
                         href="{{route('covid')}}"
@@ -140,8 +140,8 @@
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak05.jpg); 
-                        background-position: center; 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak05.jpg);
+                        background-position: center;
                         background-repeat: none;
                         "
                         href="{{url('https://app.johan.nl/login')}}"
@@ -169,8 +169,8 @@
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak06.jpg); 
-                        background-position: center; 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak06.jpg);
+                        background-position: center;
                         background-repeat: none;
                         "
                         href="{{url('articles')}}"
@@ -199,11 +199,11 @@
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak07.jpg); 
-                        background-position: center; 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak07.jpg);
+                        background-position: center;
                         background-repeat: none;
                         "
-                        href="{{url('https://my.goodhabitz.com/nl-be/login.html')}}" 
+                        href="{{url('https://my.goodhabitz.com/nl-be/login.html')}}"
                         target="_blank"
                         data-toggle="click-ripple"
                     >
@@ -228,8 +228,8 @@
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak08.jpg); 
-                        background-position: center; 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak08.jpg);
+                        background-position: center;
                         background-repeat: none;
                         "
                         href="{{url('topical')}}"
