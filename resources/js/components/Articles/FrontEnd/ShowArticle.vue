@@ -30,11 +30,11 @@
                     </div>
                 </div>
                 <b-row>
-                    <b-col cols="0" md="3" lg="3" sm="0"></b-col>
-                    <b-col align-self="center" cols="12" md="6" lg="6" sm="12">
+                    <b-col cols="0" md="1" lg="1" sm="0"></b-col>
+                    <b-col align-self="center" cols="12" md="10" lg="19" sm="12">
                         <div v-html="article.text"></div>
                     </b-col>
-                    <b-col cols="0" md="3" lg="3" sm="0"></b-col>
+                    <b-col cols="0" md="1" lg="1" sm="0"></b-col>
                 </b-row>
             </div>
             <div class="col-md-2"></div>
