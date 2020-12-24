@@ -1,7 +1,7 @@
 <template>
     <div>
         <b-row class="row">
-            <b-col align-self="center" cols="12" md="6" lg="6" sm="12">
+            <b-col align-self="center" cols="12" md="12" lg="12" sm="12">
                 <div class="text-center w-100">
                     <div v-if="article.has_video === 1">
                         <div v-html="article.video_link"></div>
