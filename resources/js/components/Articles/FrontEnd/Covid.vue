@@ -1,11 +1,11 @@
 <template>
-    <div>
-        <div class="bg-body-dark">
-            <div class="content">
-                <div class="text-center py-3">
-                    <h1 class="h3 font-w700 mb-2">Actuele Artikelen</h1>
-                </div>
-                <b-row>
+  <div>
+    <div class="bg-body-dark">
+      <div class="content">
+        <div class="text-center py-3">
+          <h1 class="h3 font-w700 mb-2">(Na)zorg Covid-19</h1>
+        </div>
+        <b-row>
           <b-col
             cols="12"
             sm="12"
@@ -267,42 +267,39 @@
             </a>
           </b-col>
         </b-row>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
 export default {
-    name: "CurrentArticles",
-    created() {
-        this.getCategories();
+  name: "Covid",
+  created() {
+    this.getCategories();
+  },
+  data() {
+    return {
+      loading: true,
+      categories: [],
+      default_image:
+        "https://www.bravissamenvitaal.nl/wp-content/uploads/2020/02/iStock-1058457940-2-495x400.jpg",
+      video_image: "storage/images/youtube.png",
+    };
+  },
+  methods: {
+    getCategories() {
+      axios
+        .get("/axios/article/get-covid-categories")
+        .then((response) => {
+          this.categories = response.data;
+          this.loading = false;
+        })
+        .catch((error) => {});
     },
-    data() {
-        return {
-            loading: true,
-            categories: [],
-            articles: [],
-            growthWorkshops: [],
-            default_image: 'https://www.bravissamenvitaal.nl/wp-content/uploads/2020/02/iStock-1058457940-2-495x400.jpg',
-            video_image: 'storage/images/youtube.png'
-        };
-    },
-    methods: {
-        getCategories() {
-            axios.get('/axios/article/get-topical-categories')
-                .then(response => {
-                    this.categories = response.data;
-                    this.loading = false;
-                })
-                .catch(error => {
-
-                });
-        }
-    },
-}
+  },
+};
 </script>
 
 <style scoped>
-
 </style>

@@ -10,4 +10,9 @@ class FAQController extends Controller
     {
         return view('faq.index');
     }
+    
+    public function showGenManagement()
+    {
+        return view('generatiemanagement.index');
+    }
 }

@@ -2,8 +2,8 @@
 
 @section('content')
     <!-- Page Content -->
-    <div class="content">
-        <workshop :workshop="{{$workshop}}"></workshop>
+    <div class="content content-full">
+        <covid />
     </div>
     <!-- END Page Content -->
 @endsection

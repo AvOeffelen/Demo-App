@@ -23,9 +23,11 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('articles','ArticleController@showArticles')->name('articles');
     Route::get('one-on-one','ArticleController@showOneOnOne')->name('oneOnOne');
     Route::get('topical','ArticleController@topical')->name('topical');
+    Route::get('covid-19','ArticleController@covid')->name('covid');
 
     Route::get('article/{article}/show','ArticleController@show')->name('article.show');
     Route::get('/faq','FAQController@showFAQ')->name('faq');
+    Route::get('/generatie-management','FAQController@showGenManagement')->name('gen.management');
 
     Route::get('/home', 'HomeController@index')->name('home');
 
@@ -87,6 +89,7 @@ Route::group(['prefix' => 'axios/article', 'namespace' => 'Axios','middleware'=>
     route::get('get-all-standard-categories','ArticleController@getAllCategories')->name('article.get.all-standard.categories');
     route::get('get-one-on-one-categories','ArticleController@getOneOnOneCategory')->name('article.get.OneOnOne.categories');
     route::get('get-topical-categories','ArticleController@getTopicalCategory')->name('article.get.topical.categories');
+    route::get('get-covid-categories','ArticleController@getCovidCategory')->name('article.get.covid.categories');
 });
 
 Route::group(['prefix' => 'axios/workshop', 'namespace' => 'Axios','middleware'=> ['web']], function () {

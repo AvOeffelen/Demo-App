@@ -9,6 +9,50 @@
 
 // For example, changing the primary color
 // $primary: #3b5998;
-.h-300{
-	height: 300px;
+.h-250{
+	height: 250px;
+}
+main#main-container{
+	background-color: #f1ebec;
+}
+
+.py-15{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.pt-150{
+	padding-top: 150px;
+}
+.pt-15{
+	padding-top:15px;
+}
+
+.h-200{
+	height: 200px;
+}
+
+.h-286{
+	height: 286px;
+}
+
+.h-220{
+	height: 220px;
+}
+
+.h-600{
+	height: 600px;
+}
+
+.mh-590{
+	max-height: 590px;
+}
+
+.mh-286{
+	max-height: 286px;
+}
+
+.article-show-image>img{
+    height: 500px;
+    width: 75%;
 }

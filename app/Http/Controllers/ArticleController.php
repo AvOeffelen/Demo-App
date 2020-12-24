@@ -35,6 +35,11 @@ class ArticleController extends Controller
         return response()->view('article.frontend.topical.index');
     }
 
+    public function covid()
+    {
+        return response()->view('article.frontend.covid.index');
+    }
+
     public function show(Article $article)
     {
         return response()->view('article.frontend.article.index', ['article' => $article]);

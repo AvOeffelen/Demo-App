@@ -152,7 +152,7 @@ class ArticleController extends Controller
 
     public function getAllCategories()
     {
-        $content = Category::with('Article')->where('name','!=','1 op 1')->where('name','!=','Actueel')->get();
+        $content = Category::with('Article')->where('name','!=','1 op 1')->where('name','!=','Actueel')->where('name','!=','Covid')->get();
 
         return $content;
     }
@@ -167,6 +167,13 @@ class ArticleController extends Controller
     public function getTopicalCategory()
     {
         $content = Category::with('Article')->where('name','=','Actueel')->get();
+
+        return $content;
+    }
+
+    public function getCovidCategory()
+    {
+        $content = Category::with('Article')->where('name','=','Covid')->get();
 
         return $content;
     }

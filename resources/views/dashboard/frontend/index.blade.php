@@ -6,12 +6,6 @@
         <div class="content content-full">
             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
                 <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Dashboard</h1>
-                <nav class="flex-sm-00-auto ml-sm-3" aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item">App</li>
-                        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-                    </ol>
-                </nav>
             </div>
         </div>
     </div>
@@ -24,12 +18,12 @@
                             block-transparent
                             block-link-pop
                             w-100
-                            h-300
+                            h-250
                             d-md-flex
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Activiteitenkalender_online-12082020-845x684-1-300x243-1.png); 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak01.jpg; 
                         background-position: center; 
                         background-repeat: none;
                         "
@@ -53,17 +47,16 @@
                             block-transparent
                             block-link-pop
                             w-100
-                            h-300
+                            h-250
                             d-md-flex
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/istockphoto-847172346-1024x1024-1.jpg); 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak02.jpg); 
                         background-position: center; 
                         background-repeat: none;
                         "
                         href="{{url('workshop')}}"
-                        target="_blank"
                         data-toggle="click-ripple"
                     >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
@@ -84,25 +77,24 @@
                             block-transparent
                             block-link-pop
                             w-100
-                            h-300
+                            h-250
                             d-md-flex
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/istockphoto-1205480426-1024x1024-1.jpg); 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak03.jpg); 
                         background-position: center; 
                         background-repeat: none;
                         "
                         href="{{url('one-on-one')}}"
-                        target="_blank"
                         data-toggle="click-ripple"
                     >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
                             <div class="ribbon-box">
-                                1 op 1
+                                Persoonlijke begeleiding
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1">1 op 1</h3>
+                                <h3 class="h1 font-w700 text-white mb-1">Persoonlijke begeleiding</h3>
                             </div>
                         </div>
                     </a>
@@ -113,25 +105,24 @@
                             block-transparent
                             block-link-pop
                             w-100
-                            h-300
+                            h-250
                             d-md-flex
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/istockphoto-1216081971-1024x1024-1.jpg); 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak04.jpg); 
                         background-position: center; 
                         background-repeat: none;
                         "
-                        href="{{url('covid')}}"
-                        target="_blank"
+                        href="{{route('covid')}}"
                         data-toggle="click-ripple"
                     >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
                             <div class="ribbon-box">
-                                Covid-19
+                                (na)zorg Corona
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1">Covid-19</h3>
+                                <h3 class="h1 font-w700 text-white mb-1">(na)zorg Corona</h3>
                             </div>
                         </div>
                     </a>
@@ -144,12 +135,12 @@
                             block-transparent
                             block-link-pop
                             w-100
-                            h-300
+                            h-250
                             d-md-flex
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/istockphoto-1203097687-1024x1024-1.jpg); 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak05.jpg); 
                         background-position: center; 
                         background-repeat: none;
                         "
@@ -159,10 +150,10 @@
                     >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
                             <div class="ribbon-box">
-                                vragenlijsten
+                                Vragenlijsten
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1">vragenlijsten</h3>
+                                <h3 class="h1 font-w700 text-white mb-1">Vragenlijsten</h3>
                             </div>
                         </div>
                     </a>
@@ -173,17 +164,16 @@
                             block-transparent
                             block-link-pop
                             w-100
-                            h-300
+                            h-250
                             d-md-flex
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/iStock-1175309338-scaled.jpg); 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak06.jpg); 
                         background-position: center; 
                         background-repeat: none;
                         "
                         href="{{url('articles')}}"
-                        target="_blank"
                         data-toggle="click-ripple"
                     >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
@@ -204,12 +194,12 @@
                             block-transparent
                             block-link-pop
                             w-100
-                            h-300
+                            h-250
                             d-md-flex
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/be-1.png); 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak07.jpg); 
                         background-position: center; 
                         background-repeat: none;
                         "
@@ -233,17 +223,16 @@
                             block-transparent
                             block-link-pop
                             w-100
-                            h-300
+                            h-250
                             d-md-flex
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/istockphoto-1209693436-1024x1024-1.jpg); 
+                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak08.jpg); 
                         background-position: center; 
                         background-repeat: none;
                         "
                         href="{{url('topical')}}"
-                        target="_blank"
                         data-toggle="click-ripple"
                     >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
