@@ -14,7 +14,7 @@
                             <b-col cols="12" sm="12" md="12" lg="6" xl="6" class="d-md-flex align-items-md-stretch"
                                    v-if="category.workshop[0]">
                                 <a
-                                    class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image"
+                                    class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-600"
                                     v-bind:style="[category.workshop[0].image_name ?
                                     {
                                         'background': 'url(' + category.workshop[0].image_name + ')',
@@ -25,7 +25,7 @@
                                      {'background-image': 'url('+ default_image +');'}]"
                                     v-bind:href="'/workshop/'+category.workshop[0].id +'/show'"
                                     data-toggle="click-ripple">
-                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-600">
                                         <div class="ribbon-box">
                                             {{ category.name }}
                                         </div>
@@ -39,7 +39,7 @@
                             </b-col>
                             <b-col cols="12" sm="12" md="12" lg="6" xl="6"
                                    v-if="category.workshop[1]">
-                                <a class="block block-transparent bg-image"
+                                <a class="block block-transparent bg-image h-286"
                                    v-bind:style="[category.workshop[1].image_name ?
                                     {'background': 'url(' + category.workshop[1].image_name + ')',
                                         'background-position':'center',
@@ -48,7 +48,7 @@
                                      {'background-image': 'url('+ default_image +')'}]"
                                    v-bind:href="'/workshop/'+category.workshop[1].id+'/show'"
                                    data-toggle="click-ripple">
-                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             {{ category.name }}
                                         </div>
@@ -60,7 +60,7 @@
                                     </div>
                                 </a>
                                 <div v-if="category.workshop[2]">
-                                    <a class="block block-transparent bg-image"
+                                    <a class="block block-transparent bg-image h-286"
                                        v-bind:style="[category.workshop[2].image_name  ?
                                     {'background': 'url(' + category.workshop[2].image_name + ')',
                                         'background-position':'center',
@@ -69,7 +69,7 @@
                                      {'background-image': 'url('+ default_image +')'}]"
                                        v-bind:href="'/workshop/'+category.workshop[2].id+'/show'"
                                        data-toggle="click-ripple">
-                                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                             <div class="ribbon-box">
                                                 {{ category.name }}
                                             </div>
@@ -83,7 +83,7 @@
                                 </div>
                             </b-col>
                             <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="category.workshop[3]">
-                                <a class="block block-transparent bg-image"
+                                <a class="block block-transparent bg-image h-286"
                                    v-bind:style="[category.workshop[3].image_name  ?
                                     {'background': 'url(' + category.workshop[3].image_name + ')',
                                         'background-position':'center',
@@ -92,7 +92,7 @@
                                      {'background-image': 'url('+ default_image +')'}]"
                                    v-bind:href="'/workshop/'+category.workshop[3].id+'/show'"
                                    data-toggle="click-ripple">
-                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             {{ category.name }}
                                         </div>
@@ -105,7 +105,7 @@
                                 </a>
                             </b-col>
                             <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="category.workshop[4]">
-                                <a class="block block-transparent bg-image"
+                                <a class="block block-transparent bg-image h-286"
                                    v-bind:style="[category.workshop[4].image_name  ?
                                     {'background': 'url(' + category.workshop[4].image_name + ')',
                                         'background-position':'center',
@@ -114,7 +114,7 @@
                                      {'background-image': 'url('+ default_image +')'}]"
                                    v-bind:href="'/workshop/'+category.workshop[4].id+'/show'"
                                    data-toggle="click-ripple">
-                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             {{ category.name }}
                                         </div>
@@ -127,7 +127,7 @@
                                 </a>
                             </b-col>
                             <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="category.workshop[5]">
-                                <a class="block block-transparent bg-image"
+                                <a class="block block-transparent bg-image h-286"
                                    v-bind:style="[category.workshop[5].image_name  ?
                                     {'background': 'url(' + category.workshop[5].image_name + ')',
                                         'background-position':'center',
@@ -136,7 +136,7 @@
                                      {'background-image': 'url('+ default_image +')'}]"
                                    v-bind:href="'/workshop/'+category.workshop[5].id+'/show'"
                                    data-toggle="click-ripple">
-                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             {{ category.name }}
                                         </div>
@@ -156,7 +156,7 @@
                                 lg="6"
                                 xl="6"
                                 :key="index">
-                                <a class="block block-transparent bg-image"
+                                <a class="block block-transparent bg-image h-286"
                                    v-bind:style="[workshop.image_name  ?
                                     {'background': 'url(' + workshop.image_name + ')',
                                         'background-position':'center',
@@ -165,7 +165,7 @@
                                      {'background-image': 'url('+ default_image +')'}]"
                                    v-bind:href="'/workshop/'+ workshop.id+'/show'"
                                    data-toggle="click-ripple">
-                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             {{ category.name }}
                                         </div>
