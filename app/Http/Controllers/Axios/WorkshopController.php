@@ -205,7 +205,7 @@ class WorkshopController extends Controller
 
     public function signUpForWorkshop(WorkshopSignUpRequest $request, Workshop $workshop)
     {
-        Mail::to('bravissamenvitaal@gmail.com')->send(new WorkshopSignUpMail($workshop,$request->toArray()));
+        Mail::to('info@vitalavie.nl')->send(new WorkshopSignUpMail($workshop,$request->toArray()));
         return response()->json(['message' => 'U bent succesvol aangemeld!']);
     }
 }
