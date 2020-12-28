@@ -133,11 +133,11 @@ export default {
                         }
                     }
                 });
+        },
+        goBack(){
+            history.back();
         }
     },
-    goBack(){
-        history.back();
-    }
 }
 </script>
 
