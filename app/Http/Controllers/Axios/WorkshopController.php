@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\FileUploadRequest;
 use App\Http\Requests\StoreWorkshopRequest;
 use App\Http\Requests\UpdateWorkshopRequest;
+use App\Http\Requests\WorkshopSignUpRequest;
+use App\Mail\WorkshopSignUpMail;
 use App\Model\Article;
 use App\Model\Workshop;
 use App\Model\WorkshopCategory;
@@ -13,6 +15,7 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use phpDocumentor\Reflection\Types\Boolean;
@@ -198,5 +201,11 @@ class WorkshopController extends Controller
     public function checkIfUserHasLiked(Workshop $workshop): bool
     {
         return $workshop->userFavorites->contains(auth()->user());
+    }
+
+    public function signUpForWorkshop(WorkshopSignUpRequest $request, Workshop $workshop)
+    {
+        Mail::to($request->get('email'))->send(new WorkshopSignUpMail($workshop,$request->toArray()));
+        return response()->json(['message' => 'U bent succesvol aangemeld!']);
     }
 }

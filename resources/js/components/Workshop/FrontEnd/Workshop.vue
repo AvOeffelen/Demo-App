@@ -2,7 +2,6 @@
     <div>
         <b-row>
             <b-col align-self="center" cols="12" md="12" lg="12" sm="12">
-                <b-button @click="goBack()" variant="primary">Terug</b-button>
                 <div class="text-center w-100">
                     <div v-if="workshop.image_name != null">
                         <div class="article-show-image">
@@ -47,7 +46,12 @@
                         </div>
                     </div>
                 </div>
-                <div v-html="workshop.agenda_link"></div>
+                <div v-if="workshop.agenda_link !== null">
+                    <div v-html="workshop.agenda_link"></div>
+                </div>
+                <div v-else>
+                    <workshop-sign-up :workshop="workshop"></workshop-sign-up>
+                </div>
             </div>
             <div class="col-md-2"></div>
         </div>
@@ -128,9 +132,6 @@ export default {
                         }
                     }
                 });
-        },
-        goBack(){
-            history.back();
         }
     },
 }

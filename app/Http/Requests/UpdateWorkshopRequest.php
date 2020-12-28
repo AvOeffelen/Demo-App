@@ -30,10 +30,7 @@ class UpdateWorkshopRequest extends FormRequest
         return [
             'title' => 'required',
             'text' => 'required',
-            'agenda_link' => 'required',
             'workshop_category_id' => 'required',
-            'start' => 'required',
-            'end' => 'required',
             'image' => 'sometimes|required|mimes:jpg,png,jpeg,gif'
         ];
     }
@@ -45,7 +42,6 @@ class UpdateWorkshopRequest extends FormRequest
             'workshop_category_id.required' => "De workshop titel is verplicht.",
             'sub_title.required' => "De workshop ondertitel is verplicht.",
             'text.required' => "De workshop text is verplicht.",
-            'agenda_link.required' => "De workshop agenda is verplicht.",
         ];
     }
 }

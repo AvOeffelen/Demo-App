@@ -30,7 +30,7 @@
                                             {{ category.name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
-                                            <h3 class="h1 font-w700 text-white mb-1">{{
+                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{
                                                     category.article[0].title
                                                 }}</h3>
                                         </div>
@@ -53,7 +53,7 @@
                                             {{ category.name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
-                                            <h3 class="h1 font-w700 text-white mb-1">{{
+                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{
                                                     category.article[1].title
                                                 }}</h3>
                                         </div>
@@ -74,7 +74,7 @@
                                                 {{ category.name }}
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
-                                                <h3 class="h1 font-w700 text-white mb-1">{{
+                                                <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{
                                                         category.article[2].title
                                                     }}</h3>
                                             </div>
@@ -97,7 +97,7 @@
                                             {{ category.name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
-                                            <h3 class="h1 font-w700 text-white mb-1">{{
+                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{
                                                     category.article[3].title
                                                 }}</h3>
                                         </div>
@@ -119,7 +119,7 @@
                                             {{ category.name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
-                                            <h3 class="h1 font-w700 text-white mb-1">{{
+                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{
                                                     category.article[4].title
                                                 }}</h3>
                                         </div>
@@ -141,7 +141,7 @@
                                             {{ category.name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
-                                            <h3 class="h1 font-w700 text-white mb-1">{{
+                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{
                                                     category.article[5].title
                                                 }}</h3>
                                         </div>
@@ -170,7 +170,7 @@
                                     Artikel
                                 </div>
                                 <div class="pt-4 pb-6 px-md-3">
-                                    <h3 class="h1 font-w700 text-white mb-1">{{
+                                    <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{
                                             article.title
                                         }}</h3>
                                 </div>

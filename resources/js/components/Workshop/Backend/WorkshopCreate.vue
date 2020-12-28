@@ -145,7 +145,7 @@ export default {
             workshop: {
                 title: '',
                 text: '',
-                agenda_link: '',
+                agenda_link: null,
                 workshop_category_id: 1,
                 start: null,
                 end:null,
@@ -185,10 +185,14 @@ export default {
             if(this.image != null){
                 data.append('image',this.image);
             }
+
+            if(this.workshop.agenda_link != null){
+                data.append('agenda_link',this.workshop.agenda_link);
+            }
+
             data.append('title',this.workshop.title);
             data.append('workshop_category_id',this.workshop.workshop_category_id);
             data.append('text',this.workshop.text);
-            data.append('agenda_link',this.workshop.agenda_link);
             data.append('start',this.workshop.start);
             data.append('end',this.workshop.end);
             let url = '/axios/workshop/post';
@@ -217,7 +221,7 @@ export default {
         },
         reset() {
             this.workshop.title = '';
-            this.workshop.agenda_link = '';
+            this.workshop.agenda_link = null;
             this.workshop.text = '';
             this.workshop.workshop_category_id = 1;
             this.workshop.start = '';

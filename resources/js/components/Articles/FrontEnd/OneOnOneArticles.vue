@@ -3,7 +3,7 @@
         <div class="bg-body-dark">
             <div class="content">
                 <div class="text-center py-3 oneOnOneimage">
-                    <h1 class="h3 font-w700 mb-2">Persoonlijke begeleiding</h1>
+                    <h1 class="h1 font-w700 mb-2 text-primary text-shadow-workshops">Persoonlijke begeleiding</h1>
                 </div>
         <b-row v-if="loading === true">
            <b-col>
@@ -45,7 +45,7 @@
                   {{ categories[0].name }}
                 </div>
                 <div class="pt-4 pb-6 px-md-3">
-                  <h3 class="h1 font-w700 text-white mb-1">
+                  <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
                     {{ categories[0].article[0].title }}
                   </h3>
                 </div>
@@ -83,7 +83,7 @@
                   {{ categories[0].name }}
                 </div>
                 <div class="pt-4 pb-6 px-md-3">
-                  <h3 class="h1 font-w700 text-white mb-1">
+                  <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
                     {{ categories[0].article[1].title }}
                   </h3>
                 </div>
@@ -115,7 +115,7 @@
                     {{ categories[0].name }}
                   </div>
                   <div class="pt-4 pb-6 px-md-3">
-                    <h3 class="h1 font-w700 text-white mb-1">
+                    <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
                       {{ categories[0].article[2].title }}
                     </h3>
                   </div>
@@ -154,7 +154,7 @@
                   {{ categories[0].name }}
                 </div>
                 <div class="pt-4 pb-6 px-md-3">
-                  <h3 class="h1 font-w700 text-white mb-1">
+                  <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
                     {{ categories[0].article[3].title }}
                   </h3>
                 </div>
@@ -192,7 +192,7 @@
                   {{ categories[0].name }}
                 </div>
                 <div class="pt-4 pb-6 px-md-3">
-                  <h3 class="h1 font-w700 text-white mb-1">
+                  <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
                     {{ categories[0].article[4].title }}
                   </h3>
                 </div>
@@ -230,7 +230,7 @@
                   {{ categories[0].name }}
                 </div>
                 <div class="pt-4 pb-6 px-md-3">
-                  <h3 class="h1 font-w700 text-white mb-1">
+                  <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
                     {{ categories[0].article[5].title }}
                   </h3>
                 </div>
@@ -266,7 +266,7 @@
                 >
                   <div class="ribbon-box">Artikel</div>
                   <div class="pt-4 pb-6 px-md-3">
-                    <h3 class="h1 font-w700 text-white mb-1">
+                    <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
                       {{ article.title }}
                     </h3>
                   </div>

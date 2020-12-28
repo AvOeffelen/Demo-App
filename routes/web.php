@@ -100,4 +100,6 @@ Route::group(['prefix' => 'axios/workshop', 'namespace' => 'Axios','middleware'=
     route::get('/get-physical','WorkshopController@getAllPhysicalVitalityWorkshops')->name('workshop.get.physical');
     route::get('/get-mental','WorkshopController@getAllMentalVitalityWorkshops')->name('workshop.get.mental');
     route::get('/get-growth','WorkshopController@getAllGrowthWorkshops')->name('workshop.get.growth');
+
+    route::post('/{workshop}/sign-up','WorkshopController@signUpForWorkshop')->name('workshop.signup');
 });
