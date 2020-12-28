@@ -13,16 +13,36 @@
             </div>
         </div>
     </div>
-    <div class="content content-boxed text-center">
+    <div class="content content text-center">
         <div class="row">
-            <div class="col-md-12 col-lg-12 col-xl-12 col-12 col-sm-12 col-xs-12">
-                <h3>Vragenlijsten</h3>
-                <alinea class="text-center">
-                    <p>Johan is een onafhankelijk platform waar je naartoe kunt gaan om vragenlijsten in te vullen. Dit kun je doen wanneer je bijvoorbeeld nog niet weet met welke thema je graag aan de slag wilt gaan. De uitslag van de vragenlijst geeft je wellicht inzichten en aanknopingspunten om mee aan de slag te gaan. Het aanbod vind je dan vervolgens weer gewoon op Bravis Samen Vitaal. 
+            <div class="col-md-12 col-lg-2 col-xl-2 col-12 col-sm-12 col-xs-12 cols-12">
 
-Je moet op deze pagina eerst even inloggen en wanneer je dat nog niet hebt gedaan, eerst een account aanmaken. Dit is omdat er persoonlijke gegevens van je worden opgeslagen en om die gegevens te beveiligen is een inlog noodzakelijk.
-</p>
+                <a href="javascript:history.back()" class="btn btn-primary">Terug</a>
+            </div>
+            <div class="col-md-12 col-lg-8 col-xl-8 col-12 col-sm-12 col-xs-12">
+                <h3>Vragenlijsten</h3>
+            </div>
+            <div class="col-md-12 col-lg-2 col-xl-2 col-12 col-sm-12 col-xs-12 cols-12">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-2 col-xl-2 col-12 col-sm-12 col-xs-12 cols-12">
+            </div>
+            <div class="col-md-12 col-lg-8 col-xl-8 col-12 col-sm-12 col-xs-12">
+                <alinea class="text-center">
+                    Johan is een onafhankelijk platform waar je naartoe kunt gaan om vragenlijsten in te vullen. Dit kun
+                    je doen wanneer je bijvoorbeeld nog niet weet met welke thema je graag aan de slag wilt gaan. De
+                    uitslag van de vragenlijst geeft je wellicht inzichten en aanknopingspunten om mee aan de slag te
+                    gaan. Het aanbod vind je dan vervolgens weer gewoon op Bravis Samen Vitaal.
+                    <br />
+                    <br />
+                    Je moet op deze pagina eerst even inloggen en wanneer je dat nog niet hebt gedaan, eerst een account
+                    aanmaken. Dit is omdat er persoonlijke gegevens van je worden opgeslagen en om die gegevens te
+                    beveiligen is een inlog noodzakelijk.
+
                 </alinea>
+            </div>
+            <div class="col-md-12 col-lg-2 col-xl-2 col-12 col-sm-12 col-xs-12 cols-12">
             </div>
         </div>
         <div class="row py-5">

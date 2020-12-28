@@ -2,9 +2,16 @@
     <div>
         <div class="bg-body-dark">
             <div class="content">
-                <div class="text-center py-3">
-                    <h1 class="h3 font-w700 mb-2">BESCHIKBARE WORKSHOPS</h1>
-                </div>
+                <b-row>
+                    <b-col cols="12" md="12" lg="2" xl="2" sm="12">
+                        <b-button @click="goBack()" variant="primary">Terug</b-button></b-col>
+                    <b-col cols="12" md="12" lg="8" xl="8" sm="12">
+                        <div class="text-center py-3">
+                            <h1 class="h3 font-w700 mb-2">BESCHIKBARE WORKSHOPS</h1>
+                        </div>
+                    </b-col>
+                    <b-col cols="12" md="12" lg="2" xl="2" sm="12"></b-col>
+                </b-row>
                 <b-tabs content-class="py-5" align="center"
                         id="horizontal-navigation-hover-centered py-5 px-1"
                         class=" h5 d-lg-block mt-2 mt-lg-0 nav nav-main nav-main-horizontal nav-main-horizontal-center"
@@ -247,6 +254,9 @@ export default {
                 .catch(error => {
 
                 });
+        },
+        goBack(){
+            history.back();
         }
     },
 }

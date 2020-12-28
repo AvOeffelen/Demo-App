@@ -2,16 +2,23 @@
     <div>
         <div class="bg-body-dark">
             <div class="content">
-                <div class="text-center py-3">
-                    <h1 class="h3 font-w700 mb-2">Artikelen</h1>
-                </div>
+                <b-row>
+                    <b-col cols="12" md="12" lg="2" xl="2" sm="12">
+                        <b-button @click="goBack()" variant="primary">Terug</b-button></b-col>
+                    <b-col cols="12" md="12" lg="4" xl="4" sm="12">
+                        <div class="text-center py-3">
+                            <h1 class="h3 font-w700 mb-2">Artikelen</h1>
+                        </div>
+                    </b-col>
+                    <b-col cols="12" md="12" lg="2" xl="2" sm="12"></b-col>
+                </b-row>
                 <b-tabs content-class="py-5" align="center"
                         id="horizontal-navigation-hover-centered py-5 px-1"
                         class=" h5 d-lg-block mt-2 mt-lg-0 nav nav-main nav-main-horizontal nav-main-horizontal-center"
                         v-if="loading == false">
                     <b-tab :title="category.name" v-for="(category, key) in this.categories" :key="key">
-                                        <b-row>
-                    <b-col cols="12" sm="12" md="12" lg="6" xl="6" class="d-md-flex align-items-md-stretch"
+                        <b-row>
+                            <b-col cols="12" sm="12" md="12" lg="6" xl="6" class="d-md-flex align-items-md-stretch"
                                    v-if="category.article[0]">
                                 <a
                                     class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-600"
@@ -25,7 +32,8 @@
                                      {'background-image': 'url('+ default_image +');'}]"
                                     v-bind:href="'/article/'+category.article[0].id +'/show'"
                                     data-toggle="click-ripple">
-                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-600">
+                                    <div
+                                        class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-600">
                                         <div class="ribbon-box">
                                             {{ category.name }}
                                         </div>
@@ -48,7 +56,8 @@
                                      {'background-image': 'url('+ default_image +')'}]"
                                    v-bind:href="'/article/'+category.article[1].id+'/show'"
                                    data-toggle="click-ripple">
-                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                    <div
+                                        class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             {{ category.name }}
                                         </div>
@@ -69,7 +78,8 @@
                                      {'background-image': 'url('+ default_image +')'}]"
                                        v-bind:href="'/article/'+category.article[2].id+'/show'"
                                        data-toggle="click-ripple">
-                                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        <div
+                                            class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                             <div class="ribbon-box">
                                                 {{ category.name }}
                                             </div>
@@ -92,7 +102,8 @@
                                      {'background-image': 'url('+ default_image +')'}]"
                                    v-bind:href="'/article/'+category.article[3].id+'/show'"
                                    data-toggle="click-ripple">
-                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                    <div
+                                        class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             {{ category.name }}
                                         </div>
@@ -114,7 +125,8 @@
                                      {'background-image': 'url('+ default_image +')'}]"
                                    v-bind:href="'/article/'+category.article[4].id+'/show'"
                                    data-toggle="click-ripple">
-                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                    <div
+                                        class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             {{ category.name }}
                                         </div>
@@ -136,7 +148,8 @@
                                      {'background-image': 'url('+ default_image +')'}]"
                                    v-bind:href="'/article/'+category.article[5].id+'/show'"
                                    data-toggle="click-ripple">
-                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                    <div
+                                        class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             {{ category.name }}
                                         </div>
@@ -148,36 +161,37 @@
                                     </div>
                                 </a>
                             </b-col>
-                    <b-col
-                        v-for="(article,index) in category.article.slice(6)"
-                        cols="12"
-                        sm="12"
-                        md="12"
-                        lg="6"
-                        xl="6"
-                        :key="index">
-                        <a class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
-                           v-bind:style="[article.image_link ?
+                            <b-col
+                                v-for="(article,index) in category.article.slice(6)"
+                                cols="12"
+                                sm="12"
+                                md="12"
+                                lg="6"
+                                xl="6"
+                                :key="index">
+                                <a class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
+                                   v-bind:style="[article.image_link ?
                                     {'background': 'url(' + article.image_link + ')',
                                         'background-position':'center',
                                         'background-size':'cover',
                                         'background-repeat': 'no-repeat'} :
                                      {'background-image': 'url('+ default_image +')'}]"
-                           v-bind:href="'/article/'+article.id +'/show'"
-                           data-toggle="click-ripple">
-                            <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
-                                <div class="ribbon-box">
-                                    Artikel
-                                </div>
-                                <div class="pt-4 pb-6 px-md-3">
-                                    <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{
-                                            article.title
-                                        }}</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </b-col>
-                </b-row>
+                                   v-bind:href="'/article/'+article.id +'/show'"
+                                   data-toggle="click-ripple">
+                                    <div
+                                        class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        <div class="ribbon-box">
+                                            Artikel
+                                        </div>
+                                        <div class="pt-4 pb-6 px-md-3">
+                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{
+                                                    article.title
+                                                }}</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </b-col>
+                        </b-row>
                     </b-tab>
                 </b-tabs>
             </div>
@@ -209,6 +223,9 @@ export default {
                 .catch(error => {
 
                 });
+        },
+        goBack() {
+            history.back();
         }
     },
 }
