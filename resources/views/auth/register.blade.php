@@ -9,8 +9,8 @@
                     <!-- Header -->
                     <div class="mb-3 text-center">
                         <div class="mb-3 text-center">
-                            <a class="link-fx font-w700 font-size-h1" href="#">
-                                <span class="text-dark">KLANTSAMEN</span><span class="text-primary">VITAAL</span>
+                            <a>
+                                <img src="https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/bravis.jpg" height="150">
                             </a>
                             <p class="text-uppercase font-w700 font-size-sm text-muted py-3">Registreren</p>
                         </div>

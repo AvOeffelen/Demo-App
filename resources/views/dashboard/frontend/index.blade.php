@@ -2,10 +2,10 @@
 
 @section('content')
     <!-- Hero -->
-    <div class="bg-body-light">
+    <div class="bg-body-white">
         <div class="content content-full">
             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
-                <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Home</h1>
+                <img src="https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/bravis.jpg" height="70">
             </div>
         </div>
     </div>
@@ -144,8 +144,7 @@
                         background-position: center;
                         background-repeat: none;
                         "
-                        href="{{url('https://app.johan.nl/login')}}"
-                        target="_blank"
+                        href="{{route('vragenlijsten')}}"
                         data-toggle="click-ripple"
                     >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
@@ -203,8 +202,7 @@
                         background-position: center;
                         background-repeat: none;
                         "
-                        href="{{url('https://my.goodhabitz.com/nl-be/login.html')}}"
-                        target="_blank"
+                        href="{{route('goodhabitz')}}"
                         data-toggle="click-ripple"
                     >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">

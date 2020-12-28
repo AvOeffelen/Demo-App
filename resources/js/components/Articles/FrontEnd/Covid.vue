@@ -5,7 +5,14 @@
         <div class="text-center py-3">
           <h1 class="h3 font-w700 mb-2">(Na)zorg Covid-19</h1>
         </div>
-        <b-row>
+        <b-row v-if="loading === true">
+           <b-col>
+             <div class="text-center">               
+                <b-spinner style="width: 3rem; height: 3rem;" variant="primary" type="grow" label="Spinning"></b-spinner>             
+             </div>
+           </b-col>
+        </b-row>
+        <b-row v-else>
           <b-col
             cols="12"
             sm="12"

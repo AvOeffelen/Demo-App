@@ -2,6 +2,7 @@
     <div>
         <b-row class="row">
             <b-col align-self="center" cols="12" md="12" lg="12" sm="12">
+                <b-button @click="goBack()" variant="primary">Terug</b-button>
                 <div class="text-center w-100">
                     <div v-if="article.has_video === 1">
                         <div v-html="article.video_link"></div>
@@ -68,6 +69,9 @@ export default {
     methods: {
         buttonFunction(link){
             window.open("https://"+link);
+        },
+        goBack(){
+            history.back();
         }
     },
 }

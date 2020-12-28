@@ -28,6 +28,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('article/{article}/show','ArticleController@show')->name('article.show');
     Route::get('/faq','FAQController@showFAQ')->name('faq');
     Route::get('/generatie-management','FAQController@showGenManagement')->name('gen.management');
+    Route::get('/vragenlijsten','FAQController@showVragenlijsten')->name('vragenlijsten');
+    Route::get('/goodhabitz','FAQController@showGoodHabitz')->name('goodhabitz');
 
     Route::get('/home', 'HomeController@index')->name('home');
 

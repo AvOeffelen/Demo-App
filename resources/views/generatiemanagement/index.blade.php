@@ -13,7 +13,7 @@
             </div>
         </div>
     </div>
-    <div class="content content-boxed">
+    <div class="content content-boxed text-center">
         <div class="row">
             <div class="col-md-12 col-lg-12 col-xl-12 col-12 col-sm-12 col-xs-12">
                 <h3>Generatiemanagement</h3>
@@ -23,8 +23,17 @@
                     Hierbij kun je denken aan: overgangsvraagstukken, loopbaanvraagstukken die per generatie kunnen verschillen, pensioenvraagstukken, van belang afhankelijk van de levensfase, balans werk en privé, mantelzorg, jonge werkenden ouders, etc 
                     Ga op zoek naar wat bij jou past!
                     Mocht je graag iets toegevoegd willen zien, laat het ons dan weten.
-                    Stuur een mail naar <a HREF="mailto:info@vitalavie.nl">info@vitalavie.nl</>
+                    Stuur een mail naar <a HREF="mailto:info@vitalavie.nl">info@vitalavie.nl</a>
                 </alinea>
+            </div>
+        </div>
+        <div class="row py-5">
+            <div class="col-md-2 col-lg-2 col-xl-2 col-2 col-sm-2 col-xs-2">
+            </div>
+            <div class="col-md-8 col-lg-8 col-xl-8 col-8 col-sm-8 col-xs-8">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/B9h7yuJ9SW4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 col-2 col-sm-2 col-xs-2">
             </div>
         </div>
     </div>

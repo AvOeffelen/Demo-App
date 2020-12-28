@@ -2,10 +2,17 @@
     <div>
         <div class="bg-body-dark">
             <div class="content">
-                <div class="text-center py-3">
+                <div class="text-center py-3 oneOnOneimage">
                     <h1 class="h3 font-w700 mb-2">Persoonlijke begeleiding</h1>
                 </div>
-                <b-row>
+        <b-row v-if="loading === true">
+           <b-col>
+             <div class="text-center">               
+                <b-spinner style="width: 3rem; height: 3rem;" variant="primary" type="grow" label="Spinning"></b-spinner>             
+             </div>
+           </b-col>
+        </b-row>
+        <b-row v-else>
           <b-col
             cols="12"
             sm="12"
@@ -230,42 +237,42 @@
               </div>
             </a>
           </b-col>
-          <b-col
-            v-for="(article, index) in categories[0].article.slice(6)"
-            cols="12"
-            sm="12"
-            md="12"
-            lg="6"
-            xl="6"
-            :key="index"
-          >
-            <a
-              class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
-              v-bind:style="[
-                article.image_link
-                  ? {
-                      background: 'url(' + article.image_link + ')',
-                      'background-position': 'center',
-                      'background-size': 'cover',
-                      'background-repeat': 'no-repeat',
-                    }
-                  : { 'background-image': 'url(' + default_image + ')' },
-              ]"
-              v-bind:href="'/article/' + article.id + '/show'"
-              data-toggle="click-ripple"
+            <b-col
+              v-for="(article, index) in categories[0].article.slice(6)"
+              cols="12"
+              sm="12"
+              md="12"
+              lg="6"
+              xl="6"
+              :key="index"
             >
-              <div
-                class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286"
+              <a
+                class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
+                v-bind:style="[
+                  article.image_link
+                    ? {
+                        background: 'url(' + article.image_link + ')',
+                        'background-position': 'center',
+                        'background-size': 'cover',
+                        'background-repeat': 'no-repeat',
+                      }
+                    : { 'background-image': 'url(' + default_image + ')' },
+                ]"
+                v-bind:href="'/article/' + article.id + '/show'"
+                data-toggle="click-ripple"
               >
-                <div class="ribbon-box">Artikel</div>
-                <div class="pt-4 pb-6 px-md-3">
-                  <h3 class="h1 font-w700 text-white mb-1">
-                    {{ article.title }}
-                  </h3>
+                <div
+                  class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286"
+                >
+                  <div class="ribbon-box">Artikel</div>
+                  <div class="pt-4 pb-6 px-md-3">
+                    <h3 class="h1 font-w700 text-white mb-1">
+                      {{ article.title }}
+                    </h3>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </b-col>
+              </a>
+            </b-col>
         </b-row>
             </div>
         </div>
@@ -290,8 +297,10 @@ export default {
         getCategories() {
             axios.get('/axios/article/get-one-on-one-categories')
                 .then(response => {
+                  console.log(this.categories);
                     this.categories = response.data;
-                    this.loading = false;
+                      this.loading = false;
+                  console.log(this.categories);
                 })
                 .catch(error => {
 
@@ -301,6 +310,6 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 
 </style>

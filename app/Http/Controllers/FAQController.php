@@ -15,4 +15,12 @@ class FAQController extends Controller
     {
         return view('generatiemanagement.index');
     }
+    public function showVragenlijsten()
+    {
+        return view('questionaires.index');
+    }
+    public function showGoodHabitz()
+    {
+        return view('goodhabitz.index');
+    }
 }
