@@ -98,11 +98,11 @@ class ArticleController extends Controller
      */
     public function update(UpdateArticleRequest $request): JsonResponse
     {
-        $hasVideo = false;
+        $hasVideo = 0;
         $uploadingImage = $request->get('uploadImage');
         $changedImage = $request->get('changed_image');
         if($uploadingImage === "false"){
-            $hasVideo = true;
+            $hasVideo = 1;
         }
 
         $article = Article::updateOrCreate([
@@ -116,10 +116,10 @@ class ArticleController extends Controller
             'text' => $request->get('text'),
         ]);
 
-        if($uploadingImage === "true" && $changedImage === "true"){
+        if($uploadingImage === "true"){
             $this->uploadImage($request->file('image_link'), $article);
         }
-
+        dd($article);
         return response()->json(['message' => 'success'],200);
     }
 
@@ -162,13 +162,6 @@ class ArticleController extends Controller
 
         return $content;
     }
-    public function getOneOnOneCategory2()
-    {
-        $content = Category::with('Article')->where('name','=','Testing')->get();
-
-        return $content;
-    }
-
     public function getTopicalCategory()
     {
         $content = Category::with('Article')->where('name','=','Actueel')->get();
