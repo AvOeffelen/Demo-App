@@ -35,8 +35,7 @@
                             v-bind:style="[
                 categories[0].article[0].image_link
                   ? {
-                      background:
-                        'url(' + categories[0].article[0].image_link + ')',
+                      'background':'url(' + categories[0].article[0].image_link + ')',
                       'background-position': 'center',
                       'background-size': 'cover',
                       'background-repeat': 'no-repeat',
@@ -73,8 +72,7 @@
                             v-bind:style="[
                 categories[0].article[1].image_link
                   ? {
-                      background:
-                        'url(' + categories[0].article[1].image_link + ')',
+                      'background': 'url(' + categories[0].article[1].image_link + ')',
                       'background-position': 'center',
                       'background-size': 'cover',
                       'background-repeat': 'no-repeat',
@@ -103,8 +101,7 @@
                                 v-bind:style="[
                   categories[0].article[2].image_link
                     ? {
-                        background:
-                          'url(' + categories[0].article[2].image_link + ')',
+                        'background':'url(' + categories[0].article[2].image_link + ')',
                         'background-position': 'center',
                         'background-size': 'cover',
                         'background-repeat': 'no-repeat',
@@ -144,8 +141,7 @@
                             v-bind:style="[
                 categories[0].article[3].image_link
                   ? {
-                      background:
-                        'url(' + categories[0].article[3].image_link + ')',
+                      'background':'url(' + categories[0].article[3].image_link + ')',
                       'background-position': 'center',
                       'background-size': 'cover',
                       'background-repeat': 'no-repeat',
@@ -182,8 +178,7 @@
                             v-bind:style="[
                 categories[0].article[4].image_link
                   ? {
-                      background:
-                        'url(' + categories[0].article[4].image_link + ')',
+                      'background':'url(' + categories[0].article[4].image_link + ')',
                       'background-position': 'center',
                       'background-size': 'cover',
                       'background-repeat': 'no-repeat',
@@ -220,8 +215,7 @@
                             v-bind:style="[
                 categories[0].article[5].image_link
                   ? {
-                      background:
-                        'url(' + categories[0].article[5].image_link + ')',
+                      'background':'url(' + categories[0].article[5].image_link + ')',
                       'background-position': 'center',
                       'background-size': 'cover',
                       'background-repeat': 'no-repeat',
@@ -259,7 +253,7 @@
                             v-bind:style="[
                 article.image_link
                   ? {
-                      background: 'url(' + article.image_link + ')',
+                      'background': 'url(' + article.image_link + ')',
                       'background-position': 'center',
                       'background-size': 'cover',
                       'background-repeat': 'no-repeat',

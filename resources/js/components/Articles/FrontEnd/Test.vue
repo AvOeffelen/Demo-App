@@ -1,0 +1,166 @@
+<template>
+    <div>
+        <div class="bg-body-dark">
+            <div class="content">
+                <b-row>
+                    <b-col cols="12" md="12" lg="2" xl="2" sm="12">
+                        <b-button @click="goBack()" variant="primary">Terug</b-button>
+                    </b-col>
+                    <b-col cols="12" md="12" lg="8" xl="8" sm="12">
+                        <div class="text-center py-3 oneOnOneimage">
+                            <h1 class="h1 font-w700 mb-2 text-primary text-shadow-workshops">Persoonlijke
+                                begeleiding</h1>
+                        </div>
+                    </b-col>
+                    <b-col cols="12" md="12" lg="2" xl="2" sm="12"></b-col>
+                </b-row>
+                <b-row v-if="loading === true">
+                    <b-col>
+                        <div class="text-center">
+                            <b-spinner style="width: 3rem; height: 3rem;" variant="primary" type="grow"
+                                       label="Spinning"></b-spinner>
+                        </div>
+                    </b-col>
+                </b-row>
+                <b-row v-else class="py-3">
+                    <b-col cols="12" sm="12" md="12" lg="6" xl="6" class="d-md-flex align-items-md-stretch"
+                           v-if="categories[0].article[0]">
+                        <a v-if="categories[0].article[0].has_video === 0"
+                           class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image"
+                           v-bind:style="[categories[0].article[0].image_link ?
+                                    {
+                                        'background': 'url(' + categories[0].article[0].image_link + ')',
+                                        'background-position':'center',
+                                        'background-size':'cover',
+                                        'background-repeat': 'no-repeat'
+                                    } :
+                                     {'background-image': 'url('+ default_image +');'}]"
+                           v-bind:href="'/article/'+categories[0].article[0].id +'/show'"
+                           data-toggle="click-ripple">
+                            <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                                <div class="ribbon-box">
+                                    Artikel
+                                </div>
+                                <div class="pt-4 pb-6 px-md-3">
+                                    <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                        {{ categories[0].article[0].title }}
+                                    </h3>
+                                </div>
+                            </div>
+                        </a>
+                        <a v-else
+                           class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image"
+                           v-bind:style="{'background': 'url(' + video_image + ')',
+                                        'background-position':'center',
+                                        'background-size':'cover',
+                                        'background-repeat': 'no-repeat'}"
+                           v-bind:href="'/article/'+categories[0].article[0].id +'/show'"
+                           data-toggle="click-ripple"
+                        >
+                            <div
+                                class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom"
+                            >
+                                <div class="ribbon-box">
+                                    Video
+                                </div>
+                                <div class="pt-4 pb-6 px-md-3">
+                                    <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                        {{ categories[0].article[0].title }}
+                                    </h3>
+                                </div>
+                            </div>
+                        </a>
+                    </b-col>
+                    <b-col v-else></b-col>
+                    <b-col cols="12" sm="12" md="12" lg="6" xl="6" class="d-md-flex align-items-md-stretch"
+                           v-if="categories[0].article[1]">
+                        <a v-if="categories[0].article[1].has_video === 0"
+                           class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image"
+                           v-bind:style="[categories[0].article[1].image_link ?
+                                    {
+                                        'background': 'url(' + categories[0].article[1].image_link + ')',
+                                        'background-position':'center',
+                                        'background-size':'cover',
+                                        'background-repeat': 'no-repeat'
+                                    } :
+                                     {'background-image': 'url('+ default_image +');'}]"
+                           v-bind:href="'/article/'+categories[0].article[1].id +'/show'"
+                           data-toggle="click-ripple">
+                            <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                                <div class="ribbon-box">
+                                    Artikel
+                                </div>
+                                <div class="pt-4 pb-6 px-md-3">
+                                    <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                        {{ categories[0].article[0].title }}
+                                    </h3>
+                                </div>
+                            </div>
+                        </a>
+                        <a v-else
+                           class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image"
+                           v-bind:style="{'background': 'url(' + video_image + ')',
+                                        'background-position':'center',
+                                        'background-size':'cover',
+                                        'background-repeat': 'no-repeat'}"
+                           v-bind:href="'/article/'+categories[0].article[1].id +'/show'"
+                           data-toggle="click-ripple"
+                        >
+                            <div
+                                class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom"
+                            >
+                                <div class="ribbon-box">
+                                    Video
+                                </div>
+                                <div class="pt-4 pb-6 px-md-3">
+                                    <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                        {{ categories[0].article[1].title }}
+                                    </h3>
+                                </div>
+                            </div>
+                        </a>
+                    </b-col>
+                    <b-col v-else></b-col>
+                </b-row>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    name: "Test",
+    created() {
+        this.getCategories();
+    },
+    data() {
+        return {
+            loading: true,
+            categories: [],
+            default_image: 'https://www.bravissamenvitaal.nl/wp-content/uploads/2020/02/iStock-1058457940-2-495x400.jpg',
+            video_image: 'storage/images/youtube.png'
+        };
+    },
+    methods: {
+        getCategories() {
+            axios.get('/axios/article/get-one-on-one-categories')
+                .then(response => {
+                    console.log(this.categories);
+                    this.categories = response.data;
+                    this.loading = false;
+                    console.log(this.categories);
+                })
+                .catch(error => {
+
+                });
+        },
+        goBack() {
+            history.back();
+        }
+    },
+}
+</script>
+
+<style scoped>
+
+</style>

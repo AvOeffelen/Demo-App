@@ -32,6 +32,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/goodhabitz','FAQController@showGoodHabitz')->name('goodhabitz');
 
     Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/secret/23sds44DFD26HdfS', 'ArticleController@secretPage')->name('secretPage');
 
 
     Route::get('/download','ActivityCalenderController@downloadActivityCalender')->name('download.calender');

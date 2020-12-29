@@ -8,7 +8,8 @@
                     </b-col>
                     <b-col cols="12" md="12" lg="8" xl="8" sm="12">
                         <div class="text-center py-3 oneOnOneimage">
-                            <h1 class="h1 font-w700 mb-2 text-primary text-shadow-workshops">Persoonlijke begeleiding</h1>
+                            <h1 class="h1 font-w700 mb-2 text-primary text-shadow-workshops">Persoonlijke
+                                begeleiding</h1>
                         </div>
                     </b-col>
                     <b-col cols="12" md="12" lg="2" xl="2" sm="12"></b-col>
@@ -36,8 +37,7 @@
                             v-bind:style="[
                 categories[0].article[0].image_link
                   ? {
-                      background:
-                        'url(' + categories[0].article[0].image_link + ')',
+                      'background':'url(' + categories[0].article[0].image_link + ')',
                       'background-position': 'center',
                       'background-size': 'cover',
                       'background-repeat': 'no-repeat',
@@ -74,8 +74,7 @@
                             v-bind:style="[
                 categories[0].article[1].image_link
                   ? {
-                      background:
-                        'url(' + categories[0].article[1].image_link + ')',
+                      'background':'url(' + categories[0].article[1].image_link + ')',
                       'background-position': 'center',
                       'background-size': 'cover',
                       'background-repeat': 'no-repeat',
@@ -104,8 +103,7 @@
                                 v-bind:style="[
                   categories[0].article[2].image_link
                     ? {
-                        background:
-                          'url(' + categories[0].article[2].image_link + ')',
+                        'background': 'url(' + categories[0].article[2].image_link + ')',
                         'background-position': 'center',
                         'background-size': 'cover',
                         'background-repeat': 'no-repeat',
@@ -145,8 +143,7 @@
                             v-bind:style="[
                 categories[0].article[3].image_link
                   ? {
-                      background:
-                        'url(' + categories[0].article[3].image_link + ')',
+                      'background':'url(' + categories[0].article[3].image_link + ')',
                       'background-position': 'center',
                       'background-size': 'cover',
                       'background-repeat': 'no-repeat',
@@ -183,8 +180,7 @@
                             v-bind:style="[
                 categories[0].article[4].image_link
                   ? {
-                      background:
-                        'url(' + categories[0].article[4].image_link + ')',
+                      'background': 'url(' + categories[0].article[4].image_link + ')',
                       'background-position': 'center',
                       'background-size': 'cover',
                       'background-repeat': 'no-repeat',
@@ -221,8 +217,7 @@
                             v-bind:style="[
                 categories[0].article[5].image_link
                   ? {
-                      background:
-                        'url(' + categories[0].article[5].image_link + ')',
+                      'background':'url(' + categories[0].article[5].image_link + ')',
                       'background-position': 'center',
                       'background-size': 'cover',
                       'background-repeat': 'no-repeat',
@@ -260,7 +255,7 @@
                             v-bind:style="[
                   article.image_link
                     ? {
-                        background: 'url(' + article.image_link + ')',
+                        'background': 'url(' + article.image_link + ')',
                         'background-position': 'center',
                         'background-size': 'cover',
                         'background-repeat': 'no-repeat',
