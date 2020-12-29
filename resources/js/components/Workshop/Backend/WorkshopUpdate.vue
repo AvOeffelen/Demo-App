@@ -187,12 +187,15 @@ export default {
                 data.append('image_name', this.workshop.image_name)
             }
 
+            if(this.workshop.agenda_link != null){
+                data.append('agenda_link',this.workshop.agenda_link);
+            }
+
             data.append('uploadImage', this.uploadImage);
             data.append('id', this.tempWorkshop.id);
             data.append('title', this.tempWorkshop.title);
             data.append('start', this.tempWorkshop.start);
             data.append('end', this.tempWorkshop.end);
-            data.append('agenda_link', this.tempWorkshop.agenda_link);
             data.append('workshop_category_id', this.tempWorkshop.workshop_category_id);
             data.append('text', this.tempWorkshop.text);
 
