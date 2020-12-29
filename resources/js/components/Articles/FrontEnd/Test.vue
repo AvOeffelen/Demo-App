@@ -49,7 +49,7 @@
                             </div>
                         </a>
                         <a v-else
-                           class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image"
+                           class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-600"
                            v-bind:style="{
                                         'background':'url(' + video_image + ')',
                                         'background-position': 'center',
@@ -57,11 +57,9 @@
                                         'background-repeat': 'no-repeat',
                                         }"
                            v-bind:href="'/article/'+categories[0].article[0].id +'/show'"
-                           data-toggle="click-ripple"
-                        >
+                           data-toggle="click-ripple">
                             <div
-                                class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom"
-                            >
+                                class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-600">
                                 <div class="ribbon-box">
                                     Video
                                 </div>
@@ -77,7 +75,7 @@
                     <b-col cols="12" sm="12" md="12" lg="6" xl="6" class="d-md-flex align-items-md-stretch"
                            v-if="categories[0].article[1]">
                         <a v-if="categories[0].article[1].has_video === false"
-                           class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image"
+                           class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
                            v-bind:style="[categories[0].article[1].image_link ?
                                     {
                                         'background':'url(' + categories[0].article[1].image_link + ')',
@@ -88,13 +86,13 @@
                                      {'background-image': 'url('+ default_image +');'}]"
                            v-bind:href="'/article/'+categories[0].article[1].id +'/show'"
                            data-toggle="click-ripple">
-                            <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                            <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                 <div class="ribbon-box">
                                     Artikel
                                 </div>
                                 <div class="pt-4 pb-6 px-md-3">
                                     <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
-                                        {{ categories[0].article[0].title }}
+                                        {{ categories[0].article[1].title }}
                                     </h3>
                                 </div>
                             </div>
