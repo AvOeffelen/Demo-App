@@ -14,7 +14,7 @@
                     </div>
                     <div v-else>
                         <div class="article-show-image">
-                            <img v-bind:src="default_image" />
+                            <img v-bind:src="fallback" />
                         </div>
                     </div>
                 </div>
@@ -61,7 +61,7 @@ export default {
     data() {
         return {
             currUserHasLiked: false,
-            default_image: 'https://www.bravissamenvitaal.nl/wp-content/uploads/2020/02/iStock-1058457940-2-495x400.jpg',
+            fallback: '/storage/images/fallback.jpg',
         };
     },
     created() {
