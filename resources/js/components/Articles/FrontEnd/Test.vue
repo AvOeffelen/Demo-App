@@ -49,7 +49,7 @@
                         <a v-else
                            class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-600"
                            v-bind:style="{
-                                        'background':'url(' + video_image + ')',
+                                        'background':'url(/' + video_image + ')',
                                         'background-position': 'center',
                                         'background-size': 'cover',
                                         'background-repeat': 'no-repeat',
@@ -73,17 +73,12 @@
                         v-if="categories[0].article[1]">
                         <a v-if="categories[0].article[1].has_video === false"
                            class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
-                           v-bind:style="[categories[0].article[1].image_link ?
-                                    {
-                                        'background':'url(' + categories[0].article[1].image_link + ')',
+                           v-bind:style="{
+                                        'background':'url(/' + categories[0].article[1].image_link + ')',
                                         'background-position': 'center',
                                         'background-size': 'cover',
                                         'background-repeat': 'no-repeat',
-                                    } :
-                                     {'background': 'url('+ default_image +')',
-                                        'background-position': 'center',
-                                        'background-size': 'cover',
-                                        'background-repeat': 'no-repeat',}]"
+                                        }"
                            v-bind:href="'/article/'+categories[0].article[1].id +'/show'"
                            data-toggle="click-ripple">
                             <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
@@ -100,7 +95,7 @@
                         <a v-else
                            class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
                            v-bind:style="{
-                                        'background':'url(' + video_image + ')',
+                                        'background':'url(/' + video_image + ')',
                                         'background-position': 'center',
                                         'background-size': 'cover',
                                         'background-repeat': 'no-repeat',
@@ -124,12 +119,12 @@
                                class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
                                v-bind:style="[categories[0].article[2].image_link ?
                                     {
-                                        'background':'url(' + categories[0].article[2].image_link + ')',
+                                        'background':'url(/' + categories[0].article[2].image_link + ')',
                                         'background-position': 'center',
                                         'background-size': 'cover',
                                         'background-repeat': 'no-repeat',
                                     } :
-                                     {'background': 'url('+ default_image +')',
+                                     {'background': 'url(/'+ default_image +')',
                                         'background-position': 'center',
                                         'background-size': 'cover',
                                         'background-repeat': 'no-repeat',}]"
@@ -149,7 +144,7 @@
                             <a v-else
                                class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
                                v-bind:style="{
-                                        'background':'url(' + video_image + ')',
+                                        'background':'url(/' + video_image + ')',
                                         'background-position': 'center',
                                         'background-size': 'cover',
                                         'background-repeat': 'no-repeat',
