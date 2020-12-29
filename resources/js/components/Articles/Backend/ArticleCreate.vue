@@ -140,7 +140,8 @@ export default {
                 text: '',
                 video_link: '',
                 image_link: '',
-                button_link: ''
+                button_link: '',
+                button_text:'',
             },
             image: null,
             categories: [],
