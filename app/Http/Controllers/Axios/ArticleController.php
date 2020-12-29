@@ -91,7 +91,6 @@ class ArticleController extends Controller
         return response()->json(['article' => $article]);
     }
 
-
     /**
      * @param UpdateArticleRequest $request
      *
@@ -165,7 +164,7 @@ class ArticleController extends Controller
     }
     public function getOneOnOneCategory2()
     {
-        $content = Category::with('Article')->where('name','=','Testing')->get();
+        $content = Category::with('Article')->where('name','=','1 op 1')->get();
 
         return $content;
     }
