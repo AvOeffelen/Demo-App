@@ -167,7 +167,7 @@ class ArticleController extends Controller
     {
         $content = Category::with('Article')->where('name','=','1 op 1')->get();
 
-        return $content;
+        return $content->toJson();
     }
 
     public function getTopicalCategory()

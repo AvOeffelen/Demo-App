@@ -25,7 +25,7 @@
                 <b-row v-else class="py-3">
                     <b-col cols="12" sm="12" md="12" lg="6" xl="6" class="d-md-flex align-items-md-stretch"
                            v-if="categories[0].article[0]">
-                        <a v-if="categories[0].article[0].has_video === 0"
+                        <a v-if="categories[0].article[0].has_video === false"
                            class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image"
                            v-bind:style="[categories[0].article[0].image_link ?
                                     {
@@ -74,7 +74,7 @@
                     <b-col v-else></b-col>
                     <b-col cols="12" sm="12" md="12" lg="6" xl="6" class="d-md-flex align-items-md-stretch"
                            v-if="categories[0].article[1]">
-                        <a v-if="categories[0].article[1].has_video === 0"
+                        <a v-if="categories[0].article[1].has_video === false"
                            class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image"
                            v-bind:style="[categories[0].article[1].image_link ?
                                     {
