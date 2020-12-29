@@ -163,6 +163,12 @@ class ArticleController extends Controller
 
         return $content;
     }
+    public function getOneOnOneCategory2()
+    {
+        $content = Category::with('Article')->where('name','=','1 op 1')->get();
+
+        return $content;
+    }
 
     public function getTopicalCategory()
     {
