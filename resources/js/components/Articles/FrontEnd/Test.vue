@@ -143,7 +143,7 @@ export default {
     },
     methods: {
         getCategories() {
-            axios.get('/axios/article/get-one-on-one-categories')
+            axios.get('/axios/article/get-one-on-one-categories2')
                 .then(response => {
                     console.log(this.categories);
                     this.categories = response.data;

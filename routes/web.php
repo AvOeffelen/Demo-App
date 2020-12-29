@@ -90,7 +90,8 @@ Route::group(['prefix' => 'axios/article', 'namespace' => 'Axios','middleware'=>
     route::get('/get-all','ArticleController@getAllArticles')->name('article.get.all');
     route::get('get-categories','ArticleController@getCategories')->name('article.get.category');
     route::get('get-all-standard-categories','ArticleController@getAllCategories')->name('article.get.all-standard.categories');
-    route::get('get-one-on-one-categories','ArticleController@getOneOnOneCategory')->name('article.get.OneOnOne.categories');
+    route::get('get-one-on-one-categories','ArticleController@getOneOnOneCategory')->name('article.get.OneOnOne.categories');;
+    route::get('get-one-on-one-categories2','ArticleController@getOneOnOneCategory2')->name('article.get.OneOnOne.categories');
     route::get('get-topical-categories','ArticleController@getTopicalCategory')->name('article.get.topical.categories');
     route::get('get-covid-categories','ArticleController@getCovidCategory')->name('article.get.covid.categories');
 });
