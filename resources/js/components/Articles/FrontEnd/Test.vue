@@ -27,14 +27,12 @@
                            v-if="categories[0].article[0]">
                         <a v-if="categories[0].article[0].has_video === false"
                            class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-600"
-                           v-bind:style="[ categories[0].article[0].image_link ?
-                           {
-                              'background':'url(' + categories[0].article[0].image_link + ')',
-                              'background-position': 'center',
-                              'background-size': 'cover',
-                              'background-repeat': 'no-repeat',
-                           } :
-                           { 'background': 'url(' + default_image + ')' },]"
+                           v-bind:style="{
+                                        'background':'url(/' + categories[0].article[0].image_link + ')',
+                                        'background-position': 'center',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',
+                                        }"
                            v-bind:href="'/article/'+categories[0].article[0].id +'/show'"
                            data-toggle="click-ripple">
                             <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-600">
