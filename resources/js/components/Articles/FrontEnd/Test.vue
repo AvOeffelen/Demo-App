@@ -29,10 +29,10 @@
                            class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image"
                            v-bind:style="[categories[0].article[0].image_link ?
                                     {
-                                        'background': 'url(' + categories[0].article[0].image_link + ')',
-                                        'background-position':'center',
-                                        'background-size':'cover',
-                                        'background-repeat': 'no-repeat'
+                                        'background':'url(' + categories[0].article[0].image_link + ')',
+                                        'background-position': 'center',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',
                                     } :
                                      {'background-image': 'url('+ default_image +');'}]"
                            v-bind:href="'/article/'+categories[0].article[0].id +'/show'"
@@ -50,10 +50,12 @@
                         </a>
                         <a v-else
                            class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image"
-                           v-bind:style="{'background': 'url(' + video_image + ')',
-                                        'background-position':'center',
-                                        'background-size':'cover',
-                                        'background-repeat': 'no-repeat'}"
+                           v-bind:style="{
+                                        'background':'url(' + video_image + ')',
+                                        'background-position': 'center',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',
+                                        }"
                            v-bind:href="'/article/'+categories[0].article[0].id +'/show'"
                            data-toggle="click-ripple"
                         >
@@ -78,10 +80,10 @@
                            class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image"
                            v-bind:style="[categories[0].article[1].image_link ?
                                     {
-                                        'background': 'url(' + categories[0].article[1].image_link + ')',
-                                        'background-position':'center',
-                                        'background-size':'cover',
-                                        'background-repeat': 'no-repeat'
+                                        'background':'url(' + categories[0].article[1].image_link + ')',
+                                        'background-position': 'center',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',
                                     } :
                                      {'background-image': 'url('+ default_image +');'}]"
                            v-bind:href="'/article/'+categories[0].article[1].id +'/show'"
@@ -99,10 +101,12 @@
                         </a>
                         <a v-else
                            class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image"
-                           v-bind:style="{'background': 'url(' + video_image + ')',
-                                        'background-position':'center',
-                                        'background-size':'cover',
-                                        'background-repeat': 'no-repeat'}"
+                           v-bind:style="{
+                                        'background':'url(' + video_image + ')',
+                                        'background-position': 'center',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',
+                                        }"
                            v-bind:href="'/article/'+categories[0].article[1].id +'/show'"
                            data-toggle="click-ripple"
                         >
