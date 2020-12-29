@@ -381,7 +381,7 @@ export default {
         return {
             loading: true,
             categories: [],
-            default_image: 'https://www.bravissamenvitaal.nl/wp-content/uploads/2020/02/iStock-1058457940-2-495x400.jpg',
+            default_image: 'storage/images/fallback.jpg',
             video_image: 'storage/images/youtube.png'
         };
     },
