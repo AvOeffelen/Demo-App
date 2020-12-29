@@ -77,7 +77,12 @@ class WorkshopController extends Controller
      */
     public function update(UpdateWorkshopRequest $request): Workshop
     {
+        dd($request->all());
         $changedImage = $request->get('changed_image');
+        $agendaLink = $request->get('agenda_link');
+        if($agendaLink === "null"){
+            $agendaLink = null;
+        }
 
         $workshop = Workshop::updateOrCreate([
             'id' => $request->get('id'),
@@ -85,7 +90,7 @@ class WorkshopController extends Controller
             [
                 'title' => $request->get('title'),
                 'workshop_category_id' => (int) $request->get('workshop_category_id'),
-                'agenda_link' => $request->get('agenda_link'),
+                'agenda_link' => $agendaLink,
                 'start' => $request->get('start'),
                 'end' => $request->get('end'),
                 'image_location' => $request->get('image_location'),
