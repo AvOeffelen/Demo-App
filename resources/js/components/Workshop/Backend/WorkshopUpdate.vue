@@ -188,7 +188,7 @@ export default {
             }
 
             if(this.workshop.agenda_link != null){
-                data.append('agenda_link',this.workshop.agenda_link);
+                data.append('agenda_link',this.tempWorkshop.agenda_link);
             }
 
             data.append('uploadImage', this.uploadImage);

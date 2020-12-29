@@ -77,7 +77,6 @@ class WorkshopController extends Controller
      */
     public function update(UpdateWorkshopRequest $request): Workshop
     {
-        dd($request->all());
         $changedImage = $request->get('changed_image');
         $agendaLink = $request->get('agenda_link');
         if($agendaLink === "null"){
