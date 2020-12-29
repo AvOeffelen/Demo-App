@@ -4,7 +4,7 @@
             <b-col align-self="center" cols="12" md="12" lg="12" sm="12">
                 <b-button @click="goBack()" variant="primary">Terug</b-button>
                 <div class="text-center w-100">
-                    <div v-if="article.has_video === 1">
+                    <div v-if="article.has_video === true">
                         <div v-html="article.video_link"></div>
                     </div>
                     <div v-else-if="article.image_link != null">
