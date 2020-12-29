@@ -28,16 +28,25 @@ class WorkshopController extends Controller
      */
     public function store(StoreWorkshopRequest $request)
     {
+        $start = null;
+        $end = null;
+
+        if($request->get('start') != null){
+            $start = Carbon::parse($request->get('start'));
+        }
+        if($request->get('end') != null){
+            $end = Carbon::parse($request->get('end'));
+        }
+
         $image = $request->file('image');
         $workshop = Workshop::create([
             'title' => $request->get('title'),
             'workshop_category_id' => (int) $request->get('workshop_category_id'),
             'text' => $request->get('text'),
             'agenda_link' => $request->get('agenda_link'),
-            'start' => Carbon::parse($request->get('start')),
-            'end' => Carbon::parse($request->get('end')),
+            'start' => $start ? $start : null,
+            'end' => $end ? $end :  null,
         ]);
-
         if($image != null){
             $this->uploadImage($request->file('image'), $workshop);
 
@@ -88,6 +97,7 @@ class WorkshopController extends Controller
         ],
             [
                 'title' => $request->get('title'),
+                'text' => $request->get('text'),
                 'workshop_category_id' => (int) $request->get('workshop_category_id'),
                 'agenda_link' => $agendaLink,
                 'start' => $request->get('start'),

@@ -186,15 +186,22 @@ export default {
                 data.append('image',this.image);
             }
 
-            if(this.workshop.agenda_link != null){
-                data.append('agenda_link',this.workshop.agenda_link);
+            if(this.workshop.agenda_link != null) {
+                data.append('agenda_link', this.workshop.agenda_link);
+            }
+
+            if(this.workshop.start != null){
+                data.append('start',this.workshop.start);
+            }
+
+
+            if(this.workshop.end != null){
+                data.append('end',this.workshop.end);
             }
 
             data.append('title',this.workshop.title);
             data.append('workshop_category_id',this.workshop.workshop_category_id);
             data.append('text',this.workshop.text);
-            data.append('start',this.workshop.start);
-            data.append('end',this.workshop.end);
             let url = '/axios/workshop/post';
             axios.post(url, data)
                 .then(response => {

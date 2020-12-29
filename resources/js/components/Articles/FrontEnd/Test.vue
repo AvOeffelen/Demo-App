@@ -32,7 +32,7 @@
                               'background':'url(' + categories[0].article[0].image_link + ')',
                               'background-position': 'center',
                               'background-size': 'cover',
-                              'background-repeat': 'no-repeat', 
+                              'background-repeat': 'no-repeat',
                            } :
                            { 'background': 'url(' + default_image + ')' },]"
                            v-bind:href="'/article/'+categories[0].article[0].id +'/show'"

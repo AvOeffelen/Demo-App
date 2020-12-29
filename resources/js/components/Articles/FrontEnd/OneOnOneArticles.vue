@@ -30,8 +30,7 @@
                         lg="6"
                         xl="6"
                         class="d-md-flex align-items-md-stretch"
-                        v-if="categories[0].article[0]"
-                    >
+                        v-if="categories[0].article[0]">
                         <a
                             class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-600"
                             v-bind:style="[
@@ -45,11 +44,8 @@
                   : { 'background-image': 'url(' + default_image + ');' },
               ]"
                             v-bind:href="'/article/' + categories[0].article[0].id + '/show'"
-                            data-toggle="click-ripple"
-                        >
-                            <div
-                                class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-600"
-                            >
+                            data-toggle="click-ripple">
+                            <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-600" >
                                 <div class="ribbon-box">
                                     {{ categories[0].name }}
                                 </div>
@@ -67,8 +63,7 @@
                         md="12"
                         lg="6"
                         xl="6"
-                        v-if="categories[0].article[1]"
-                    >
+                        v-if="categories[0].article[1]">
                         <a
                             class="block block-transparent bg-image h-286"
                             v-bind:style="[
