@@ -164,7 +164,7 @@ class ArticleController extends Controller
     }
     public function getOneOnOneCategory2()
     {
-        $content = Category::with('Article')->where('name','=','1 op 1')->get();
+        $content = Category::with('Article')->where('name','=','Testing')->get();
 
         return $content;
     }
