@@ -27,17 +27,14 @@
                            v-if="categories[0].article[0]">
                         <a v-if="categories[0].article[0].has_video === false"
                            class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-600"
-                           v-bind:style="[categories[0].article[0].image_link ?
-                                    {
-                                        'background':'url(' + categories[0].article[0].image_link + ')',
-                                        'background-position': 'center',
-                                        'background-size': 'cover',
-                                        'background-repeat': 'no-repeat',
-                                    } :
-                                     {'background': 'url('+ default_image +')',
-                                        'background-position': 'center',
-                                        'background-size': 'cover',
-                                        'background-repeat': 'no-repeat',}]"
+                           v-bind:style="[ categories[0].article[0].image_link ?
+                           {
+                              'background':'url(' + categories[0].article[0].image_link + ')',
+                              'background-position': 'center',
+                              'background-size': 'cover',
+                              'background-repeat': 'no-repeat', 
+                           } :
+                           { 'background': 'url(' + default_image + ')' },]"
                            v-bind:href="'/article/'+categories[0].article[0].id +'/show'"
                            data-toggle="click-ripple">
                             <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-600">
@@ -74,9 +71,8 @@
                             </div>
                         </a>
                     </b-col>
-                    <b-col v-else></b-col>
-                    <b-col cols="12" sm="12" md="12" lg="6" xl="6" class="d-md-flex align-items-md-stretch"
-                           v-if="categories[0].article[1]">
+                    <b-col cols="12" sm="12" md="12" lg="6" xl="6"
+                        v-if="categories[0].article[1]">
                         <a v-if="categories[0].article[1].has_video === false"
                            class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
                            v-bind:style="[categories[0].article[1].image_link ?
@@ -112,11 +108,9 @@
                                         'background-repeat': 'no-repeat',
                                         }"
                            v-bind:href="'/article/'+categories[0].article[1].id +'/show'"
-                           data-toggle="click-ripple"
-                        >
+                           data-toggle="click-ripple">
                             <div
-                                class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286"
-                            >
+                                class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                 <div class="ribbon-box">
                                     Video
                                 </div>
@@ -127,9 +121,10 @@
                                 </div>
                             </div>
                         </a>
-                        <a v-if="categories[0].article[2].has_video === false"
-                           class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
-                           v-bind:style="[categories[0].article[2].image_link ?
+                        <div v-if="categories[0].article[2]">
+                            <a v-if="categories[0].article[2].has_video === false"
+                               class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
+                               v-bind:style="[categories[0].article[2].image_link ?
                                     {
                                         'background':'url(' + categories[0].article[2].image_link + ')',
                                         'background-position': 'center',
@@ -140,45 +135,43 @@
                                         'background-position': 'center',
                                         'background-size': 'cover',
                                         'background-repeat': 'no-repeat',}]"
-                           v-bind:href="'/article/'+categories[0].article[2].id +'/show'"
-                           data-toggle="click-ripple">
-                            <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
-                                <div class="ribbon-box">
-                                    Artikel
+                               v-bind:href="'/article/'+categories[0].article[2].id +'/show'"
+                               data-toggle="click-ripple">
+                                <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                    <div class="ribbon-box">
+                                        Artikel
+                                    </div>
+                                    <div class="pt-4 pb-6 px-md-3">
+                                        <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                            {{ categories[0].article[2].title }}
+                                        </h3>
+                                    </div>
                                 </div>
-                                <div class="pt-4 pb-6 px-md-3">
-                                    <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
-                                        {{ categories[0].article[1].title }}
-                                    </h3>
-                                </div>
-                            </div>
-                        </a>
-                        <a v-else
-                           class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
-                           v-bind:style="{
+                            </a>
+                            <a v-else
+                               class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
+                               v-bind:style="{
                                         'background':'url(' + video_image + ')',
                                         'background-position': 'center',
                                         'background-size': 'cover',
                                         'background-repeat': 'no-repeat',
                                         }"
-                           v-bind:href="'/article/'+categories[0].article[2].id +'/show'"
-                           data-toggle="click-ripple"
-                        >
-                            <div
-                                class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286"
-                            >
-                                <div class="ribbon-box">
-                                    Video
+                               v-bind:href="'/article/'+categories[0].article[2].id +'/show'"
+                               data-toggle="click-ripple">
+                                <div
+                                    class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                    <div class="ribbon-box">
+                                        Video
+                                    </div>
+                                    <div class="pt-4 pb-6 px-md-3">
+                                        <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                            {{ categories[0].article[2].title }}
+                                        </h3>
+                                    </div>
                                 </div>
-                                <div class="pt-4 pb-6 px-md-3">
-                                    <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
-                                        {{ categories[0].article[2].title }}
-                                    </h3>
-                                </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </b-col>
-                    <b-col v-else></b-col>
                 </b-row>
             </div>
         </div>
