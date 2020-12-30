@@ -26,7 +26,7 @@
                         style="
                             background-image : url(storage/images/Vak01.jpg;
                         "
-                        href="{{route('download.calender')}}"
+                        href="{{url('activiteitenkalender')}}"
                         target="_blank"
                         data-toggle="click-ripple"
                     >

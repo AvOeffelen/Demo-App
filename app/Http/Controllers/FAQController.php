@@ -23,4 +23,8 @@ class FAQController extends Controller
     {
         return view('goodhabitz.index');
     }
+    public function showActiviteitenkalender()
+    {
+        return view('activiteitenkalender.index');
+    }
 }
