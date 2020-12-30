@@ -7,7 +7,7 @@
                         <b-button @click="goBack()" variant="primary">Terug</b-button></b-col>
                     <b-col cols="12" md="12" lg="8" xl="8" sm="12">
                         <div class="text-center py-3">
-                            <h1 class="h3 font-w700 mb-2">(Na)zorg Covid-19</h1>
+                            <h1 class="h3 font-w700 mb-2">(Na)zorg Corona</h1>
                         </div>
                     </b-col>
                     <b-col cols="12" md="12" lg="2" xl="2" sm="12"></b-col>
@@ -35,7 +35,7 @@
                            data-toggle="click-ripple">
                             <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-600">
                                 <div class="ribbon-box">
-                                    Artikel
+                                    (Na)zorg Corona
                                 </div>
                                 <div class="pt-4 pb-6 px-md-3">
                                     <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -57,7 +57,7 @@
                             <div
                                 class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-600">
                                 <div class="ribbon-box">
-                                    Video
+                                    (Na)zorg Corona
                                 </div>
                                 <div class="pt-4 pb-6 px-md-3">
                                     <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -81,7 +81,7 @@
                            data-toggle="click-ripple">
                             <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                 <div class="ribbon-box">
-                                    Artikel
+                                    (Na)zorg Corona
                                 </div>
                                 <div class="pt-4 pb-6 px-md-3">
                                     <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -103,7 +103,7 @@
                             <div
                                 class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                 <div class="ribbon-box">
-                                    Video
+                                    (Na)zorg Corona
                                 </div>
                                 <div class="pt-4 pb-6 px-md-3">
                                     <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -130,7 +130,7 @@
                                data-toggle="click-ripple">
                                 <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                     <div class="ribbon-box">
-                                        Artikel
+                                        (Na)zorg Corona
                                     </div>
                                     <div class="pt-4 pb-6 px-md-3">
                                         <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -152,7 +152,7 @@
                                 <div
                                     class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                     <div class="ribbon-box">
-                                        Video
+                                        (Na)zorg Corona
                                     </div>
                                     <div class="pt-4 pb-6 px-md-3">
                                         <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -181,7 +181,7 @@
                            data-toggle="click-ripple">
                             <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                 <div class="ribbon-box">
-                                    Artikel
+                                    (Na)zorg Corona
                                 </div>
                                 <div class="pt-4 pb-6 px-md-3">
                                     <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -203,7 +203,7 @@
                             <div
                                 class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                 <div class="ribbon-box">
-                                    Video
+                                    (Na)zorg Corona
                                 </div>
                                 <div class="pt-4 pb-6 px-md-3">
                                     <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -231,7 +231,7 @@
                            data-toggle="click-ripple">
                             <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                 <div class="ribbon-box">
-                                    Artikel
+                                    (Na)zorg Corona
                                 </div>
                                 <div class="pt-4 pb-6 px-md-3">
                                     <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -253,7 +253,7 @@
                             <div
                                 class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                 <div class="ribbon-box">
-                                    Video
+                                    (Na)zorg Corona
                                 </div>
                                 <div class="pt-4 pb-6 px-md-3">
                                     <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -281,7 +281,7 @@
                            data-toggle="click-ripple">
                             <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                 <div class="ribbon-box">
-                                    Artikel
+                                    (Na)zorg Corona
                                 </div>
                                 <div class="pt-4 pb-6 px-md-3">
                                     <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -303,7 +303,7 @@
                             <div
                                 class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                 <div class="ribbon-box">
-                                    Video
+                                    (Na)zorg Corona
                                 </div>
                                 <div class="pt-4 pb-6 px-md-3">
                                     <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -331,7 +331,7 @@
                            data-toggle="click-ripple">
                             <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                 <div class="ribbon-box">
-                                    Artikel
+                                    (Na)zorg Corona
                                 </div>
                                 <div class="pt-4 pb-6 px-md-3">
                                     <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -353,7 +353,7 @@
                             <div
                                 class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                 <div class="ribbon-box">
-                                    Video
+                                    (Na)zorg Corona
                                 </div>
                                 <div class="pt-4 pb-6 px-md-3">
                                     <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
