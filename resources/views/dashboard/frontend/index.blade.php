@@ -21,11 +21,10 @@
                             h-250
                             d-md-flex
                             align-items-md-stretch
-                            bg-image"
+                            bg-image
+                            homepage-block"
                         style="
-                        background-image : url(storage/images/Vak01.jpg;
-                        background-position: center;
-                        background-repeat: none;
+                            background-image : url(storage/images/Vak01.jpg;
                         "
                         href="{{route('download.calender')}}"
                         target="_blank"
@@ -50,11 +49,10 @@
                             h-250
                             d-md-flex
                             align-items-md-stretch
-                            bg-image"
+                            bg-image
+                            homepage-block"
                         style="
                         background-image : url(storage/images/Vak02.jpg;
-                        background-position: center;
-                        background-repeat: none;
                         "
                         href="{{url('workshop')}}"
                         data-toggle="click-ripple"
@@ -80,11 +78,10 @@
                             h-250
                             d-md-flex
                             align-items-md-stretch
-                            bg-image"
+                            bg-image
+                            homepage-block"
                         style="
                         background-image : url(storage/images/Vak03.jpg;
-                        background-position: center;
-                        background-repeat: none;
                         "
                         href="{{url('one-on-one')}}"
                         data-toggle="click-ripple"
@@ -108,11 +105,10 @@
                             h-250
                             d-md-flex
                             align-items-md-stretch
-                            bg-image"
+                            bg-image
+                            homepage-block"
                         style="
                         background-image : url(storage/images/Vak04.jpg;
-                        background-position: center;
-                        background-repeat: none;
                         "
                         href="{{route('covid')}}"
                         data-toggle="click-ripple"
@@ -138,11 +134,10 @@
                             h-250
                             d-md-flex
                             align-items-md-stretch
-                            bg-image"
+                            bg-image
+                            homepage-block"
                         style="
                         background-image : url(storage/images/Vak05.jpg;
-                        background-position: center;
-                        background-repeat: none;
                         "
                         href="{{route('vragenlijsten')}}"
                         data-toggle="click-ripple"
@@ -166,11 +161,10 @@
                             h-250
                             d-md-flex
                             align-items-md-stretch
-                            bg-image"
+                            bg-image
+                            homepage-block"
                         style="
                         background-image : url(storage/images/Vak06.jpg;
-                        background-position: center;
-                        background-repeat: none;
                         "
                         href="{{url('articles')}}"
                         data-toggle="click-ripple"
@@ -196,11 +190,10 @@
                             h-250
                             d-md-flex
                             align-items-md-stretch
-                            bg-image"
+                            bg-image
+                            homepage-block"
                         style="
                         background-image : url(storage/images/Vak07.jpg;
-                        background-position: center;
-                        background-repeat: none;
                         "
                         href="{{route('goodhabitz')}}"
                         data-toggle="click-ripple"
@@ -224,11 +217,10 @@
                             h-250
                             d-md-flex
                             align-items-md-stretch
-                            bg-image"
+                            bg-image
+                            homepage-block"
                         style="
                         background-image : url(storage/images/Vak08.jpg;
-                        background-position: center;
-                        background-repeat: none;
                         "
                         href="{{url('topical')}}"
                         data-toggle="click-ripple"
