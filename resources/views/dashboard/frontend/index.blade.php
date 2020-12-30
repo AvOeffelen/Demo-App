@@ -5,7 +5,7 @@
     <div class="bg-body-white">
         <div class="content content-full">
             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
-                <img src="https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/bravis.jpg" height="70">
+                <img src="storage/images/bravis.jpg" height="70">
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://thumbs-eu-west-1.myalbum.io/photo/1k0/07f7ce55-59a8-4258-8953-77297e548315.jpg;
+                        background-image : url(storage/images/Vak01.jpg;
                         background-position: center;
                         background-repeat: none;
                         "
@@ -52,7 +52,7 @@
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://thumbs-eu-west-1.myalbum.io/photo/1k0/8bb7de1a-94be-4029-987c-6fae99e7ac84.jpg);
+                        background-image : url(storage/images/Vak02.jpg;
                         background-position: center;
                         background-repeat: none;
                         "
@@ -82,7 +82,7 @@
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://thumbs-eu-west-1.myalbum.io/photo/1k0/2df52bb4-ff1a-42ef-a213-b9b94a5aaa11.jpg);
+                        background-image : url(storage/images/Vak03.jpg;
                         background-position: center;
                         background-repeat: none;
                         "
@@ -110,7 +110,7 @@
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://thumbs-eu-west-1.myalbum.io/photo/1k0/9426e193-2028-4cf0-b849-cbccc8ba1934.jpg);
+                        background-image : url(storage/images/Vak04.jpg;
                         background-position: center;
                         background-repeat: none;
                         "
@@ -140,7 +140,7 @@
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://thumbs-eu-west-1.myalbum.io/photo/1k0/b89c2eb1-d6ba-4f02-ba21-b46877d8e9fc.jpg);
+                        background-image : url(storage/images/Vak05.jpg;
                         background-position: center;
                         background-repeat: none;
                         "
@@ -168,7 +168,7 @@
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://thumbs-eu-west-1.myalbum.io/photo/1k0/20bff521-5578-4ad3-9eda-9bb64df67c87.jpg);
+                        background-image : url(storage/images/Vak06.jpg;
                         background-position: center;
                         background-repeat: none;
                         "
@@ -198,7 +198,7 @@
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://thumbs-eu-west-1.myalbum.io/photo/1k0/5ff06581-93fd-4424-8580-ad9d7ed150bf.jpg);
+                        background-image : url(storage/images/Vak07.jpg;
                         background-position: center;
                         background-repeat: none;
                         "
@@ -226,7 +226,7 @@
                             align-items-md-stretch
                             bg-image"
                         style="
-                        background-image : url(https://thumbs-eu-west-1.myalbum.io/photo/1k0/c1a53a4c-2287-40c5-be20-0aa83ae662f9.jpg);
+                        background-image : url(storage/images/Vak08.jpg;
                         background-position: center;
                         background-repeat: none;
                         "
