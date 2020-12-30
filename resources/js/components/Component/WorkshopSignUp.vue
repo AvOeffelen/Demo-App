@@ -49,7 +49,7 @@
                 <b-form-group
                     v-bind:class="[this.errors.employee_id ? 'text-primary':'' ]"
                     id="input-group-employee"
-                    label="Werknemers nummer:"
+                    label="Personeelsnummer"
                     label-for="input-employee"
                     class="text-left"
                 >

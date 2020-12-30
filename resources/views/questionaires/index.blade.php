@@ -47,13 +47,17 @@
         </div>
         <div class="row py-5">
             <div class="col-md-4 col-lg-4 col-xl-4 col-4 col-sm-4 col-xs-4">
+                
             </div>
             <div class="col-md-4 col-lg-4 col-xl-4 col-4 col-sm-4 col-xs-4">
                 <div class="text-center">
-                    <a href="https://app.johan.nl" target="_blank" class="btn btn-primary">Ga naar johan</a>
+                    <a href="https://app.johan.nl" target="_blank" class="btn btn-primary">Ga naar Johan</a>
+                    <a href="https://app.johan.nl/open-registration/3c965d0d49569e0b0094d78ac5591aa415c9222afb1c23fadde5688f0f283f21" target="_blank" class="btn btn-primary">Eerste keer inloggen Johan</a>
                 </div>
             </div>
             <div class="col-md-4 col-lg-4 col-xl-4 col-4 col-sm-4 col-xs-4">
+                <div class="text-center">
+                </div>
             </div>
         </div>
     </div>

@@ -96,7 +96,7 @@
                              data-parent="#faq1">
                             <div class="block-content">
                                 <p>
-                                    Voor Johan tekst van Johan gebruiken.
+                                    
                                 </p>
                             </div>
                         </div>
@@ -111,6 +111,7 @@
                             <div class="block-content">
                                 <p>
                                     Inlogprocedure van Johan.
+                                    <a href="https://support.johan.nl/knowledge-base/welke-stappen-doorloopt-de-deelnemer-als-zij-gaan-deelnemen-aan-het-project/">Klik hier voor de inlogprocedure</a>
                                 </p>
                             </div>
                         </div>
@@ -195,7 +196,7 @@
                              data-parent="#faq1">
                             <div class="block-content">
                                 <p>
-                                    ...
+                                    Voor sommige workshops is subsidie mogelijk. Om die subsidie te kunnen innen is het laten zien van een presentielijst noodzakelijk. Het is informatie die alleen uitgewisseld wordt tussen de subsidieverstrekker en Vitalavie.
                                 </p>
                             </div>
                         </div>
