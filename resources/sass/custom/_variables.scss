@@ -61,9 +61,11 @@ main#main-container{
 .bg-body-white {
 	background-color: #ffffff;
 }
+/*Workshops*/
 .text-shadow-workshops {
 	text-shadow: 2px 2px 4px #000000;
 }
+/*Persoonlijke Begeleiding / 1 op 1 */
 .oneOnOneimage{
 	height: 350px;
 	width: 100%;
@@ -72,8 +74,14 @@ main#main-container{
 	background-repeat: no-repeat;
 	background-size: 100vh;
 }
+
+/*Homepage*/
 .homepage-block{
 	background-position: center;
 	background-repeat: none;
 	border-radius:10px;
+}
+.bravis-logo img{
+	height: 75px;
+	width: 150px;
 }
