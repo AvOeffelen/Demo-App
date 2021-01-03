@@ -133,7 +133,7 @@ export default {
 
 <style scoped>
 /deep/ .preview-modal-header {
-    background: #fc0c1d;
+    background: #5a268c;
     color: white;
 }
 

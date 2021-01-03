@@ -3,7 +3,7 @@
         <h3 class="block-title">Vaak gestelde vragen</h3>
     </div>
     <div class="block-content">
-        <h2 class="content-heading"><strong>1.</strong> Welke vragen kunnen worden gesteld bij FAQ Bravis?
+        <h2 class="content-heading"><strong>1.</strong> Welke vragen kunnen worden gesteld bij FAQ Gelre?
         </h2>
         <div class="row items-push">
             <div class="col-lg-4">
@@ -11,7 +11,7 @@
                    Wij begrijpen natuurlijk dat je vragen hebt. We hebben hier de meest voorkomende opgesomd.
                 </p>
                 <div class="text-center py-5">
-                    <img class="h-250" src="https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/FAQ_Bravis_KlantSamenVitaal.nl_V1.png" />
+                    <img class="h-250" src="storage/images/Screenshot_1.png"/>
                 </div>
             </div>
             <div class="col-lg-8">
@@ -35,12 +35,12 @@
                         <div class="block-header block-header-default" role="tab" id="faq1_h2">
                             <a class="font-w600" data-toggle="collapse" data-parent="#faq1" href="#faq1_q2"
                                aria-expanded="true" aria-controls="faq1_q2">1.2 Mag ik van het aanbod gebruik maken in
-                                eigen tijd of Bravis tijd?</a>
+                                eigen tijd of Gelre tijd?</a>
                         </div>
                         <div id="faq1_q2" class="collapse" role="tabpanel" aria-labelledby="faq1_h2"
                              data-parent="#faq1">
                             <div class="block-content">
-                                <p>Bravis faciliteert en organiseert. Deelnemen aan het aanbod is in eigen tijd.
+                                <p>Gelre faciliteert en organiseert. Deelnemen aan het aanbod is in eigen tijd.
                                 </p>
                             </div>
                         </div>
@@ -96,7 +96,7 @@
                              data-parent="#faq1">
                             <div class="block-content">
                                 <p>
-                                    In de omgeving van Bravis Samen Vitaal worden geen persoonlijke gegevens opgeslagen. 
+                                    In de omgeving van GelreEnergiek worden geen persoonlijke gegevens opgeslagen. 
                                     Wanneer dat wel gebeurt, zoals bij:
                                     1. het invullen van vragenlijsten bij Johan of 
                                     2. het deelnemen aan een online programma van GoodHabitz of
@@ -124,7 +124,7 @@
                     <div class="block block-rounded mb-1">
                         <div class="block-header block-header-default" role="tab" id="faq1_h8">
                             <a class="font-w600" data-toggle="collapse" data-parent="#faq1" href="#faq1_q8"
-                               aria-expanded="true" aria-controls="faq1_q8">1.8 Wanneer de workshop op locatie van Bravis is, hoe weet ik in welke ruimte ik moet zijn?
+                               aria-expanded="true" aria-controls="faq1_q8">1.8 Wanneer de workshop op locatie van Gelre is, hoe weet ik in welke ruimte ik moet zijn?
                             </a>
                         </div>
                         <div id="faq1_q8" class="collapse" role="tabpanel" aria-labelledby="faq1_h8"
@@ -181,7 +181,7 @@
                     <div class="block block-rounded mb-1">
                         <div class="block-header block-header-default" role="tab" id="faq1_h12">
                             <a class="font-w600" data-toggle="collapse" data-parent="#faq1" href="#faq1_q12"
-                               aria-expanded="true" aria-controls="faq1_q12">1.12 Informeert Vitalavie aan Bravis of ik aan een workshop heb deelgenomen?</a>
+                               aria-expanded="true" aria-controls="faq1_q12">1.12 Informeert Vitalavie aan Gelre of ik aan een workshop heb deelgenomen?</a>
                         </div>
                         <div id="faq1_q12" class="collapse" role="tabpanel" aria-labelledby="faq1_h12"
                              data-parent="#faq1">

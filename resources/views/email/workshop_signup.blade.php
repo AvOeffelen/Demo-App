@@ -377,7 +377,7 @@
                                 <td class="content-cell" align="center">
                                     <p>Vriendelijke groet,</p>
                                     <br />
-                                    <p>BravisSamenVitaal</p>
+                                    <p>Gelre-Energiek</p>
                                 </td>
                             </tr>
                         </table>

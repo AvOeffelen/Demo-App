@@ -2,13 +2,15 @@
 
 @section('content')
     <!-- Hero -->
+    
     <div class="bg-body-white">
         <div class="content content-full">
             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center bravis-logo">
-                <img src="storage/images/bravis.jpg" height="70">
+                <img src="storage/logo/logo.jpg" height="70">
             </div>
         </div>
     </div>
+    <div class="bg-gradient"></div>
     <div class="content content-boxed">
         <div>
             <div class="row">
@@ -24,7 +26,7 @@
                             bg-image
                             homepage-block"
                         style="
-                            background-image : url(storage/images/Vak01.jpg;
+                            background-image : url(storage/vakken/Vak01.jpg;
                         "
                         href="{{url('activiteitenkalender')}}"
                         target="_blank"
@@ -52,7 +54,7 @@
                             bg-image
                             homepage-block"
                         style="
-                        background-image : url(storage/images/Vak02.jpg;
+                        background-image : url(storage/vakken/Vak02.jpg;
                         "
                         href="{{url('workshop')}}"
                         data-toggle="click-ripple"
@@ -62,7 +64,7 @@
                                 Workshops.
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1">Workshops</h3>
+                                <h3 class="h1 font-w700 text-pink mb-1">Workshops</h3>
                             </div>
                         </div>
                     </a>
@@ -81,7 +83,7 @@
                             bg-image
                             homepage-block"
                         style="
-                        background-image : url(storage/images/Vak03.jpg;
+                        background-image : url(storage/vakken/Vak03.jpg;
                         "
                         href="{{url('one-on-one')}}"
                         data-toggle="click-ripple"
@@ -108,7 +110,7 @@
                             bg-image
                             homepage-block"
                         style="
-                        background-image : url(storage/images/Vak04.jpg;
+                        background-image : url(storage/vakken/Vak04.jpg;
                         "
                         href="{{route('covid')}}"
                         data-toggle="click-ripple"
@@ -118,7 +120,7 @@
                                 (na)zorg Corona
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1">(na)zorg Corona</h3>
+                                <h3 class="h1 font-w700 text-blue mb-1">(na)zorg Corona</h3>
                             </div>
                         </div>
                     </a>
@@ -137,7 +139,7 @@
                             bg-image
                             homepage-block"
                         style="
-                        background-image : url(storage/images/Vak05.jpg;
+                        background-image : url(storage/vakken/Vak05.jpg;
                         "
                         href="{{route('vragenlijsten')}}"
                         data-toggle="click-ripple"
@@ -164,7 +166,7 @@
                             bg-image
                             homepage-block"
                         style="
-                        background-image : url(storage/images/Vak06.jpg;
+                        background-image : url(storage/vakken/Vak06.jpg;
                         "
                         href="{{url('articles')}}"
                         data-toggle="click-ripple"
@@ -174,7 +176,7 @@
                                 Inspiratiemateriaal
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1">Inspiratiemateriaal</h3>
+                                <h3 class="h1 font-w700 text-purple mb-1">Inspiratiemateriaal</h3>
                             </div>
                         </div>
                     </a>
@@ -193,7 +195,7 @@
                             bg-image
                             homepage-block"
                         style="
-                        background-image : url(storage/images/Vak07.jpg;
+                        background-image : url(storage/vakken/Vak07.jpg;
                         "
                         href="{{route('goodhabitz')}}"
                         data-toggle="click-ripple"
@@ -220,7 +222,7 @@
                             bg-image
                             homepage-block"
                         style="
-                        background-image : url(storage/images/Vak08.jpg;
+                        background-image : url(storage/vakken/Vak08.jpg;
                         "
                         href="{{url('topical')}}"
                         data-toggle="click-ripple"
@@ -230,7 +232,7 @@
                                 Thuiswerken
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1">Thuiswerken</h3>
+                                <h3 class="h1 font-w700 text-orange mb-1">Thuiswerken</h3>
                             </div>
                         </div>
                     </a>

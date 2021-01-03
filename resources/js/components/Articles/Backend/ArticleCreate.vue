@@ -237,7 +237,7 @@ export default {
 <style>
 
 .decoratedErrorField {
-    border: 2px solid #fc0c1d;
+    border: 2px solid #5a268c;
 }
 
 </style>

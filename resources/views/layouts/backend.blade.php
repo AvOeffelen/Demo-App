@@ -7,8 +7,8 @@
     <title>{{config('app.name')}}</title>
 
     <meta name="description"
-          content="BravisSamenVitaal">
-    <meta name="author" content="BravisSamenVitaal">
+          content="GelreEnergiek">
+    <meta name="author" content="GelreEnergiek">
     <meta name="robots" content="noindex, nofollow">
 
     <link rel="shortcut icon" href="{{ asset('media/favicons/favicon-32x32.png') }}">
