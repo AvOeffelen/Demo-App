@@ -111,6 +111,10 @@
     @include ribbon-variation(theme-color("primary"), $white);
 }
 
+.ribbon-secondary {
+    @include ribbon-variation(theme-color("secondary"), $white);
+}
+
 .ribbon-success {
     @include ribbon-variation(theme-color("success"), $white);
 }

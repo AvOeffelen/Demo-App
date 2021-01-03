@@ -8,7 +8,7 @@
                     </b-col>
                     <b-col cols="12" md="12" lg="8" xl="8" sm="12">
                         <div class="text-center py-3 oneOnOneimage">
-                            <h1 class="h1 font-w700 mb-2 text-primary text-shadow-workshops">Persoonlijke
+                            <h1 class="h1 font-w700 mb-2 text-secondary text-shadow-workshops">Persoonlijke
                                 begeleiding</h1>
                         </div>
                     </b-col>
@@ -36,7 +36,7 @@
                            v-bind:href="'/article/'+categories[0].article[0].id +'/show'"
 
                            data-toggle="click-ripple">
-                            <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-600">
+                            <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-600">
                                 <div class="ribbon-box">
                                     Persoonlijke begeleiding
                                 </div>
@@ -58,7 +58,7 @@
                            v-bind:href="'/article/'+categories[0].article[0].id +'/show'"
                            data-toggle="click-ripple">
                             <div
-                                class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-600">
+                                class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-600">
                                 <div class="ribbon-box">
                                     Persoonlijke begeleiding
                                 </div>
@@ -82,7 +82,7 @@
                                         }"
                            v-bind:href="'/article/'+categories[0].article[1].id +'/show'"
                            data-toggle="click-ripple">
-                            <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                            <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                 <div class="ribbon-box">
                                     Persoonlijke begeleiding
                                 </div>
@@ -104,7 +104,7 @@
                            v-bind:href="'/article/'+categories[0].article[1].id +'/show'"
                            data-toggle="click-ripple">
                             <div
-                                class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                 <div class="ribbon-box">
                                     Persoonlijke begeleiding
                                 </div>
@@ -131,7 +131,7 @@
                                         'background-repeat': 'no-repeat',}]"
                                v-bind:href="'/article/'+categories[0].article[2].id +'/show'"
                                data-toggle="click-ripple">
-                                <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                     <div class="ribbon-box">
                                         Persoonlijke begeleiding
                                     </div>
@@ -153,7 +153,7 @@
                                v-bind:href="'/article/'+categories[0].article[2].id +'/show'"
                                data-toggle="click-ripple">
                                 <div
-                                    class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                    class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                     <div class="ribbon-box">
                                         Persoonlijke begeleiding
                                     </div>
@@ -182,7 +182,7 @@
                                         'background-repeat': 'no-repeat',}]"
                            v-bind:href="'/article/'+categories[0].article[3].id +'/show'"
                            data-toggle="click-ripple">
-                            <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                            <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                 <div class="ribbon-box">
                                     Persoonlijke begeleiding
                                 </div>
@@ -204,7 +204,7 @@
                            v-bind:href="'/article/'+categories[0].article[3].id +'/show'"
                            data-toggle="click-ripple">
                             <div
-                                class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                 <div class="ribbon-box">
                                     Persoonlijke begeleiding
                                 </div>
@@ -232,7 +232,7 @@
                                         'background-repeat': 'no-repeat',}]"
                            v-bind:href="'/article/'+categories[0].article[4].id +'/show'"
                            data-toggle="click-ripple">
-                            <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                            <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                 <div class="ribbon-box">
                                     Artikel
                                 </div>
@@ -254,7 +254,7 @@
                            v-bind:href="'/article/'+categories[0].article[4].id +'/show'"
                            data-toggle="click-ripple">
                             <div
-                                class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                 <div class="ribbon-box">
                                     Persoonlijke begeleiding
                                 </div>
@@ -282,7 +282,7 @@
                                         'background-repeat': 'no-repeat',}]"
                            v-bind:href="'/article/'+categories[0].article[5].id +'/show'"
                            data-toggle="click-ripple">
-                            <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                            <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                 <div class="ribbon-box">
                                     Persoonlijke begeleiding
                                 </div>
@@ -304,7 +304,7 @@
                            v-bind:href="'/article/'+categories[0].article[5].id +'/show'"
                            data-toggle="click-ripple">
                             <div
-                                class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                 <div class="ribbon-box">
                                     Persoonlijke begeleiding
                                 </div>
@@ -332,7 +332,7 @@
                                         'background-repeat': 'no-repeat',}]"
                            v-bind:href="'/article/'+ article.id +'/show'"
                            data-toggle="click-ripple">
-                            <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                            <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                 <div class="ribbon-box">
                                     Persoonlijke begeleiding
                                 </div>
@@ -354,7 +354,7 @@
                            v-bind:href="'/article/'+article.id +'/show'"
                            data-toggle="click-ripple">
                             <div
-                                class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                 <div class="ribbon-box">
                                     Persoonlijke begeleiding
                                 </div>

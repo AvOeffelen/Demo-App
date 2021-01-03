@@ -7,7 +7,8 @@
 
 // Generate color theme
 @include color-theme($theme-xmodern-primary,
-                     $theme-xmodern-light,
+$theme-xmodern-secondary,
+$theme-xmodern-light,
                      $theme-xmodern-lighter,
                      $theme-xmodern-dark,
                      $theme-xmodern-darker,

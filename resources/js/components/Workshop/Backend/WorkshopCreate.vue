@@ -263,7 +263,7 @@ export default {
 }
 
 .decoratedErrorField {
-    border: 2px solid #5a268c;
+    border: 2px solid #fc0c1d;
 }
 
 textarea {

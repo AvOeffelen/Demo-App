@@ -30,7 +30,7 @@
                                         }"
                                    v-bind:href="'/article/'+ category.article[0].id +'/show'"
                                    data-toggle="click-ripple">
-                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-600">
+                                    <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-600">
                                         <div class="ribbon-box">
                                             Artikel
                                         </div>
@@ -52,7 +52,7 @@
                                    v-bind:href="'/article/'+categories[0].article[0].id +'/show'"
                                    data-toggle="click-ripple">
                                     <div
-                                        class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-600">
+                                        class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-600">
                                         <div class="ribbon-box">
                                             Video
                                         </div>
@@ -76,7 +76,7 @@
                                         }"
                                    v-bind:href="'/article/'+ category.article[1].id +'/show'"
                                    data-toggle="click-ripple">
-                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                    <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             Artikel
                                         </div>
@@ -98,7 +98,7 @@
                                    v-bind:href="'/article/'+category.article[1].id +'/show'"
                                    data-toggle="click-ripple">
                                     <div
-                                        class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             Video
                                         </div>
@@ -125,7 +125,7 @@
                                         'background-repeat': 'no-repeat',}]"
                                        v-bind:href="'/article/'+category.article[2].id +'/show'"
                                        data-toggle="click-ripple">
-                                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
                                                 Artikel
                                             </div>
@@ -147,7 +147,7 @@
                                        v-bind:href="'/article/'+category.article[2].id +'/show'"
                                        data-toggle="click-ripple">
                                         <div
-                                            class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                            class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
                                                 Video
                                             </div>
@@ -176,7 +176,7 @@
                                         'background-repeat': 'no-repeat',}]"
                                    v-bind:href="'/article/'+category.article[3].id +'/show'"
                                    data-toggle="click-ripple">
-                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                    <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             Artikel
                                         </div>
@@ -198,7 +198,7 @@
                                    v-bind:href="'/article/'+category.article[3].id +'/show'"
                                    data-toggle="click-ripple">
                                     <div
-                                        class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             Video
                                         </div>
@@ -226,7 +226,7 @@
                                         'background-repeat': 'no-repeat',}]"
                                    v-bind:href="'/article/'+category.article[4].id +'/show'"
                                    data-toggle="click-ripple">
-                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                    <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             Artikel
                                         </div>
@@ -248,7 +248,7 @@
                                    v-bind:href="'/article/'+category.article[4].id +'/show'"
                                    data-toggle="click-ripple">
                                     <div
-                                        class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             Video
                                         </div>
@@ -276,7 +276,7 @@
                                         'background-repeat': 'no-repeat',}]"
                                    v-bind:href="'/article/'+category.article[5].id +'/show'"
                                    data-toggle="click-ripple">
-                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                    <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             Artikel
                                         </div>
@@ -298,7 +298,7 @@
                                    v-bind:href="'/article/'+category.article[5].id +'/show'"
                                    data-toggle="click-ripple">
                                     <div
-                                        class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             Video
                                         </div>
@@ -326,7 +326,7 @@
                                         'background-repeat': 'no-repeat',}]"
                                    v-bind:href="'/article/'+ article.id +'/show'"
                                    data-toggle="click-ripple">
-                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                    <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             Artikel
                                         </div>
@@ -348,7 +348,7 @@
                                    v-bind:href="'/article/'+article.id +'/show'"
                                    data-toggle="click-ripple">
                                     <div
-                                        class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             Video
                                         </div>

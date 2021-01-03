@@ -5,6 +5,7 @@
 // xWork Theme
 
 $theme-xwork-primary:                       #343a40 !default;
+$theme-xwork-secondary:                     #FC8033 !default;
 $theme-xwork-light:                         lighten($theme-xwork-primary, 25%) !default;
 $theme-xwork-lighter:                       lighten($theme-xwork-primary, 50%) !default;
 $theme-xwork-dark:                          darken($theme-xwork-primary, 10%) !default;
@@ -54,6 +55,7 @@ $theme-xwork-btn-alt-primary-bg:            lighten($theme-xwork-lighter, 5%);
 // xModern Theme
 
 $theme-xmodern-primary:                       #3b5998 !default;
+$theme-xmodern-secondary:                     #FC8033 !default;
 $theme-xmodern-light:                         lighten($theme-xmodern-primary, 15%) !default;
 $theme-xmodern-lighter:                       lighten($theme-xmodern-primary, 35%) !default;
 $theme-xmodern-dark:                          darken($theme-xmodern-primary, 10%) !default;
@@ -103,6 +105,7 @@ $theme-xmodern-btn-alt-primary-bg:            lighten($theme-xmodern-lighter, 5%
 // xEco Theme
 
 $theme-xeco-primary:                       #689550 !default;
+$theme-xeco-secondary:                     #FC8033 !default;
 $theme-xeco-light:                         lighten($theme-xeco-primary, 15%) !default;
 $theme-xeco-lighter:                       lighten($theme-xeco-primary, 35%) !default;
 $theme-xeco-dark:                          darken($theme-xeco-primary, 10%) !default;
@@ -152,6 +155,7 @@ $theme-xeco-btn-alt-primary-bg:            lighten($theme-xeco-lighter, 5%);
 // xSmooth Theme
 
 $theme-xsmooth-primary:                       #774aa4 !default;
+$theme-xsmooth-secondary:                     #FC8033 !default;
 $theme-xsmooth-light:                         lighten($theme-xsmooth-primary, 15%) !default;
 $theme-xsmooth-lighter:                       lighten($theme-xsmooth-primary, 37%) !default;
 $theme-xsmooth-dark:                          darken($theme-xsmooth-primary, 10%) !default;
@@ -201,6 +205,7 @@ $theme-xsmooth-btn-alt-primary-bg:            $theme-xsmooth-lighter;
 // xInspire Theme
 
 $theme-xinspire-primary:                       #00a680 !default;
+$theme-xinspire-secondary:                     #FC8033 !default;
 $theme-xinspire-light:                         #36c396 !default;
 $theme-xinspire-lighter:                       lighten($theme-xinspire-light, 25%) !default;
 $theme-xinspire-dark:                          darken($theme-xinspire-primary, 7.5%) !default;
@@ -250,6 +255,7 @@ $theme-xinspire-btn-alt-primary-bg:            lighten($theme-xinspire-lighter, 
 // xDream Theme
 
 $theme-xdream-primary:                       #314499 !default;
+$theme-xdream-secondary:                     #FC8033 !default;
 $theme-xdream-light:                         lighten($theme-xdream-primary, 25%) !default;
 $theme-xdream-lighter:                       lighten($theme-xdream-primary, 50%) !default;
 $theme-xdream-dark:                          lighten(#20273e, 10%) !default;
@@ -299,6 +305,7 @@ $theme-xdream-btn-alt-primary-bg:            darken($theme-xdream-lighter, 5%);
 // xPro Theme
 
 $theme-xpro-primary:                       #6772e5 !default;
+$theme-xpro-secondary:                     #FC8033 !default;
 $theme-xpro-light:                         lighten($theme-xpro-primary, 15%) !default;
 $theme-xpro-lighter:                       lighten($theme-xpro-primary, 30%) !default;
 $theme-xpro-dark:                          #394263 !default;
@@ -348,6 +355,7 @@ $theme-xpro-btn-alt-primary-bg:            darken($theme-xpro-lighter, 5%);
 // xPlay Theme
 
 $theme-xplay-primary:                       #dd4b39 !default;
+$theme-xplay-secondary:                     #FC8033 !default;
 $theme-xplay-light:                         lighten($theme-xplay-primary, 10%) !default;
 $theme-xplay-lighter:                       lighten($theme-xplay-primary, 30%) !default;
 $theme-xplay-dark:                          darken($theme-xplay-primary, 12%) !default;
@@ -393,7 +401,9 @@ $theme-xplay-main-nav-submenu-dark-bg:      darken($theme-xplay-sidebar-dark-bg,
 
 $theme-xplay-btn-alt-primary-bg:            $theme-xplay-lighter;
 
-$theme-xbrvs-primary:                       #3DBDDE !default;
+//bravis
+$theme-xbrvs-primary:                       #fc0c1d !default;
+$theme-xbrvs-secondary:                     #FC8033 !default;
 $theme-xbrvs-light:                         lighten($theme-xbrvs-primary, 10%) !default;
 $theme-xbrvs-lighter:                       lighten($theme-xbrvs-light, 20%) !default;
 $theme-xbrvs-dark:                          darken($theme-xbrvs-primary, 12%) !default;
@@ -438,3 +448,51 @@ $theme-xbrvs-main-nav-link-dark-hover-bg:   darken($theme-xbrvs-sidebar-dark-bg,
 $theme-xbrvs-main-nav-submenu-dark-bg:      darken($theme-xbrvs-sidebar-dark-bg, 3%) !default;
 
 $theme-xbrvs-btn-alt-primary-bg:            $theme-xbrvs-lighter;
+
+//gelre
+$theme-xge-primary:                       #3DBDDE !default;
+$theme-xge-secondary:                     #FC8033 !default;
+$theme-xge-light:                         lighten($theme-xge-primary, 10%) !default;
+$theme-xge-lighter:                       lighten($theme-xge-light, 20%) !default;
+$theme-xge-dark:                          darken($theme-xge-primary, 12%) !default;
+$theme-xge-darker:                        darken($theme-xge-primary, 24%) !default;
+
+$theme-xge-body-bg:                       #f2f2f2 !default;
+$theme-xge-body-bg-dark:                  darken($theme-xge-body-bg, 4%) !default;
+$theme-xge-body-bg-light:                 lighten($theme-xge-body-bg, 2%) !default;
+
+$theme-xge-body-color:                    #574a49 !default;
+$theme-xge-body-color-dark:               #332c2b !default;
+$theme-xge-body-color-light:              $theme-xge-body-bg-dark !default;
+
+$theme-xge-link-color:                    $theme-xge-primary !default;
+$theme-xge-link-hover-color:              darken($theme-xge-primary, 20%) !default;
+
+$theme-xge-headings-color:                $theme-xge-body-color-dark !default;
+
+$theme-xge-input-btn-focus-color:         rgba($theme-xge-primary, .25) !default;
+$theme-xge-input-btn-focus-box-shadow:    0 0 0 $input-btn-focus-width $theme-xge-input-btn-focus-color !default;
+
+$theme-xge-input-bg:                      $white !default;
+$theme-xge-input-color:                   $theme-xge-body-color !default;
+$theme-xge-input-border-color:            darken($theme-xge-body-bg, 8%) !default;
+
+$theme-xge-input-focus-bg:                $white !default;
+$theme-xge-input-focus-color:             $theme-xge-body-color-dark !default;
+$theme-xge-input-focus-border-color:      lighten($theme-xge-primary, 25%) !default;
+
+$theme-xge-header-bg:                     $white !default;
+$theme-xge-header-dark-bg:                $theme-xge-primary !default;
+$theme-xge-sidebar-bg:                    $white !default;
+$theme-xge-sidebar-dark-bg:               #35393e !default;
+$theme-xge-side-overlay-bg:               $white !default;
+
+$theme-xge-main-nav-link-icon-color:      lighten($theme-xge-body-color, 20%) !default;
+$theme-xge-main-nav-link-hover-bg:        $theme-xge-body-bg-dark !default;
+$theme-xge-main-nav-submenu-bg:           $theme-xge-body-bg-light !default;
+
+$theme-xge-main-nav-link-icon-dark-color: rgba($white, .45) !default;
+$theme-xge-main-nav-link-dark-hover-bg:   darken($theme-xge-sidebar-dark-bg, 8%) !default;
+$theme-xge-main-nav-submenu-dark-bg:      darken($theme-xge-sidebar-dark-bg, 3%) !default;
+
+$theme-xge-btn-alt-primary-bg:            $theme-xge-lighter;

@@ -3,6 +3,7 @@
 // --------------------------------------------------
 
 @mixin color-theme($brand-primary,
+                   $brand-secondary,
                    $brand-light,
                    $brand-lighter,
                    $brand-dark,
@@ -35,7 +36,8 @@
                    $main-nav-link-icon-dark-color,
                    $main-nav-link-dark-hover-bg,
                    $main-nav-submenu-dark-bg,
-                   $btn-alt-primary-bg) {
+                   $btn-alt-primary-bg
+                   ) {
     // Scaffolding
     body {
         color: $body-color;

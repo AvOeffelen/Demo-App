@@ -178,11 +178,11 @@ export default {
 
             axios.post('/axios/article/post', data)
                 .then(response => {
-                    // if (response.status === 200) {
-                    //     setTimeout(() => {
-                    //         window.location = '/backend/article/overview';
-                    //     }, 1000);
-                    // }
+                    if (response.status === 200) {
+                        setTimeout(() => {
+                            window.location = '/backend/article/overview';
+                        }, 1000);
+                    }
                 })
                 .catch(error => {
                     if (error.response.status == 422) {
@@ -237,7 +237,7 @@ export default {
 <style>
 
 .decoratedErrorField {
-    border: 2px solid #5a268c;
+    border: 2px solid #fc0c1d;
 }
 
 </style>

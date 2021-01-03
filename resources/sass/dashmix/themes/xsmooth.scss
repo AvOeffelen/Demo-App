@@ -7,7 +7,8 @@
 
 // Generate color theme
 @include color-theme($theme-xsmooth-primary,
-                     $theme-xsmooth-light,
+$theme-xsmooth-secondary,
+$theme-xsmooth-light,
                      $theme-xsmooth-lighter,
                      $theme-xsmooth-dark,
                      $theme-xsmooth-darker,

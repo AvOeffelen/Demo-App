@@ -29,10 +29,9 @@
                             background-image : url(storage/vakken/Vak01.jpg;
                         "
                         href="{{url('activiteitenkalender')}}"
-                        target="_blank"
                         data-toggle="click-ripple"
                     >
-                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                        <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom">
                             <div class="ribbon-box">
                                 Activiteitenkalender.
                             </div>
@@ -59,7 +58,7 @@
                         href="{{url('workshop')}}"
                         data-toggle="click-ripple"
                     >
-                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom">
                             <div class="ribbon-box">
                                 Workshops.
                             </div>
@@ -88,7 +87,7 @@
                         href="{{url('one-on-one')}}"
                         data-toggle="click-ripple"
                     >
-                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom">
                             <div class="ribbon-box">
                                 Persoonlijke begeleiding
                             </div>
@@ -115,7 +114,7 @@
                         href="{{route('covid')}}"
                         data-toggle="click-ripple"
                     >
-                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom">
                             <div class="ribbon-box">
                                 (na)zorg Corona
                             </div>
@@ -144,7 +143,7 @@
                         href="{{route('vragenlijsten')}}"
                         data-toggle="click-ripple"
                     >
-                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom">
                             <div class="ribbon-box">
                                 Vragenlijsten
                             </div>
@@ -171,7 +170,7 @@
                         href="{{url('articles')}}"
                         data-toggle="click-ripple"
                     >
-                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom">
                             <div class="ribbon-box">
                                 Inspiratiemateriaal
                             </div>
@@ -200,7 +199,7 @@
                         href="{{route('goodhabitz')}}"
                         data-toggle="click-ripple"
                     >
-                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom">
                             <div class="ribbon-box">
                                 GoodHabitz
                             </div>
@@ -227,7 +226,7 @@
                         href="{{url('topical')}}"
                         data-toggle="click-ripple"
                     >
-                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom">
                             <div class="ribbon-box">
                                 Thuiswerken
                             </div>

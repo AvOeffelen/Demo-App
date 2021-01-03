@@ -7,6 +7,7 @@
 
 // Generate color theme
 @include color-theme($theme-xeco-primary,
+                     $theme-xeco-secondary,
                      $theme-xeco-light,
                      $theme-xeco-lighter,
                      $theme-xeco-dark,

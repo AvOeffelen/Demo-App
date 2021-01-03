@@ -7,7 +7,8 @@
 
 // Generate color theme
 @include color-theme($theme-xpro-primary,
-                     $theme-xpro-light,
+$theme-xpro-secondary,
+$theme-xpro-light,
                      $theme-xpro-lighter,
                      $theme-xpro-dark,
                      $theme-xpro-darker,

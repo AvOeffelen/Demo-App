@@ -6,7 +6,7 @@
                 <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Generatiemanagement</h1>
                 <nav class="flex-sm-00-auto ml-sm-3" aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item">GelreEnergiek</li>
+                        <li class="breadcrumb-item">{{(config('app.name'))}}</li>
                         <li class="breadcrumb-item active" aria-current="page">Generatiemanagement</li>
                     </ol>
                 </nav>

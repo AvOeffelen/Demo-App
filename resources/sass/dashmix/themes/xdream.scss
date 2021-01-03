@@ -7,6 +7,7 @@
 
 // Generate color theme
 @include color-theme($theme-xdream-primary,
+                     $theme-xdream-secondary,
                      $theme-xdream-light,
                      $theme-xdream-lighter,
                      $theme-xdream-dark,

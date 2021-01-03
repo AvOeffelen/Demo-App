@@ -7,7 +7,8 @@
 
 // Generate color theme
 @include color-theme($theme-xplay-primary,
-                     $theme-xplay-light,
+$theme-xplay-secondary,
+$theme-xplay-light,
                      $theme-xplay-lighter,
                      $theme-xplay-dark,
                      $theme-xplay-darker,
