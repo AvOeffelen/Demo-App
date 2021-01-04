@@ -34,10 +34,12 @@
                                             {{ category.name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
-                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{
-                                                    category.workshop[1].title
-                                                }}</h3>
+                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[1].title}}</h3>
+                                            <i class="fa fa-calendar appointment-date text-white" aria-hidden="true">
+                                                {{category.workshop[1].start}}
+                                            </i>
                                         </div>
+                                        
                                     </div>
                                 </a>
                                 <div v-if="category.workshop[2]">
@@ -55,9 +57,10 @@
                                                 {{ category.name }}
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
-                                                <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{
-                                                        category.workshop[2].title
-                                                    }}</h3>
+                                                <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[2].title}}</h3>
+                                                <i class="fa fa-calendar appointment-date text-white" aria-hidden="true">
+                                                    {{category.workshop[1].start}}
+                                                </i>
                                             </div>
                                         </div>
                                     </a>
@@ -79,9 +82,10 @@
                                             {{ category.name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
-                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{
-                                                    category.workshop[1].title
-                                                }}</h3>
+                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[1].title}}</h3>
+                                            <i class="fa fa-calendar appointment-date text-white" aria-hidden="true">
+                                                {{category.workshop[1].start}}
+                                            </i>
                                         </div>
                                     </div>
                                 </a>
@@ -100,9 +104,10 @@
                                                 {{ category.name }}
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
-                                                <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{
-                                                        category.workshop[4].title
-                                                    }}</h3>
+                                                <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[4].title}}</h3>
+                                                <i class="fa fa-calendar appointment-date text-white" aria-hidden="true">
+                                                    {{category.workshop[1].start}}
+                                                </i>
                                             </div>
                                         </div>
                                     </a>
@@ -123,9 +128,10 @@
                                             {{ category.name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
-                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{
-                                                    category.workshop[5].title
-                                                }}</h3>
+                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[5].title}}</h3>
+                                            <i class="fa fa-calendar appointment-date text-white" aria-hidden="true">
+                                                {{category.workshop[1].start}}
+                                            </i>
                                         </div>
                                     </div>
                                 </a>
@@ -145,9 +151,10 @@
                                             {{ category.name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
-                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{
-                                                    category.workshop[6].title
-                                                }}</h3>
+                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[6].title}}</h3>
+                                            <i class="fa fa-calendar appointment-date text-white" aria-hidden="true">
+                                                {{category.workshop[1].start}}
+                                            </i>
                                         </div>
                                     </div>
                                 </a>
@@ -167,9 +174,10 @@
                                             {{ category.name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
-                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{
-                                                    category.workshop[7].title
-                                                }}</h3>
+                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[7].title}}</h3>
+                                            <i class="fa fa-calendar appointment-date text-white" aria-hidden="true">
+                                                {{category.workshop[1].start}}
+                                            </i>
                                         </div>
                                     </div>
                                 </a>
@@ -197,6 +205,9 @@
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{ workshop.title }}</h3>
+                                            <i class="fa fa-calendar appointment-date text-white" aria-hidden="true">
+                                                {{category.workshop[1].start}}
+                                            </i>
                                         </div>
                                     </div>
                                 </a>
