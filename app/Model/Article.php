@@ -27,6 +27,10 @@ class Article extends Model
 
     ];
 
+    protected $casts = [
+        'has_video' => 'boolean',
+    ];
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */

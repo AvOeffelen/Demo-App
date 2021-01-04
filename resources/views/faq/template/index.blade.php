@@ -96,7 +96,12 @@
                              data-parent="#faq1">
                             <div class="block-content">
                                 <p>
-                                    Voor Johan tekst van Johan gebruiken.
+                                    In de omgeving van Bravis Samen Vitaal worden geen persoonlijke gegevens opgeslagen. 
+                                    Wanneer dat wel gebeurt, zoals bij:
+                                    1. het invullen van vragenlijsten bij Johan of 
+                                    2. het deelnemen aan een online programma van GoodHabitz of
+                                    3. wanneer jij wil dat wij je favorieten bijhouden,
+                                    Dan wordt er gevraagd of je in wil loggen. Dan kom je in een andere omgeving waar inloggen noodzakelijk is, zodat je privacy gewaarborgd is.
                                 </p>
                             </div>
                         </div>
@@ -111,6 +116,7 @@
                             <div class="block-content">
                                 <p>
                                     Inlogprocedure van Johan.
+                                    <a href="https://support.johan.nl/knowledge-base/welke-stappen-doorloopt-de-deelnemer-als-zij-gaan-deelnemen-aan-het-project/">Klik hier voor de inlogprocedure</a>
                                 </p>
                             </div>
                         </div>
@@ -195,7 +201,7 @@
                              data-parent="#faq1">
                             <div class="block-content">
                                 <p>
-                                    ...
+                                    Voor sommige workshops is subsidie mogelijk. Om die subsidie te kunnen innen is het laten zien van een presentielijst noodzakelijk. Het is informatie die alleen uitgewisseld wordt tussen de subsidieverstrekker en Vitalavie.
                                 </p>
                             </div>
                         </div>

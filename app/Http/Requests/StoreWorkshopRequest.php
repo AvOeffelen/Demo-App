@@ -30,10 +30,7 @@ class StoreWorkshopRequest extends FormRequest
         return [
             'title' => 'required',
             'text' => 'required',
-            'agenda_link' => 'required',
             'workshop_category_id' => 'required',
-            'start' => 'required',
-            'end' => 'required',
             'image' => 'sometimes|file|mimes:jpg,png,jpeg,gif'
         ];
     }
@@ -43,7 +40,6 @@ class StoreWorkshopRequest extends FormRequest
         return [
           'title.required' => "De workshop titel is verplicht.",
           'text.required' => "De workshop text is verplicht.",
-          'agenda_link.required' => "De workshop agenda is verplicht.",
         ];
     }
 }

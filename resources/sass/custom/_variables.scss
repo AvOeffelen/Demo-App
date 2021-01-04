@@ -20,7 +20,9 @@ main#main-container{
 	padding-top: 15px;
 	padding-bottom: 15px;
 }
-
+.t-20{
+	margin-top: 125px;
+}	
 .pt-150{
 	padding-top: 150px;
 }
@@ -55,4 +57,31 @@ main#main-container{
 .article-show-image>img{
     height: 500px;
     width: 75%;
+}
+.bg-body-white {
+	background-color: #ffffff;
+}
+/*Workshops*/
+.text-shadow-workshops {
+	text-shadow: 2px 2px 4px #000000;
+}
+/*Persoonlijke Begeleiding / 1 op 1 */
+.oneOnOneimage{
+	height: 350px;
+	width: 100%;
+	background: url("https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/oneone.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100vh;
+}
+
+/*Homepage*/
+.homepage-block{
+	background-position: center;
+	background-repeat: none;
+	border-radius:10px;
+}
+.bravis-logo img{
+	height: 75px;
+	width: 150px;
 }

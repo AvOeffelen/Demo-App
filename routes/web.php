@@ -23,11 +23,14 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('articles','ArticleController@showArticles')->name('articles');
     Route::get('one-on-one','ArticleController@showOneOnOne')->name('oneOnOne');
     Route::get('topical','ArticleController@topical')->name('topical');
-    Route::get('covid-19','ArticleController@topical')->name('topical');
+    Route::get('covid-19','ArticleController@covid')->name('covid');
 
     Route::get('article/{article}/show','ArticleController@show')->name('article.show');
-    Route::get('/faq','PageController@showFAQ')->name('faq');
-    Route::get('/generatie-management','PageController@showGenManagement')->name('gen.management');
+    Route::get('/faq','FAQController@showFAQ')->name('faq');
+    Route::get('/generatie-management','FAQController@showGenManagement')->name('gen.management');
+    Route::get('/vragenlijsten','FAQController@showVragenlijsten')->name('vragenlijsten');
+    Route::get('/goodhabitz','FAQController@showGoodHabitz')->name('goodhabitz');
+    Route::get('/activiteitenkalender','FAQController@showActiviteitenkalender')->name('activiteitenkalender');
 
     Route::get('/home', 'HomeController@index')->name('home');
 
@@ -98,4 +101,6 @@ Route::group(['prefix' => 'axios/workshop', 'namespace' => 'Axios','middleware'=
     route::get('/get-physical','WorkshopController@getAllPhysicalVitalityWorkshops')->name('workshop.get.physical');
     route::get('/get-mental','WorkshopController@getAllMentalVitalityWorkshops')->name('workshop.get.mental');
     route::get('/get-growth','WorkshopController@getAllGrowthWorkshops')->name('workshop.get.growth');
+
+    route::post('/{workshop}/sign-up','WorkshopController@signUpForWorkshop')->name('workshop.signup');
 });
