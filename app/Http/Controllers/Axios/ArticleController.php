@@ -60,7 +60,10 @@ class ArticleController extends Controller
     public function store(StoreArticleRequest $request): JsonResponse
     {
         $hasVideo = false;
+        $uploadSucceed = true;
+
         $uploadingImage = $request->get('uploadImage');
+
         if($uploadingImage === "false"){
             $hasVideo = true;
         }
@@ -76,10 +79,16 @@ class ArticleController extends Controller
         ]);
 
         if($uploadingImage === "true"){
-            $this->uploadImage($request->file('image'), $article);
+            $image = $request->file('image');
+
+            $uploadSucceed = $this->uploadImage($image , $article);
         }
 
-        return response()->json(['article' => $article], 200);
+        if(! $uploadSucceed) {
+            return response()->json(['message' => 'Internal server error'],500);
+        }
+
+        return response()->json(['article' => $article]);
     }
 
     /**
@@ -89,11 +98,11 @@ class ArticleController extends Controller
      */
     public function update(UpdateArticleRequest $request): JsonResponse
     {
-        $hasVideo = false;
+        $hasVideo = 0;
         $uploadingImage = $request->get('uploadImage');
         $changedImage = $request->get('changed_image');
         if($uploadingImage === "false"){
-            $hasVideo = true;
+            $hasVideo = 1;
         }
 
         $article = Article::updateOrCreate([
@@ -109,10 +118,10 @@ class ArticleController extends Controller
             'text' => $request->get('text'),
         ]);
 
-        if($uploadingImage === "true" && $changedImage === "true"){
+        if($uploadingImage === "true"){
             $this->uploadImage($request->file('image_link'), $article);
         }
-
+        dd($article);
         return response()->json(['message' => 'success'],200);
     }
 
@@ -144,7 +153,7 @@ class ArticleController extends Controller
 
     public function getAllCategories()
     {
-        $content = Category::with('Article')->where('name','!=','1 op 1')->where('name','!=','Actueel')->get();
+        $content = Category::with('Article')->where('name','!=','1 op 1')->where('name','!=','Actueel')->where('name','!=','Covid')->get();
 
         return $content;
     }
@@ -155,10 +164,16 @@ class ArticleController extends Controller
 
         return $content;
     }
-
     public function getTopicalCategory()
     {
         $content = Category::with('Article')->where('name','=','Actueel')->get();
+
+        return $content;
+    }
+
+    public function getCovidCategory()
+    {
+        $content = Category::with('Article')->where('name','=','Covid')->get();
 
         return $content;
     }

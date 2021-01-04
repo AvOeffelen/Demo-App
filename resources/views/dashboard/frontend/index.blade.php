@@ -2,16 +2,10 @@
 
 @section('content')
     <!-- Hero -->
-    <div class="bg-body-light">
+    <div class="bg-body-white">
         <div class="content content-full">
-            <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
-                <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Dashboard</h1>
-                <nav class="flex-sm-00-auto ml-sm-3" aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item">App</li>
-                        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-                    </ol>
-                </nav>
+            <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center bravis-logo">
+                <img src="storage/images/bravis.jpg" height="70">
             </div>
         </div>
     </div>
@@ -27,13 +21,12 @@
                             h-250
                             d-md-flex
                             align-items-md-stretch
-                            bg-image"
+                            bg-image
+                            homepage-block"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak_01.jpg); 
-                        background-position: center; 
-                        background-repeat: none;
+                            background-image : url(storage/images/Vak01.jpg;
                         "
-                        href="{{route('download.calender')}}"
+                        href="{{url('activiteitenkalender')}}"
                         target="_blank"
                         data-toggle="click-ripple"
                     >
@@ -56,14 +49,12 @@
                             h-250
                             d-md-flex
                             align-items-md-stretch
-                            bg-image"
+                            bg-image
+                            homepage-block"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/WORKSHOPS_Bravis_KlantSamenVitaal.nl_V1.png); 
-                        background-position: center; 
-                        background-repeat: none;
+                        background-image : url(storage/images/Vak02.jpg;
                         "
                         href="{{url('workshop')}}"
-                        target="_blank"
                         data-toggle="click-ripple"
                     >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
@@ -71,7 +62,7 @@
                                 Workshops.
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1"></h3>
+                                <h3 class="h1 font-w700 text-white mb-1">Workshops</h3>
                             </div>
                         </div>
                     </a>
@@ -87,14 +78,12 @@
                             h-250
                             d-md-flex
                             align-items-md-stretch
-                            bg-image"
+                            bg-image
+                            homepage-block"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak_03.jpg); 
-                        background-position: center; 
-                        background-repeat: none;
+                        background-image : url(storage/images/Vak03.jpg;
                         "
                         href="{{url('one-on-one')}}"
-                        target="_blank"
                         data-toggle="click-ripple"
                     >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
@@ -116,14 +105,12 @@
                             h-250
                             d-md-flex
                             align-items-md-stretch
-                            bg-image"
+                            bg-image
+                            homepage-block"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/COVID-19_Bravis_KlantSamenVitaal.nl_V1.png); 
-                        background-position: center; 
-                        background-repeat: none;
+                        background-image : url(storage/images/Vak04.jpg;
                         "
-                        href="{{url('covid')}}"
-                        target="_blank"
+                        href="{{route('covid')}}"
                         data-toggle="click-ripple"
                     >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
@@ -131,7 +118,7 @@
                                 (na)zorg Corona
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1"></h3>
+                                <h3 class="h1 font-w700 text-white mb-1">(na)zorg Corona</h3>
                             </div>
                         </div>
                     </a>
@@ -147,14 +134,12 @@
                             h-250
                             d-md-flex
                             align-items-md-stretch
-                            bg-image"
+                            bg-image
+                            homepage-block"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak_05.jpg); 
-                        background-position: center; 
-                        background-repeat: none;
+                        background-image : url(storage/images/Vak05.jpg;
                         "
-                        href="{{url('https://app.johan.nl/login')}}"
-                        target="_blank"
+                        href="{{route('vragenlijsten')}}"
                         data-toggle="click-ripple"
                     >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
@@ -176,14 +161,12 @@
                             h-250
                             d-md-flex
                             align-items-md-stretch
-                            bg-image"
+                            bg-image
+                            homepage-block"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/INSPIRATIEMATERIAAL_Bravis_KlantSamenVitaal.nl_V1.png); 
-                        background-position: center; 
-                        background-repeat: none;
+                        background-image : url(storage/images/Vak06.jpg;
                         "
                         href="{{url('articles')}}"
-                        target="_blank"
                         data-toggle="click-ripple"
                     >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
@@ -191,7 +174,7 @@
                                 Inspiratiemateriaal
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1"></h3>
+                                <h3 class="h1 font-w700 text-white mb-1">Inspiratiemateriaal</h3>
                             </div>
                         </div>
                     </a>
@@ -207,14 +190,12 @@
                             h-250
                             d-md-flex
                             align-items-md-stretch
-                            bg-image"
+                            bg-image
+                            homepage-block"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/Vak_07.jpg); 
-                        background-position: center; 
-                        background-repeat: none;
+                        background-image : url(storage/images/Vak07.jpg;
                         "
-                        href="{{url('https://my.goodhabitz.com/nl-be/login.html')}}" 
-                        target="_blank"
+                        href="{{route('goodhabitz')}}"
                         data-toggle="click-ripple"
                     >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
@@ -236,22 +217,20 @@
                             h-250
                             d-md-flex
                             align-items-md-stretch
-                            bg-image"
+                            bg-image
+                            homepage-block"
                         style="
-                        background-image : url(https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/ACTUEEL_Bravis_KlantSamenVitaal.nl_V1.png); 
-                        background-position: center; 
-                        background-repeat: none;
+                        background-image : url(storage/images/Vak08.jpg;
                         "
                         href="{{url('topical')}}"
-                        target="_blank"
                         data-toggle="click-ripple"
                     >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
                             <div class="ribbon-box">
-                                Actueel
+                                Thuiswerken
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1"></h3>
+                                <h3 class="h1 font-w700 text-white mb-1">Thuiswerken</h3>
                             </div>
                         </div>
                     </a>

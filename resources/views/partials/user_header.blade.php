@@ -22,13 +22,18 @@
                 </a>
             </li>
             <li class="nav-main-item">
+                <a class="btn btn-dual" href="{{route('gen.management')}}">
+                    <span class="nav-main-link-name">Generatiemanagement</span>
+                </a>
+            </li>
+            <li class="nav-main-item">
                 <a class="btn btn-dual" href="{{url('faq')}}">
                     <span class="nav-main-link-name">FAQ</span>
                 </a>
             </li>
             <li class="nav-main-item">
                 <a class="btn btn-dual" href="{{route('gen.management')}}">
-                    <span class="nav-main-link-name">Generatie management</span>
+                    <span class="nav-main-link-name">Generatiemanagement</span>
                 </a>
             </li>
         </ul>

@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Page Content -->
-    <div class="content content-full">
+    <div class="content">
         <workshop :workshop="{{$workshop}}"></workshop>
     </div>
     <!-- END Page Content -->

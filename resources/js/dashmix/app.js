@@ -3,14 +3,17 @@ import './bootstrap';
 window.Vue = require('vue');
 
 
+
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import CKEditor from '@ckeditor/ckeditor5-vue';
 import VueFlatPickr from 'vue-flatpickr-component';
 import VueRouter from 'vue-router'
+import Toast,{ POSITION } from "vue-toastification";
 
 
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'flatpickr/dist/flatpickr.css';
+import "vue-toastification/dist/index.css";
 
 // Install BootstrapVue
 Vue.use(VueFlatPickr);
@@ -21,7 +24,16 @@ Vue.use( CKEditor );
 import Tools from './modules/tools';
 import Helpers from './modules/helpers';
 import Template from './modules/template';
-import WorkshopUpdate from "../components/Workshop/Backend/WorkshopUpdate";
+const options = {
+    // You can set your default options here
+    timeout: 4000,
+    draggable: false,
+    closeOnClick: true,
+    position: POSITION.TOP_RIGHT
+};
+
+
+Vue.use(Toast, options);
 
 Vue.component('WorkshopUpdate',require('../components/Workshop/Backend/WorkshopUpdate').default);
 Vue.component('WorkshopCreate',require('../components/Workshop/Backend/WorkshopCreate').default);
