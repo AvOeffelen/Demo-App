@@ -16,19 +16,6 @@
 	padding:2px;
 }
 
-/*Text Color*/
-.text-pink {
-	color: #E83680 !important;
-}
-.text-blue {
-	color: #3DBDDE !important;
-}
-.text-purple {
-	color: #582BBA !important;
-}
-.text-orange {
-	color: #FC8033 !important;
-}
 .h-250{
 	height: 250px;
 }
@@ -96,10 +83,15 @@ main#main-container{
 }
 
 /*Homepage*/
-.homepage-block{
+a.block.block-transparent.block-link-pop.w-100.h-250.d-md-flex.align-items-md-stretch.bg-image.homepage-block.left-row.js-click-ripple-enabled{
 	background-position: center;
 	background-repeat: none;
 	border-top-left-radius:40px;
+}
+a.block.block-transparent.block-link-pop.w-100.h-250.d-md-flex.align-items-md-stretch.bg-image.homepage-block.right-row.js-click-ripple-enabled{
+	background-position: center;
+	background-repeat: none;
+	border-top-right-radius:40px;
 }
 .bravis-logo img{
 	height: 75px;

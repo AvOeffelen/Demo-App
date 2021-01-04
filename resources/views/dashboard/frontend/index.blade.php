@@ -24,7 +24,8 @@
                             d-md-flex
                             align-items-md-stretch
                             bg-image
-                            homepage-block"
+                            homepage-block
+                            left-row"
                         style="
                             background-image : url(storage/vakken/Vak01.jpg;
                         "
@@ -51,7 +52,8 @@
                             d-md-flex
                             align-items-md-stretch
                             bg-image
-                            homepage-block"
+                            homepage-block
+                            right-row"
                         style="
                         background-image : url(storage/vakken/Vak02.jpg;
                         "
@@ -63,7 +65,7 @@
                                 Workshops.
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-pink mb-1">Workshops</h3>
+                                <h3 class="h1 font-w700 text-white mb-1">Workshops</h3>
                             </div>
                         </div>
                     </a>
@@ -80,7 +82,8 @@
                             d-md-flex
                             align-items-md-stretch
                             bg-image
-                            homepage-block"
+                            homepage-block
+                            left-row"
                         style="
                         background-image : url(storage/vakken/Vak03.jpg;
                         "
@@ -107,7 +110,8 @@
                             d-md-flex
                             align-items-md-stretch
                             bg-image
-                            homepage-block"
+                            homepage-block
+                            right-row"
                         style="
                         background-image : url(storage/vakken/Vak04.jpg;
                         "
@@ -119,7 +123,7 @@
                                 (na)zorg Corona
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-blue mb-1">(na)zorg Corona</h3>
+                                <h3 class="h1 font-w700 text-white mb-1">(na)zorg Corona</h3>
                             </div>
                         </div>
                     </a>
@@ -136,7 +140,8 @@
                             d-md-flex
                             align-items-md-stretch
                             bg-image
-                            homepage-block"
+                            homepage-block
+                            left-row"
                         style="
                         background-image : url(storage/vakken/Vak05.jpg;
                         "
@@ -163,7 +168,8 @@
                             d-md-flex
                             align-items-md-stretch
                             bg-image
-                            homepage-block"
+                            homepage-block
+                            right-row"
                         style="
                         background-image : url(storage/vakken/Vak06.jpg;
                         "
@@ -175,7 +181,7 @@
                                 Inspiratiemateriaal
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-purple mb-1">Inspiratiemateriaal</h3>
+                                <h3 class="h1 font-w700 text-white mb-1">Inspiratiemateriaal</h3>
                             </div>
                         </div>
                     </a>
@@ -192,7 +198,8 @@
                             d-md-flex
                             align-items-md-stretch
                             bg-image
-                            homepage-block"
+                            homepage-block
+                            left-row"
                         style="
                         background-image : url(storage/vakken/Vak07.jpg;
                         "
@@ -219,7 +226,8 @@
                             d-md-flex
                             align-items-md-stretch
                             bg-image
-                            homepage-block"
+                            homepage-block
+                            right-row"
                         style="
                         background-image : url(storage/vakken/Vak08.jpg;
                         "
@@ -231,7 +239,7 @@
                                 Thuiswerken
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-orange mb-1">Thuiswerken</h3>
+                                <h3 class="h1 font-w700 text-white mb-1">Thuiswerken</h3>
                             </div>
                         </div>
                     </a>
