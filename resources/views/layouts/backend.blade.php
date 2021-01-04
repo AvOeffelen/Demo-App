@@ -7,8 +7,8 @@
     <title>{{config('app.name')}}</title>
 
     <meta name="description"
-          content="Dit is een DEMO App.. Dit bevat geen functionaliteiten.">
-    <meta name="author" content="RMNDDESIGN">
+          content="BravisSamenVitaal">
+    <meta name="author" content="BravisSamenVitaal">
     <meta name="robots" content="noindex, nofollow">
 
     <link rel="shortcut icon" href="{{ asset('media/favicons/favicon-32x32.png') }}">

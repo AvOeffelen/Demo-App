@@ -10,4 +10,21 @@ class FAQController extends Controller
     {
         return view('faq.index');
     }
+    
+    public function showGenManagement()
+    {
+        return view('generatiemanagement.index');
+    }
+    public function showVragenlijsten()
+    {
+        return view('questionaires.index');
+    }
+    public function showGoodHabitz()
+    {
+        return view('goodhabitz.index');
+    }
+    public function showActiviteitenkalender()
+    {
+        return view('activiteitenkalender.index');
+    }
 }

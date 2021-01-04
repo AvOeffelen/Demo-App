@@ -1,17 +1,21 @@
 <template>
     <div>
-        <b-row class="row">
-            <b-col cols="0" md="3" lg="3" sm="0"></b-col>
-            <b-col align-self="center" cols="12" md="6" lg="6" sm="12">
+        <b-row>
+            <b-col align-self="center" cols="12" md="12" lg="12" sm="12">
+                <b-button @click="goBack()" variant="primary">Terug</b-button>
                 <div class="text-center w-100">
-                    <div class="" v-bind:style="[workshop.image_name ?
-                                    {'background': 'url(' +'../../'+ workshop.image_name + ')'} :
-                                     {'background-image': 'url('+ default_image +')'}]"
-                         style=" width:100%; height: 600px;">
+                    <div v-if="workshop.image_name != null">
+                        <div class="article-show-image">
+                            <img class="" v-bind:src="'../../' + workshop.image_name" />
+                        </div>
+                    </div>
+                    <div v-else>
+                        <div class="article-show-image">
+                            <img v-bind:src="default_image" />
+                        </div>
                     </div>
                 </div>
             </b-col>
-            <b-col cols="0" md="3" lg="3" sm="0"></b-col>
         </b-row>
         <div class="row py-3">
             <div class="col-md-2"></div>
@@ -19,16 +23,16 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="text-center">
-                            <h2 class="h1 font-w600 mb-2 display-3">{{ workshop.title }}</h2>
+                            <h3 class="h3 font-w400 mb-2 display-3">{{ workshop.title }}</h3>
                         </div>
                     </div>
                 </div>
                 <b-row>
-                    <b-col cols="0" md="3" lg="3" sm="0"></b-col>
-                    <b-col align-self="center" cols="12" md="6" lg="6" sm="12">
+                    <b-col cols="0" md="1" lg="1" sm="0"></b-col>
+                    <b-col align-self="center" cols="12" md="10" lg="19" sm="12">
                         <div v-html="workshop.text"></div>
                     </b-col>
-                    <b-col cols="0" md="3" lg="3" sm="0"></b-col>
+                    <b-col cols="0" md="1" lg="1" sm="0"></b-col>
                 </b-row>
             </div>
             <div class="col-md-2"></div>
@@ -43,7 +47,12 @@
                         </div>
                     </div>
                 </div>
-                <div v-html="workshop.agenda_link"></div>
+                <div v-if="workshop.agenda_link !== null">
+                    <div v-html="workshop.agenda_link"></div>
+                </div>
+                <div v-else>
+                    <workshop-sign-up :workshop="workshop"></workshop-sign-up>
+                </div>
             </div>
             <div class="col-md-2"></div>
         </div>
@@ -124,6 +133,9 @@ export default {
                         }
                     }
                 });
+        },
+        goBack(){
+            history.back();
         }
     },
 }

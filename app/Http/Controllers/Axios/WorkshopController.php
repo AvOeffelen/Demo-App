@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\FileUploadRequest;
 use App\Http\Requests\StoreWorkshopRequest;
 use App\Http\Requests\UpdateWorkshopRequest;
+use App\Http\Requests\WorkshopSignUpRequest;
+use App\Mail\WorkshopSignUpMail;
 use App\Model\Article;
 use App\Model\Workshop;
 use App\Model\WorkshopCategory;
@@ -13,6 +15,7 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use phpDocumentor\Reflection\Types\Boolean;
@@ -22,23 +25,33 @@ class WorkshopController extends Controller
     /**
      * @param StoreWorkshopRequest $request
      *
-     * @return JsonResponse
      */
-    public function store(StoreWorkshopRequest $request): JsonResponse
+    public function store(StoreWorkshopRequest $request)
     {
-        $workshop = Workshop::create([
-            'title' => $request->get('title'),
-            'workshop_category_id' => $request->get('category_id'),
-            'text' => $request->get('text'),
-            'agenda_link' => $request->get('agenda_link'),
-            'start' => Carbon::parse($request->get('start')),
-            'end' => Carbon::parse($request->get('end')),
-        ]);
+        $start = null;
+        $end = null;
 
-        if($request->get('image') != null){
-            $this->uploadImage($request->file('image'), $workshop);
+        if($request->get('start') != null){
+            $start = Carbon::parse($request->get('start'));
+        }
+        if($request->get('end') != null){
+            $end = Carbon::parse($request->get('end'));
         }
 
+        $image = $request->file('image');
+        $workshop = Workshop::create([
+            'title' => $request->get('title'),
+            'workshop_category_id' => (int) $request->get('workshop_category_id'),
+            'text' => $request->get('text'),
+            'agenda_link' => $request->get('agenda_link'),
+            'start' => $start ? $start : null,
+            'end' => $end ? $end :  null,
+        ]);
+        if($image != null){
+            $this->uploadImage($request->file('image'), $workshop);
+
+        }
+        $workshop = $workshop->fresh();
         return response()->json(['workshop' => $workshop], 200);
     }
 
@@ -74,14 +87,19 @@ class WorkshopController extends Controller
     public function update(UpdateWorkshopRequest $request): Workshop
     {
         $changedImage = $request->get('changed_image');
+        $agendaLink = $request->get('agenda_link');
+        if($agendaLink === "null"){
+            $agendaLink = null;
+        }
 
         $workshop = Workshop::updateOrCreate([
             'id' => $request->get('id'),
         ],
             [
                 'title' => $request->get('title'),
-                'workshop_category_id' => $request->get('workshop_category_id'),
-                'agenda_link' => $request->get('agenda_link'),
+                'text' => $request->get('text'),
+                'workshop_category_id' => (int) $request->get('workshop_category_id'),
+                'agenda_link' => $agendaLink,
                 'start' => $request->get('start'),
                 'end' => $request->get('end'),
                 'image_location' => $request->get('image_location'),
@@ -197,5 +215,11 @@ class WorkshopController extends Controller
     public function checkIfUserHasLiked(Workshop $workshop): bool
     {
         return $workshop->userFavorites->contains(auth()->user());
+    }
+
+    public function signUpForWorkshop(WorkshopSignUpRequest $request, Workshop $workshop)
+    {
+        Mail::to('info@vitalavie.nl')->send(new WorkshopSignUpMail($workshop,$request->toArray()));
+        return response()->json(['message' => 'U bent succesvol aangemeld!']);
     }
 }

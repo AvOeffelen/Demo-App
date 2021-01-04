@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -13,7 +14,6 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
     }
 
     /**
@@ -21,11 +21,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if(auth()->user()->isAdmin()){
-
-            return response()->view('workshop.admin.overview.index');
+        if (Auth::check()) {
+            if(auth()->user()->isAdmin()){
+                return response()->view('workshop.admin.overview.index');
+            }else {
+                return response()->view('dashboard.frontend.index');
+            }
         }
-
         return response()->view('dashboard.frontend.index');
+
     }
+
 }

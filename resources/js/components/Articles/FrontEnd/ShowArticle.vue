@@ -1,22 +1,24 @@
 <template>
     <div>
         <b-row class="row">
-            <b-col cols="0" md="3" lg="3" sm="0"></b-col>
-            <b-col align-self="center" cols="12" md="6" lg="6" sm="12">
+            <b-col align-self="center" cols="12" md="12" lg="12" sm="12">
+                <b-button @click="goBack()" variant="primary">Terug</b-button>
                 <div class="text-center w-100">
-                    <div v-if="article.has_video === 0">
-                        <div class="" v-bind:style="[article.image_link ?
-                                    {'background': 'url(' +'../../'+ article.image_link + ')'} :
-                                     {'background-image': 'url('+ default_image +')'}]"
-                             style=" width:100%; height: 600px;">
+                    <div v-if="article.has_video === true">
+                        <div v-html="article.video_link"></div>
+                    </div>
+                    <div v-else-if="article.image_link != null">
+                        <div class="article-show-image">
+                            <img class="" v-bind:src="'../../' + article.image_link" />
                         </div>
                     </div>
                     <div v-else>
-                        <div v-html="article.video_link"></div>
+                        <div class="article-show-image">
+                            <img v-bind:src="fallback" />
+                        </div>
                     </div>
                 </div>
             </b-col>
-            <b-col cols="0" md="3" lg="3" sm="0"></b-col>
         </b-row>
         <div class="row py-3">
             <div class="col-md-2"></div>
@@ -24,16 +26,16 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="text-center">
-                            <h2 class="h1 font-w600 mb-2 display-3">{{ article.title }}</h2>
+                            <h3 class="h3 font-w400 mb-2 display-3">{{ article.title }}</h3>
                         </div>
                     </div>
                 </div>
                 <b-row>
-                    <b-col cols="0" md="3" lg="3" sm="0"></b-col>
-                    <b-col align-self="center" cols="12" md="6" lg="6" sm="12">
+                    <b-col cols="0" md="1" lg="1" sm="0"></b-col>
+                    <b-col align-self="center" cols="12" md="10" lg="19" sm="12">
                         <div v-html="article.text"></div>
                     </b-col>
-                    <b-col cols="0" md="3" lg="3" sm="0"></b-col>
+                    <b-col cols="0" md="1" lg="1" sm="0"></b-col>
                 </b-row>
             </div>
             <div class="col-md-2"></div>
@@ -59,7 +61,7 @@ export default {
     data() {
         return {
             currUserHasLiked: false,
-            default_image: 'https://www.bravissamenvitaal.nl/wp-content/uploads/2020/02/iStock-1058457940-2-495x400.jpg',
+            fallback: '/storage/images/fallback.jpg',
         };
     },
     created() {
@@ -67,6 +69,9 @@ export default {
     methods: {
         buttonFunction(link){
             window.open("https://"+link);
+        },
+        goBack(){
+            history.back();
         }
     },
 }

@@ -9,8 +9,8 @@
                     <!-- Header -->
                     <div class="mb-3 text-center">
                         <div class="mb-3 text-center">
-                            <a class="link-fx font-w700 font-size-h1" href="#">
-                                <span class="text-dark">KLANTSAMEN</span><span class="text-primary">VITAAL</span>
+                             <a>
+                                 <img src="storage/images/bravis.jpg" height="150">
                             </a>
                             <p class="text-uppercase font-w700 font-size-sm text-muted py-3">Log in</p>
                         </div>
@@ -31,12 +31,25 @@
                                     <i class="fa fa-fw fa-sign-in-alt mr-1"></i> Log in
                                 </button>
                             </form>
-                            <div class="form-group">
-                                <p class="mt-3 mb-0 d-lg-flex justify-content-lg-between">
-                                    <a class="btn btn-sm btn-light d-block d-lg-inline-block mb-1" href="#">
-                                        <i class="fa fa-exclamation-triangle text-muted mr-1"></i> Forgot password
-                                    </a>
-                                </p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <p class="mt-3 mb-0 d-lg-flex justify-content-lg-between">
+                                            <a class="btn btn-sm btn-light d-block d-lg-inline-block mb-1" href="#">
+                                                <i class="fa fa-exclamation-triangle text-muted mr-1"></i> Forgot password
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <div class="form-group">
+                                        <p class="mt-3 mb-0 d-lg-flex justify-content-lg-between">
+                                                <a class="btn btn-sm btn-light d-block d-lg-inline-block mb-1" href="/register">
+                                                    <i class="fa fa-user-plus text-muted mr-1"></i> Registreren
+                                                </a>
+                                            </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
