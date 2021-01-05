@@ -22,7 +22,7 @@
                                    v-if="category.workshop[0]">
                                 <a class="block block-transparent bg-image h-286"
                                    v-bind:style="[category.workshop[0].image_name ?
-                                    {'background': 'url(' + category.workshop[1].image_name + ')',
+                                    {'background': 'url(' + category.workshop[0].image_name + ')',
                                         'background-position':'center',
                                         'background-size':'cover',
                                         'background-repeat': 'no-repeat'} :
