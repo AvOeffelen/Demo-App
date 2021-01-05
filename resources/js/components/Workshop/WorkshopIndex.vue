@@ -35,7 +35,7 @@
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[0].title}}</h3>
-                                            <i class="fa fa-calendar appointment-date text-white" aria-hidden="true">
+                                            <i class="fa fa-calendar appointment-date text-white" aria-hidden="true" v-if="category.workshop[0].start !== null">
                                                 {{category.workshop[0].start}}
                                             </i>
                                         </div>
@@ -58,7 +58,7 @@
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[1].title}}</h3>
-                                                <i class="fa fa-calendar appointment-date text-white" aria-hidden="true">
+                                                <i class="fa fa-calendar appointment-date text-white" aria-hidden="true" v-if="category.workshop[1].start !== null">
                                                     {{category.workshop[1].start}}
                                                 </i>
                                             </div>
@@ -83,7 +83,7 @@
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[2].title}}</h3>
-                                            <i class="fa fa-calendar appointment-date text-white" aria-hidden="true">
+                                            <i class="fa fa-calendar appointment-date text-white" aria-hidden="true" v-if="category.workshop[2].start !== null">
                                                 {{category.workshop[2].start}}
                                             </i>
                                         </div>
@@ -105,7 +105,7 @@
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[3].title}}</h3>
-                                                <i class="fa fa-calendar appointment-date text-white" aria-hidden="true">
+                                                <i class="fa fa-calendar appointment-date text-white" aria-hidden="true" v-if="category.workshop[3].start !== null">
                                                     {{category.workshop[3].start}}
                                                 </i>
                                             </div>
@@ -129,7 +129,7 @@
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[4].title}}</h3>
-                                            <i class="fa fa-calendar appointment-date text-white" aria-hidden="true">
+                                            <i class="fa fa-calendar appointment-date text-white" aria-hidden="true" v-if="category.workshop[4].start !== null">
                                                 {{category.workshop[4].start}}
                                             </i>
                                         </div>
@@ -152,7 +152,7 @@
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[5].title}}</h3>
-                                            <i class="fa fa-calendar appointment-date text-white" aria-hidden="true">
+                                            <i class="fa fa-calendar appointment-date text-white" aria-hidden="true" v-if="category.workshop[5].start !== null">
                                                 {{category.workshop[5].start}}
                                             </i>
                                         </div>
@@ -175,7 +175,7 @@
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[6].title}}</h3>
-                                            <i class="fa fa-calendar appointment-date text-white" aria-hidden="true">
+                                            <i class="fa fa-calendar appointment-date text-white" aria-hidden="true" v-if="category.workshop[6].start !== null">
                                                 {{category.workshop[6].start}}
                                             </i>
                                         </div>
@@ -205,7 +205,7 @@
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{ workshop.title }}</h3>
-                                            <i class="fa fa-calendar appointment-date text-white" aria-hidden="true">
+                                            <i class="fa fa-calendar appointment-date text-white" aria-hidden="true" v-if="category.workshop[7].start !== null">
                                                 {{category.workshop[7].start}}
                                             </i>
                                         </div>
