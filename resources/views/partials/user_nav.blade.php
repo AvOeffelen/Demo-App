@@ -21,7 +21,7 @@
         <li class="nav-main-item">
             <a class="nav-main-link" href="{{url('workshop')}}">
                 <i class="nav-main-link-icon fa fa-chalkboard-teacher"></i>
-                <span class="nav-main-link-name">Workshops</span>
+                <span class="nav-main-link-name">Home</span>
             </a>
         </li>
         <li class="nav-main-item">
