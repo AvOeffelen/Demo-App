@@ -34,6 +34,7 @@
                                         'background-repeat': 'no-repeat',
                                         }"
                            v-bind:href="'/article/'+categories[0].article[0].id +'/show'"
+
                            data-toggle="click-ripple">
                             <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-600">
                                 <div class="ribbon-box">

@@ -21,7 +21,8 @@ class Workshop extends Model
     ];
 
     protected $casts = [
-
+        'start' => 'datetime:d-m-Y',
+        'end' => 'datetime:d-m-Y',
     ];
 
     protected $dates = [

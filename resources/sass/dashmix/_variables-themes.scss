@@ -438,3 +438,51 @@ $theme-xbrvs-main-nav-link-dark-hover-bg:   darken($theme-xbrvs-sidebar-dark-bg,
 $theme-xbrvs-main-nav-submenu-dark-bg:      darken($theme-xbrvs-sidebar-dark-bg, 3%) !default;
 
 $theme-xbrvs-btn-alt-primary-bg:            $theme-xbrvs-lighter;
+
+//gelre
+$theme-xge-primary:                       #3DBDDE !default;
+$theme-xge-secondary:                     #FC8033 !default;
+$theme-xge-light:                         lighten($theme-xge-primary, 10%) !default;
+$theme-xge-lighter:                       lighten($theme-xge-light, 20%) !default;
+$theme-xge-dark:                          darken($theme-xge-primary, 12%) !default;
+$theme-xge-darker:                        darken($theme-xge-primary, 24%) !default;
+
+$theme-xge-body-bg:                       #f2f2f2 !default;
+$theme-xge-body-bg-dark:                  darken($theme-xge-body-bg, 4%) !default;
+$theme-xge-body-bg-light:                 lighten($theme-xge-body-bg, 2%) !default;
+
+$theme-xge-body-color:                    #574a49 !default;
+$theme-xge-body-color-dark:               #332c2b !default;
+$theme-xge-body-color-light:              $theme-xge-body-bg-dark !default;
+
+$theme-xge-link-color:                    $theme-xge-primary !default;
+$theme-xge-link-hover-color:              darken($theme-xge-primary, 20%) !default;
+
+$theme-xge-headings-color:                $theme-xge-body-color-dark !default;
+
+$theme-xge-input-btn-focus-color:         rgba($theme-xge-primary, .25) !default;
+$theme-xge-input-btn-focus-box-shadow:    0 0 0 $input-btn-focus-width $theme-xge-input-btn-focus-color !default;
+
+$theme-xge-input-bg:                      $white !default;
+$theme-xge-input-color:                   $theme-xge-body-color !default;
+$theme-xge-input-border-color:            darken($theme-xge-body-bg, 8%) !default;
+
+$theme-xge-input-focus-bg:                $white !default;
+$theme-xge-input-focus-color:             $theme-xge-body-color-dark !default;
+$theme-xge-input-focus-border-color:      lighten($theme-xge-primary, 25%) !default;
+
+$theme-xge-header-bg:                     $white !default;
+$theme-xge-header-dark-bg:                $theme-xge-primary !default;
+$theme-xge-sidebar-bg:                    $white !default;
+$theme-xge-sidebar-dark-bg:               #35393e !default;
+$theme-xge-side-overlay-bg:               $white !default;
+
+$theme-xge-main-nav-link-icon-color:      lighten($theme-xge-body-color, 20%) !default;
+$theme-xge-main-nav-link-hover-bg:        $theme-xge-body-bg-dark !default;
+$theme-xge-main-nav-submenu-bg:           $theme-xge-body-bg-light !default;
+
+$theme-xge-main-nav-link-icon-dark-color: rgba($white, .45) !default;
+$theme-xge-main-nav-link-dark-hover-bg:   darken($theme-xge-sidebar-dark-bg, 8%) !default;
+$theme-xge-main-nav-submenu-dark-bg:      darken($theme-xge-sidebar-dark-bg, 3%) !default;
+
+$theme-xge-btn-alt-primary-bg:            $theme-xge-lighter;
