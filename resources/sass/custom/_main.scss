@@ -1,4 +1,3 @@
-
 .h-250{
 	height: 250px;
 }
@@ -75,6 +74,13 @@ main#main-container{
 	height: 75px;
 	width: 150px;
 }
+
 .appointment-date{
 	text-shadow: 2px 2px 4px #000000;
+
+/*workshop images*/
+@media only screen and (max-width: 768px) {
+	.article-show-image img{
+		height: 200px !important;
+	}
 }
