@@ -33,7 +33,7 @@
                     Johan is een onafhankelijk platform waar je naartoe kunt gaan om vragenlijsten in te vullen. Dit kun
                     je doen wanneer je bijvoorbeeld nog niet weet met welke thema je graag aan de slag wilt gaan. De
                     uitslag van de vragenlijst geeft je wellicht inzichten en aanknopingspunten om mee aan de slag te
-                    gaan. Het aanbod vind je dan vervolgens weer gewoon op Bravis Samen Vitaal.
+                    gaan. Het aanbod vind je dan vervolgens weer gewoon op Gelre Energiek.
                     <br />
                     <br />
                     Je moet op deze pagina eerst even inloggen en wanneer je dat nog niet hebt gedaan, eerst een account
@@ -52,7 +52,7 @@
             <div class="col-md-4 col-lg-4 col-xl-4 col-4 col-sm-4 col-xs-4">
                 <div class="text-center">
                     <a href="https://app.johan.nl" target="_blank" class="btn btn-primary">Ga naar Johan</a>
-                    <a href="https://app.johan.nl/open-registration/3c965d0d49569e0b0094d78ac5591aa415c9222afb1c23fadde5688f0f283f21" target="_blank" class="btn btn-primary">Eerste keer inloggen Johan</a>
+                    <a href="https://app.johan.nl/open-registration/9a25d9b0efd6c546ce3fd1430741fa4b8bcf3c91a275ff0dee074f2ab6cd2728" target="_blank" class="btn btn-primary">Eerste keer inloggen Johan</a>
                 </div>
             </div>
             <div class="col-md-4 col-lg-4 col-xl-4 col-4 col-sm-4 col-xs-4">
