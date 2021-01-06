@@ -361,7 +361,7 @@
                                     </div>
                                 </a>
                             </b-col>
-                            <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-for="(article,key) in category.article.slice(7)" :key="key">
+                            <b-col cols="12" sm="12" md="12" lg="6" xl="6" v-for="(article,key) in category.article.slice(7)" :key="key">
                                 <a v-if="article.has_video === false"
                                    class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
                                    v-bind:style="[article.image_link ?
