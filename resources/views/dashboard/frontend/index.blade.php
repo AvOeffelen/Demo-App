@@ -22,7 +22,8 @@
                             d-md-flex
                             align-items-md-stretch
                             bg-image
-                            homepage-block"
+                            homepage-block
+                            left-tile"
                         style="
                             background-image : url(storage/vakken/Vak01.jpg;
                         "
@@ -50,7 +51,8 @@
                             d-md-flex
                             align-items-md-stretch
                             bg-image
-                            homepage-block"
+                            homepage-block
+                            right-tile"
                         style="
                         background-image : url(storage/vakken/Vak02.jpg;
                         "
@@ -79,7 +81,8 @@
                             d-md-flex
                             align-items-md-stretch
                             bg-image
-                            homepage-block"
+                            homepage-block
+                            left-tile"
                         style="
                         background-image : url(storage/vakken/Vak03.jpg;
                         "
@@ -106,7 +109,8 @@
                             d-md-flex
                             align-items-md-stretch
                             bg-image
-                            homepage-block"
+                            homepage-block
+                            right-tile"
                         style="
                         background-image : url(storage/vakken/Vak04.jpg;
                         "
@@ -135,7 +139,8 @@
                             d-md-flex
                             align-items-md-stretch
                             bg-image
-                            homepage-block"
+                            homepage-block
+                            left-tile"
                         style="
                         background-image : url(storage/vakken/Vak05.jpg;
                         "
@@ -162,7 +167,8 @@
                             d-md-flex
                             align-items-md-stretch
                             bg-image
-                            homepage-block"
+                            homepage-block
+                            right-tile"
                         style="
                         background-image : url(storage/vakken/Vak06.jpg;
                         "
@@ -191,7 +197,8 @@
                             d-md-flex
                             align-items-md-stretch
                             bg-image
-                            homepage-block"
+                            homepage-block
+                            left-tile"
                         style="
                         background-image : url(storage/vakken/Vak07.jpg;
                         "
@@ -218,7 +225,8 @@
                             d-md-flex
                             align-items-md-stretch
                             bg-image
-                            homepage-block"
+                            homepage-block
+                            right-tile"
                         style="
                         background-image : url(storage/vakken/Vak08.jpg;
                         "
