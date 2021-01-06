@@ -7,11 +7,13 @@ use App\Http\Requests\ArticleFileUploadRequest;
 use App\Http\Requests\FileUploadRequest;
 use App\Http\Requests\StoreArticleRequest;
 use App\Http\Requests\UpdateArticleRequest;
+use App\Mail\ArticleSignUpMail;
 use App\Model\Article;
 use App\Model\Category;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -76,6 +78,7 @@ class ArticleController extends Controller
             'button_text' => $request->get('button_text'),
             'button_link' => $request->get('button_link'),
             'video_link' => $request->get('video_link'),
+            'show_contact' => $request->get('show_contact') ? 1 : 0 ,
         ]);
 
         if($uploadingImage === "true"){
@@ -100,7 +103,7 @@ class ArticleController extends Controller
     {
         $hasVideo = 0;
         $uploadingImage = $request->get('uploadImage');
-        $changedImage = $request->get('changed_image');
+        $changedImage = $request->get('changed_image') ? $request->get('changed_image') : "false" ;
         if($uploadingImage === "false"){
             $hasVideo = 1;
         }
@@ -116,13 +119,14 @@ class ArticleController extends Controller
             'button_link' => $request->get('button_link'),
             'has_video' => $hasVideo,
             'text' => $request->get('text'),
+            'show_contact' => $request->get('show_contact') ? 1 : 0 ,
         ]);
 
-        if($uploadingImage === "true"){
+        if($uploadingImage === "true" && $changedImage === "true"){
             $this->uploadImage($request->file('image_link'), $article);
         }
-        dd($article);
-        return response()->json(['message' => 'success'],200);
+
+        return response()->json(['message' => 'success']);
     }
 
     /**
@@ -181,5 +185,17 @@ class ArticleController extends Controller
     public function showArticleUpdate(Article $article)
     {
         return response()->view('article.backend.crud.update',['article' => $article]);
+    }
+
+    /**
+     * @param Request $request
+     * @param Article $article
+     *
+     * @return JsonResponse
+     */
+    public function signUpForArticle(Request $request, Article $article)
+    {
+        Mail::to('info@vitalavie.nl')->send(new ArticleSignUpMail($article,$request->toArray()));
+        return response()->json(['message' => 'Aanvraag succesvol verstuurd!']);
     }
 }

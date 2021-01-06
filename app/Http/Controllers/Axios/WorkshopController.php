@@ -217,6 +217,12 @@ class WorkshopController extends Controller
         return $workshop->userFavorites->contains(auth()->user());
     }
 
+    /**
+     * @param WorkshopSignUpRequest $request
+     * @param Workshop $workshop
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function signUpForWorkshop(WorkshopSignUpRequest $request, Workshop $workshop)
     {
         Mail::to('info@vitalavie.nl')->send(new WorkshopSignUpMail($workshop,$request->toArray()));
