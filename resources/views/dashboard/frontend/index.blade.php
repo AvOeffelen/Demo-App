@@ -34,10 +34,10 @@
                     >
                         <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom">
                             <div class="ribbon-box">
-                                Activiteitenkalender.
+                                Kalender Gelre Energiek.
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1">Activiteitenkalender</h3>
+                                <h3 class="h1 font-w700 text-white mb-1"></h3>
                             </div>
                         </div>
                     </a>
@@ -65,7 +65,7 @@
                                 Workshops.
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1">Workshops</h3>
+                                <h3 class="h1 font-w700 text-white mb-1"></h3>
                             </div>
                         </div>
                     </a>
@@ -95,7 +95,7 @@
                                 Persoonlijke begeleiding
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1">Persoonlijke begeleiding</h3>
+                                <h3 class="h1 font-w700 text-white mb-1"></h3>
                             </div>
                         </div>
                     </a>
@@ -123,7 +123,7 @@
                                 (na)zorg Corona
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1">(na)zorg Corona</h3>
+                                <h3 class="h1 font-w700 text-white mb-1"></h3>
                             </div>
                         </div>
                     </a>
@@ -153,7 +153,7 @@
                                 Vragenlijsten
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1">Vragenlijsten</h3>
+                                <h3 class="h1 font-w700 text-white mb-1"></h3>
                             </div>
                         </div>
                     </a>
@@ -181,7 +181,7 @@
                                 Inspiratiemateriaal
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1">Inspiratiemateriaal</h3>
+                                <h3 class="h1 font-w700 text-white mb-1"></h3>
                             </div>
                         </div>
                     </a>
@@ -211,7 +211,7 @@
                                 GoodHabitz
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1">GoodHabitz</h3>
+                                <h3 class="h1 font-w700 text-white mb-1"></h3>
                             </div>
                         </div>
                     </a>
@@ -239,7 +239,7 @@
                                 Thuiswerken
                             </div>
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1">Thuiswerken</h3>
+                                <h3 class="h1 font-w700 text-white mb-1"></h3>
                             </div>
                         </div>
                     </a>
