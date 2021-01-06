@@ -17,7 +17,7 @@
                         class=" h5 d-lg-block mt-2 mt-lg-0 nav nav-main nav-main-horizontal nav-main-horizontal-center"
                         v-if="loading == false">
                     <b-tab :title="category.name" v-for="(category, key) in this.categories" :key="key">
-                        <b-row >
+                        <b-row>
                            <b-col cols="12" sm="12" md="12" lg="6" xl="6"
                                    v-if="category.workshop[0]">
                                 <a class="block block-transparent bg-image h-286"
@@ -39,7 +39,7 @@
                                                 {{category.workshop[0].start}}
                                             </i>
                                         </div>
-                                        
+
                                     </div>
                                 </a>
                                 <div v-if="category.workshop[1]">

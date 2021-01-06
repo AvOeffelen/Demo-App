@@ -8,12 +8,23 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
+/**
+ * Class WorkshopSignUpMail
+ *
+ * @package App\Mail
+ */
 class WorkshopSignUpMail extends Mailable
 {
     use Queueable, SerializesModels;
 
+    /**
+     * @var Workshop
+     */
     public $workshop;
 
+    /**
+     * @var array
+     */
     public $attendee;
 
     /**

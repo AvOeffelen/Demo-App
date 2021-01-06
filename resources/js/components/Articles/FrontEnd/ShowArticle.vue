@@ -47,6 +47,24 @@
                 </div>
             </b-col>
         </b-row>
+        <div class="py-5">
+            <b-row>
+                <b-col xl="2" lg="2" col="0" sm="0" md="0"></b-col>
+                <b-col xl="8" lg="8" col="12" sm="12" md="12">
+                    <div class="text-center">
+                        <h1 class="h4 font-w600 mb-2 display-5">Maak een afspraak</h1>
+                    </div>
+                </b-col>
+                <b-col xl="2" lg="2" col="0" sm="0" md="0"></b-col>
+            </b-row>
+            <b-row v-if="article.show_contact === true">
+                <b-col align-self="center">
+                    <div class="text-center">
+                        <article-contact :article="article"></article-contact>
+                    </div>
+                </b-col>
+            </b-row>
+        </div>
     </div>
 </template>
 
@@ -78,7 +96,4 @@ export default {
 </script>
 
 <style scoped>
-.colorStar {
-    color: orange;
-}
 </style>

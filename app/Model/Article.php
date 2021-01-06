@@ -23,16 +23,18 @@ class Article extends Model
         'button_text',
         'button_link',
         'updated_at',
-        'created_at'
+        'created_at',
+        'show_contact'
 
     ];
 
     protected $casts = [
         'has_video' => 'boolean',
+        'show_contact' => 'boolean',
     ];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return \Illuminate\Database\Eloquent\Relations\belongsTo
      */
     public function Category()
     {

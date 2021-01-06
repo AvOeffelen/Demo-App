@@ -64,7 +64,6 @@
                                                 accept="image/*"
                                                 placeholder="Kies of drop een afbeelding hier"
                                                 drop-placeholder="Drop afbeelding hier"
-                                                @change="changedImage"
                                                 v-bind:class="[this.errors.image ? 'decoratedErrorField':'' ]"/>
                                             <p v-if="this.errors.image" class="text-primary">{{
                                                     this.errors['image'][0]
@@ -120,6 +119,15 @@
                                 }}</p>
                         </div>
                     </div>
+                    <b-row class="py-3">
+                        <b-col cols="12" md="12" lg="12" sm="12" xl="12">
+                            <b-form-checkbox
+                                v-model="article.show_contact"
+                                name="show-contact-form"
+                                inline
+                            ><p>Contact formulier</p></b-form-checkbox>
+                        </b-col>
+                    </b-row>
                     <div class="row py-3">
                         <div class="col-md-12">
                             <div class="text-right">
@@ -193,11 +201,19 @@ export default {
             this.errors = [];
             let data = new FormData();
 
-            if (this.image != null) {
+            if (this.image !== null) {
                 data.append('image_link', this.image)
                 data.append('changed_image', "true")
             } else if (this.article.image_link !== null) {
                 data.append('image_link', this.article.image_link)
+            }
+
+            if(this.article.video_link !== null){
+                data.append('video_link', this.article.video_link);
+            }
+
+            if(this.article.show_contact == true){
+                data.append('show_contact', this.article.show_contact);
             }
 
             data.append('uploadImage', this.uploadImage);
@@ -206,7 +222,6 @@ export default {
             data.append('has_video', this.article.has_video);
             data.append('category_id', this.article.category_id);
             data.append('text', this.article.text);
-            data.append('video_link', this.article.video_link);
             data.append('button_text', this.article.button_text);
             data.append('button_link', this.article.button_link);
 
