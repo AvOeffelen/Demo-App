@@ -47,7 +47,7 @@
                 </div>
             </b-col>
         </b-row>
-        <div class="py-5">
+        <div class="py-5" v-if="article.show_contact === true">
             <b-row>
                 <b-col xl="2" lg="2" col="0" sm="0" md="0"></b-col>
                 <b-col xl="8" lg="8" col="12" sm="12" md="12">
@@ -57,7 +57,7 @@
                 </b-col>
                 <b-col xl="2" lg="2" col="0" sm="0" md="0"></b-col>
             </b-row>
-            <b-row v-if="article.show_contact === true">
+            <b-row>
                 <b-col align-self="center">
                     <div class="text-center">
                         <article-contact :article="article"></article-contact>
