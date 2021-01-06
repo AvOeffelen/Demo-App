@@ -25,7 +25,7 @@
                             align-items-md-stretch
                             bg-image
                             homepage-block
-                            left-row"
+                            left-tile"
                         style="
                             background-image : url(storage/vakken/Vak01.jpg;
                         "
@@ -53,7 +53,7 @@
                             align-items-md-stretch
                             bg-image
                             homepage-block
-                            right-row"
+                            right-tile"
                         style="
                         background-image : url(storage/vakken/Vak02.jpg;
                         "
@@ -83,7 +83,7 @@
                             align-items-md-stretch
                             bg-image
                             homepage-block
-                            left-row"
+                            left-tile"
                         style="
                         background-image : url(storage/vakken/Vak03.jpg;
                         "
@@ -111,7 +111,7 @@
                             align-items-md-stretch
                             bg-image
                             homepage-block
-                            right-row"
+                            right-tile"
                         style="
                         background-image : url(storage/vakken/Vak04.jpg;
                         "
@@ -141,7 +141,7 @@
                             align-items-md-stretch
                             bg-image
                             homepage-block
-                            left-row"
+                            left-tile"
                         style="
                         background-image : url(storage/vakken/Vak05.jpg;
                         "
@@ -169,7 +169,7 @@
                             align-items-md-stretch
                             bg-image
                             homepage-block
-                            right-row"
+                            right-tile"
                         style="
                         background-image : url(storage/vakken/Vak06.jpg;
                         "
@@ -199,7 +199,7 @@
                             align-items-md-stretch
                             bg-image
                             homepage-block
-                            left-row"
+                            left-tile"
                         style="
                         background-image : url(storage/vakken/Vak07.jpg;
                         "
@@ -227,7 +227,7 @@
                             align-items-md-stretch
                             bg-image
                             homepage-block
-                            right-row"
+                            right-tile"
                         style="
                         background-image : url(storage/vakken/Vak08.jpg;
                         "
