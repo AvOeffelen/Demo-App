@@ -78,7 +78,7 @@
 export default {
     name: "WorkshopSignUp",
     props:[
-      'workshop'
+      'article'
     ],
     data() {
         return {
@@ -92,7 +92,7 @@ export default {
     },
     methods:{
         submit(){
-            let url = `/axios/workshop/${this.workshop.id}/sign-up`
+            let url = `/axios/article/${this.article.id}/sign-up`
             axios.post(url,this.contact)
                 .then(response => {
                     if(response.status === 200){
