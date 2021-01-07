@@ -4,3 +4,8 @@
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link{
     border-color:#fc0c1d !important;
 }
+@media only screen and (max-width: 768px) {
+	.goodhabitz-image{
+        height: 200px
+    }
+}
