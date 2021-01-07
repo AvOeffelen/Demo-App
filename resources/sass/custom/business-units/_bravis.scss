@@ -1,3 +1,6 @@
 .homepage-block{
     border-radius:10px;
 }
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link{
+    border-color:#fc0c1d !important;
+}
