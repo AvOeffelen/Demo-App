@@ -1,5 +1,20 @@
 <template>
     <div>
+        <b-row class="pb-3">
+            <b-col sm="6" md="6" lg="6" xl="6">
+                <b-input-group size="sm">
+                    <b-form-input
+                        id="filter-input"
+                        v-model="filter"
+                        type="search"
+                        placeholder="Type om te zoeken"
+                    ></b-form-input>
+                    <b-input-group-append>
+                        <b-button :disabled="!filter" @click="filter = ''" variant="primary">Reset</b-button>
+                    </b-input-group-append>
+                </b-input-group>
+            </b-col>
+        </b-row>
         <b-row>
             <b-col>
                 <b-table :items="items"
@@ -7,6 +22,9 @@
                          :fields="fields"
                          :current-page="currentPage"
                          :per-page="perPage"
+                         :filter="filter"
+                         :filter-included-fields="filterOn"
+                         @filtered="onFiltered"
                          responsive
                          selectable
                          striped
@@ -96,6 +114,8 @@ export default {
                     sortable: false
                 }
             ],
+            filter: null,
+            filterOn: ['title'],
             selected: [],
             selectMode: 'single',
             items: [],
@@ -107,6 +127,16 @@ export default {
             showPreviewModal: false,
             showConfirmationModal: false,
         };
+    },
+    computed: {
+        sortOptions() {
+            // Create an options list from our fields
+            return this.fields
+                .filter(f => f.sortable)
+                .map(f => {
+                    return { text: f.label, value: f.key }
+                })
+        }
     },
     mounted() {
         this.$root.$on('closeModal', () => {
@@ -161,6 +191,11 @@ export default {
                 .catch(errors => {
 
                 });
+        },
+        onFiltered(filteredItems) {
+            // Trigger pagination to update the number of buttons/pages due to filtering
+            this.totalRows = filteredItems.length
+            this.currentPage = 1
         }
     }
 }
