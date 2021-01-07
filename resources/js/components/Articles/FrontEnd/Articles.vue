@@ -115,7 +115,6 @@
                                     </a>
                                 </div>
                             </b-col>
-                            ///
                             <b-col cols="12" sm="12" md="12" lg="6" xl="6"
                                    v-if="category.article[2]">
                                 <a v-if="category.article[2].has_video === false"
