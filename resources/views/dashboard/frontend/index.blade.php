@@ -12,7 +12,7 @@
     <div class="content content-boxed">
         <div>
             <div class="row">
-                <div class="col-md-6 col-xl-6 col-lg-6 col-12 col-xs-12 invisible" data-toggle="appear">
+                <div class="col-md-12 col-xl-6 col-lg-6 col-12 col-xs-12 order-xl-1 order-lg-1 order-md-1 order-sm-1 order-1" data-toggle="appear">
                    <a class="
                             block
                             block-transparent
@@ -28,10 +28,9 @@
                             background-image : url(storage/vakken/Vak01.jpg;
                         "
                         href="{{url('activiteitenkalender')}}"
-                        target="_blank"
                         data-toggle="click-ripple"
                     >
-                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
                             <div class="ribbon-box">
                                 Activiteitenkalender.
                             </div>
@@ -41,7 +40,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-6 col-xl-6 invisible" data-toggle="appear">
+                <div class="col-md-12 col-xl-6 col-lg-6 col-12 col-xs-12 order-xl-2 order-lg-2 order-md-5 order-sm-5 order-5" data-toggle="appear">
                     <a class="
                             block
                             block-transparent
@@ -59,7 +58,7 @@
                         href="{{url('workshop')}}"
                         data-toggle="click-ripple"
                     >
-                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
                             <div class="ribbon-box">
                                 Workshops.
                             </div>
@@ -69,9 +68,7 @@
                         </div>
                     </a>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 col-xl-6 invisible" data-toggle="appear">
+                <div class="col-md-12 col-xl-6 col-lg-6 col-12 col-xs-12 order-xl-3 order-lg-3 order-md-2 order-sm-2 order-2" data-toggle="appear">
                     <a class="
                             block
                             block-transparent
@@ -89,7 +86,7 @@
                         href="{{url('one-on-one')}}"
                         data-toggle="click-ripple"
                     >
-                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
                             <div class="ribbon-box">
                                 Persoonlijke begeleiding
                             </div>
@@ -99,7 +96,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-6 col-xl-6 invisible" data-toggle="appear">
+                <div class="col-md-12 col-xl-6 col-lg-6 col-12 col-xs-12 order-xl-4 order-lg-4 order-md-6 order-sm-6 order-6" data-toggle="appear">
                     <a class="
                             block
                             block-transparent
@@ -117,7 +114,7 @@
                         href="{{route('covid')}}"
                         data-toggle="click-ripple"
                     >
-                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
                             <div class="ribbon-box">
                                 (na)zorg Corona
                             </div>
@@ -127,9 +124,7 @@
                         </div>
                     </a>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 col-xl-6 invisible" data-toggle="appear">
+                <div class="col-md-12 col-xl-6 col-lg-6 col-12 col-xs-12 order-xl-5 order-lg-5 order-md-3 order-sm-3 order-3" data-toggle="appear">
                     <a class="
                             block
                             block-transparent
@@ -147,7 +142,7 @@
                         href="{{route('vragenlijsten')}}"
                         data-toggle="click-ripple"
                     >
-                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
                             <div class="ribbon-box">
                                 Vragenlijsten
                             </div>
@@ -157,7 +152,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-6 col-xl-6 invisible" data-toggle="appear">
+                <div class="col-md-12 col-xl-6 col-lg-6 col-12 col-xs-12 order-xl-6 order-lg-6 order-md-7 order-sm-7 order-7" data-toggle="appear">
                     <a class="
                             block
                             block-transparent
@@ -175,7 +170,7 @@
                         href="{{url('articles')}}"
                         data-toggle="click-ripple"
                     >
-                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
                             <div class="ribbon-box">
                                 Inspiratiemateriaal
                             </div>
@@ -185,9 +180,7 @@
                         </div>
                     </a>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 col-xl-6 invisible" data-toggle="appear">
+                <div class="col-md-12 col-xl-6 col-lg-6 col-12 col-xs-12 order-xl-7 order-lg-7 order-md-4 order-sm-4 order-4" data-toggle="appear">
                     <a class="
                             block
                             block-transparent
@@ -205,7 +198,7 @@
                         href="{{route('goodhabitz')}}"
                         data-toggle="click-ripple"
                     >
-                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
                             <div class="ribbon-box">
                                 GoodHabitz
                             </div>
@@ -215,7 +208,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-6 col-xl-6 invisible" data-toggle="appear">
+                <div class="col-md-12 col-xl-6 col-lg-6 col-12 col-xs-12 order-xl-8 order-lg-8 order-md-8 order-sm-8 order-8" data-toggle="appear">
                     <a class="
                             block
                             block-transparent
@@ -233,7 +226,7 @@
                         href="{{url('topical')}}"
                         data-toggle="click-ripple"
                     >
-                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
                             <div class="ribbon-box">
                                 Thuiswerken
                             </div>
