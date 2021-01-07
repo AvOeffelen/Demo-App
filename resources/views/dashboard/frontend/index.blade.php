@@ -30,14 +30,14 @@
                         href="{{url('activiteitenkalender')}}"
                         data-toggle="click-ripple"
                     >
-{{--                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">--}}
-{{--                            <div class="ribbon-box">--}}
-{{--                                Activiteitenkalender.--}}
-{{--                            </div>--}}
-{{--                            <div class="pt-4 pb-6 px-md-3">--}}
-{{--                                <h3 class="h1 font-w700 text-white mb-1">Activiteitenkalender</h3>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
+                       <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
+                            <!-- <div class="ribbon-box">
+                                Activiteitenkalender.
+                            </div> -->
+                            <div class="pt-4 pb-6 px-md-3">
+                                <h3 class="h1 font-w700 text-white mb-1 text-center">Activiteitenkalender</h3>
+                            </div>
+                        </div>
                     </a>
                 </div>
                 <div class="col-md-12 col-xl-6 col-lg-6 col-12 col-xs-12 order-xl-2 order-lg-2 order-md-5 order-sm-5 order-5" data-toggle="appear">
@@ -58,14 +58,14 @@
                         href="{{url('workshop')}}"
                         data-toggle="click-ripple"
                     >
-{{--                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">--}}
-{{--                            <div class="ribbon-box">--}}
-{{--                                Workshops.--}}
-{{--                            </div>--}}
-{{--                            <div class="pt-4 pb-6 px-md-3">--}}
-{{--                                <h3 class="h1 font-w700 text-white mb-1">Workshops</h3>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
+                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
+                            <!-- <div class="ribbon-box">
+                                Workshops.
+                            </div> -->
+                            <div class="pt-4 pb-6 px-md-3">
+                                <h3 class="h1 font-w700 text-white mb-1 text-center">Workshops</h3>
+                            </div>
+                        </div>
                     </a>
                 </div>
                 <div class="col-md-12 col-xl-6 col-lg-6 col-12 col-xs-12 order-xl-3 order-lg-3 order-md-2 order-sm-2 order-2" data-toggle="appear">
@@ -86,14 +86,14 @@
                         href="{{url('one-on-one')}}"
                         data-toggle="click-ripple"
                     >
-{{--                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">--}}
-{{--                            <div class="ribbon-box">--}}
-{{--                                Persoonlijke begeleiding--}}
-{{--                            </div>--}}
-{{--                            <div class="pt-4 pb-6 px-md-3">--}}
-{{--                                <h3 class="h1 font-w700 text-white mb-1">Persoonlijke begeleiding</h3>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
+                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
+                            <!-- <div class="ribbon-box">
+                                Persoonlijke begeleiding
+                            </div> -->
+                            <div class="pt-4 pb-6 px-md-3">
+                                <h3 class="h1 font-w700 text-white mb-1 text-center">Persoonlijke begeleiding</h3>
+                            </div>
+                        </div>
                     </a>
                 </div>
                 <div class="col-md-12 col-xl-6 col-lg-6 col-12 col-xs-12 order-xl-4 order-lg-4 order-md-6 order-sm-6 order-6" data-toggle="appear">
@@ -115,11 +115,11 @@
                         data-toggle="click-ripple"
                     >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
-                            <div class="ribbon-box">
+                            <!-- <div class="ribbon-box">
                                 (na)zorg Corona
-                            </div>
+                            </div> -->
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1">(na)zorg Corona</h3>
+                                <h3 class="h1 font-w700 text-white mb-1 text-center">(na)zorg Corona</h3>
                             </div>
                         </div>
                     </a>
@@ -142,14 +142,14 @@
                         href="{{route('vragenlijsten')}}"
                         data-toggle="click-ripple"
                     >
-{{--                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">--}}
-{{--                            <div class="ribbon-box">--}}
-{{--                                Vragenlijsten--}}
-{{--                            </div>--}}
-{{--                            <div class="pt-4 pb-6 px-md-3">--}}
-{{--                                <h3 class="h1 font-w700 text-white mb-1">Vragenlijsten</h3>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
+                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
+                            <!-- <div class="ribbon-box">
+                                Vragenlijsten
+                            </div> -->
+                            <div class="pt-4 pb-6 px-md-3">
+                                <h3 class="h1 font-w700 text-white mb-1 text-center">Vragenlijsten</h3>
+                            </div>
+                        </div>
                     </a>
                 </div>
                 <div class="col-md-12 col-xl-6 col-lg-6 col-12 col-xs-12 order-xl-6 order-lg-6 order-md-7 order-sm-7 order-7" data-toggle="appear">
@@ -170,14 +170,14 @@
                         href="{{url('articles')}}"
                         data-toggle="click-ripple"
                     >
-{{--                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">--}}
-{{--                            <div class="ribbon-box">--}}
-{{--                                Inspiratiemateriaal--}}
-{{--                            </div>--}}
-{{--                            <div class="pt-4 pb-6 px-md-3">--}}
-{{--                                <h3 class="h1 font-w700 text-white mb-1">Inspiratiemateriaal</h3>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
+                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
+                            <!-- <div class="ribbon-box">
+                                Inspiratiemateriaal
+                            </div> -->
+                            <div class="pt-4 pb-6 px-md-3">
+                                <h3 class="h1 font-w700 text-white mb-1 text-center">Inspiratiemateriaal</h3>
+                            </div>
+                        </div>
                     </a>
                 </div>
                 <div class="col-md-12 col-xl-6 col-lg-6 col-12 col-xs-12 order-xl-7 order-lg-7 order-md-4 order-sm-4 order-4" data-toggle="appear">
@@ -199,11 +199,11 @@
                         data-toggle="click-ripple"
                     >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
-                            <div class="ribbon-box">
+                            <!-- <div class="ribbon-box">
                                 GoodHabitz
-                            </div>
+                            </div> -->
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1">GoodHabitz</h3>
+                                <h3 class="h1 font-w700 text-white mb-1 text-center">GoodHabitz</h3>
                             </div>
                         </div>
                     </a>
@@ -226,14 +226,14 @@
                         href="{{url('topical')}}"
                         data-toggle="click-ripple"
                     >
-{{--                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">--}}
-{{--                            <div class="ribbon-box">--}}
-{{--                                Thuiswerken--}}
-{{--                            </div>--}}
-{{--                            <div class="pt-4 pb-6 px-md-3">--}}
-{{--                                <h3 class="h1 font-w700 text-white mb-1">Thuiswerken</h3>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
+                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
+                            <!-- <div class="ribbon-box">
+                                Thuiswerken
+                            </div> -->
+                            <div class="pt-4 pb-6 px-md-3">
+                                <h3 class="h1 font-w700 text-white mb-1 text-center">Thuiswerken</h3>
+                            </div>
+                        </div>
                     </a>
                 </div>
             </div>
