@@ -446,7 +446,8 @@ export default {
         },
         goBack() {
             history.back();
-        }
+        },
+        uselessFunction(){}
     },
 }
 </script>
