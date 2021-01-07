@@ -41,7 +41,7 @@
                         gegevens te beveiligen is een inlog noodzakelijk.
                         <br />
                         <br />
-                        LET OP:
+                        <b>LET OP:</b>
                         
                         Wanneer je al eerder hebt ingelogd lukt het je nu waarschijnlijk niet om in te loggen. Klik op wachtwoord wijzigen en je kunt weer gewoon bij het aanbod van GoodHabitz.
 
