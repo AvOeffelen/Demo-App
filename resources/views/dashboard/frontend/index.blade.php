@@ -5,7 +5,7 @@
     <div class="bg-body-white">
         <div class="content content-full">
             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center bravis-logo">
-                <img src="storage/images/bravis.jpg" height="70">
+                <img src="storage/logo/logo.jpg" height="70">
             </div>
         </div>
     </div>
@@ -22,9 +22,10 @@
                             d-md-flex
                             align-items-md-stretch
                             bg-image
-                            homepage-block"
+                            homepage-block
+                            left-tile"
                         style="
-                            background-image : url(storage/images/Vak01.jpg;
+                            background-image : url(storage/vakken/Vak01.jpg;
                         "
                         href="{{url('activiteitenkalender')}}"
                         target="_blank"
@@ -50,9 +51,10 @@
                             d-md-flex
                             align-items-md-stretch
                             bg-image
-                            homepage-block"
+                            homepage-block
+                            right-tile"
                         style="
-                        background-image : url(storage/images/Vak02.jpg;
+                        background-image : url(storage/vakken/Vak02.jpg;
                         "
                         href="{{url('workshop')}}"
                         data-toggle="click-ripple"
@@ -79,9 +81,10 @@
                             d-md-flex
                             align-items-md-stretch
                             bg-image
-                            homepage-block"
+                            homepage-block
+                            left-tile"
                         style="
-                        background-image : url(storage/images/Vak03.jpg;
+                        background-image : url(storage/vakken/Vak03.jpg;
                         "
                         href="{{url('one-on-one')}}"
                         data-toggle="click-ripple"
@@ -106,9 +109,10 @@
                             d-md-flex
                             align-items-md-stretch
                             bg-image
-                            homepage-block"
+                            homepage-block
+                            right-tile"
                         style="
-                        background-image : url(storage/images/Vak04.jpg;
+                        background-image : url(storage/vakken/Vak04.jpg;
                         "
                         href="{{route('covid')}}"
                         data-toggle="click-ripple"
@@ -135,9 +139,10 @@
                             d-md-flex
                             align-items-md-stretch
                             bg-image
-                            homepage-block"
+                            homepage-block
+                            left-tile"
                         style="
-                        background-image : url(storage/images/Vak05.jpg;
+                        background-image : url(storage/vakken/Vak05.jpg;
                         "
                         href="{{route('vragenlijsten')}}"
                         data-toggle="click-ripple"
@@ -162,9 +167,10 @@
                             d-md-flex
                             align-items-md-stretch
                             bg-image
-                            homepage-block"
+                            homepage-block
+                            right-tile"
                         style="
-                        background-image : url(storage/images/Vak06.jpg;
+                        background-image : url(storage/vakken/Vak06.jpg;
                         "
                         href="{{url('articles')}}"
                         data-toggle="click-ripple"
@@ -191,9 +197,10 @@
                             d-md-flex
                             align-items-md-stretch
                             bg-image
-                            homepage-block"
+                            homepage-block
+                            left-tile"
                         style="
-                        background-image : url(storage/images/Vak07.jpg;
+                        background-image : url(storage/vakken/Vak07.jpg;
                         "
                         href="{{route('goodhabitz')}}"
                         data-toggle="click-ripple"
@@ -218,9 +225,10 @@
                             d-md-flex
                             align-items-md-stretch
                             bg-image
-                            homepage-block"
+                            homepage-block
+                            right-tile"
                         style="
-                        background-image : url(storage/images/Vak08.jpg;
+                        background-image : url(storage/vakken/Vak08.jpg;
                         "
                         href="{{url('topical')}}"
                         data-toggle="click-ripple"

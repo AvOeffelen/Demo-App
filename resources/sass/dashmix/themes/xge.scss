@@ -1,0 +1,44 @@
+//
+// xGE Theme
+// --------------------------------------------------
+
+// Include base files
+@import 'base';
+
+// Generate color theme
+@include color-theme($theme-xge-primary,
+    $theme-xge-secondary,
+    $theme-xge-light,
+    $theme-xge-lighter,
+    $theme-xge-dark,
+    $theme-xge-darker,
+    $theme-xge-body-bg,
+    $theme-xge-body-bg-dark,
+    $theme-xge-body-bg-light,
+    $theme-xge-body-color,
+    $theme-xge-body-color-dark,
+    $theme-xge-body-color-light,
+    $theme-xge-link-color,
+    $theme-xge-link-hover-color,
+    $theme-xge-headings-color,
+    $theme-xge-input-btn-focus-color,
+    $theme-xge-input-btn-focus-box-shadow,
+    $theme-xge-input-bg,
+    $theme-xge-input-color,
+    $theme-xge-input-border-color,
+    $theme-xge-input-focus-bg,
+    $theme-xge-input-focus-color,
+    $theme-xge-input-focus-border-color,
+    $theme-xge-header-bg,
+    $theme-xge-header-dark-bg,
+    $theme-xge-sidebar-bg,
+    $theme-xge-sidebar-dark-bg,
+    $theme-xge-side-overlay-bg,
+    $theme-xge-main-nav-link-icon-color,
+    $theme-xge-main-nav-link-hover-bg,
+    $theme-xge-main-nav-submenu-bg,
+    $theme-xge-main-nav-link-icon-dark-color,
+    $theme-xge-main-nav-link-dark-hover-bg,
+    $theme-xge-main-nav-submenu-dark-bg,
+    $theme-xge-btn-alt-primary-bg
+    );

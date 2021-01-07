@@ -103,6 +103,15 @@
                             </div>
                         </div>
                         <b-row class="py-3">
+                            <b-col cols="12" md="12" lg="12" sm="12" xl="12">
+                                    <b-form-checkbox
+                                        v-model="article.show_contact"
+                                        name="show-contact-form"
+                                        inline
+                                    ><p>Contact formulier</p></b-form-checkbox>
+                            </b-col>
+                        </b-row>
+                        <b-row class="py-3">
                             <b-col>
                                 <div class="text-right">
                                     <button class="btn btn-alt-danger btn-sm" @click="reset()">Reset</button>
@@ -142,6 +151,7 @@ export default {
                 image_link: '',
                 button_link: '',
                 button_text:'',
+                show_contact:false,
             },
             image: null,
             categories: [],
@@ -165,6 +175,9 @@ export default {
 
             if (this.uploadImage) {
                 data.append('image', this.image)
+            }
+            if(this.article.show_contact === true){
+                data.append('show_contact', this.article.show_contact);
             }
 
             data.append('uploadImage', this.uploadImage);

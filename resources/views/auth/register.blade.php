@@ -10,7 +10,7 @@
                     <div class="mb-3 text-center">
                         <div class="mb-3 text-center">
                             <a>
-                                <img src="storage/images/bravis.jpg" height="150">
+                                <img src="storage/logo/logo.jpg" height="150">
                             </a>
                             <p class="text-uppercase font-w700 font-size-sm text-muted py-3">Registreren</p>
                         </div>

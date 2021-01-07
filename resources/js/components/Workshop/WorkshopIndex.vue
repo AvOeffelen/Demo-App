@@ -17,101 +17,105 @@
                         class=" h5 d-lg-block mt-2 mt-lg-0 nav nav-main nav-main-horizontal nav-main-horizontal-center"
                         v-if="loading == false">
                     <b-tab :title="category.name" v-for="(category, key) in this.categories" :key="key">
+                        <b-row>
+                           <b-col cols="12" sm="12" md="12" lg="6" xl="6"
                         <b-row >
                             <b-col cols="12" sm="12" md="12" lg="6" xl="6" class="d-md-flex align-items-md-stretch"
                                    v-if="category.workshop[0]">
-                                <a
-                                    class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-600"
-                                    v-bind:style="[category.workshop[0].image_name ?
-                                    {
-                                        'background': 'url(' + category.workshop[0].image_name + ')',
-                                        'background-position':'center',
-                                        'background-size':'cover',
-                                        'background-repeat': 'no-repeat'
-                                    } :
-                                     {'background-image': 'url('+ default_image +');'}]"
-                                    v-bind:href="'/workshop/'+category.workshop[0].id +'/show'"
-                                    data-toggle="click-ripple">
-                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-600">
-                                        <div class="ribbon-box">
-                                            {{ category.name }}
-                                        </div>
-                                        <div class="pt-4 pb-6 px-md-3">
-                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{
-                                                    category.workshop[0].title
-                                                }}</h3>
-                                        </div>
-                                    </div>
-                                </a>
-                            </b-col>
-                            <b-col cols="12" sm="12" md="12" lg="6" xl="6"
-                                   v-if="category.workshop[1]">
                                 <a class="block block-transparent bg-image h-286"
-                                   v-bind:style="[category.workshop[1].image_name ?
-                                    {'background': 'url(' + category.workshop[1].image_name + ')',
+                                   v-bind:style="[category.workshop[0].image_name ?
+                                    {'background': 'url(' + category.workshop[0].image_name + ')',
                                         'background-position':'center',
                                         'background-size':'cover',
                                         'background-repeat': 'no-repeat'} :
                                      {'background-image': 'url('+ default_image +')'}]"
-                                   v-bind:href="'/workshop/'+category.workshop[1].id+'/show'"
+                                   v-bind:href="'/workshop/'+category.workshop[0].id+'/show'"
                                    data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             {{ category.name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
-                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{
-                                                    category.workshop[1].title
-                                                }}</h3>
+                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[0].title}}</h3>
+                                            <i class="fa fa-calendar appointment-date text-white" aria-hidden="true" v-if="category.workshop[0].start !== null">
+                                                {{category.workshop[0].start}}
+                                            </i>
                                         </div>
+
                                     </div>
                                 </a>
-                                <div v-if="category.workshop[2]">
+                                <div v-if="category.workshop[1]">
                                     <a class="block block-transparent bg-image h-286"
-                                       v-bind:style="[category.workshop[2].image_name  ?
-                                    {'background': 'url(' + category.workshop[2].image_name + ')',
+                                       v-bind:style="[category.workshop[1].image_name  ?
+                                    {'background': 'url(' + category.workshop[1].image_name + ')',
                                         'background-position':'center',
                                         'background-size':'cover',
                                         'background-repeat': 'no-repeat'} :
                                      {'background-image': 'url('+ default_image +')'}]"
-                                       v-bind:href="'/workshop/'+category.workshop[2].id+'/show'"
+                                       v-bind:href="'/workshop/'+category.workshop[1].id+'/show'"
                                        data-toggle="click-ripple">
                                         <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                             <div class="ribbon-box">
                                                 {{ category.name }}
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
-                                                <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{
-                                                        category.workshop[2].title
-                                                    }}</h3>
+                                                <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[1].title}}</h3>
+                                                <i class="fa fa-calendar appointment-date text-white" aria-hidden="true" v-if="category.workshop[1].start !== null">
+                                                    {{category.workshop[1].start}}
+                                                </i>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
                             </b-col>
-                            <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="category.workshop[3]">
+                            <b-col cols="12" sm="12" md="12" lg="6" xl="6"
+                                   v-if="category.workshop[2]">
                                 <a class="block block-transparent bg-image h-286"
-                                   v-bind:style="[category.workshop[3].image_name  ?
-                                    {'background': 'url(' + category.workshop[3].image_name + ')',
+                                   v-bind:style="[category.workshop[2].image_name ?
+                                    {'background': 'url(' + category.workshop[2].image_name + ')',
                                         'background-position':'center',
                                         'background-size':'cover',
                                         'background-repeat': 'no-repeat'} :
                                      {'background-image': 'url('+ default_image +')'}]"
-                                   v-bind:href="'/workshop/'+category.workshop[3].id+'/show'"
+                                   v-bind:href="'/workshop/'+category.workshop[2].id+'/show'"
                                    data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             {{ category.name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
-                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{
-                                                    category.workshop[3].title
-                                                }}</h3>
+                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[2].title}}</h3>
+                                            <i class="fa fa-calendar appointment-date text-white" aria-hidden="true" v-if="category.workshop[2].start !== null">
+                                                {{category.workshop[2].start}}
+                                            </i>
                                         </div>
                                     </div>
                                 </a>
+                                <div v-if="category.workshop[3]">
+                                    <a class="block block-transparent bg-image h-286"
+                                       v-bind:style="[category.workshop[3].image_name  ?
+                                    {'background': 'url(' + category.workshop[3].image_name + ')',
+                                        'background-position':'center',
+                                        'background-size':'cover',
+                                        'background-repeat': 'no-repeat'} :
+                                     {'background-image': 'url('+ default_image +')'}]"
+                                       v-bind:href="'/workshop/'+category.workshop[3].id+'/show'"
+                                       data-toggle="click-ripple">
+                                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                            <div class="ribbon-box">
+                                                {{ category.name }}
+                                            </div>
+                                            <div class="pt-4 pb-6 px-md-3">
+                                                <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[3].title}}</h3>
+                                                <i class="fa fa-calendar appointment-date text-white" aria-hidden="true" v-if="category.workshop[3].start !== null">
+                                                    {{category.workshop[3].start}}
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
                             </b-col>
-                            <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="category.workshop[4]">
+                            <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="category.workshop[3]">
                                 <a class="block block-transparent bg-image h-286"
                                    v-bind:style="[category.workshop[4].image_name  ?
                                     {'background': 'url(' + category.workshop[4].image_name + ')',
@@ -126,14 +130,15 @@
                                             {{ category.name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
-                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{
-                                                    category.workshop[4].title
-                                                }}</h3>
+                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[4].title}}</h3>
+                                            <i class="fa fa-calendar appointment-date text-white" aria-hidden="true" v-if="category.workshop[4].start !== null">
+                                                {{category.workshop[4].start}}
+                                            </i>
                                         </div>
                                     </div>
                                 </a>
                             </b-col>
-                            <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="category.workshop[5]">
+                            <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="category.workshop[4]">
                                 <a class="block block-transparent bg-image h-286"
                                    v-bind:style="[category.workshop[5].image_name  ?
                                     {'background': 'url(' + category.workshop[5].image_name + ')',
@@ -148,15 +153,39 @@
                                             {{ category.name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
-                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{
-                                                    category.workshop[5].title
-                                                }}</h3>
+                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[5].title}}</h3>
+                                            <i class="fa fa-calendar appointment-date text-white" aria-hidden="true" v-if="category.workshop[5].start !== null">
+                                                {{category.workshop[5].start}}
+                                            </i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </b-col>
+                            <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="category.workshop[5]">
+                                <a class="block block-transparent bg-image h-286"
+                                   v-bind:style="[category.workshop[6].image_name  ?
+                                    {'background': 'url(' + category.workshop[6].image_name + ')',
+                                        'background-position':'center',
+                                        'background-size':'cover',
+                                        'background-repeat': 'no-repeat'} :
+                                     {'background-image': 'url('+ default_image +')'}]"
+                                   v-bind:href="'/workshop/'+category.workshop[6].id+'/show'"
+                                   data-toggle="click-ripple">
+                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        <div class="ribbon-box">
+                                            {{ category.name }}
+                                        </div>
+                                        <div class="pt-4 pb-6 px-md-3">
+                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[6].title}}</h3>
+                                            <i class="fa fa-calendar appointment-date text-white" aria-hidden="true" v-if="category.workshop[6].start !== null">
+                                                {{category.workshop[6].start}}
+                                            </i>
                                         </div>
                                     </div>
                                 </a>
                             </b-col>
                             <b-col
-                                v-for="(workshop,index) in category.workshop.slice(6)"
+                                v-for="(workshop,index) in category.workshop.slice(7)"
                                 cols="12"
                                 sm="12"
                                 md="12"
@@ -178,6 +207,9 @@
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{ workshop.title }}</h3>
+                                            <i class="fa fa-calendar appointment-date text-white" aria-hidden="true" v-if="category.workshop[7].start !== null">
+                                                {{category.workshop[7].start}}
+                                            </i>
                                         </div>
                                     </div>
                                 </a>

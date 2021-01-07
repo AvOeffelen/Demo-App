@@ -93,6 +93,8 @@ Route::group(['prefix' => 'axios/article', 'namespace' => 'Axios','middleware'=>
     route::get('get-one-on-one-categories','ArticleController@getOneOnOneCategory')->name('article.get.OneOnOne.categories');
     route::get('get-topical-categories','ArticleController@getTopicalCategory')->name('article.get.topical.categories');
     route::get('get-covid-categories','ArticleController@getCovidCategory')->name('article.get.covid.categories');
+
+    route::post('/{article}/sign-up','ArticleController@signUpForArticle')->name('article.signup');
 });
 
 Route::group(['prefix' => 'axios/workshop', 'namespace' => 'Axios','middleware'=> ['web']], function () {
