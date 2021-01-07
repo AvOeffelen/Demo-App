@@ -527,6 +527,9 @@ export default {
         },
         goBack() {
             history.back();
+        },
+        uselessFunction() {
+            console.log("dont mind me");
         }
     },
 }
