@@ -19,6 +19,8 @@
                     <b-tab :title="category.name" v-for="(category, key) in this.categories" :key="key">
                         <b-row>
                            <b-col cols="12" sm="12" md="12" lg="6" xl="6"
+                        <b-row >
+                            <b-col cols="12" sm="12" md="12" lg="6" xl="6" class="d-md-flex align-items-md-stretch"
                                    v-if="category.workshop[0]">
                                 <a class="block block-transparent bg-image h-286"
                                    v-bind:style="[category.workshop[0].image_name ?
