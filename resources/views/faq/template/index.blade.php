@@ -34,7 +34,7 @@
                     <div class="block block-rounded mb-1">
                         <div class="block-header block-header-default" role="tab" id="faq1_h2">
                             <a class="font-w600" data-toggle="collapse" data-parent="#faq1" href="#faq1_q2"
-                               aria-expanded="true" aria-controls="faq1_q2">1.3 Ik heb wat inhoudelijke vragen. Aan wie kan ik die stellen?</a>
+                               aria-expanded="true" aria-controls="faq1_q2">1.2 Ik heb wat inhoudelijke vragen. Aan wie kan ik die stellen?</a>
                         </div>
                         <div id="faq1_q2" class="collapse" role="tabpanel" aria-labelledby="faq1_h2"
                              data-parent="#faq1">
@@ -48,7 +48,7 @@
                     <div class="block block-rounded mb-1">
                         <div class="block-header block-header-default" role="tab" id="faq1_h3">
                             <a class="font-w600" data-toggle="collapse" data-parent="#faq1" href="#faq1_q3"
-                               aria-expanded="true" aria-controls="faq1_q3">1.4 Ik wil deelnemen aan een online workshop. Hoe werkt dat?</a>
+                               aria-expanded="true" aria-controls="faq1_q3">1.3 Ik wil deelnemen aan een online workshop. Hoe werkt dat?</a>
                         </div>
                         <div id="faq1_q3" class="collapse" role="tabpanel" aria-labelledby="faq1_h3"
                              data-parent="#faq1">
@@ -62,7 +62,7 @@
                     <div class="block block-rounded mb-1">
                         <div class="block-header block-header-default" role="tab" id="faq1_h4">
                             <a class="font-w600" data-toggle="collapse" data-parent="#faq1" href="#faq1_q4"
-                               aria-expanded="true" aria-controls="faq1_q6">1.6 Waar worden gegevens opgeslagen?</a>
+                               aria-expanded="true" aria-controls="faq1_q6">1.4 Waar worden gegevens opgeslagen?</a>
                         </div>
                         <div id="faq1_q4" class="collapse" role="tabpanel" aria-labelledby="faq1_h4"
                              data-parent="#faq1">
@@ -81,7 +81,7 @@
                     <div class="block block-rounded mb-1">
                         <div class="block-header block-header-default" role="tab" id="faq1_h5">
                             <a class="font-w600" data-toggle="collapse" data-parent="#faq1" href="#faq1_q5"
-                               aria-expanded="true" aria-controls="faq1_q5">1.10 Ik heb een tip voor een waardevolle workshop. Met wie kan ik die delen?</a>
+                               aria-expanded="true" aria-controls="faq1_q5">1.5 Ik heb een tip voor een waardevolle workshop. Met wie kan ik die delen?</a>
                         </div>
                         <div id="faq1_q5" class="collapse" role="tabpanel" aria-labelledby="faq1_h5"
                              data-parent="#faq1">
@@ -95,7 +95,7 @@
                     <div class="block block-rounded mb-1">
                         <div class="block-header block-header-default" role="tab" id="faq1_h15">
                             <a class="font-w600" data-toggle="collapse" data-parent="#faq1" href="#faq1_q6"
-                               aria-expanded="true" aria-controls="faq1_q6">1.15 Ik heb me aangemeld voor een workshop of training. Ontvang ik daarvan nog een bevestiging?</a>
+                               aria-expanded="true" aria-controls="faq1_q6">1.6 Ik heb me aangemeld voor een workshop of training. Ontvang ik daarvan nog een bevestiging?</a>
                         </div>
                         <div id="faq1_q6" class="collapse" role="tabpanel" aria-labelledby="faq1_h6"
                              data-parent="#faq1">
@@ -109,7 +109,7 @@
                     <div class="block block-rounded mb-1">
                         <div class="block-header block-header-default" role="tab" id="faq1_h7">
                             <a class="font-w600" data-toggle="collapse" data-parent="#faq1" href="#faq1_q7"
-                               aria-expanded="true" aria-controls="faq1_q16">1.16 Ik ben plotseling verhinderd. Kan ik me afmelden?</a>
+                               aria-expanded="true" aria-controls="faq1_q16">1.7 Ik ben plotseling verhinderd. Kan ik me afmelden?</a>
                         </div>
                         <div id="faq1_q7" class="collapse" role="tabpanel" aria-labelledby="faq1_h7"
                              data-parent="#faq1">
@@ -123,7 +123,7 @@
                     <div class="block block-rounded mb-1">
                         <div class="block-header block-header-default" role="tab" id="faq1_h8">
                             <a class="font-w600" data-toggle="collapse" data-parent="#faq1" href="#faq1_q8"
-                               aria-expanded="true" aria-controls="faq1_q8">1.17 Ik wil gebruik maken van een ander aanbod dan wordt aangeboden, kan dat?
+                               aria-expanded="true" aria-controls="faq1_q8">1.8 Ik wil gebruik maken van een ander aanbod dan wordt aangeboden, kan dat?
                             </a>
                         </div>
                         <div id="faq1_q8" class="collapse" role="tabpanel" aria-labelledby="faq1_h8"
@@ -138,7 +138,7 @@
                     <div class="block block-rounded mb-1">
                         <div class="block-header block-header-default" role="tab" id="faq1_h9">
                             <a class="font-w600" data-toggle="collapse" data-parent="#faq1" href="#faq1_q9"
-                               aria-expanded="true" aria-controls="faq1_q9">1.18 Je bij workshops een sterretje waar dient dit voor?
+                               aria-expanded="true" aria-controls="faq1_q9">1.9 Je bij workshops een sterretje waar dient dit voor?
                             </a>
                         </div>
                         <div id="faq1_q9" class="collapse" role="tabpanel" aria-labelledby="faq1_h9"
