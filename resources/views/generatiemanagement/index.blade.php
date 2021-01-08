@@ -40,9 +40,9 @@
                     houden. Juist omdat elke generatie anders is, is het belangrijk over goede handvatten te beschikken
                     om hiermee om te gaan. Veel van het aanbod op Bravis Samen Vitaal is generiek. Daarnaast is er
                     sprake van een aanbod wat van toepassing is op een bepaalde generatie.
-                    Hierbij kun je denken aan: overgangsvraagstukken, loopbaanvraagstukken die per generatie kunnen
-                    verschillen, pensioenvraagstukken, van belang afhankelijk van de levensfase, balans werk en privé,
-                    mantelzorg, jonge werkenden ouders, etc
+                    Hierbij kun je denken aan: <a href="/workshop/47/show">overgangsvraagstukken</a>, <a href="/workshop/20/show">loopbaanvraagstukken</a> die per generatie kunnen
+                    verschillen, <a href="/article/128/show">pensioenvraagstukken</a>, van belang afhankelijk van de levensfase, balans <a href="/workshop/61/show">werk en privé</a>,
+                    <a href="/workshop/55/show">mantelzorg</a>, <a href="/workshop/69/show">jonge werkenden ouders</a>, etc
                     Ga op zoek naar wat bij jou past!
                     Mocht je graag iets toegevoegd willen zien, laat het ons dan weten.
                     Stuur een mail naar <a HREF="mailto:info@vitalavie.nl">info@vitalavie.nl</a>
