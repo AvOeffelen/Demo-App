@@ -7,8 +7,8 @@
                         <b-button @click="goBack()" variant="primary">Terug</b-button>
                     </b-col>
                     <b-col cols="12" md="12" lg="8" xl="8" sm="12">
-                        <div class="text-center py-3 oneOnOneimage">
-                            <h1 class="h1 font-w700 mb-2 text-primary text-shadow-workshops">Persoonlijke
+                        <div class="text-center py-3 ">
+                            <h1 class="h1 font-w700 mb-2 text-primary">Persoonlijke
                                 begeleiding</h1>
                         </div>
                     </b-col>

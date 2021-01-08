@@ -7,7 +7,7 @@
                 <nav class="flex-sm-00-auto ml-sm-3" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">KLANTSAMENVITAAL</li>
-                        <li class="breadcrumb-item active" aria-current="page">GoodHabitz</li>
+                        <li class="breadcrumb-item active text-primary" aria-current="page">GoodHabitz</li>
                     </ol>
                 </nav>
             </div>
@@ -20,7 +20,7 @@
                 <a href="javascript:history.back()" class="btn btn-primary">Terug</a>
             </div>
             <div class="col-md-12 col-lg-8 col-xl-8 col-12 col-sm-12 col-xs-12">
-                <img class="goodhabitz-image" src="storage/images/GOODHABITZ_Bravis_KlantSamenVitaal.nl_V1.png" height="400">
+                
                 <h3>GoodHabitz</h3>
             </div>
             <div class="col-md-12 col-lg-2 col-xl-2 col-12 col-sm-12 col-xs-12 cols-12">
@@ -69,6 +69,7 @@
             </div>
             <div class="col-md-4 col-lg-4 col-xl-4 col-4 col-sm-4 col-xs-4">
             </div>
+            <img class="goodhabitz-image" src="storage/images/GOODHABITZ_Bravis_KlantSamenVitaal.nl_V1.png" height="400">
         </div>
     </div>
 @endsection
