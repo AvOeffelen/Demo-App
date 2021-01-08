@@ -35,7 +35,7 @@
                                 Activiteitenkalender.
                             </div> -->
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1 text-center">Activiteitenkalender</h3>
+                                <h3 class="h1 font-w700 text-white mb-1 text-center">Kalender Gelre Energiek</h3>
                             </div>
                         </div>
                     </a>
