@@ -9,7 +9,16 @@
             </div>
         </div>
     </div>
-  
+    <div class="dropdown text-center py-5">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Bekijk voorbeelden
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Voorbeeld 1</a>
+            <a class="dropdown-item" href="#">Voorbeeld 2</a>
+            <a class="dropdown-item" href="#">Voorbeeld 3</a>
+        </div>
+    </div>
     <div class="content content-boxed">
         <div>
             <div class="row">
