@@ -94,6 +94,8 @@ Route::group(['prefix' => 'axios/article', 'namespace' => 'Axios','middleware'=>
     route::get('get-topical-categories','ArticleController@getTopicalCategory')->name('article.get.topical.categories');
     route::get('get-covid-categories','ArticleController@getCovidCategory')->name('article.get.covid.categories');
 
+    route::get('get-all-articles-for-standard-categories', 'ArticleController@getAllArticlesForStandardCategories');
+
     route::post('/{article}/sign-up','ArticleController@signUpForArticle')->name('article.signup');
 });
 

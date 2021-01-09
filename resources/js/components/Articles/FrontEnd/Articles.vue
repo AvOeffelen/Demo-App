@@ -3,16 +3,50 @@
         <div class="bg-body-dark">
             <div class="content">
                 <b-row>
-                    <b-col cols="12" md="12" lg="2" xl="2" sm="12">
+                    <b-col cols="12" md="12" lg="3" xl="3" sm="12">
                         <b-button @click="goBack()" variant="primary">Terug</b-button></b-col>
-                    <b-col cols="12" md="12" lg="8" xl="8" sm="12">
+                    <b-col cols="12" md="12" lg="6" xl="6" sm="12">
                         <div class="text-center py-3">
                             <h1 class="h3 font-w700 mb-2">Artikelen</h1>
                         </div>
                     </b-col>
-                    <b-col cols="12" md="12" lg="2" xl="2" sm="12"></b-col>
+                    <b-col cols="12" md="12" lg="3" xl="3" sm="12">
+                        <b-form-group size="lg">
+                            <b-form-input
+                                id="filter-input"
+                                v-model="searchString"
+                                type="search"
+                                placeholder="Type om te zoeken">
+                            </b-form-input>
+                        </b-form-group>
+                    </b-col>
                 </b-row>
-                <b-tabs content-class="py-5" align="center"
+                <div v-if="searchString != ''">
+                    <b-row>
+                        <b-col cols="12" sm="12" md="12" lg="6" xl="6" v-for="(article) in filteredArticles">
+                            <a class="block block-transparent bg-image h-286"
+                               v-bind:style="[article.image_link  ?
+                                    {'background': 'url(' + article.image_link + ')',
+                                        'background-position':'center',
+                                        'background-size':'cover',
+                                        'background-repeat': 'no-repeat'} :
+                                     {'background-image': 'url('+ default_image +')'}]"
+                               v-bind:href="'/workshop/'+ article.id+'/show'"
+                               data-toggle="click-ripple">
+                                <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                    <div class="ribbon-box">
+                                        {{ article.category.name }}
+                                    </div>
+                                    <div class="pt-4 pb-6 px-md-3">
+                                        <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{ article.title }}</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </b-col>
+                    </b-row>
+                </div>
+                <div v-else>
+                    <b-tabs content-class="py-5" align="center"
                         id="horizontal-navigation-hover-centered py-5 px-1"
                         class=" h5 d-lg-block mt-2 mt-lg-0 nav nav-main nav-main-horizontal nav-main-horizontal-center"
                         v-if="loading === false">
@@ -414,6 +448,7 @@
                         </b-row>
                     </b-tab>
                 </b-tabs>
+                </div>
             </div>
         </div>
     </div>
@@ -424,20 +459,45 @@ export default {
     name: "Article",
     created() {
         this.getCategories();
+        this.getAllArticles();
     },
     data() {
         return {
             loading: true,
             categories: [],
+            articles:[],
             default_image: 'storage/images/fallback.jpg',
+            searchString:'',
             video_image: 'storage/images/youtube.png'
         };
+    },
+    computed: {
+        filteredArticles: function () {
+            return this.articles.filter((article) => {
+                let regex = new RegExp('(' + this.searchString + ')', 'i');
+                if (article.title.match(regex) == null) {
+                    //    TODO:: Display error message if we want to.
+                } else {
+                    return article.title.match(regex);
+                }
+            })
+        }
     },
     methods: {
         getCategories() {
             axios.get('/axios/article/get-all-standard-categories')
                 .then(response => {
                     this.categories = response.data;
+                    this.loading = false;
+                })
+                .catch(error => {
+
+                });
+        },
+        getAllArticles(){
+            axios.get('/axios/article/get-all-articles-for-standard-categories')
+                .then(response => {
+                    this.articles = response.data.data;
                     this.loading = false;
                 })
                 .catch(error => {
