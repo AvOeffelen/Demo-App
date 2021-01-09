@@ -304,7 +304,6 @@ export default {
             axios.get('/axios/workshop/get-all')
                 .then(response => {
                     this.workshops = response.data;
-                    console.log(this.workshops);
                 })
                 .catch(error => {
 
