@@ -349,7 +349,7 @@ $theme-xpro-btn-alt-primary-bg:            darken($theme-xpro-lighter, 5%);
 
 $theme-xplay-primary:                       #dd4b39 !default;
 $theme-xplay-light:                         lighten($theme-xplay-primary, 10%) !default;
-$theme-xplay-lighter:                       lighten($theme-xplay-primary, 30%) !default;
+$theme-xplay-lighter:                       lighten($theme-xplay-primary, 20%) !default;
 $theme-xplay-dark:                          darken($theme-xplay-primary, 12%) !default;
 $theme-xplay-darker:                        darken($theme-xplay-primary, 24%) !default;
 
@@ -392,6 +392,8 @@ $theme-xplay-main-nav-link-dark-hover-bg:   darken($theme-xplay-sidebar-dark-bg,
 $theme-xplay-main-nav-submenu-dark-bg:      darken($theme-xplay-sidebar-dark-bg, 3%) !default;
 
 $theme-xplay-btn-alt-primary-bg:            $theme-xplay-lighter;
+
+//bravis
 
 $theme-xbrvs-primary:                       #fc0c1d !default;
 $theme-xbrvs-light:                         lighten($theme-xbrvs-primary, 10%) !default;
@@ -447,7 +449,7 @@ $theme-xge-lighter:                       lighten($theme-xge-light, 20%) !defaul
 $theme-xge-dark:                          darken($theme-xge-primary, 12%) !default;
 $theme-xge-darker:                        darken($theme-xge-primary, 24%) !default;
 
-$theme-xge-body-bg:                       #f2f2f2 !default;
+$theme-xge-body-bg:                       #3DBDDE !default;
 $theme-xge-body-bg-dark:                  darken($theme-xge-body-bg, 4%) !default;
 $theme-xge-body-bg-light:                 lighten($theme-xge-body-bg, 2%) !default;
 
@@ -486,3 +488,52 @@ $theme-xge-main-nav-link-dark-hover-bg:   darken($theme-xge-sidebar-dark-bg, 8%)
 $theme-xge-main-nav-submenu-dark-bg:      darken($theme-xge-sidebar-dark-bg, 3%) !default;
 
 $theme-xge-btn-alt-primary-bg:            $theme-xge-lighter;
+
+//KlantSamenVitaal
+
+$theme-xksv-primary:                       #157b86 !default;
+$theme-xksv-secondary:                     #FC8033 !default;
+$theme-xksv-light:                         lighten($theme-xksv-primary, 10%) !default;
+$theme-xksv-lighter:                       lighten($theme-xksv-light, 20%) !default;
+$theme-xksv-dark:                          darken($theme-xksv-primary, 12%) !default;
+$theme-xksv-darker:                        darken($theme-xksv-primary, 24%) !default;
+
+$theme-xksv-body-bg:                       #f2f2f2 !default;
+$theme-xksv-body-bg-dark:                  darken($theme-xksv-body-bg, 4%) !default;
+$theme-xksv-body-bg-light:                 lighten($theme-xksv-body-bg, 2%) !default;
+
+$theme-xksv-body-color:                    #574a49 !default;
+$theme-xksv-body-color-dark:               #332c2b !default;
+$theme-xksv-body-color-light:              $theme-xksv-body-bg-dark !default;
+
+$theme-xksv-link-color:                    $theme-xksv-primary !default;
+$theme-xksv-link-hover-color:              darken($theme-xksv-primary, 20%) !default;
+
+$theme-xksv-headings-color:                $theme-xksv-body-color-dark !default;
+
+$theme-xksv-input-btn-focus-color:         rgba($theme-xksv-primary, .25) !default;
+$theme-xksv-input-btn-focus-box-shadow:    0 0 0 $input-btn-focus-width $theme-xksv-input-btn-focus-color !default;
+
+$theme-xksv-input-bg:                      $white !default;
+$theme-xksv-input-color:                   $theme-xksv-body-color !default;
+$theme-xksv-input-border-color:            darken($theme-xksv-body-bg, 8%) !default;
+
+$theme-xksv-input-focus-bg:                $white !default;
+$theme-xksv-input-focus-color:             $theme-xksv-body-color-dark !default;
+$theme-xksv-input-focus-border-color:      lighten($theme-xksv-primary, 25%) !default;
+
+$theme-xksv-header-bg:                     $white !default;
+$theme-xksv-header-dark-bg:                $theme-xksv-primary !default;
+$theme-xksv-sidebar-bg:                    $white !default;
+$theme-xksv-sidebar-dark-bg:               #35393e !default;
+$theme-xksv-side-overlay-bg:               $white !default;
+
+$theme-xksv-main-nav-link-icon-color:      lighten($theme-xksv-body-color, 20%) !default;
+$theme-xksv-main-nav-link-hover-bg:        $theme-xksv-body-bg-dark !default;
+$theme-xksv-main-nav-submenu-bg:           $theme-xksv-body-bg-light !default;
+
+$theme-xksv-main-nav-link-icon-dark-color: rgba($white, .45) !default;
+$theme-xksv-main-nav-link-dark-hover-bg:   darken($theme-xksv-sidebar-dark-bg, 8%) !default;
+$theme-xksv-main-nav-submenu-dark-bg:      darken($theme-xksv-sidebar-dark-bg, 3%) !default;
+
+$theme-xksv-btn-alt-primary-bg:            $theme-xksv-lighter;

@@ -217,12 +217,12 @@
 @include bg-variant('.bg-xplay-lighter', $theme-xplay-lighter);
 @include bg-gradient-variant-linear('.bg-gd-xplay', 135deg, $theme-xplay-primary, lighten($theme-xplay-primary, 15%));
 
-// xBrvs Color Theme
-@include bg-variant('.bg-xbrvs', $theme-xbrvs-primary);
-@include bg-variant('.bg-xbrvs-op', rgba($theme-xbrvs-primary, .75));
-@include bg-variant('.bg-xbrvs-dark', $theme-xbrvs-dark);
-@include bg-variant('.bg-xbrvs-dark-op', rgba($theme-xbrvs-dark, .8));
-@include bg-variant('.bg-xbrvs-darker', $theme-xbrvs-darker);
-@include bg-variant('.bg-xbrvs-light', $theme-xbrvs-light);
-@include bg-variant('.bg-xbrvs-lighter', $theme-xbrvs-lighter);
-@include bg-gradient-variant-linear('.bg-gd-xbrvs', 125deg, $theme-xbrvs-primary, lighten($theme-xbrvs-primary, 15%));
+// xKsv Color Theme
+@include bg-variant('.bg-xksv', $theme-xksv-primary);
+@include bg-variant('.bg-xksv-op', rgba($theme-xksv-primary, .75));
+@include bg-variant('.bg-xksv-dark', $theme-xksv-dark);
+@include bg-variant('.bg-xksv-dark-op', rgba($theme-xksv-dark, .8));
+@include bg-variant('.bg-xksv-darker', $theme-xksv-darker);
+@include bg-variant('.bg-xksv-light', $theme-xksv-light);
+@include bg-variant('.bg-xksv-lighter', $theme-xksv-lighter);
+@include bg-gradient-variant-linear('.bg-gd-xksv', 125deg, $theme-xksv-primary, lighten($theme-xksv-primary, 15%));

@@ -1,0 +1,44 @@
+//
+// xksv Theme
+// --------------------------------------------------
+
+// Include base files
+@import 'base';
+
+// Generate color theme
+@include color-theme($theme-xksv-primary,
+    // $theme-xksv-secondary,
+    $theme-xksv-light,
+    $theme-xksv-lighter,
+    $theme-xksv-dark,
+    $theme-xksv-darker,
+    $theme-xksv-body-bg,
+    $theme-xksv-body-bg-dark,
+    $theme-xksv-body-bg-light,
+    $theme-xksv-body-color,
+    $theme-xksv-body-color-dark,
+    $theme-xksv-body-color-light,
+    $theme-xksv-link-color,
+    $theme-xksv-link-hover-color,
+    $theme-xksv-headings-color,
+    $theme-xksv-input-btn-focus-color,
+    $theme-xksv-input-btn-focus-box-shadow,
+    $theme-xksv-input-bg,
+    $theme-xksv-input-color,
+    $theme-xksv-input-border-color,
+    $theme-xksv-input-focus-bg,
+    $theme-xksv-input-focus-color,
+    $theme-xksv-input-focus-border-color,
+    $theme-xksv-header-bg,
+    $theme-xksv-header-dark-bg,
+    $theme-xksv-sidebar-bg,
+    $theme-xksv-sidebar-dark-bg,
+    $theme-xksv-side-overlay-bg,
+    $theme-xksv-main-nav-link-icon-color,
+    $theme-xksv-main-nav-link-hover-bg,
+    $theme-xksv-main-nav-submenu-bg,
+    $theme-xksv-main-nav-link-icon-dark-color,
+    $theme-xksv-main-nav-link-dark-hover-bg,
+    $theme-xksv-main-nav-submenu-dark-bg,
+    $theme-xksv-btn-alt-primary-bg
+    );

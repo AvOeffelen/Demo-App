@@ -22,7 +22,7 @@ mix
     .sass('resources/sass/dashmix/themes/xdream.scss', 'public/css/themes/')
     .sass('resources/sass/dashmix/themes/xpro.scss', 'public/css/themes/')
     .sass('resources/sass/dashmix/themes/xplay.scss', 'public/css/themes/')
-    .sass('resources/sass/dashmix/themes/xbrvs.scss', 'public/css/themes/')
+    .sass('resources/sass/dashmix/themes/xksv.scss', 'public/css/themes/')
 
     /* JS */
     .js('resources/js/app.js', 'public/js/laravel.app.js')
