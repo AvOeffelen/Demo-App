@@ -19,9 +19,7 @@
                                 v-model="searchString"
                                 type="search"
                                 placeholder="Type om te zoeken">
-                            <b-input-group-append>
-                                <b-button @click="searchString = ''" variant="primary">Reset</b-button>
-                            </b-input-group-append></b-form-input>
+                            </b-form-input>
                         </b-form-group>
                     </b-col>
                 </b-row>
@@ -280,9 +278,9 @@
                     <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="filteredArticles[5]">
                         <a v-if="filteredArticles[5].has_video === false"
                            class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
-                           v-bind:style="[filteredArticles[4].image_link ?
+                           v-bind:style="[filteredArticles[5].image_link ?
                                     {
-                                        'background':'url(/' + filteredArticles[4].image_link + ')',
+                                        'background':'url(/' + filteredArticles[5].image_link + ')',
                                         'background-position': 'center',
                                         'background-size': 'cover',
                                         'background-repeat': 'no-repeat',
@@ -291,7 +289,7 @@
                                         'background-position': 'center',
                                         'background-size': 'cover',
                                         'background-repeat': 'no-repeat',}]"
-                           v-bind:href="'/article/'+filteredArticles[4].id +'/show'"
+                           v-bind:href="'/article/'+filteredArticles[5].id +'/show'"
                            data-toggle="click-ripple">
                             <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                 <div class="ribbon-box">
@@ -299,7 +297,7 @@
                                 </div>
                                 <div class="pt-4 pb-6 px-md-3">
                                     <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
-                                        {{ filteredArticles[4].title }}
+                                        {{ filteredArticles[5].title }}
                                     </h3>
                                 </div>
                             </div>
@@ -312,7 +310,7 @@
                                         'background-size': 'cover',
                                         'background-repeat': 'no-repeat',
                                         }"
-                           v-bind:href="'/article/'+filteredArticles[4].id +'/show'"
+                           v-bind:href="'/article/'+filteredArticles[5].id +'/show'"
                            data-toggle="click-ripple">
                             <div
                                 class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
@@ -321,7 +319,7 @@
                                 </div>
                                 <div class="pt-4 pb-6 px-md-3">
                                     <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
-                                        {{ filteredArticles[4].title }}
+                                        {{ filteredArticles[5].title }}
                                     </h3>
                                 </div>
                             </div>
