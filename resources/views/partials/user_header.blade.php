@@ -23,7 +23,7 @@
             </li>
             <li class="nav-main-item">
                 <a class="btn btn-dual" href="{{route('gen.management')}}">
-                    <span class="nav-main-link-name">Generatiemanagement</span>
+                    <span class="nav-main-link-name">Menu item 1</span>
                 </a>
             </li>
             <li class="nav-main-item">

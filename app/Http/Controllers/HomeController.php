@@ -28,8 +28,14 @@ class HomeController extends Controller
                 return response()->view('dashboard.frontend.index');
             }
         }
+
         return response()->view('dashboard.frontend.index');
 
+    }
+
+    public function dashboard()
+    {
+        return response()->view('dashboard.frontend.index');
     }
 
 }

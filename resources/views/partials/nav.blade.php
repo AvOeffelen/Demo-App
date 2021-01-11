@@ -42,6 +42,12 @@
     <div class="content-side content-side-full">
         <ul class="nav-main">
             <li class="nav-main-item">
+                <a class="nav-main-link{{ request()->is('dashboard') ? ' active' : '' }}" href="{{route('dashboard')}}">
+                    <i class="nav-main-link-icon fa fa-home"></i>
+                    <span class="nav-main-link-name">Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-main-item">
                 <a class="nav-main-link nav-main-link-submenu"
                    data-toggle="submenu" aria-haspopup="true"
                    aria-expanded="false"

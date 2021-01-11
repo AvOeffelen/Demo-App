@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 // Example Routes
-Route::get('/', 'HomeController@index');
+
 
 Route::group(['middleware' => ['web']], function () {
-
+    
     Route::get('workshop','WorkshopController@showWorkshops')->name('workshop');
     Route::get('workshop/{workshop}/show','WorkshopController@show')->name('workshop.show');
 
@@ -58,6 +58,8 @@ Route::group(['prefix' => 'axios/workshop', 'namespace' => 'Axios','middleware'=
 });
 
 Route::group(['middleware'=> ['web','default']], function () {
+    Route::get('/dashboard','HomeController@dashboard')->name('dashboard');
+    Route::get('/', 'HomeController@index');
     Route::get('/me','UserController@showProfile')->name('me');
 });
 
