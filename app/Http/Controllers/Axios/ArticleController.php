@@ -107,7 +107,7 @@ class ArticleController extends Controller
         if($uploadingImage === "false"){
             $hasVideo = 1;
         }
-        
+
         $article = Article::updateOrCreate([
             'id' => $request->get('id'),
         ], [
@@ -204,7 +204,7 @@ class ArticleController extends Controller
      */
     public function getAllArticlesForStandardCategories(): JsonResponse
     {
-        $articles = Article::where('category_id',['2','3','4'])->With('category')->get();
+        $articles = Article::whereIn('category_id',['2','3','4'])->With('category')->get();
         return response()->json(['data' => $articles]);
     }
 }
