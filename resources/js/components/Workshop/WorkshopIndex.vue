@@ -33,7 +33,7 @@
                                      {'background-image': 'url('+ default_image +')'}]"
                                v-bind:href="'/workshop/'+ workshop.id+'/show'"
                                data-toggle="click-ripple">
-                                <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                     <div class="ribbon-box">
                                         {{ workshop.category.name }}
                                     </div>
@@ -66,7 +66,7 @@
                                          {'background-image': 'url('+ default_image +')'}]"
                                        v-bind:href="'/workshop/'+category.workshop[0].id+'/show'"
                                        data-toggle="click-ripple">
-                                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
                                                 {{ category.name }}
                                             </div>
@@ -89,7 +89,7 @@
                                          {'background-image': 'url('+ default_image +')'}]"
                                            v-bind:href="'/workshop/'+category.workshop[1].id+'/show'"
                                            data-toggle="click-ripple">
-                                            <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                            <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                                 <div class="ribbon-box">
                                                     {{ category.name }}
                                                 </div>
@@ -136,7 +136,7 @@
                                          {'background-image': 'url('+ default_image +')'}]"
                                            v-bind:href="'/workshop/'+category.workshop[3].id+'/show'"
                                            data-toggle="click-ripple">
-                                            <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                            <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                                 <div class="ribbon-box">
                                                     {{ category.name }}
                                                 </div>
@@ -160,7 +160,7 @@
                                          {'background-image': 'url('+ default_image +')'}]"
                                        v-bind:href="'/workshop/'+category.workshop[4].id+'/show'"
                                        data-toggle="click-ripple">
-                                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
                                                 {{ category.name }}
                                             </div>
@@ -183,7 +183,7 @@
                                          {'background-image': 'url('+ default_image +')'}]"
                                        v-bind:href="'/workshop/'+category.workshop[5].id+'/show'"
                                        data-toggle="click-ripple">
-                                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
                                                 {{ category.name }}
                                             </div>
@@ -206,7 +206,7 @@
                                          {'background-image': 'url('+ default_image +')'}]"
                                        v-bind:href="'/workshop/'+category.workshop[6].id+'/show'"
                                        data-toggle="click-ripple">
-                                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
                                                 {{ category.name }}
                                             </div>
@@ -236,7 +236,7 @@
                                          {'background-image': 'url('+ default_image +')'}]"
                                        v-bind:href="'/workshop/'+ workshop.id+'/show'"
                                        data-toggle="click-ripple">
-                                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
                                                 {{ category.name }}
                                             </div>

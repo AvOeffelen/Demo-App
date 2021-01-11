@@ -65,7 +65,7 @@
                                         }"
                                    v-bind:href="'/article/'+ category.article[0].id +'/show'"
                                    data-toggle="click-ripple">
-                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                    <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             Artikel
                                         </div>
@@ -87,7 +87,7 @@
                                    v-bind:href="'/article/'+category.article[0].id +'/show'"
                                    data-toggle="click-ripple">
                                     <div
-                                        class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             Video
                                         </div>
@@ -114,7 +114,7 @@
                                         'background-repeat': 'no-repeat',}]"
                                        v-bind:href="'/article/'+category.article[1].id +'/show'"
                                        data-toggle="click-ripple">
-                                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
                                                 Artikel
                                             </div>
@@ -136,7 +136,7 @@
                                        v-bind:href="'/article/'+category.article[1].id +'/show'"
                                        data-toggle="click-ripple">
                                         <div
-                                            class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                            class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
                                                 Video
                                             </div>

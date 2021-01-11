@@ -52,7 +52,7 @@
                                             'background-repeat': 'no-repeat',}]"
                                        v-bind:href="'/article/'+ article.id +'/show'"
                                        data-toggle="click-ripple">
-                                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
                                                 Persoonlijke begeleiding
                                             </div>
@@ -74,7 +74,7 @@
                                        v-bind:href="'/article/'+article.id +'/show'"
                                        data-toggle="click-ripple">
                                         <div
-                                            class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                            class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
                                                 Persoonlijke begeleiding
                                             </div>
@@ -102,7 +102,7 @@
                                         }"
                                    v-bind:href="'/article/'+categories[0].article[0].id +'/show'"
                                    data-toggle="click-ripple">
-                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                    <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             Persoonlijke begeleiding
                                         </div>
@@ -124,7 +124,7 @@
                                    v-bind:href="'/article/'+categories[0].article[0].id +'/show'"
                                    data-toggle="click-ripple">
                                     <div
-                                        class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             Persoonlijke begeleiding
                                         </div>
@@ -151,7 +151,7 @@
                                         'background-repeat': 'no-repeat',}]"
                                        v-bind:href="'/article/'+categories[0].article[1].id +'/show'"
                                        data-toggle="click-ripple">
-                                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
                                                 Persoonlijke begeleiding
                                             </div>
@@ -173,7 +173,7 @@
                                        v-bind:href="'/article/'+categories[0].article[1].id +'/show'"
                                        data-toggle="click-ripple">
                                         <div
-                                            class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                            class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
                                                 Persoonlijke begeleiding
                                             </div>
@@ -198,7 +198,7 @@
                                         }"
                                    v-bind:href="'/article/'+categories[0].article[2].id +'/show'"
                                    data-toggle="click-ripple">
-                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                    <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             Persoonlijke begeleiding
                                         </div>
@@ -220,7 +220,7 @@
                                    v-bind:href="'/article/'+categories[0].article[2].id +'/show'"
                                    data-toggle="click-ripple">
                                     <div
-                                        class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             Persoonlijke begeleiding
                                         </div>
@@ -247,7 +247,7 @@
                                         'background-repeat': 'no-repeat',}]"
                                        v-bind:href="'/article/'+categories[0].article[3].id +'/show'"
                                        data-toggle="click-ripple">
-                                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
                                                 Persoonlijke begeleiding
                                             </div>
@@ -269,7 +269,7 @@
                                        v-bind:href="'/article/'+categories[0].article[3].id +'/show'"
                                        data-toggle="click-ripple">
                                         <div
-                                            class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                            class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
                                                 Persoonlijke begeleiding
                                             </div>
@@ -298,7 +298,7 @@
                                         'background-repeat': 'no-repeat',}]"
                                    v-bind:href="'/article/'+categories[0].article[4].id +'/show'"
                                    data-toggle="click-ripple">
-                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                    <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             Persoonlijke begeleiding
                                         </div>
@@ -320,7 +320,7 @@
                                    v-bind:href="'/article/'+categories[0].article[4].id +'/show'"
                                    data-toggle="click-ripple">
                                     <div
-                                        class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             Persoonlijke begeleiding
                                         </div>
@@ -348,7 +348,7 @@
                                         'background-repeat': 'no-repeat',}]"
                                    v-bind:href="'/article/'+categories[0].article[5].id +'/show'"
                                    data-toggle="click-ripple">
-                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                    <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             Persoonlijke begeleiding
                                         </div>
@@ -370,7 +370,7 @@
                                    v-bind:href="'/article/'+categories[0].article[5].id +'/show'"
                                    data-toggle="click-ripple">
                                     <div
-                                        class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             Persoonlijke begeleiding
                                         </div>
@@ -398,7 +398,7 @@
                                         'background-repeat': 'no-repeat',}]"
                                    v-bind:href="'/article/'+categories[0].article[6].id +'/show'"
                                    data-toggle="click-ripple">
-                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                    <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             Persoonlijke begeleiding
                                         </div>
@@ -420,7 +420,7 @@
                                    v-bind:href="'/article/'+categories[0].article[6].id +'/show'"
                                    data-toggle="click-ripple">
                                     <div
-                                        class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             Persoonlijke begeleiding
                                         </div>
@@ -448,7 +448,7 @@
                                         'background-repeat': 'no-repeat',}]"
                                    v-bind:href="'/article/'+ article.id +'/show'"
                                    data-toggle="click-ripple">
-                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                    <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             Persoonlijke begeleiding
                                         </div>
@@ -470,7 +470,7 @@
                                    v-bind:href="'/article/'+article.id +'/show'"
                                    data-toggle="click-ripple">
                                     <div
-                                        class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             Persoonlijke begeleiding
                                         </div>
