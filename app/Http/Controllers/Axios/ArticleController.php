@@ -107,7 +107,7 @@ class ArticleController extends Controller
         if($uploadingImage === "false"){
             $hasVideo = 1;
         }
-        
+
         $article = Article::updateOrCreate([
             'id' => $request->get('id'),
         ], [
