@@ -198,4 +198,13 @@ class ArticleController extends Controller
         Mail::to('info@vitalavie.nl')->send(new ArticleSignUpMail($article,$request->toArray()));
         return response()->json(['message' => 'Aanvraag succesvol verstuurd!']);
     }
+
+    /**
+     * @return JsonResponse
+     */
+    public function getAllArticlesForStandardCategories(): JsonResponse
+    {
+        $articles = Article::where('category_id',['2','3','4'])->With('category')->get();
+        return response()->json(['data' => $articles]);
+    }
 }
