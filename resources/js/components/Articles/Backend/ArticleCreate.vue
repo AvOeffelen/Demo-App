@@ -203,30 +203,6 @@ export default {
                     }
                 });
         },
-        imageUpload(articleId) {
-            let url = '/axios/article/image/upload';
-            let data = new FormData();
-
-            let config = {
-                header: {
-                    'Content-Type': 'image/*'
-                }
-            }
-            // data.append('article_id', articleId)
-            data.append('image', this.image);
-
-            axios.post(url, {data}, config)
-                .then(response => {
-                    if (response.status === 200) {
-                        window.location = '/backend/article/overview';
-                    }
-                })
-                .catch(error => {
-                    if (error.response.status == 422) {
-                        this.errors = error.response.data.errors;
-                    }
-                });
-        },
         reset() {
         },
         cancel() {
