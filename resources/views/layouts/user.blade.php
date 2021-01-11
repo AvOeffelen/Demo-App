@@ -33,7 +33,7 @@
 </head>
 <body>
 
-<div id="page-container" class="sidebar side-scroll page-header-fixed page-header-dark main-content-narrow">
+<div id="page-container" class="sidebar side-scroll page-header-fixed page-header-dark">
     <nav id="sidebar">
         @include('partials.user_nav')
     </nav>

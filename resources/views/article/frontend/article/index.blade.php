@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Page Content -->
-    <div class="content content-full">
+    <div class="content">
         <show-article :article="{{$article}}"></show-article>
     </div>
     <!-- END Page Content -->
