@@ -95,13 +95,6 @@
                     </li>
                 </ul>
             </li>
-            <li class="nav-main-item">
-                <a class="nav-main-link{{ request()->is('faq') ? ' active' : '' }}" href="{{route('faq')}}">
-                    <i class="nav-main-link-icon fa fa-question"></i>
-                    <span class="nav-main-link-name">FAQ</span>
-                    {{--                    <span class="nav-main-link-badge badge badge-pill badge-success">5</span>--}}
-                </a>
-            </li>
         </ul>
     </div>
     <!-- END Side Navigation -->

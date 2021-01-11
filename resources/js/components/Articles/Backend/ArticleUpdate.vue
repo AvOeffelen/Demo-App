@@ -215,6 +215,12 @@ export default {
             if(this.article.show_contact == true){
                 data.append('show_contact', this.article.show_contact);
             }
+            if(this.article.button_text !== null){
+                data.append('button_text', this.article.button_text);
+            }
+            if(this.article.button_link !== null){
+                data.append('button_link', this.article.button_link);
+            }
 
             data.append('uploadImage', this.uploadImage);
             data.append('id', this.article.id);
@@ -222,8 +228,6 @@ export default {
             data.append('has_video', this.article.has_video);
             data.append('category_id', this.article.category_id);
             data.append('text', this.article.text);
-            data.append('button_text', this.article.button_text);
-            data.append('button_link', this.article.button_link);
 
             axios.post('/axios/article/put', data)
                 .then(response => {
