@@ -1,5 +1,6 @@
 <template>
     <div>
+        <h3>Bekijk hieronder de voorbeelden</h3>
         <b-form-select v-model="selected" :options="options"></b-form-select>
         <dashboard-without-text v-if="selected === 1"></dashboard-without-text>
         <dashboard-without-ribbon v-else-if="selected === 2"></dashboard-without-ribbon>
