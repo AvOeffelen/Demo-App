@@ -189,10 +189,10 @@
                 >
                 <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
                         <div class="ribbon-box">
-                            GoodHabitz
+                            Uw Academy
                         </div>
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">GoodHabitz</h3>
+                            <h3 class="h1 font-w700 text-white mb-1">Uw Academy</h3>
                         </div>
                     </div>
                 </a>
