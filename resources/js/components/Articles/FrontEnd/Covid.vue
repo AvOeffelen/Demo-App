@@ -7,7 +7,7 @@
                         <b-button @click="goBack()" variant="primary">Terug</b-button></b-col>
                     <b-col cols="12" md="12" lg="6" xl="6" sm="12">
                         <div class="text-center py-3">
-                            <h1 class="h3 font-w700 mb-2">(Na)zorg Corona</h1>
+                            <h1 class="h3 font-w700 mb-2">Gamification</h1>
                         </div>
                     </b-col>
                     <b-col cols="12" md="12" lg="3" xl="3" sm="12">
@@ -21,6 +21,11 @@
                         </b-form-group>
                     </b-col>
                 </b-row>
+                
+                <p class="text-center">
+                Toepassing van games als manier van leren. Spelen is eigenlijk onze natuurlijke manier van leren maar vanaf het moment dat we naar school gaan, komt steeds meer de nadruk te liggen op boekenkennis. Door middel van gamification bieden wij een leerstrategie om het gedrag van medewerkers op een duurzame manier positief te beïnvloeden.
+                 </p>
+                 
                 <div v-if="loading === true">
                     <b-row>
                         <b-col>
