@@ -31,15 +31,7 @@
             </div>
             <div class="col-md-12 col-lg-8 col-xl-8 col-12 col-sm-12 col-xs-12">
                 <alinea class="text-center">
-                    Johan is een onafhankelijk platform waar je naartoe kunt gaan om vragenlijsten in te vullen. Dit kun
-                    je doen wanneer je bijvoorbeeld nog niet weet met welke thema je graag aan de slag wilt gaan. De
-                    uitslag van de vragenlijst geeft je wellicht inzichten en aanknopingspunten om mee aan de slag te
-                    gaan. Het aanbod vind je dan vervolgens weer gewoon op Bravis Samen Vitaal.
-                    <br />
-                    <br />
-                    Je moet op deze pagina eerst even inloggen en wanneer je dat nog niet hebt gedaan, eerst een account
-                    aanmaken. Dit is omdat er persoonlijke gegevens van je worden opgeslagen en om die gegevens te
-                    beveiligen is een inlog noodzakelijk.
+                Naast verbinding maken met Johan zijn wij ook in staat om Whappbots voor u te maken. Het is een speels intelligent systeem, een techniek dat gebaseerd is op speelse interactie. Vragenlijsten tot leven laten komen vanuit de intrinsieke motivaties van medewerkers. Het zorgt ervoor dat mensen willen doen wat jij nodig hebben door middel van toepassing van kunstmatige intelligentie.
 
                 </alinea>
             </div>
@@ -51,10 +43,6 @@
                 
             </div>
             <div class="col-md-4 col-lg-4 col-xl-4 col-4 col-sm-4 col-xs-4">
-                <div class="text-center">
-                    <a href="https://app.johan.nl" target="_blank" class="btn btn-primary">Ga naar Johan</a>
-                    <a href="https://app.johan.nl" target="_blank" class="btn btn-primary">Eerste keer inloggen Johan</a>
-                </div>
             </div>
             <div class="col-md-4 col-lg-4 col-xl-4 col-4 col-sm-4 col-xs-4">
                 <div class="text-center">
