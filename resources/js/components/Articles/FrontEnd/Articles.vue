@@ -57,12 +57,17 @@
                                    v-if="category.article[0]">
                                 <a v-if="category.article[0].has_video === false"
                                    class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
-                                   v-bind:style="{
+                                   v-bind:style="[category.article[0].image_link ?
+                                    {
                                         'background':'url(/' + category.article[0].image_link + ')',
                                         'background-position': 'center',
                                         'background-size': 'cover',
                                         'background-repeat': 'no-repeat',
-                                        }"
+                                    } :
+                                     {'background': 'url(/'+ default_image +')',
+                                        'background-position': 'center',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',}]"
                                    v-bind:href="'/article/'+ category.article[0].id +'/show'"
                                    data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
