@@ -4,6 +4,8 @@
         <b-form-select v-model="selected" :options="options"></b-form-select>
         <dashboard-without-text v-if="selected === 1"></dashboard-without-text>
         <dashboard-without-ribbon v-else-if="selected === 2"></dashboard-without-ribbon>
+        <dashboard-with-round-corners v-else-if="selected === 3"></dashboard-with-round-corners>
+        <dashboard-with-own-foto v-else-if="selected === 4"></dashboard-with-own-foto>
         <default-dashboard v-else></default-dashboard>
     </div>
 </template>
@@ -11,11 +13,14 @@
 <script>
 
 import DashboardWithoutRibbon from './DashboardWithoutRibbon.vue';
+import DashboardWithRoundCorners from './DashboardWithRoundCorners.vue';
 import DashboardWithoutText from './DashboardWithoutText.vue';
+import DashboardWithOwnFoto from './DashboardWithOwnFoto.vue';
 import DefaultDashboard from './DefaultDashboard.vue';
 
+
 export default {
-  components: { DashboardWithoutRibbon ,DashboardWithoutText, DefaultDashboard },
+  components: { DashboardWithoutRibbon ,DashboardWithoutText, DefaultDashboard, DashboardWithOwnFoto, DashboardWithRoundCorners },
     name: "Dashboard",
     data() {
         return {
@@ -25,6 +30,8 @@ export default {
                 { value: 0, text: 'Dashboard foto met titel en ribbon' },
                 { value: 1, text: 'Dashboard foto zonder titel met ribbon' },
                 { value: 2, text: 'Dashboard foto zonder ribbon met titel' },
+                { value: 3, text: 'Dashboard met afgeronde hoeken' },
+                { value: 4, text: 'Dashboard met uw eigen foto' },
             ]
         };
     },
