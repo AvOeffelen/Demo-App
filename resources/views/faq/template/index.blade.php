@@ -41,7 +41,7 @@
                         <div id="faq1_q2" class="collapse" role="tabpanel" aria-labelledby="faq1_h2"
                              data-parent="#faq1">
                             <div class="block-content">
-                                <p>Gelre faciliteert en organiseert. Deelnemen aan het aanbod is in eigen tijd.
+                                <p>Gelre faciliteert en organiseert. Deelnemen aan het aanbod is meestal in eigen tijd.
                                 </p>
                             </div>
                         </div>
@@ -55,7 +55,7 @@
                              data-parent="#faq1">
                             <div class="block-content">
                                 <p>
-                                    Je kunt een mail sturen aan info@vitalavie.nl
+                                    Je kunt een mail sturen aan energiek@gelre.nl
                                 </p>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                              data-parent="#faq1">
                             <div class="block-content">
                                 <p>
-                                    Wanneer je een vragenlijst invult wordt er data opgeslagen. Die data is beveiligd. Dat is de reden waarom je in moet loggen wanneer je een vragenlijst invult.
+                                    Wanneer je een vragenlijst invult wordt er data opgeslagen. Die data zijn beveiligd. Dat is de reden waarom je in moet loggen wanneer je een vragenlijst invult.
                                 </p>
                             </div>
                         </div>
@@ -132,7 +132,7 @@
                              data-parent="#faq1">
                             <div class="block-content">
                                 <p>
-                                    Bij elke workshop staat de datum, tijdstip en ruimte vermeld.
+                                    Bij elke workshop staat de locatie, datum, tijdstip en ruimte vermeld.
                                 </p>
                             </div>
                         </div>
@@ -160,7 +160,7 @@
                              data-parent="#faq1">
                             <div class="block-content">
                                 <p>
-                                    Je mag je tip of advies mailen aan info@vitalavie.nl.
+                                    Je mag je tip of advies mailen aan energiek@gelre.nl
                                 </p>
                             </div>
                         </div>
@@ -174,7 +174,7 @@
                              data-parent="#faq1">
                             <div class="block-content">
                                 <p>
-                                    Je mag je collega meenemen. Wij stellen het wel op prijs dat je je collega wel even aanmeldt. Dit i.v.m. het maximaal aantal deelnemers i.v.m. corona maatregelen.
+                                    Je mag je collega meenemen. Wij stellen het wel op prijs dat je je collega wel even aanmeldt.
                                 </p>
                             </div>
                         </div>
@@ -188,7 +188,7 @@
                              data-parent="#faq1">
                             <div class="block-content">
                                 <p>
-                                    Nee dit blijft iets tussen jou en Vitalavie.
+                                    Nee dit blijft iets tussen jou en energiek@gelre.
                                 </p>
                             </div>
                         </div>
@@ -202,7 +202,7 @@
                              data-parent="#faq1">
                             <div class="block-content">
                                 <p>
-                                    Voor sommige workshops is subsidie mogelijk. Om die subsidie te kunnen innen is het laten zien van een presentielijst noodzakelijk. Het is informatie die alleen uitgewisseld wordt tussen de subsidieverstrekker en Vitalavie.
+                                    Voor sommige workshops is subsidie mogelijk. Om die subsidie te kunnen innen is het laten zien van een presentielijst noodzakelijk. Het is informatie die alleen uitgewisseld wordt tussen de subsidieverstrekker en Gelre.
                                 </p>
                             </div>
                         </div>
@@ -216,7 +216,7 @@
                              data-parent="#faq1">
                             <div class="block-content">
                                 <p>
-                                    Ja, er zijn geen kosten verbonden bij deelname aan workshops en/of trainingen.
+                                     Deelname aan de meeste workshops en trainingen is gratis. Voor een aantal activiteiten wordt een eigen bijdrage gevraagd.
                                 </p>
                             </div>
                         </div>
@@ -244,7 +244,7 @@
                              data-parent="#faq1">
                             <div class="block-content">
                                 <p>
-                                    Stuur tijdig, uiterlijk 48 uur voor de datum, een bericht naar info@vitalavie.nl
+                                    Stuur tijdig, uiterlijk 48 uur voor de datum, een bericht naar Energiek@gelre.nl
                                 </p>
                             </div>
                         </div>
@@ -274,7 +274,7 @@
                              data-parent="#faq1">
                             <div class="block-content">
                                 <p>
-                                    Als je bij Gelre Energiek een account maakt kun je favorieten toevoegen, deze kun je terugvinden in jouw profiel. Doormiddel van het sterretje kun je deze toevoegen. Wil je ook een account aanmaken klik dan hier.
+                                    Als je bij Gelre Energiek een account maakt kun je favorieten toevoegen, deze kun je terugvinden in jouw profiel. Doormiddel van het sterretje kun je deze toevoegen. Wil je ook een account aanmaken klik dan <a href="https://gelre-energiek.nl/register">hier.</a>
                                 </p>
                             </div>
                         </div>
