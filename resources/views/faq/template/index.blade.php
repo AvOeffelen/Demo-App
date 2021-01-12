@@ -69,7 +69,7 @@
                              data-parent="#faq1">
                             <div class="block-content">
                                 <p>
-                                    In de omgeving van Bravis Samen Vitaal worden geen persoonlijke gegevens opgeslagen. 
+                                    In de omgeving van Klant Samen Vitaal worden geen persoonlijke gegevens opgeslagen. 
                                     Wanneer dat wel gebeurt, zoals bij:
                                     1. het invullen van vragenlijsten bij Johan of 
                                     2. het deelnemen aan een online programma van GoodHabitz of
