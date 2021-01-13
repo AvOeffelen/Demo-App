@@ -119,7 +119,7 @@
                                 (na)zorg Corona
                             </div> -->
                             <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1 text-center">(na)zorg Corona</h3>
+                                <h3 class="h1 font-w700 text-white mb-1 text-center">van Covid naar Go Fit</h3>
                             </div>
                         </div>
                     </a>

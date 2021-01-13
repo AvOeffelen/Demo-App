@@ -7,7 +7,7 @@
                         <b-button @click="goBack()" variant="primary">Terug</b-button></b-col>
                     <b-col cols="12" md="12" lg="6" xl="6" sm="12">
                         <div class="text-center py-3">
-                            <h1 class="h3 font-w700 mb-2">(Na)zorg Corona</h1>
+                            <h1 class="h3 font-w700 mb-2">van Covid naar Go Fit</h1>
                         </div>
                     </b-col>
                     <b-col cols="12" md="12" lg="3" xl="3" sm="12">
@@ -103,7 +103,7 @@
                                    data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            (Na)zorg Corona
+                                            van Covid naar Go Fit
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -125,7 +125,7 @@
                                     <div
                                         class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            (Na)zorg Corona
+                                            van Covid naar Go Fit
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -152,7 +152,7 @@
                                        data-toggle="click-ripple">
                                         <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
-                                                (Na)zorg Corona
+                                                van Covid naar Go Fit
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -174,7 +174,7 @@
                                         <div
                                             class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
-                                                (Na)zorg Corona
+                                                van Covid naar Go Fit
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -199,7 +199,7 @@
                                    data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            (Na)zorg Corona
+                                            van Covid naar Go Fit
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -221,7 +221,7 @@
                                     <div
                                         class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            (Na)zorg Corona
+                                            van Covid naar Go Fit
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -248,7 +248,7 @@
                                        data-toggle="click-ripple">
                                         <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
-                                                (Na)zorg Corona
+                                                van Covid naar Go Fit
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -270,7 +270,7 @@
                                         <div
                                             class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
-                                                (Na)zorg Corona
+                                                van Covid naar Go Fit
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -299,7 +299,7 @@
                                    data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            (Na)zorg Corona
+                                            van Covid naar Go Fit
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -321,7 +321,7 @@
                                     <div
                                         class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            (Na)zorg Corona
+                                            van Covid naar Go Fit
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -349,7 +349,7 @@
                                    data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            (Na)zorg Corona
+                                            van Covid naar Go Fit
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -371,7 +371,7 @@
                                     <div
                                         class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            (Na)zorg Corona
+                                            van Covid naar Go Fit
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -399,7 +399,7 @@
                                    data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            (Na)zorg Corona
+                                            van Covid naar Go Fit
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -421,7 +421,7 @@
                                     <div
                                         class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            (Na)zorg Corona
+                                            van Covid naar Go Fit
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -449,7 +449,7 @@
                                    data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            (Na)zorg Corona
+                                            van Covid naar Go Fit
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -471,7 +471,7 @@
                                     <div
                                         class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            (Na)zorg Corona
+                                            van Covid naar Go Fit
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
