@@ -157,27 +157,37 @@ class ArticleController extends Controller
 
     public function getAllCategories()
     {
-        $content = Category::with('Article')->where('name','!=','1 op 1')->where('name','!=','Actueel')->where('name','!=','Covid')->get();
+        $content = Category::with('Article')
+            ->where('name','!=','persoonlijke_begeleiding')
+            ->where('name','!=','actueel')
+            ->where('name','!=','covid')
+            ->get();
 
         return $content;
     }
 
     public function getOneOnOneCategory()
     {
-        $content = Category::with('Article')->where('name','=','1 op 1')->get();
+        $content = Category::with('Article')
+            ->where('name','=','persoonlijke_begeleiding')
+            ->get();
 
         return $content;
     }
     public function getTopicalCategory()
     {
-        $content = Category::with('Article')->where('name','=','Actueel')->get();
+        $content = Category::with('Article')
+            ->where('name','=','actueel')
+            ->get();
 
         return $content;
     }
 
     public function getCovidCategory()
     {
-        $content = Category::with('Article')->where('name','=','Covid')->get();
+        $content = Category::with('Article')
+            ->where('name','=','covid')
+            ->get();
 
         return $content;
     }

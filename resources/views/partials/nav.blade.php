@@ -42,6 +42,13 @@
     <div class="content-side content-side-full">
         <ul class="nav-main">
             <li class="nav-main-item">
+                <a class="nav-main-link{{ request()->is('backend/dashboard') ? ' active' : '' }}"
+                   href="{{route('show.frontend.dashboard')}}">
+                    <i class="nav-main-link-icon fa fa-home"></i>
+                    <span class="nav-main-link-name">Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-main-item">
                 <a class="nav-main-link nav-main-link-submenu"
                    data-toggle="submenu" aria-haspopup="true"
                    aria-expanded="false"
@@ -55,7 +62,6 @@
                            href="{{route('workshop.overview')}}">
                             <i class="nav-main-link-icon fa fa-clipboard"></i>
                             <span class="nav-main-link-name">Overzicht</span>
-                            {{--                    <span class="nav-main-link-badge badge badge-pill badge-success">5</span>--}}
                         </a>
                     </li>
                     <li class="nav-main-item">
@@ -63,7 +69,6 @@
                            href="{{url('backend/workshop/add')}}">
                             <i class="nav-main-link-icon fa fa-plus-circle"></i>
                             <span class="nav-main-link-name">toevoegen</span>
-                            {{--                    <span class="nav-main-link-badge badge badge-pill badge-success">5</span>--}}
                         </a>
                     </li>
                 </ul>
@@ -82,7 +87,6 @@
                            href="{{route('article.show.overview')}}">
                             <i class="nav-main-link-icon fa fa-clipboard"></i>
                             <span class="nav-main-link-name">Overzicht</span>
-                            {{--                    <span class="nav-main-link-badge badge badge-pill badge-success">5</span>--}}
                         </a>
                     </li>
                     <li class="nav-main-item">
@@ -90,7 +94,24 @@
                            href="{{route('article.show.create')}}">
                             <i class="nav-main-link-icon fa fa-plus-circle"></i>
                             <span class="nav-main-link-name">toevoegen</span>
-                            {{--                    <span class="nav-main-link-badge badge badge-pill badge-success">5</span>--}}
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-main-item">
+                <a class="nav-main-link nav-main-link-submenu"
+                   data-toggle="submenu" aria-haspopup="true"
+                   aria-expanded="false"
+                   href="#">
+                    <i class="nav-main-link-icon fa fa-list"></i>
+                    <span class="nav-main-link-name">Categorieën</span>
+                </a>
+                <ul class="nav-main-submenu">
+                    <li class="nav-main-item">
+                        <a class="nav-main-link{{ request()->is('backend/categories/overview') ? ' active' : '' }}"
+                           href="{{route('category.overview')}}">
+                            <i class="nav-main-link-icon fa fa-clipboard"></i>
+                            <span class="nav-main-link-name">Overzicht</span>
                         </a>
                     </li>
                 </ul>

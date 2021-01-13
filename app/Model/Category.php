@@ -9,9 +9,10 @@ class Category extends Model
     protected $table = 'category';
 
     protected $fillable = [
-      'name',
-      'created_at',
-      'updated_at'
+        'name',
+        'display_name',
+        'created_at',
+        'updated_at'
     ];
 
 
@@ -24,7 +25,7 @@ class Category extends Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return \Illuminate\Database\Eloquent\Relations\hasMany
      */
     public function Article()
     {
