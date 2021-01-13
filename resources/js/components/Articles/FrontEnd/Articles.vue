@@ -7,7 +7,7 @@
                         <b-button @click="goBack()" variant="primary">Terug</b-button></b-col>
                     <b-col cols="12" md="12" lg="6" xl="6" sm="12">
                         <div class="text-center py-3">
-                            <h1 class="h3 font-w700 mb-2">Artikelen</h1>
+                            <h1 class="h3 font-w700 mb-2">Inspiratie Materiaal</h1>
                         </div>
                     </b-col>
                     <b-col cols="12" md="12" lg="3" xl="3" sm="12">
@@ -35,7 +35,7 @@
                                data-toggle="click-ripple">
                                 <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                     <div class="ribbon-box">
-                                        {{ article.category.name }}
+                                        {{ article.category.display_name }}
                                     </div>
                                     <div class="pt-4 pb-6 px-md-3">
                                         <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{ article.title }}</h3>
@@ -50,7 +50,7 @@
                         id="horizontal-navigation-hover-centered py-5 px-1"
                         class=" h5 d-lg-block mt-2 mt-lg-0 nav nav-main nav-main-horizontal nav-main-horizontal-center"
                         v-if="loading === false">
-                    <b-tab :title="category.name" v-for="(category, key) in this.categories" :key="key">
+                    <b-tab :title="category.display_name" v-for="(category, key) in this.categories" :key="key">
                         <b-row class="py-3">
 
                             <b-col cols="12" sm="12" md="12" lg="6" xl="6"
@@ -72,7 +72,7 @@
                                    data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            Artikel
+                                            {{ category.display_name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -94,7 +94,7 @@
                                     <div
                                         class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            Video
+                                            {{ category.display_name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -121,7 +121,7 @@
                                        data-toggle="click-ripple">
                                         <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
-                                                Artikel
+                                                {{ category.display_name }}
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -143,7 +143,7 @@
                                         <div
                                             class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
-                                                Video
+                                                {{ category.display_name }}
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -168,7 +168,7 @@
                                    data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            Artikel
+                                            {{ category.display_name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -190,7 +190,7 @@
                                     <div
                                         class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            Video
+                                            {{ category.display_name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -217,7 +217,7 @@
                                        data-toggle="click-ripple">
                                         <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
-                                                Artikel
+                                                {{ category.display_name }}
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -239,7 +239,7 @@
                                         <div
                                             class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
-                                                Video
+                                                {{ category.display_name }}
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -268,7 +268,7 @@
                                    data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            Artikel
+                                            {{ category.display_name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -290,7 +290,7 @@
                                     <div
                                         class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            Video
+                                            {{ category.display_name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -318,7 +318,7 @@
                                    data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            Artikel
+                                            {{ category.display_name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -340,7 +340,7 @@
                                     <div
                                         class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            Video
+                                            {{ category.display_name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -368,7 +368,7 @@
                                    data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            Artikel
+                                            {{ category.display_name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -390,7 +390,7 @@
                                     <div
                                         class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            Video
+                                            {{ category.display_name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -418,7 +418,7 @@
                                    data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            Artikel
+                                            {{ category.display_name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -440,7 +440,7 @@
                                     <div
                                         class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            Video
+                                            {{ category.display_name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">

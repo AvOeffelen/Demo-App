@@ -35,7 +35,7 @@
                                data-toggle="click-ripple">
                                 <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                     <div class="ribbon-box">
-                                        {{ workshop.category.name }}
+                                        {{ workshop.category.display_name }}
                                     </div>
                                     <div class="pt-4 pb-6 px-md-3">
                                         <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{ workshop.title }}</h3>
@@ -53,7 +53,7 @@
                             id="horizontal-navigation-hover-centered py-5 px-1"
                             class=" h5 d-lg-block mt-2 mt-lg-0 nav nav-main nav-main-horizontal nav-main-horizontal-center"
                             v-if="loading == false">
-                        <b-tab :title="category.name" v-for="(category, key) in this.categories" :key="key">
+                        <b-tab :title="category.display_name" v-for="(category, key) in this.categories" :key="key">
                             <b-row>
                                <b-col cols="12" sm="12" md="12" lg="6" xl="6"
                                        v-if="category.workshop[0]">
@@ -68,7 +68,7 @@
                                        data-toggle="click-ripple">
                                         <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
-                                                {{ category.name }}
+                                                {{ category.display_name }}
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[0].title}}</h3>
@@ -91,7 +91,7 @@
                                            data-toggle="click-ripple">
                                             <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                                 <div class="ribbon-box">
-                                                    {{ category.name }}
+                                                    {{ category.display_name }}
                                                 </div>
                                                 <div class="pt-4 pb-6 px-md-3">
                                                     <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[1].title}}</h3>
@@ -116,7 +116,7 @@
                                        data-toggle="click-ripple">
                                         <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
-                                                {{ category.name }}
+                                                {{ category.display_name }}
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[2].title}}</h3>
@@ -138,7 +138,7 @@
                                            data-toggle="click-ripple">
                                             <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                                 <div class="ribbon-box">
-                                                    {{ category.name }}
+                                                    {{ category.display_name }}
                                                 </div>
                                                 <div class="pt-4 pb-6 px-md-3">
                                                     <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[3].title}}</h3>
@@ -162,7 +162,7 @@
                                        data-toggle="click-ripple">
                                         <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
-                                                {{ category.name }}
+                                                {{ category.display_name }}
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[4].title}}</h3>
@@ -185,7 +185,7 @@
                                        data-toggle="click-ripple">
                                         <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
-                                                {{ category.name }}
+                                                {{ category.display_name }}
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[5].title}}</h3>
@@ -208,7 +208,7 @@
                                        data-toggle="click-ripple">
                                         <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
-                                                {{ category.name }}
+                                                {{ category.display_name }}
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[6].title}}</h3>
@@ -238,7 +238,7 @@
                                        data-toggle="click-ripple">
                                         <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
-                                                {{ category.name }}
+                                                {{ category.display_name }}
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{ workshop.title }}</h3>
