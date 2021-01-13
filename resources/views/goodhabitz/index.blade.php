@@ -45,12 +45,12 @@
                         <br />
                         <b>LET OP:</b>
                         
-                        Wanneer je al eerder hebt ingelogd lukt het je nu waarschijnlijk niet om in te loggen. Klik op wachtwoord wijzigen en je kunt weer gewoon bij het aanbod van GoodHabitz.
+                        Wanneer je al eerder hebt ingelogd lukt het je nu waarschijnlijk niet om in te loggen. Klik op wachtwoord vergeten en je kunt weer gewoon bij het aanbod van GoodHabitz.
 
-                        Heb je nog niet eerder een account aangemaakt dan willen wij je verzoeken om een mail te sturen naar <a href="mailto:info@vitalavie.nl" target="_blank">info@vitalavie.nl</a>
+                        Heb je nog niet eerder een account aangemaakt dan willen wij je verzoeken om een mail te sturen naar <a href="mailto:samenvitaal@bravis.nl" target="_blank">samenvitaal@bravis.nl </a>
                         Van een medewerker ontvang je dan een link om een account voor jezelf aan te maken.
 
-                        Mocht bovenstaande onduidelijk zijn en/of vragen oproepen, stuur dan een mail naar <a href="mailto:info@vitalavie.nl" target="_blank">info@vitalavie.nl</a>
+                        Mocht bovenstaande onduidelijk zijn en/of vragen oproepen, stuur dan een mail naar <a href="mailto:samenvitaal@bravis.nl" target="_blank">samenvitaal@bravis.nl </a>
 
                     </p>
                 </alinea>
