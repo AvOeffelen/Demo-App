@@ -32,4 +32,9 @@ class HomeController extends Controller
 
     }
 
+    public function showFrontendDashboard()
+    {
+        return response()->view('dashboard.frontend.index');
+    }
+
 }
