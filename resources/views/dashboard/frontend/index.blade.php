@@ -25,7 +25,7 @@
                             homepage-block
                             left-tile"
                         style="
-                            background-image : url(storage/vakken/Vak01.jpg;
+                            background-image : url('/storage/vakken/Vak01.jpg');
                         "
                         href="{{url('activiteitenkalender')}}"
                         data-toggle="click-ripple"
@@ -53,7 +53,7 @@
                             homepage-block
                             right-tile"
                         style="
-                        background-image : url(storage/vakken/Vak02.jpg;
+                        background-image : url('/storage/vakken/Vak02.jpg');
                         "
                         href="{{url('workshop')}}"
                         data-toggle="click-ripple"
@@ -81,7 +81,7 @@
                             homepage-block
                             left-tile"
                         style="
-                        background-image : url(storage/vakken/Vak03.jpg;
+                        background-image : url('/storage/vakken/Vak03.jpg');
                         "
                         href="{{url('one-on-one')}}"
                         data-toggle="click-ripple"
@@ -109,7 +109,7 @@
                             homepage-block
                             right-tile"
                         style="
-                        background-image : url(storage/vakken/Vak04.jpg;
+                        background-image : url('/storage/vakken/Vak04.jpg');
                         "
                         href="{{route('covid')}}"
                         data-toggle="click-ripple"
@@ -137,7 +137,7 @@
                             homepage-block
                             left-tile"
                         style="
-                        background-image : url(storage/vakken/Vak05.jpg;
+                        background-image : url('/storage/vakken/Vak05.jpg');
                         "
                         href="{{route('vragenlijsten')}}"
                         data-toggle="click-ripple"
@@ -165,7 +165,7 @@
                             homepage-block
                             right-tile"
                         style="
-                        background-image : url(storage/vakken/Vak06.jpg;
+                        background-image : url('/storage/vakken/Vak06.jpg');
                         "
                         href="{{url('articles')}}"
                         data-toggle="click-ripple"
@@ -193,7 +193,7 @@
                             homepage-block
                             left-tile"
                         style="
-                        background-image : url(storage/vakken/Vak07.jpg;
+                        background-image : url('/storage/vakken/Vak07.jpg');
                         "
                         href="{{route('goodhabitz')}}"
                         data-toggle="click-ripple"
@@ -221,7 +221,7 @@
                             homepage-block
                             right-tile"
                         style="
-                        background-image : url(storage/vakken/Vak08.jpg;
+                        background-image : url('/storage/vakken/Vak08.jpg');
                         "
                         href="{{url('topical')}}"
                         data-toggle="click-ripple"
