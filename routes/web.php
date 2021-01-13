@@ -49,6 +49,13 @@ Route::group(['prefix' => 'backend/','middleware'=> ['web','admin']], function (
     Route::get('article/overview','ArticleController@showOverview')->name('article.show.overview');
     Route::get('article/create','ArticleController@showCreate')->name('article.show.create');
     Route::get('article/overview/{article}/update','ArticleController@showArticleUpdate')->name('article.update.show');
+
+    Route::get('categories/overview','CategoryController@index')->name('category.overview');
+
+    Route::get('categories/article/{category}/update','CategoryController@showUpdate')->name('categories.article.update.show');
+    Route::get('categories/workshop/{category}/update','CategoryController@showWorkshopUpdate')->name('categories.workshop.update.show');
+
+    route::get('/dashboard','HomeController@showFrontendDashboard')->name('show.frontend.dashboard');
 });
 Route::group(['prefix' => 'axios/workshop', 'namespace' => 'Axios','middleware'=> ['web','admin']], function () {
     route::post('/post','WorkshopController@store')->name('workshop.store');
@@ -99,6 +106,15 @@ Route::group(['prefix' => 'axios/article', 'namespace' => 'Axios','middleware'=>
     route::get('get-all-articles-for-standard-categories', 'ArticleController@getAllArticlesForStandardCategories');
 
     route::post('/{article}/sign-up','ArticleController@signUpForArticle')->name('article.signup');
+});
+
+
+Route::group(['prefix' => 'axios/categories', 'namespace' => 'Axios','middleware'=> ['web','admin']], function() {
+    route::get('/article/get-all','CategoryController@getArticleCategories')->name('categories.article.get.all');
+    route::get('/workshop/get-all','CategoryController@getWorkshopCategories')->name('categories.workshop.get.all');
+
+    route::put('/article/{category}/update','CategoryController@updateCategory')->name('article.category.update');
+    route::put('/workshop/{category}/update','CategoryController@updateWorkshopCategory')->name('workshop.category.update');
 });
 
 Route::group(['prefix' => 'axios/workshop', 'namespace' => 'Axios','middleware'=> ['web']], function () {

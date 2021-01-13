@@ -104,7 +104,7 @@ export default {
                     sortable: true,
                 },
                 {
-                    key: 'category.name',
+                    key: 'category.display_name',
                     label: 'Categorie',
                     sortable: true,
                 },

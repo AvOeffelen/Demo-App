@@ -33,7 +33,7 @@ class HomeController extends Controller
 
     }
 
-    public function dashboard()
+    public function showFrontendDashboard()
     {
         return response()->view('dashboard.frontend.index');
     }

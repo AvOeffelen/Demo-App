@@ -57,7 +57,7 @@
                                    data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            Persoonlijke begeleiding
+                                            {{ categories[0].display_name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -79,7 +79,7 @@
                                     <div
                                         class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            Persoonlijke begeleiding
+                                            {{ categories[0].display_name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -108,7 +108,7 @@
                                    data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            (Na)zorg Corona
+                                            {{ categories[0].display_name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -130,7 +130,7 @@
                                     <div
                                         class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            (Na)zorg Corona
+                                            {{ categories[0].display_name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -157,7 +157,7 @@
                                        data-toggle="click-ripple">
                                         <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                             <div class="ribbon-box">
-                                                (Na)zorg Corona
+                                                {{ categories[0].display_name }}
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -179,7 +179,7 @@
                                         <div
                                             class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                             <div class="ribbon-box">
-                                                (Na)zorg Corona
+                                                {{ categories[0].display_name }}
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -204,7 +204,7 @@
                                    data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            (Na)zorg Corona
+                                            {{ categories[0].display_name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -226,7 +226,7 @@
                                     <div
                                         class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            (Na)zorg Corona
+                                            {{ categories[0].display_name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -253,7 +253,7 @@
                                        data-toggle="click-ripple">
                                         <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                             <div class="ribbon-box">
-                                                (Na)zorg Corona
+                                                {{ categories[0].display_name }}
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -275,7 +275,7 @@
                                         <div
                                             class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                             <div class="ribbon-box">
-                                                (Na)zorg Corona
+                                                {{ categories[0].display_name }}
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -304,7 +304,7 @@
                                    data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            (Na)zorg Corona
+                                            {{ categories[0].display_name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -326,7 +326,7 @@
                                     <div
                                         class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            (Na)zorg Corona
+                                            {{ categories[0].display_name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -354,7 +354,7 @@
                                    data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            (Na)zorg Corona
+                                            {{ categories[0].display_name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -376,7 +376,7 @@
                                     <div
                                         class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            (Na)zorg Corona
+                                            {{ categories[0].display_name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -404,7 +404,7 @@
                                    data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            (Na)zorg Corona
+                                            {{ categories[0].display_name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -426,7 +426,7 @@
                                     <div
                                         class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            (Na)zorg Corona
+                                            {{ categories[0].display_name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -454,7 +454,7 @@
                                    data-toggle="click-ripple">
                                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            (Na)zorg Corona
+                                            {{ categories[0].display_name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -476,7 +476,7 @@
                                     <div
                                         class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                         <div class="ribbon-box">
-                                            (Na)zorg Corona
+                                            {{ categories[0].display_name }}
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">

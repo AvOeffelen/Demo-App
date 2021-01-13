@@ -8,9 +8,14 @@ class WorkshopCategory extends Model
 {
     protected $table = 'workshop_category';
 
+    protected $fillable = [
+        'name',
+        'tag',
+        'display_name'
+    ];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return \Illuminate\Database\Eloquent\Relations\hasMany
      */
     public function Workshop()
     {
