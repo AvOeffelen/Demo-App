@@ -15,7 +15,7 @@
                         left-tile
                         homepage-block-round"
                     style="
-                        background-image : url(storage/vakken/Vak01.jpg;
+                        background-image : url('/storage/vakken/Vak01.jpg');
                     "
                     data-toggle="click-ripple"
                     href="/activiteitenkalender"
@@ -44,7 +44,7 @@
                         right-tile
                         homepage-block-round"
                     style="
-                    background-image : url(storage/vakken/Vak02.jpg;
+                    background-image : url('/storage/vakken/Vak02.jpg');
                     "
                     data-toggle="click-ripple"
                     href="/workshop"
@@ -73,7 +73,7 @@
                         left-tile
                         homepage-block-round"
                     style="
-                    background-image : url(storage/vakken/Vak03.jpg;
+                    background-image : url('/storage/vakken/Vak03.jpg');
                     "
                     data-toggle="click-ripple"
                     href="/one-on-one"
@@ -102,7 +102,7 @@
                         right-tile
                         homepage-block-round"
                     style="
-                    background-image : url(storage/vakken/Vak04.jpg;
+                    background-image : url('/storage/vakken/Vak04.jpg');
                     "
                     data-toggle="click-ripple"
                     href="/covid-19"
@@ -131,7 +131,7 @@
                         left-tile
                         homepage-block-round"
                     style="
-                    background-image : url(storage/vakken/Vak05.jpg;
+                    background-image : url('/storage/vakken/Vak05.jpg');
                     "
                     data-toggle="click-ripple"
                     href="/vragenlijsten"
@@ -160,7 +160,7 @@
                         right-tile
                         homepage-block-round"
                     style="
-                    background-image : url(storage/vakken/Vak06.jpg;
+                    background-image : url('/storage/vakken/Vak06.jpg');
                     "
                     data-toggle="click-ripple"
                     href="/articles"
@@ -189,7 +189,7 @@
                         left-tile
                         homepage-block-round"
                     style="
-                    background-image : url(storage/vakken/Vak07.jpg;
+                    background-image : url('/storage/vakken/Vak07.jpg');
                     "
                     data-toggle="click-ripple"
                     href="/goodhabitz"
@@ -218,7 +218,7 @@
                         right-tile
                         homepage-block-round"
                     style="
-                    background-image : url(storage/vakken/Vak08.jpg;
+                    background-image : url('/storage/vakken/Vak08.jpg');
                     "
                     data-toggle="click-ripple"
                     href="/topical"
