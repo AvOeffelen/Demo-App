@@ -10,7 +10,7 @@
                         <div class="text-center py-3">
                             <h1 class="h1 font-w700 mb-2 text-secondary text-shadow-workshops">Persoonlijke
                                 begeleiding</h1>
-                            <img src="storage/images/iconen nieuwe stijl Gelre.jpg" height="">
+                            <img src="storage/images/gelre-themas.png" class="img-fluid">
                         </div>
                     </b-col>
                     <b-col cols="12" md="12" lg="3" xl="3" sm="12">

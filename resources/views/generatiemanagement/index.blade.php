@@ -23,9 +23,10 @@
                 <h3>Thema's</h3>
             </div>
             <div class="col-md-12 col-lg-2 col-xl-2 col-12 col-sm-12 col-xs-12 cols-12">
+            
             </div>
         </div>
-        <img src="storage/images/iconen nieuwe stijl Gelre.jpg" height="">
+             <img src="storage/images/gelre-themas.png" class="img-fluid">
         </br>
         </br>
         <div class="row content content-full text-center">
