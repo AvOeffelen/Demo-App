@@ -10,13 +10,14 @@
                             <h1 class="h3 font-w700 mb-2">BESCHIKBARE WORKSHOPS</h1>
                         </div>
                     </b-col>
+                    
                     <b-col cols="12" md="12" lg="3" xl="3" sm="12">
                         <b-form-group size="lg">
                             <b-form-input
                                 id="filter-input"
                                 v-model="searchString"
                                 type="search"
-                                placeholder="Type om te zoeken">
+                                placeholder="Waar ben je naar op zoek?">
                             </b-form-input>
                         </b-form-group>
                     </b-col>
