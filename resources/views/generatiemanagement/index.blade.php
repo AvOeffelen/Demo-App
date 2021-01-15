@@ -26,17 +26,16 @@
             
             </div>
         </div>
-             <img src="storage/images/gelre-themas.png" class="img-fluid">
-        </br>
-        </br>
         <div class="row content content-full text-center">
             <div class="col-sm-6 col-lg-2">
             </div>
             <div class="col-sm-6 col-lg-4">
+                <img src="storage/images/gezondheid&vitaliteit-thema.png" class="img-fluid">
                 <h5>Gezondheid en vitaliteit</h5>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
             <div class="col-sm-6 col-lg-4">
+                <img src="storage/images/motivatie&betrokkenheid-thema.png" class="img-fluid">
                 <h5>Motivatie en betrokkenheid</h5>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
@@ -47,10 +46,12 @@
             <div class="col-sm-6 col-lg-2">
             </div>
             <div class="col-sm-6 col-lg-4">
+                <img src="storage/images/ontwikkeling-thema.png" class="img-fluid">
                 <h5>Ontwikkeling</h5>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
             <div class="col-sm-6 col-lg-4">
+                <img src="storage/images/wendbaarheid-thema.png" class="img-fluid">
                 <h5>Wendbaarheid</h5>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
