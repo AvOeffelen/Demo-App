@@ -8,6 +8,7 @@
                     <b-col cols="12" md="12" lg="6" xl="6" sm="12">
                         <div class="text-center py-3">
                             <h1 class="h3 font-w700 mb-2">van Covid naar Go Fit</h1>
+                            <img src="storage/images/gelre-themas.png" class="img-fluid">
                         </div>
                     </b-col>
                     <b-col cols="12" md="12" lg="3" xl="3" sm="12">
