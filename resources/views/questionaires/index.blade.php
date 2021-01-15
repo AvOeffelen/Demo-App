@@ -20,7 +20,8 @@
                 <a href="javascript:history.back()" class="btn btn-primary">Terug</a>
             </div>
             <div class="col-md-12 col-lg-8 col-xl-8 col-12 col-sm-12 col-xs-12">
-                <h3>Vragenlijsten</h3>
+                <img src="/storage/images/johan.jpg" class="img-fluid" alt="">
+                <h3 class="py-5">Vragenlijsten</h3>
             </div>
             <div class="col-md-12 col-lg-2 col-xl-2 col-12 col-sm-12 col-xs-12 cols-12">
             </div>
