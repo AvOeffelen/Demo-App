@@ -205,7 +205,7 @@ class ArticleController extends Controller
      */
     public function signUpForArticle(Request $request, Article $article)
     {
-        Mail::to('info@vitalavie.nl')->send(new ArticleSignUpMail($article,$request->toArray()));
+        Mail::to('energiek@gelre.nl')->send(new ArticleSignUpMail($article,$request->toArray()));
         return response()->json(['message' => 'Aanvraag succesvol verstuurd!']);
     }
 
