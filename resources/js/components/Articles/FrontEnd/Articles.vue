@@ -31,7 +31,7 @@
                                         'background-size':'cover',
                                         'background-repeat': 'no-repeat'} :
                                      {'background-image': 'url('+ default_image +')'}]"
-                               v-bind:href="'/workshop/'+ article.id+'/show'"
+                               v-bind:href="'/article/'+ article.id+'/show'"
                                data-toggle="click-ripple">
                                 <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                     <div class="ribbon-box">
