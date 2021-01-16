@@ -14,6 +14,9 @@
                             </a>
                             <p class="text-uppercase font-w700 font-size-sm text-muted py-3">Log in</p>
                         </div>
+                        <button type="button" class="btn btn-sm btn-primary" data-toggle="popover" title="Waarom inloggen?" data-placement="bottom" data-content="Je kunt hier een account aanmaken wanneer je dat graag wil.
+Wanneer biedt dit voor jou toegevoegde waarde? Dat is wanneer je het leuk vindt dat er een overzicht voor je wordt bijgehouden van welke workshops je gebruik hebt gemaakt, een overzicht van je favorieten. Of wanneer je het prettig vindt dat je op de hoogte wordt gebracht van de nieuwste workshops of de nieuwste artikelen. Dan heb je de mogelijkheid om een persoonlijk dashboard aan te maken waarvoor wij dan wel je mailadres nodig hebben. 
+">Waarom inloggen?</button>
                     </div>
                     <div class="row no-gutters justify-content-center">
                         <div class="col-sm-8 col-xl-6">
