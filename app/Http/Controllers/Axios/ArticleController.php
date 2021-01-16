@@ -13,6 +13,7 @@ use App\Model\Category;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -205,7 +206,8 @@ class ArticleController extends Controller
      */
     public function signUpForArticle(Request $request, Article $article)
     {
-        Mail::to('energiek@gelre.nl')->send(new ArticleSignUpMail($article,$request->toArray()));
+        Mail::to('info@rmnddesign.com')->send(new ArticleSignUpMail($article,$request->toArray()));
+        Log::info("mail send!");
         return response()->json(['message' => 'Aanvraag succesvol verstuurd!']);
     }
 
