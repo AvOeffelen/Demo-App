@@ -46,8 +46,8 @@ class WorkshopSignUpMail extends Mailable
     public function build()
     {
         return $this
-                ->from('no-reply@bravissamenvitaal.nl','BravisSamenVitaal')
-                ->subject("Aanmelding workshop BravisSamenVitaal {$this->workshop->title}")
+                ->from('no-reply@bravissamenvitaal.nl','Gelre Energiek')
+                ->subject("Aanmelding workshop Gelre Energiek {$this->workshop->title}")
                 ->view('email.workshop_signup',[
                     'workshop' => $this->workshop,
                     'attendee' => $this->attendee

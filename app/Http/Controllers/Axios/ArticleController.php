@@ -10,6 +10,7 @@ use App\Http\Requests\UpdateArticleRequest;
 use App\Mail\ArticleSignUpMail;
 use App\Model\Article;
 use App\Model\Category;
+use Carbon\Carbon;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
@@ -206,8 +207,8 @@ class ArticleController extends Controller
      */
     public function signUpForArticle(Request $request, Article $article)
     {
-        Mail::to('armandovanoeffelen@gmail.com')->send(new ArticleSignUpMail($article,$request->toArray()));
-        Log::info("mail send!");
+        Mail::to('energiek@gelre.nl')->send(new ArticleSignUpMail($article,$request->toArray()));
+        Log::info("mail send!" . Carbon::now()->format('d-m-Y'));
         return response()->json(['message' => 'Aanvraag succesvol verstuurd!']);
     }
 
