@@ -31,6 +31,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/vragenlijsten','FAQController@showVragenlijsten')->name('vragenlijsten');
     Route::get('/goodhabitz','FAQController@showGoodHabitz')->name('goodhabitz');
     Route::get('/activiteitenkalender','FAQController@showActiviteitenkalender')->name('activiteitenkalender');
+    Route::get('/verhalen','FAQController@showVerhalen')->name('verhalen');
 
     Route::get('/home', 'HomeController@index')->name('home');
 
