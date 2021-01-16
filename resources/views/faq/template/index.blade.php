@@ -12,7 +12,7 @@
                    Wij begrijpen natuurlijk dat je vragen hebt. We hebben hier de meest voorkomende opgesomd.
                 </p>
                 <div class="text-center py-5">
-                    <img class="h-250" src="storage/images/Screenshot_1.png"/>
+                    <img class="h-250" src="storage/images/iStock-1217882006.jpg"/>
                 </div>
             </div>
             <div class="col-lg-8">
