@@ -32,12 +32,12 @@
             <div class="col-sm-6 col-lg-4">
                 <img src="storage/images/gezondheid&vitaliteit-thema.png" class="img-fluid">
                 <h5>Gezondheid en vitaliteit</h5>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p>Bij gezondheid en vitaliteit gaat het over jouw beleving over je eigen gezondheid en energieniveau. Ook geeft het aan in welke mate je zowel lichamelijk als geestelijk aan de eisen van het werk kan voldoen.  </p>
             </div>
             <div class="col-sm-6 col-lg-4">
                 <img src="storage/images/motivatie&betrokkenheid-thema.png" class="img-fluid">
                 <h5>Motivatie en betrokkenheid</h5>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p>Bij motivatie en betrokkenheid gaat het om de dingen die ervoor zorgen dat jij bepaalde dingen doet. Betrokkenheid onderscheidt zich in je betrokkenheid bij Gelre en bij je functie of je rol die je vervult.</p>
             </div>
             <div class="col-sm-6 col-lg-2">
             </div>
@@ -48,12 +48,12 @@
             <div class="col-sm-6 col-lg-4">
                 <img src="storage/images/ontwikkeling-thema.png" class="img-fluid">
                 <h5>Ontwikkeling</h5>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p>Bij het thema ontwikkeling gaat het om het beschikken over de juiste kennis en vaardigheden, het benutten van je talenten en capaciteiten. Bij dit thema gaat het om het volgen van opleidingen maar ook het leren van nieuwe vaardigheden voor je functie.</p>
             </div>
             <div class="col-sm-6 col-lg-4">
                 <img src="storage/images/wendbaarheid-thema.png" class="img-fluid">
                 <h5>Wendbaarheid</h5>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p>Bij wendbaarheid gaat het om de manier waarop je in staat bent om te gaan met veranderingen. Kun je meebewegen met de veranderingen die op je afkomen? En ben je bereid om van functie of baan te veranderen.</p>
             </div>
             <div class="col-sm-6 col-lg-2">
             </div>
