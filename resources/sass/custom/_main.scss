@@ -44,8 +44,7 @@ main#main-container{
 }
 
 .article-show-image>img{
-    height: 500px;
-    width: 62%;
+    max-width:1000px !important;
 }
 .bg-body-white {
 	background-color: #ffffff;
