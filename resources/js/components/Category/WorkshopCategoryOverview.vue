@@ -2,6 +2,11 @@
     <div>
         <b-row class="pb-3">
             <b-col sm="6" md="6" lg="6" xl="6">
+                <div class="">
+                    <h5 class="font-w500">Workshop Categories</h5>
+                </div>
+            </b-col>
+            <b-col sm="6" md="6" lg="6" xl="6">
                 <b-input-group size="sm">
                     <b-form-input
                         id="filter-input"
@@ -13,11 +18,6 @@
                         <b-button :disabled="!filter" @click="filter = ''" variant="primary">Reset</b-button>
                     </b-input-group-append>
                 </b-input-group>
-            </b-col>
-            <b-col sm="6" md="6" lg="6" xl="6">
-                <div class="text-right">
-                    <h5 class="font-w300">Workshop Categories</h5>
-                </div>
             </b-col>
         </b-row>
         <b-row>
