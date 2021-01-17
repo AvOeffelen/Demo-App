@@ -8,7 +8,7 @@
                         <div v-html="article.video_link"></div>
                     </div>
                     <div v-else-if="article.image_link != null">
-                        <div class="article-show-image">
+                        <div class="article-show-image img-fluid">
                             <img class="" v-bind:src="'../../' + article.image_link" />
                         </div>
                     </div>
