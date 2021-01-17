@@ -33,7 +33,7 @@
                 <alinea class="text-center">
                 <p>De mogelijk bestaat om een leeromgeving met ruim 700 online trainingen, actuele webinars en persoonlijkheidstesten onderdeel te laten zijn van dit platform.</p>
                 </alinea>
-                <img class="" src="storage/images/hobp.png" height="800">
+                <img class="img-fluid" src="storage/images/hobp.png" height="800">
             </div>
             <div class="col-md-12 col-lg-2 col-xl-2 col-12 col-sm-12 col-xs-12 cols-12">
             </div>
