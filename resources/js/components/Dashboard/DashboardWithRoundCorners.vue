@@ -25,7 +25,7 @@
                             Ons Aanbod
                         </div>
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">Ons Aanbod</h3>
+                            <h3 class="h1 font-w700 text-primary mb-1">Ons Aanbod</h3>
                         </div>
                     </div>
                 </a>
@@ -54,7 +54,7 @@
                             Uw Aanbod
                         </div>
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">Uw Aanbod</h3>
+                            <h3 class="h1 font-w700 text-primary mb-1">Uw Aanbod</h3>
                         </div>
                     </div>
                 </a>
@@ -83,7 +83,7 @@
                             Persoonlijke begeleiding
                         </div>
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">Persoonlijke begeleiding</h3>
+                            <h3 class="h1 font-w700 text-primary mb-1">Persoonlijke begeleiding</h3>
                         </div>
                     </div>
                 </a>
@@ -112,7 +112,7 @@
                             Gamification
                         </div>
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">Gamification</h3>
+                            <h3 class="h1 font-w700 text-primary mb-1">Gamification</h3>
                         </div>
                     </div>
                 </a>
@@ -141,7 +141,7 @@
                             Vragenlijsten
                         </div>
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">Vragenlijsten</h3>
+                            <h3 class="h1 font-w700 text-primary mb-1">Vragenlijsten</h3>
                         </div>
                     </div>
                 </a>
@@ -170,7 +170,7 @@
                             Inspiratiemateriaal
                         </div>
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">Inspiratiemateriaal</h3>
+                            <h3 class="h1 font-w700 text-primary mb-1">Inspiratiemateriaal</h3>
                         </div>
                     </div>
                 </a>
@@ -199,7 +199,7 @@
                             Uw Academy
                         </div>
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">Uw Academy</h3>
+                            <h3 class="h1 font-w700 text-primary mb-1">Uw Academy</h3>
                         </div>
                     </div>
                 </a>
@@ -228,7 +228,7 @@
                             Thuiswerken
                         </div>
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">Thuiswerken</h3>
+                            <h3 class="h1 font-w700 text-primary mb-1">Thuiswerken</h3>
                         </div>
                     </div>
                 </a>
