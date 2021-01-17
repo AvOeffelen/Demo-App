@@ -14,6 +14,10 @@
                     </b-input-group-append>
                 </b-input-group>
             </b-col>
+            <b-col sm="3" md="3" lg="3" xl="3"></b-col>
+            <b-col sm="3" md="3" lg="3" xl="3">
+                <a href="/backend/workshop/add" class="btn btn-success btn-sm text-right" role="button" aria-disabled="true">Voeg workshop toe +</a>
+            </b-col>
         </b-row>
         <b-row>
             <b-col>
