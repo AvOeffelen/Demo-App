@@ -100,8 +100,9 @@
                     <div class="row py-3">
                         <div class="col-md-6">
                             <label v-bind:class="[this.errors.button_link ? 'text-primary':'' ]">
-                                Button link
+                                Button link 
                             </label>
+                            <small class="pl-2">Zonder https://</small>
                             <b-input v-model="article.button_link" type="text" class="form-control" name="title"
                                      v-bind:class="[this.errors.button_link ? 'decoratedErrorField':'' ]"/>
                             <p v-if="this.errors.button_link" class="text-primary">{{

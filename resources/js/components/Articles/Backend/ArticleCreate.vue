@@ -88,6 +88,7 @@
                             <div class="col-md-6">
                                 <label v-bind:class="[this.errors.button_link ? 'text-primary':'' ]">
                                     Button link
+                                    <small class="pl-2">Zonder https://</small>
                                 </label>
                                 <b-input v-model="article.button_link" type="text" class="form-control" name="title"
                                          v-bind:class="[this.errors.button_link ? 'decoratedErrorField':'' ]"/>
