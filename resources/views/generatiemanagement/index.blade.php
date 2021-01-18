@@ -48,7 +48,7 @@
             <div class="col-sm-6 col-lg-4">
                 <img src="storage/images/ontwikkeling-thema.png" class="img-fluid">
                 <h5>Ontwikkeling</h5>
-                <p>Bij het thema ontwikkeling gaat het om het beschikken over de juiste kennis en vaardigheden, het benutten van je talenten en capaciteiten. Bij dit thema gaat het om het volgen van opleidingen maar ook het leren van nieuwe vaardigheden voor je functie.</p>
+                <p>Bij het thema ontwikkeling gaat het om het beschikken over de juiste kennis en vaardigheden, het benutten van je talenten en capaciteiten. Bij het thema ontwikkeling gaat het om je "persoonlijke ontwikkeling'' en niet de beroeps gebonden (en verplichte) competenties en vaardigheden cq. bekwaamheden.  </p>
             </div>
             <div class="col-sm-6 col-lg-4">
                 <img src="storage/images/wendbaarheid-thema.png" class="img-fluid">
