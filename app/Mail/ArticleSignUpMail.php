@@ -48,9 +48,9 @@ class ArticleSignUpMail extends Mailable
     public function build()
     {
         return $this
-            ->from('no-reply@bravissamenvitaal.nl','Gelre Energiek')
+            ->from('no-reply@gelre-energiek.nl','Gelre Energiek')
             ->subject("Contactformulier Gelre Energiek {$this->article->title}")
-            ->view('email.workshop_signup',[
+            ->view('email.article_contact',[
                 'workshop' => $this->article,
                 'attendee' => $this->attendee
             ]);

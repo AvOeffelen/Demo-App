@@ -46,27 +46,6 @@
         <b-row>
             <b-col cols="12" lg="3" xl="3" md="0" sm="0"></b-col>
             <b-col cols="12" lg="6" xl="6" md="12" sm="12">
-                <b-form-group
-                    v-bind:class="[this.errors.employee_id ? 'text-primary':'' ]"
-                    id="input-group-employee"
-                    label="Personeelsnummer"
-                    label-for="input-employee"
-                    class="text-left"
-                >
-                    <b-form-input
-                        v-bind:class="[this.errors.employee_id ? 'decoratedErrorField':'' ]"
-                        id="input-employee"
-                        v-model="contact.employee_id"
-                        placeholder=""
-                    ></b-form-input>
-                    <p v-if="this.errors.employee_id" class="text-primary">{{ this.errors['employee_id'][0] }}</p>
-                </b-form-group>
-            </b-col>
-            <b-col cols="12" lg="3" xl="3" md="0" sm="0"></b-col>
-        </b-row>
-        <b-row>
-            <b-col cols="12" lg="3" xl="3" md="0" sm="0"></b-col>
-            <b-col cols="12" lg="6" xl="6" md="12" sm="12">
                 <b-button @click="submit" variant="primary">verstuur</b-button>
             </b-col>
             <b-col cols="12" lg="3" xl="3" md="0" sm="0"></b-col>
@@ -85,7 +64,6 @@ export default {
             contact:{
                 name:'',
                 email:'',
-                employee_id:'',
             },
             errors:[]
         };
@@ -108,7 +86,6 @@ export default {
         },
         reset(){
             this.contact.email = '';
-            this.contact.employee_id = '';
             this.contact.name = '';
         }
     }

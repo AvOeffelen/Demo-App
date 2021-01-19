@@ -316,9 +316,8 @@
 </style>
 <table class="wrapper" width="100%" style="margin: auto" cellpadding="0" cellspacing="0" role="presentation"><tr>
         <td class="header">
-            <a href="https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/bravis.jpg" style="display: inline-block;">
-
-                    <img src="https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/bravis.jpg" class="logo" alt="BravisSamenVitaal Logo">
+            <a style="display: inline-block;">
+                <img  class="logo"  src="https://gelre-energiek.nl/storage/logo/logo.jpg"  alt="Gelre Energiek Logo" height="">
             </a>
         </td>
     </tr>
@@ -355,15 +354,6 @@
                                 </td>
                                 <td class="content-cell">
                                     <span>{{$attendee['email']}}</span>
-                                </td>
-                            </tr>
-                            <!-- Body content -->
-                            <tr>
-                                <td class="content-cell">
-                                    Werknemer nummer
-                                </td>
-                                <td class="content-cell">
-                                    <span>{{$attendee['employee_id']}}</span>
                                 </td>
                             </tr>
                         </table>
