@@ -39,9 +39,7 @@
                         jouw manier van leren. Alles mag, niets moet: je leert zoals jij dat wilt!
                         <br />
                         <br />
-                        Je moet op deze pagina eerst even inloggen en wanneer je dat nog niet hebt gedaan, eerst een
-                        account aanmaken. Dit is omdat er persoonlijke gegevens van je worden opgeslagen en om die
-                        gegevens te beveiligen is een inlog noodzakelijk.
+                        Je moet op deze pagina eerst inloggen. Heb je nog geen account, dan kun je deze via leerhuis@gelre.nl opvragen.
                     </p>
                 </alinea>
             </div>
