@@ -267,7 +267,7 @@
                     <div class="block block-rounded mb-1">
                         <div class="block-header block-header-default" role="tab" id="faq1_h18">
                             <a class="font-w600" data-toggle="collapse" data-parent="#faq1" href="#faq1_q18"
-                               aria-expanded="true" aria-controls="faq1_q18">1.18 Je bij workshops een sterretje waar dient dit voor?
+                               aria-expanded="true" aria-controls="faq1_q18">1.18 Je ziet bij workshops een sterretje waar dient dit voor?
                             </a>
                         </div>
                         <div id="faq1_q18" class="collapse" role="tabpanel" aria-labelledby="faq1_h18"
