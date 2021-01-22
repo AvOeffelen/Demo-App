@@ -7,7 +7,7 @@
             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center bravis-logo">
                 <img src="storage/logo/logo.jpg" height="70">
                 <div class="text-center justify-content-center" height="70">
-                    <p>Deze Bravis Samen Vitaal omgeving is uitsluitend bestemd voor medewerkers van het Bravis ziekenhuis.</p>
+                    <i class="fas fa-exclamation text-primary"></i>  Deze Bravis Samen Vitaal omgeving is uitsluitend bestemd voor medewerkers van het Bravis ziekenhuis.
                 </div>
                 <div class=""></div>
             </div>
