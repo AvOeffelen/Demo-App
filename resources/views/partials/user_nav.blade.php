@@ -1,12 +1,12 @@
 <div class="bg-header-dark">
     <div class="content-header bg-white-10">
         <a class="link-fx font-w600 font-size-lg text-white" href="/">
-                            <span class="smini-visible">
-                                <span class="text-white-75">{{config('app.name')}}</span>
-                            </span>
-            <span class="smini-hidden">
-                                <span class="text-white-75">{{config('app.name')}}</span>
-                            </span>
+            <span class="smini-visible">
+                <span class="text-white-75">{{config('app.name')}}</span>
+            </span>
+        <span class="smini-hidden">
+            <span class="text-white-75">{{config('app.name')}}</span>
+        </span>
         </a>
         <div>
             <a class="d-lg-none text-white ml-2" data-toggle="layout" data-action="sidebar_close"
