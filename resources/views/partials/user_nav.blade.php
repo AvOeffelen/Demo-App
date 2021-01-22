@@ -19,9 +19,15 @@
 <div class="content-side content-side-full">
     <ul class="nav-main">
         <li class="nav-main-item">
-            <a class="nav-main-link" href="{{url('workshop')}}">
+            <a class="nav-main-link" href="{{url('home')}}">
                 <i class="nav-main-link-icon fa fa-chalkboard-teacher"></i>
                 <span class="nav-main-link-name">Home</span>
+            </a>
+        </li>
+        <li class="nav-main-item">
+            <a class="nav-main-link" href="{{url('generatie-management')}}">
+                <i class="nav-main-link-icon fa fa-chalkboard-teacher"></i>
+                <span class="nav-main-link-name">Generatiemanagement</span>
             </a>
         </li>
         <li class="nav-main-item">
