@@ -13,6 +13,18 @@
         </div>
     </div>
     
+    <div class="wrapper py-5">
+  <input type="checkbox">
+  <div class="showvideo-video">
+    <video src="https://www.robmillsarchitects.com/files/land/city/RMA_Web_land_city_1.mp4" loop muted autoplay></video>
+  </div>
+  <div class="showvideo-text">
+    <span data-text="Klik hier voor de instructievideo"></span>
+  </div>
+</div>
+
+
+
     <div class="content content-boxed">
         <dashboard></dashboard>
     </div>

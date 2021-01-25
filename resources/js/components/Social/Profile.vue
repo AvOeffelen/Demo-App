@@ -1,27 +1,71 @@
 <template>
     <div>
-        <div class="bg-image">
-            <div class="bg-black-25">
-                <div class="content content-full">
-                    <div class="py-5 text-center">
-                        <a class="img-link">
-                            <img class="img-avatar img-avatar96 img-avatar-thumb"
-                                 v-bind:src="'https://eu.ui-avatars.com/api/?name='+user.firstname+'+'+user.infix+'+'+user.lastname+'?size=128?bold=true?color=FFFFFF'"
-                                 alt="">
+<div class="container test color-white">
+    <div class="main-body">
+          <div class="row gutters-sm">
+            <div class="col-md-4 mb-3 test">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-column align-items-center text-center">
+                      <a class="img-link">
+                        <img class="img-avatar img-avatar96 img-avatar-thumb"
+                                v-bind:src="'https://eu.ui-avatars.com/api/?name='+user.firstname+'+'+user.infix+'+'+user.lastname+'?size=128?bold=true?color=FFFFFF'"
+                                alt="">
                         </a>
-                        <h1 class="font-w700 my-2 text-white">{{
-                                user.firstname + ' ' + user.infix + ' ' + user.lastname
-                            }}</h1>
-                        <!--                        <button type="button" class="btn btn-hero-primary">-->
-                        <!--                            <i class="fa fa-fw fa-user-edit mr-1"></i> Bewerk profiel-->
-                        <!--                        </button>-->
+                    <div class="mt-3">
+                      <h4>{{user.firstname}} {{user.lastname}}</h4>
+                      <p class="text-secondary mb-1">Medewerkerr</p>
                     </div>
+                 </div>
                 </div>
+              </div>
             </div>
+            <div class="col-md-8">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Naam</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{user.firstname}} {{user.lastname}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{user.email}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Geboorte Datum</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      12-11-1996
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Dummy text</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      Lorem ipsum
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- END Hero -->
+    </div>
 
-        <!-- Page Content -->
+
         <div class="content content-full content-boxed">
             <h2 class="content-heading">
                 <i class="si si-star mr-1"></i> Mijn favoriete workshops
@@ -39,13 +83,15 @@
             </div>
             <div v-else>
                 <b-row>
-                    <b-col cols="12" sm="12" md="6" xl="3" lg="3" v-for="(workshop,index) in this.workshops" :key="index">
+                    <b-col cols="12" sm="12" md="6" xl="4" lg="4" v-for="(workshop,index) in this.workshops" :key="index">
                         <div class="block block-rounded text-center">
                             <div class="block-content block-content-full bg-image"
                                  v-bind:style="[workshop.image_name ?
                                     {'background': 'url(' +'../../'+ workshop.image_name + ') center'} :
-                                     {'background-image': 'url('+ default_image +')'}]"
-                                 style="height: 150px;">
+                                     {'background-image': 'url('+ default_image +')'},
+                                     {'background-size': 'cover'}
+                                     ]"
+                                 style="height: 250px;">
                             </div>
                             <div class="block-content block-content-full block-content-sm bg-body-light">
                                 <div class="font-w600">{{ workshop.title }}</div>
