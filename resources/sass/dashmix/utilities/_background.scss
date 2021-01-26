@@ -218,11 +218,21 @@
 @include bg-gradient-variant-linear('.bg-gd-xplay', 135deg, $theme-xplay-primary, lighten($theme-xplay-primary, 15%));
 
 // xKsv Color Theme
-@include bg-variant('.bg-xksv', $theme-xksv-primary);
-@include bg-variant('.bg-xksv-op', rgba($theme-xksv-primary, .75));
-@include bg-variant('.bg-xksv-dark', $theme-xksv-dark);
-@include bg-variant('.bg-xksv-dark-op', rgba($theme-xksv-dark, .8));
-@include bg-variant('.bg-xksv-darker', $theme-xksv-darker);
-@include bg-variant('.bg-xksv-light', $theme-xksv-light);
-@include bg-variant('.bg-xksv-lighter', $theme-xksv-lighter);
-@include bg-gradient-variant-linear('.bg-gd-xksv', 125deg, $theme-xksv-primary, lighten($theme-xksv-primary, 15%));
+// @include bg-variant('.bg-xksv', $theme-xksv-primary);
+// @include bg-variant('.bg-xksv-op', rgba($theme-xksv-primary, .75));
+// @include bg-variant('.bg-xksv-dark', $theme-xksv-dark);
+// @include bg-variant('.bg-xksv-dark-op', rgba($theme-xksv-dark, .8));
+// @include bg-variant('.bg-xksv-darker', $theme-xksv-darker);
+// @include bg-variant('.bg-xksv-light', $theme-xksv-light);
+// @include bg-variant('.bg-xksv-lighter', $theme-xksv-lighter);
+// @include bg-gradient-variant-linear('.bg-gd-xksv', 125deg, $theme-xksv-primary, lighten($theme-xksv-primary, 15%));
+
+// xdsv Color Theme
+@include bg-variant('.bg-xdsv', $theme-xdsv-primary);
+@include bg-variant('.bg-xdsv-op', rgba($theme-xdsv-primary, .75));
+@include bg-variant('.bg-xdsv-dark', $theme-xdsv-dark);
+@include bg-variant('.bg-xdsv-dark-op', rgba($theme-xdsv-dark, .8));
+@include bg-variant('.bg-xdsv-darker', $theme-xdsv-darker);
+@include bg-variant('.bg-xdsv-light', $theme-xdsv-light);
+@include bg-variant('.bg-xdsv-lighter', $theme-xdsv-lighter);
+@include bg-gradient-variant-linear('.bg-gd-xdsv', 125deg, $theme-xdsv-primary, lighten($theme-xdsv-primary, 15%));

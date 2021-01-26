@@ -537,3 +537,52 @@ $theme-xksv-main-nav-link-dark-hover-bg:   darken($theme-xksv-sidebar-dark-bg, 8
 $theme-xksv-main-nav-submenu-dark-bg:      darken($theme-xksv-sidebar-dark-bg, 3%) !default;
 
 $theme-xksv-btn-alt-primary-bg:            $theme-xksv-lighter;
+
+//Test Dashboard
+
+$theme-xdsv-primary:                       #343a40 !default;
+$theme-xdsv-secondary:                     #FC8033 !default;
+$theme-xdsv-light:                         lighten($theme-xdsv-primary, 10%) !default;
+$theme-xdsv-lighter:                       lighten($theme-xdsv-light, 20%) !default;
+$theme-xdsv-dark:                          darken($theme-xdsv-primary, 12%) !default;
+$theme-xdsv-darker:                        darken($theme-xdsv-primary, 24%) !default;
+
+$theme-xdsv-body-bg:                       #f2f2f2 !default;
+$theme-xdsv-body-bg-dark:                  darken($theme-xdsv-body-bg, 4%) !default;
+$theme-xdsv-body-bg-light:                 lighten($theme-xdsv-body-bg, 2%) !default;
+
+$theme-xdsv-body-color:                    #574a49 !default;
+$theme-xdsv-body-color-dark:               #332c2b !default;
+$theme-xdsv-body-color-light:              $theme-xdsv-body-bg-dark !default;
+
+$theme-xdsv-link-color:                    $theme-xdsv-primary !default;
+$theme-xdsv-link-hover-color:              darken($theme-xdsv-primary, 20%) !default;
+
+$theme-xdsv-headings-color:                $theme-xdsv-body-color-dark !default;
+
+$theme-xdsv-input-btn-focus-color:         rgba($theme-xdsv-primary, .25) !default;
+$theme-xdsv-input-btn-focus-box-shadow:    0 0 0 $input-btn-focus-width $theme-xdsv-input-btn-focus-color !default;
+
+$theme-xdsv-input-bg:                      $white !default;
+$theme-xdsv-input-color:                   $theme-xdsv-body-color !default;
+$theme-xdsv-input-border-color:            darken($theme-xdsv-body-bg, 8%) !default;
+
+$theme-xdsv-input-focus-bg:                $white !default;
+$theme-xdsv-input-focus-color:             $theme-xdsv-body-color-dark !default;
+$theme-xdsv-input-focus-border-color:      lighten($theme-xdsv-primary, 25%) !default;
+
+$theme-xdsv-header-bg:                     $white !default;
+$theme-xdsv-header-dark-bg:                $theme-xdsv-primary !default;
+$theme-xdsv-sidebar-bg:                    $white !default;
+$theme-xdsv-sidebar-dark-bg:               #35393e !default;
+$theme-xdsv-side-overlay-bg:               $white !default;
+
+$theme-xdsv-main-nav-link-icon-color:      lighten($theme-xdsv-body-color, 20%) !default;
+$theme-xdsv-main-nav-link-hover-bg:        $theme-xdsv-body-bg-dark !default;
+$theme-xdsv-main-nav-submenu-bg:           $theme-xdsv-body-bg-light !default;
+
+$theme-xdsv-main-nav-link-icon-dark-color: rgba($white, .45) !default;
+$theme-xdsv-main-nav-link-dark-hover-bg:   darken($theme-xdsv-sidebar-dark-bg, 8%) !default;
+$theme-xdsv-main-nav-submenu-dark-bg:      darken($theme-xdsv-sidebar-dark-bg, 3%) !default;
+
+$theme-xdsv-btn-alt-primary-bg:            $theme-xdsv-lighter;

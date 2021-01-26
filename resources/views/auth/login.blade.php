@@ -10,7 +10,7 @@
                     <div class="mb-3 text-center">
                         <div class="mb-3 text-center">
                              <a>
-                                 <img src="storage/logo/logo.jpg" height="150">
+                                 <img src="storage/logo/welcome.gif" height="150">
                             </a>
                             <p class="text-uppercase font-w700 font-size-sm text-muted py-3">Log in</p>
                         </div>
@@ -60,12 +60,12 @@ Wanneer biedt dit voor jou toegevoegde waarde? Dat is wanneer je het leuk vindt 
             </div>
             <!-- END Main Section -->
             <!-- Meta Info Section -->
-            <div class="hero-static col-md-6 d-none d-md-flex align-items-md-center justify-content-md-center text-md-center bg-gd-xksv">
+            <div class="hero-static col-md-6 d-none d-md-flex align-items-md-center justify-content-md-center text-md-center bg-gd-xdsv">
                 <div class="p-3">
-                    <p class="display-4 font-w700 text-xksv-lighter mb-3">
+                    <p class="display-4 font-w700 text-xdsv-lighter mb-3">
                         Uw slogan hier!
                     </p>
-                    <p class="font-size-lg font-w600 text-xksv-lighter mb-0">
+                    <p class="font-size-lg font-w600 text-xdsv-lighter mb-0">
                         Copyright &copy; <span data-toggle="year-copy"></span>
                     </p>
                 </div>

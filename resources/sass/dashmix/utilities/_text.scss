@@ -121,8 +121,14 @@
 @include text-emphasis-variant('.text-xplay-light', $theme-xplay-light);
 @include text-emphasis-variant('.text-xplay-lighter', $theme-xplay-lighter);
 // xPlay Color Theme
-@include text-emphasis-variant('.text-xksv', $theme-xksv-primary);
-@include text-emphasis-variant('.text-xksv-dark', $theme-xksv-dark);
-@include text-emphasis-variant('.text-xksv-darker', $theme-xksv-darker);
-@include text-emphasis-variant('.text-xksv-light', $theme-xksv-light);
-@include text-emphasis-variant('.text-xksv-lighter', $theme-xksv-lighter);
+// @include text-emphasis-variant('.text-xksv', $theme-xksv-primary);
+// @include text-emphasis-variant('.text-xksv-dark', $theme-xksv-dark);
+// @include text-emphasis-variant('.text-xksv-darker', $theme-xksv-darker);
+// @include text-emphasis-variant('.text-xksv-light', $theme-xksv-light);
+// @include text-emphasis-variant('.text-xksv-lighter', $theme-xksv-lighter);
+// xdsv Color Theme
+@include text-emphasis-variant('.text-xdsv', $theme-xdsv-primary);
+@include text-emphasis-variant('.text-xdsv-dark', $theme-xdsv-dark);
+@include text-emphasis-variant('.text-xdsv-darker', $theme-xdsv-darker);
+@include text-emphasis-variant('.text-xdsv-light', $theme-xdsv-light);
+@include text-emphasis-variant('.text-xdsv-lighter', $theme-xdsv-lighter);
