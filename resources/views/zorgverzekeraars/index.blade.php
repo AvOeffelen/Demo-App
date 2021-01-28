@@ -27,49 +27,24 @@
             </div>
         </div>
        
-        <div class="row">
-            <div class="col-md-12 col-lg-2 col-xl-2 col-12 col-sm-12 col-xs-12 cols-12">
+        <div class="row content content-full text-center">
+            <div class="col-sm-6 col-lg-2">
             </div>
-            <div class="col-md-12 col-lg-8 col-xl-8 col-12 col-sm-12 col-xs-12">
-                <alinea class="text-center">
-                    <p>Voor onlinetrainingen waar je nooit genoeg van krijgt kun je gaan naar de omgeving van
-                        GoodHabitz. Je vindt hier van toffe documentaires tot interessante magazines en van inspirerende
-                        experts tot uitdagende opdrachten. Je luistert, kijkt of doet allen de onderdelen die passen bij
-                        jouw manier van leren. Alles mag, niets moet: je leert zoals jij dat wilt!
-                        <br />
-                        <br />
-                        Je moet op deze pagina eerst even inloggen en wanneer je dat nog niet hebt gedaan, eerst een
-                        account aanmaken. Dit is omdat er persoonlijke gegevens van je worden opgeslagen en om die
-                        gegevens te beveiligen is een inlog noodzakelijk.
-                        <br />
-                        <br />
-                        <b>LET OP:</b>
-                        
-                        Wanneer je al eerder hebt ingelogd lukt het je nu waarschijnlijk niet om in te loggen. Klik op wachtwoord vergeten en je kunt weer gewoon bij het aanbod van GoodHabitz.
-
-                        Heb je nog niet eerder een account aangemaakt dan willen wij je verzoeken om een mail te sturen naar <a href="mailto:samenvitaal@bravis.nl" target="_blank">samenvitaal@bravis.nl </a>
-                        Van een medewerker ontvang je dan een link om een account voor jezelf aan te maken.
-
-                        Mocht bovenstaande onduidelijk zijn en/of vragen oproepen, stuur dan een mail naar <a href="mailto:samenvitaal@bravis.nl" target="_blank">samenvitaal@bravis.nl </a>
-
-                    </p>
-                </alinea>
+            <div class="col-sm-6 col-lg-4">
+                <img src="storage/images/cz-tijdlijn.png" class="img-fluid">
+                <h5 class="py-4">VGZ</h5>
+                <P>Samen werken aan een gezonder Nederland. Dat is de missie van VGZ. Daarom juichen we u van harte toe als u uw gezondheid of leefstijl wilt verbeteren. Maar we zwaaien niet alleen vanaf de zijlijn. We helpen u ook graag. Met kwalitatief goede services waarmee u echt een verschil kunt maken. Waarmee u beter kunt ontspannen of optimistischer in het leven kunt staan. We zijn er voor iedereen. Ook als u prima gezond bent, want ook dan kunt u verbetering wensen. Succes met uw voornemens. We wensen u alle gezondheid toe.</P>
+                <a class="btn btn-primary" href="https://www.vgzvoordezorg.nl/gezond-leven" role="button">Ga naar VGZ</a>
             </div>
-            <div class="col-md-12 col-lg-2 col-xl-2 col-12 col-sm-12 col-xs-12 cols-12">
+            <div class="col-sm-6 col-lg-4">
+                <img src="storage/images/fitzme-tijdlijn.gif" class="img-fluid">
+                <h5 class="py-4">CZ</h5>
+                <p>Vitaliteit, gezondheid en leefstijl als inspiratie
+Het FitzMe portal is in de basis een platform dat bezoekers inspireert om de regie in eigen handen te nemen rondom thema's als vitaliteit, gezondheid en leefstijl.  De content inspireert en verleidt je tot gezonde keuzes.</p>
+                <a class="btn btn-primary" href="https://fitzme.nl/cz/home" role="button">Ga naar CZ</a>
             </div>
-        </div>
-        <div class="row py-5">
-            <div class="col-md-4 col-lg-4 col-xl-4 col-4 col-sm-4 col-xs-4">
+            <div class="col-sm-6 col-lg-2">
             </div>
-            <div class="col-md-4 col-lg-4 col-xl-4 col-4 col-sm-4 col-xs-4">
-                <div class="text-center">
-                    <a href="https://my.goodhabitz.com/nl-be/login.html" target="_blank" class="btn btn-primary">Ga naar
-                        GoodHabitz</a>
-                </div>
-            </div>
-            <div class="col-md-4 col-lg-4 col-xl-4 col-4 col-sm-4 col-xs-4">
-            </div>
-            <img class="goodhabitz-image" src="storage/images/GOODHABITZ_Bravis_KlantSamenVitaal.nl_V1.png" height="400">
         </div>
     </div>
 @endsection

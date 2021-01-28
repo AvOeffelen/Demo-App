@@ -31,6 +31,12 @@
             </a>
         </li>
         <li class="nav-main-item">
+            <a class="nav-main-link" href="{{route('zorgverzekeraars')}}">
+                <i class="nav-main-link-icon fa fa-info"></i>
+                <span class="nav-main-link-name">Aanbod Zorgverzekeraars</span>
+            </a>
+        </li>
+        <li class="nav-main-item">
             <a class="nav-main-link" href="{{route('faq')}}">
                 <i class="nav-main-link-icon fa fa-question"></i>
                 <span class="nav-main-link-name">FAQ</span>
