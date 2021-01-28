@@ -78,8 +78,8 @@
                                                     {{category.workshop[0].start}}
                                                 </i>
                                             </div>
-                                            <img src="/storage/images/test-icon.png" class="left-50 top-10" v-if="category.display_name == 'Fysieke vitaliteit'" >
-                                            <img src="/storage/images/test-icon1.png" class="left-50 top-10" v-if="category.display_name == 'Mentale vitaliteit'" >
+                                            <img src="/storage/images/test-icon.png" class="left-50 top-10" v-if="category.display_name == 'Gezondheid en vitaliteit'" >
+                                            <img src="/storage/images/test-icon1.png" class="left-50 top-10" v-if="category.display_name == 'Motivatie en betrokkenheid'" >
                                         </div>
                                         
                                     </a>
