@@ -71,14 +71,17 @@
                                             <div class="ribbon-box">
                                                 {{ category.display_name }}
                                             </div>
+                                            
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[0].title}}</h3>
                                                 <i class="fa fa-calendar appointment-date text-white" aria-hidden="true" v-if="category.workshop[0].start !== null">
                                                     {{category.workshop[0].start}}
                                                 </i>
                                             </div>
-
+                                            <img src="/storage/images/test-icon.png" class="left-50 top-10" v-if="category.display_name == 'Fysieke vitaliteit'" >
+                                            <img src="/storage/images/test-icon1.png" class="left-50 top-10" v-if="category.display_name == 'Mentale vitaliteit'" >
                                         </div>
+                                        
                                     </a>
                                     <div v-if="category.workshop[1]">
                                         <a class="block block-transparent bg-image h-286"

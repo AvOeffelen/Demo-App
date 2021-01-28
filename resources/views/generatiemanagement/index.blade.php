@@ -26,6 +26,7 @@
             
             </div>
         </div>
+        
         <div class="row content content-full text-center">
             <div class="col-sm-6 col-lg-2">
             </div>
