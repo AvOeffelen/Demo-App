@@ -34,14 +34,14 @@
                 <img src="storage/images/cz-tijdlijn.png" class="img-fluid">
                 <h5 class="py-4">VGZ</h5>
                 <P>Samen werken aan een gezonder Nederland. Dat is de missie van VGZ. Daarom juichen we u van harte toe als u uw gezondheid of leefstijl wilt verbeteren. Maar we zwaaien niet alleen vanaf de zijlijn. We helpen u ook graag. Met kwalitatief goede services waarmee u echt een verschil kunt maken. Waarmee u beter kunt ontspannen of optimistischer in het leven kunt staan. We zijn er voor iedereen. Ook als u prima gezond bent, want ook dan kunt u verbetering wensen. Succes met uw voornemens. We wensen u alle gezondheid toe.</P>
-                <a class="btn btn-primary" href="https://www.vgzvoordezorg.nl/gezond-leven" role="button">Ga naar VGZ</a>
+                <a class="btn btn-primary" href="https://www.vgzvoordezorg.nl/gezond-leven" role="button" target="_blank">Ga naar VGZ</a>
             </div>
             <div class="col-sm-6 col-lg-4">
                 <img src="storage/images/fitzme-tijdlijn.gif" class="img-fluid">
                 <h5 class="py-4">CZ</h5>
                 <p>Vitaliteit, gezondheid en leefstijl als inspiratie
 Het FitzMe portal is in de basis een platform dat bezoekers inspireert om de regie in eigen handen te nemen rondom thema's als vitaliteit, gezondheid en leefstijl.  De content inspireert en verleidt je tot gezonde keuzes.</p>
-                <a class="btn btn-primary" href="https://fitzme.nl/cz/home" role="button">Ga naar CZ</a>
+                <a class="btn btn-primary" href="https://fitzme.nl/cz/home" role="button" target="_blank">Ga naar CZ</a>
             </div>
             <div class="col-sm-6 col-lg-2">
             </div>
