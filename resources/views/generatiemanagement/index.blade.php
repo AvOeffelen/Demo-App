@@ -30,12 +30,16 @@
             <div class="col-sm-6 col-lg-2">
             </div>
             <div class="col-sm-6 col-lg-4">
-                <img src="storage/images/gezondheid&vitaliteit-thema.png" class="img-fluid">
+                <a href="workshop">
+                    <img src="storage/images/gezondheid&vitaliteit-thema.png" class="img-fluid">
+                </a>
                 <h5>Gezondheid en vitaliteit</h5>
                 <p>Bij gezondheid en vitaliteit gaat het over jouw beleving over je eigen gezondheid en energieniveau. Ook geeft het aan in welke mate je zowel lichamelijk als geestelijk aan de eisen van het werk kan voldoen.  </p>
             </div>
             <div class="col-sm-6 col-lg-4">
-                <img src="storage/images/motivatie&betrokkenheid-thema.png" class="img-fluid">
+                <a href="workshop">
+                    <img src="storage/images/motivatie&betrokkenheid-thema.png" class="img-fluid">
+                </a>
                 <h5>Motivatie en betrokkenheid</h5>
                 <p>Bij motivatie en betrokkenheid gaat het om de dingen die ervoor zorgen dat jij bepaalde dingen doet. Betrokkenheid onderscheidt zich in je betrokkenheid bij Gelre en bij je functie of je rol die je vervult.</p>
             </div>
@@ -46,12 +50,16 @@
             <div class="col-sm-6 col-lg-2">
             </div>
             <div class="col-sm-6 col-lg-4">
-                <img src="storage/images/ontwikkeling-thema.png" class="img-fluid">
+                <a href="workshop">
+                    <img src="storage/images/ontwikkeling-thema.png" class="img-fluid">
+                </a>
                 <h5>Ontwikkeling</h5>
                 <p>Bij het thema ontwikkeling gaat het om het beschikken over de juiste kennis en vaardigheden, het benutten van je talenten en capaciteiten. Bij het thema ontwikkeling gaat het om je "persoonlijke ontwikkeling'' en niet de beroeps gebonden (en verplichte) competenties en vaardigheden cq. bekwaamheden.  </p>
             </div>
             <div class="col-sm-6 col-lg-4">
-                <img src="storage/images/wendbaarheid-thema.png" class="img-fluid">
+                <a href="workshop">
+                    <img src="storage/images/wendbaarheid-thema.png" class="img-fluid">
+                </a>
                 <h5>Wendbaarheid</h5>
                 <p>Bij wendbaarheid gaat het om de manier waarop je in staat bent om te gaan met veranderingen. Kun je meebewegen met de veranderingen die op je afkomen? En ben je bereid om van functie of baan te veranderen.</p>
             </div>
