@@ -26,20 +26,32 @@
                 <div class="col-sm-6 col-lg-2">
                 </div>
                 <div class="col-sm-6 col-lg-4">
-                    <img src="/storage/images/Goodhabitz1.jpg" class="img-fluid">
+                    <a href="https://my.goodhabitz.com/nl-be/login.html" target="_blank">
+                        <p>Onderstaand vind je online trainingen in relatie tot Gezondheid en vitaliteit</p>
+                        <img src="/storage/images/Goodhabitz1.jpg" class="img-fluid">
+                    </a>
                 </div>
                 <div class="col-sm-6 col-lg-4">
-                    <img src="/storage/images/Goodhabitz2.jpg" class="img-fluid">
+                    <a href="https://my.goodhabitz.com/nl-be/login.html" target="_blank">
+                        <p>Onderstaand vind je online trainingen in relatie tot Motivatie en betrokkenheid</p>
+                        <img src="/storage/images/Goodhabitz2.jpg" class="img-fluid">
+                    </a>
                 </div>
                 <div class="col-sm-6 col-lg-2">
                 </div>
                 <div class="col-sm-6 col-lg-2">
                 </div>
                 <div class="col-sm-6 col-lg-4">
-                    <img src="/storage/images/Goodhabitz3.jpg" class="img-fluid">
+                    <a href="https://my.goodhabitz.com/nl-be/login.html" target="_blank">
+                        <p>Onderstaand vind je online trainingen in relatie tot Ontwikkeling</p>
+                        <img src="/storage/images/Goodhabitz3.jpg" class="img-fluid">
+                    </a>
                 </div>
                 <div class="col-sm-6 col-lg-4">
-                    <img src="/storage/images/Goodhabitz4.jpg" class="img-fluid">
+                    <a href="https://my.goodhabitz.com/nl-be/login.html" target="_blank">
+                        <p>Onderstaand vind je online trainingen in relatie tot Wendbaarheid</p>
+                        <img src="/storage/images/Goodhabitz4.jpg" class="img-fluid">
+                    </a>
                 </div>
                 <div class="col-sm-6 col-lg-2">
                 </div>
