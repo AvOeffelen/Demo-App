@@ -7,10 +7,10 @@
                             <img class="img-avatar img-avatar96 img-avatar-thumb"
                                 v-bind:src="'https://eu.ui-avatars.com/api/?name='+user.firstname+'+'+user.infix+'+'+user.lastname+'?size=128?bold=true?color=FFFFFF'"
                                 alt="">
-                            <div class="file btn btn-lg btn-primary">
+                            <!-- <div class="file btn btn-lg btn-primary">
                                 Change Photo
                                 <input type="file" name="file"/>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -32,7 +32,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <a class="btn btn-primary profile-edit-btn text-right" href="#" role="button" >Edit Profile</a>
+                        <!-- <a class="btn btn-primary profile-edit-btn text-right" href="#" role="button" >Edit Profile</a> -->
                     </div>
                 </div>
                 <div class="row">
@@ -71,8 +71,8 @@
                                     </div>
                                 </div>
                                 <hr>
-                                <label class="py-2">Your Bio</label><br/>
-                                <p>Your detail description</p>
+                                <!-- <label class="py-2">Your Bio</label><br/>
+                                <p>Your detail description</p> -->
                             </div>
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                 <div class="row">
