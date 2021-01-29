@@ -1,114 +1,130 @@
 <template>
-    <div>
-<div class="container test color-white">
-    <div class="main-body">
-          <div class="row gutters-sm">
-            <div class="col-md-4 mb-3 test">
-              <div class="card">
-                <div class="card-body">
-                  <div class="d-flex flex-column align-items-center text-center">
-                      <a class="img-link">
-                        <img class="img-avatar img-avatar96 img-avatar-thumb"
+<div class="container emp-profile">
+            <form method="post">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-img">
+                            <img class="img-avatar img-avatar96 img-avatar-thumb"
                                 v-bind:src="'https://eu.ui-avatars.com/api/?name='+user.firstname+'+'+user.infix+'+'+user.lastname+'?size=128?bold=true?color=FFFFFF'"
                                 alt="">
-                        </a>
-                    <div class="mt-3">
-                      <h4>{{user.firstname}} {{user.lastname}}</h4>
-                      <p class="text-secondary mb-1">Medewerkerr</p>
-                    </div>
-                 </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-8">
-              <div class="card mb-3">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Naam</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                      {{user.firstname}} {{user.lastname}}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Email</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                      {{user.email}}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Geboorte Datum</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                      12-11-1996
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Dummy text</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                      Lorem ipsum
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
-
-
-        <div class="content content-full content-boxed">
-            <h2 class="content-heading">
-                <i class="si si-star mr-1"></i> Mijn favoriete workshops
-            </h2>
-            <div v-if="loading">
-                <b-row>
-                    <b-col class="text-center">
-                        <b-spinner
-                            style="width: 3rem; height: 3rem;"
-                            variant="primary"
-                            type="grow"
-                        ></b-spinner>
-                    </b-col>
-                </b-row>
-            </div>
-            <div v-else>
-                <b-row>
-                    <b-col cols="12" sm="12" md="6" xl="4" lg="4" v-for="(workshop,index) in this.workshops" :key="index">
-                        <div class="block block-rounded text-center">
-                            <div class="block-content block-content-full bg-image"
-                                 v-bind:style="[workshop.image_name ?
-                                    {'background': 'url(' +'../../'+ workshop.image_name + ') center'} :
-                                     {'background-image': 'url('+ default_image +')'},
-                                     {'background-size': 'cover'}
-                                     ]"
-                                 style="height: 250px;">
-                            </div>
-                            <div class="block-content block-content-full block-content-sm bg-body-light">
-                                <div class="font-w600">{{ workshop.title }}</div>
-                            </div>
-                            <div class="block-content block-content-full">
-                                <a class="btn btn-sm btn-light" v-bind:href="`/workshop/${workshop.id}/show`">
-                                    <i class="fa fa-search text-muted mr-1"></i> Bekijk
-                                </a>
+                            <div class="file btn btn-lg btn-primary">
+                                Change Photo
+                                <input type="file" name="file"/>
                             </div>
                         </div>
-                    </b-col>
-                </b-row>
-            </div>
-
+                    </div>
+                    <div class="col-md-6">
+                        <div class="profile-head">
+                                    <h5>
+                                      {{user.firstname}} {{user.lastname}}
+                                    </h5>
+                                    <h6>
+                                        {{user.type}}
+                                    </h6>
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Over</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Workshops</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <a class="btn btn-primary profile-edit-btn" href="#" role="button" >Edit Profile</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-work">
+                            <b>{{user.type}}</b>
+                            <hr>
+                            <b>Bravis Samen Vitaal</b>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Naam</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{user.firstname}} {{user.lastname}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Email</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{user.email}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Geslacht</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <label class="py-2">Your Bio</label><br/>
+                                <p>Your detail description</p>
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        
+                                        <h2 class="content-heading">
+                                            <i class="si si-star mr-1"></i> Mijn favoriete workshops
+                                        </h2>
+                                      <div v-if="loading">
+                                          <b-row>
+                                              <b-col class="text-center">
+                                                  <b-spinner
+                                                      style="width: 3rem; height: 3rem;"
+                                                      variant="primary"
+                                                      type="grow"
+                                                  ></b-spinner>
+                                              </b-col>
+                                          </b-row>
+                                      </div>
+                                      <b-row>
+                                          <b-col cols="12" sm="12" md="6" xl="4" lg="4" v-for="(workshop,index) in this.workshops" :key="index">
+                                              <div class="block block-rounded text-center">
+                                                  <div class="block-content block-content-full bg-image"
+                                                      v-bind:style="[workshop.image_name ?
+                                                          {'background': 'url(' +'../../'+ workshop.image_name + ') center'} :
+                                                          {'background-image': 'url('+ default_image +')'},
+                                                          {'background-size': 'cover'}
+                                                          ]"
+                                                      style="height: 250px;">
+                                                  </div>
+                                                  <div class="block-content block-content-full block-content-sm bg-body-light">
+                                                      <div class="font-w600">{{ workshop.title }}</div>
+                                                  </div>
+                                                  <div class="block-content block-content-full">
+                                                      <a class="btn btn-sm btn-light" v-bind:href="`/workshop/${workshop.id}/show`">
+                                                          <i class="fa fa-search text-muted mr-1"></i> Bekijk
+                                                      </a>
+                                                  </div>
+                                              </div>
+                                          </b-col>
+                                      </b-row>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>           
         </div>
-
-    </div>
+    
+            
+        
 </template>
 
 <script>
