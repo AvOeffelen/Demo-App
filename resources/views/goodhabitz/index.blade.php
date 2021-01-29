@@ -24,23 +24,14 @@
             <div class="col-sm-6 col-lg-2">
             </div>
             <div class="col-sm-6 col-lg-4">
-                <img src="/storage/images/goodhabitz1.jpg" class="img-fluid">
+                <img src="/storage/images/goodhabitz-left.png" class="img-fluid">
             </div>
             <div class="col-sm-6 col-lg-4">
-                <img src="/storage/images/goodhabitz2.jpg" class="img-fluid">
+                <img src="/storage/images/goodhabitz-right.png" class="img-fluid">
             </div>
             <div class="col-sm-6 col-lg-2">
             </div>
-            <div class="col-sm-6 col-lg-2">
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <img src="/storage/images/goodhabitz3.jpg" class="img-fluid">
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <img src="/storage/images/goodhabitz4.jpg" class="img-fluid">
-            </div>
-            <div class="col-sm-6 col-lg-2">
-            </div>
+            
         </div>
         </div>
         
