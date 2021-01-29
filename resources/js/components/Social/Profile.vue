@@ -32,7 +32,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <a class="btn btn-primary profile-edit-btn" href="#" role="button" >Edit Profile</a>
+                        <a class="btn btn-primary profile-edit-btn text-right" href="#" role="button" >Edit Profile</a>
                     </div>
                 </div>
                 <div class="row">

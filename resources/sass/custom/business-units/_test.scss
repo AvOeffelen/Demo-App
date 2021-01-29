@@ -3,9 +3,7 @@ main#main-container{
 }
 
 .emp-profile{
-    margin-bottom: 3%;
     border-radius: 0.5rem;
-    background: #fff;
 }
 .profile-img{
     text-align: center;
@@ -15,19 +13,16 @@ main#main-container{
     height: 100%;
 }
 .profile-img .file {
-    position: relative;
-    overflow: hidden;
-    margin-top: 0%;
+    // position: relative;
+    // overflow: hidden;
     width: 70%;
     border: none;
     border-radius: 0;
     font-size: 15px;
-    background: #212529b8;
 }
 .profile-img .file input {
     position: absolute;
     opacity: 0;
-    right: 0;
     top: 0;
 }
 .profile-head h5{
@@ -37,13 +32,7 @@ main#main-container{
     color: #0062cc;
 }
 .profile-edit-btn{
-    border: none;
     border-radius: 1.5rem;
-    width: 70%;
-    padding: 2%;
-    font-weight: 600;
-    color: #6c757d;
-    cursor: pointer;
 }
 .proile-rating{
     font-size: 12px;
