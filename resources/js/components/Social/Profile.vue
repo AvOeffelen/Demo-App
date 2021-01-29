@@ -40,7 +40,7 @@
                         <div class="profile-work">
                             <b>{{user.type}}</b>
                             <hr>
-                            <b>Bravis Samen Vitaal</b>
+                            <b>Gelre Energiek</b>
                         </div>
                     </div>
                     <div class="col-md-8">
