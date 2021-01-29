@@ -20,12 +20,28 @@
                 <a href="javascript:history.back()" class="btn btn-primary">Terug</a>
             </div>
             
-            <div class="col-md-12 col-lg-8 col-xl-8 col-12 col-sm-12 col-xs-12">
-                <img src="/storage/images/slider-good-habitz.png" class="img-fluid" alt="">
-                <h3 class="py-5">GoodHabitz</h3>
+            <div class="row content content-full text-center">
+            <div class="col-sm-6 col-lg-2">
             </div>
-            <div class="col-md-12 col-lg-2 col-xl-2 col-12 col-sm-12 col-xs-12 cols-12">
+            <div class="col-sm-6 col-lg-4">
+                <img src="/storage/images/goodhabitz1.jpg" class="img-fluid">
             </div>
+            <div class="col-sm-6 col-lg-4">
+                <img src="/storage/images/goodhabitz2.jpg" class="img-fluid">
+            </div>
+            <div class="col-sm-6 col-lg-2">
+            </div>
+            <div class="col-sm-6 col-lg-2">
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <img src="/storage/images/goodhabitz3.jpg" class="img-fluid">
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <img src="/storage/images/goodhabitz4.jpg" class="img-fluid">
+            </div>
+            <div class="col-sm-6 col-lg-2">
+            </div>
+        </div>
         </div>
         
         <div class="row">
@@ -59,18 +75,7 @@
             </div>
         </div>
 
-        <div class="row content content-full text-center">
-            <div class="col-sm-6 col-lg-2">
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <img src="/storage/images/goodhabitz-left.png" class="img-fluid">
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <img src="/storage/images/goodhabitz-right.png" class="img-fluid">
-            </div>
-            <div class="col-sm-6 col-lg-2">
-            </div>
-        </div>
+       
        
         
        
