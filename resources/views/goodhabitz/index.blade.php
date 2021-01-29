@@ -19,22 +19,33 @@
 
                 <a href="javascript:history.back()" class="btn btn-primary">Terug</a>
             </div>
-            
+            <div class="col-md-12 col-lg-8 col-xl-8 col-12 col-sm-12 col-xs-12">
+                <h3 class="py-5">GoodHabitz</h3>
+            </div>
             <div class="row content content-full text-center">
-            <div class="col-sm-6 col-lg-2">
+                <div class="col-sm-6 col-lg-2">
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <img src="/storage/images/Goodhabitz1.jpg" class="img-fluid">
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <img src="/storage/images/Goodhabitz2.jpg" class="img-fluid">
+                </div>
+                <div class="col-sm-6 col-lg-2">
+                </div>
+                <div class="col-sm-6 col-lg-2">
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <img src="/storage/images/Goodhabitz3.jpg" class="img-fluid">
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <img src="/storage/images/Goodhabitz4.jpg" class="img-fluid">
+                </div>
+                <div class="col-sm-6 col-lg-2">
+                </div>
             </div>
-            <div class="col-sm-6 col-lg-4">
-                <img src="/storage/images/goodhabitz-left.png" class="img-fluid">
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <img src="/storage/images/goodhabitz-right.png" class="img-fluid">
-            </div>
-            <div class="col-sm-6 col-lg-2">
-            </div>
-            
         </div>
-        </div>
-        
+
         <div class="row">
             <div class="col-md-12 col-lg-2 col-xl-2 col-12 col-sm-12 col-xs-12 cols-12">
             </div>
@@ -65,10 +76,5 @@
             <div class="col-md-4 col-lg-4 col-xl-4 col-4 col-sm-4 col-xs-4">
             </div>
         </div>
-
-       
-       
-        
-       
     </div>
 @endsection
