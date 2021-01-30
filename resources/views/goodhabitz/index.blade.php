@@ -26,36 +26,6 @@
             <p>Gelre Energiek is opgebouwd en onderverdeeld in 4 thema's. (deze zijn ook terug te vinden in de menubalk onder "thema's)
 Elk thema wordt aangeduid met een logo.</p>
             </div>
-        <div class="row content content-full text-center">
-            <div class="col-sm-6 col-lg-2">
-            </div>
-            <div class="col-sm-6 col-lg-2">
-                <a href="workshop">
-                    <img src="storage/images/gezondheid&vitaliteit-thema.png" class="img-fluid" width="100" height="100">
-                </a>
-                <h5>Gezondheid en vitaliteit</h5>
-            </div>
-            <div class="col-sm-6 col-lg-2">
-                <a href="workshop">
-                    <img src="storage/images/motivatie&betrokkenheid-thema.png" class="img-fluid" width="100" height="100">
-                </a>
-                <h5>Motivatie en betrokkenheid</h5>
-            </div>
-            <div class="col-sm-6 col-lg-2">
-                <a href="workshop">
-                    <img src="storage/images/ontwikkeling-thema.png" class="img-fluid" width="100" height="100">
-                </a>
-                <h5>Ontwikkeling</h5>
-            </div>
-            <div class="col-sm-6 col-lg-2">
-                <a href="workshop">
-                    <img src="storage/images/wendbaarheid-thema.png" class="img-fluid" width="100" height="100">
-                </a>
-                <h5>Wendbaarheid</h5>
-            </div>
-            <div class="col-sm-6 col-lg-2">
-            </div>
-        </div>
         <div class="col-12">
         <p>Per thema hebben wij voor jou inzichtelijk gemaakt welke online trainingen je in GoodHabitz terug kunt vinden.</p>
         </div>
@@ -63,14 +33,14 @@ Elk thema wordt aangeduid met een logo.</p>
                 <div class="col-sm-6 col-lg-2">
                 </div>
                 <div class="col-sm-6 col-lg-4">
+                    <img src="storage/images/gezondheid&vitaliteit-thema.png" class="img-fluid" width="100" height="100">
                     <a href="https://my.goodhabitz.com/nl-be/login.html" target="_blank">
-                        <p>Onderstaand vind je online trainingen in relatie tot Gezondheid en vitaliteit</p>
                         <img src="/storage/images/Goodhabitz2.jpg" class="img-fluid">
                     </a>
                 </div>
                 <div class="col-sm-6 col-lg-4">
+                    <img src="storage/images/motivatie&betrokkenheid-thema.png" class="img-fluid" width="100" height="100">
                     <a href="https://my.goodhabitz.com/nl-be/login.html" target="_blank">
-                        <p>Onderstaand vind je online trainingen in relatie tot Motivatie en betrokkenheid</p>
                         <img src="/storage/images/Goodhabitz3.jpg" class="img-fluid">
                     </a>
                 </div>
@@ -79,15 +49,15 @@ Elk thema wordt aangeduid met een logo.</p>
                 <div class="col-sm-6 col-lg-2">
                 </div>
                 <div class="col-sm-6 col-lg-4">
+                    <img src="storage/images/ontwikkeling-thema.png" class="img-fluid" width="100" height="100">
                     <a href="https://my.goodhabitz.com/nl-be/login.html" target="_blank">
-                        <p>Onderstaand vind je online trainingen in relatie tot Ontwikkeling</p>
-                        <img src="/storage/images/Goodhabitz4.jpg" class="img-fluid">
+                        <img src="/storage/images/Goodhabitz1.jpg" class="img-fluid">
                     </a>
                 </div>
                 <div class="col-sm-6 col-lg-4">
+                    <img src="storage/images/wendbaarheid-thema.png" class="img-fluid" width="100" height="100">
                     <a href="https://my.goodhabitz.com/nl-be/login.html" target="_blank">
-                        <p>Onderstaand vind je online trainingen in relatie tot Wendbaarheid</p>
-                        <img src="/storage/images/Goodhabitz1.jpg" class="img-fluid">
+                        <img src="/storage/images/Goodhabitz4.jpg" class="img-fluid">
                     </a>
                 </div>
                 <div class="col-sm-6 col-lg-2">
