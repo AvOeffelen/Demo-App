@@ -26,4 +26,10 @@
     <div class="content content-boxed">
         <dashboard></dashboard>
     </div>
+    <script SameSite="None; Secure" src="https://static.landbot.io/landbot-3/landbot-3.0.0.js"></script>
+<script>
+  var myLandbot = new Landbot.Livechat({
+    configUrl: 'https://chats.landbot.io/v3/H-811640-D7HQSOA217FRMLA7/index.json',
+  });
+</script>
 @endsection
