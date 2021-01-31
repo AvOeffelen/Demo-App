@@ -34,12 +34,14 @@ Elk thema wordt aangeduid met een logo.</p>
                 </div>
                 <div class="col-sm-6 col-lg-4">
                     <img src="storage/images/gezondheid&vitaliteit-thema.png" class="img-fluid" width="100" height="100">
+                    <p>Gezondheid en vitaliteit</p>
                     <a href="https://my.goodhabitz.com/nl-be/login.html" target="_blank">
                         <img src="/storage/images/Goodhabitz2.jpg" class="img-fluid">
                     </a>
                 </div>
                 <div class="col-sm-6 col-lg-4">
                     <img src="storage/images/motivatie&betrokkenheid-thema.png" class="img-fluid" width="100" height="100">
+                    <p>Motivatie en betrokkenheid</p>
                     <a href="https://my.goodhabitz.com/nl-be/login.html" target="_blank">
                         <img src="/storage/images/Goodhabitz3.jpg" class="img-fluid">
                     </a>
@@ -50,12 +52,14 @@ Elk thema wordt aangeduid met een logo.</p>
                 </div>
                 <div class="col-sm-6 col-lg-4">
                     <img src="storage/images/ontwikkeling-thema.png" class="img-fluid" width="100" height="100">
+                    <p>Ontwikkeling</p>
                     <a href="https://my.goodhabitz.com/nl-be/login.html" target="_blank">
                         <img src="/storage/images/Goodhabitz1.jpg" class="img-fluid">
                     </a>
                 </div>
                 <div class="col-sm-6 col-lg-4">
                     <img src="storage/images/wendbaarheid-thema.png" class="img-fluid" width="100" height="100">
+                    <p>Wendbaarheid</p>
                     <a href="https://my.goodhabitz.com/nl-be/login.html" target="_blank">
                         <img src="/storage/images/Goodhabitz4.jpg" class="img-fluid">
                     </a>
