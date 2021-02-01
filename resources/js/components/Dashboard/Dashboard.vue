@@ -6,12 +6,14 @@
         <dashboard-without-ribbon v-else-if="selected === 2"></dashboard-without-ribbon>
         <dashboard-with-round-corners v-else-if="selected === 3"></dashboard-with-round-corners>
         <dashboard-with-own-foto v-else-if="selected === 4"></dashboard-with-own-foto>
+        <dashboard-with-hexagon v-else-if="selected === 5"></dashboard-with-hexagon>
         <default-dashboard v-else></default-dashboard>
     </div>
 </template>
 
 <script>
 
+import DashboardWithHexagon from './DashboardWithHexagon.vue';
 import DashboardWithoutRibbon from './DashboardWithoutRibbon.vue';
 import DashboardWithRoundCorners from './DashboardWithRoundCorners.vue';
 import DashboardWithoutText from './DashboardWithoutText.vue';
@@ -20,7 +22,7 @@ import DefaultDashboard from './DefaultDashboard.vue';
 
 
 export default {
-  components: { DashboardWithoutRibbon ,DashboardWithoutText, DefaultDashboard, DashboardWithOwnFoto, DashboardWithRoundCorners },
+  components: { DashboardWithoutRibbon ,DashboardWithoutText, DefaultDashboard, DashboardWithOwnFoto, DashboardWithRoundCorners,DashboardWithHexagon },
     name: "Dashboard",
     data() {
         return {
@@ -32,6 +34,7 @@ export default {
                 { value: 2, text: 'Dashboard foto zonder ribbon met titel' },
                 { value: 3, text: 'Dashboard met afgeronde hoeken' },
                 { value: 4, text: 'Dashboard met uw eigen foto' },
+                { value: 5, text: 'Dashboard met Hexagon' },
             ]
         };
     },
