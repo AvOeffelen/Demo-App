@@ -37,6 +37,10 @@
                                 <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                     <div class="ribbon-box">
                                         {{ workshop.category.display_name }}
+                                        <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 1" >
+                                        <img src="/storage/images/motivatie-betrokkenheid-28.png" class="mt-4" v-if="category.id == 2" >
+                                        <img src="/storage/images/ontwikkeling-28.png" class="mt-4" v-if="category.id == 3" >
+                                        <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 7" >
                                     </div>
                                     <div class="pt-4 pb-6 px-md-3">
                                         <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{ workshop.title }}</h3>
@@ -71,9 +75,9 @@
                                             <div class="ribbon-box">
                                                 {{ category.display_name }} 
                                                 <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 1" >
-                                                <img src="/storage/images/motivatie-betrokkenheid-28.png"class="mt-4" v-if="category.id == 2" >
+                                                <img src="/storage/images/motivatie-betrokkenheid-28.png" class="mt-4" v-if="category.id == 2" >
                                                 <img src="/storage/images/ontwikkeling-28.png" class="mt-4" v-if="category.id == 3" >
-                                                <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 4" >
+                                                <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 7" >
                                             </div>
                                             
                                             <div class="pt-4 pb-6 px-md-3">
@@ -100,9 +104,9 @@
                                                 <div class="ribbon-box">
                                                     {{ category.display_name }}
                                                     <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 1" >
-                                                    <img src="/storage/images/motivatie-betrokkenheid-28.png"class="mt-4" v-if="category.id == 2" >
+                                                    <img src="/storage/images/motivatie-betrokkenheid-28.png" class="mt-4" v-if="category.id == 2" >
                                                     <img src="/storage/images/ontwikkeling-28.png" class="mt-4" v-if="category.id == 3" >
-                                                    <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 4" >
+                                                    <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 7" >
                                                 </div>
                                                 <div class="pt-4 pb-6 px-md-3">
                                                     <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[1].title}}</h3>
@@ -129,9 +133,9 @@
                                             <div class="ribbon-box">
                                                 {{ category.display_name }}
                                                 <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 1" >
-                                                <img src="/storage/images/motivatie-betrokkenheid-28.png"class="mt-4" v-if="category.id == 2" >
+                                                <img src="/storage/images/motivatie-betrokkenheid-28.png" class="mt-4" v-if="category.id == 2" >
                                                 <img src="/storage/images/ontwikkeling-28.png" class="mt-4" v-if="category.id == 3" >
-                                                <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 4" >
+                                                <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 7" >
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[2].title}}</h3>
@@ -155,9 +159,9 @@
                                                 <div class="ribbon-box">
                                                     {{ category.display_name }}
                                                     <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 1" >
-                                                    <img src="/storage/images/motivatie-betrokkenheid-28.png"class="mt-4" v-if="category.id == 2" >
+                                                    <img src="/storage/images/motivatie-betrokkenheid-28.png" class="mt-4" v-if="category.id == 2" >
                                                     <img src="/storage/images/ontwikkeling-28.png" class="mt-4" v-if="category.id == 3" >
-                                                    <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 4" >
+                                                    <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 7" >
                                                 </div>
                                                 <div class="pt-4 pb-6 px-md-3">
                                                     <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[3].title}}</h3>
@@ -183,9 +187,9 @@
                                             <div class="ribbon-box">
                                                 {{ category.display_name }}
                                                 <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 1" >
-                                                <img src="/storage/images/motivatie-betrokkenheid-28.png"class="mt-4" v-if="category.id == 2" >
+                                                <img src="/storage/images/motivatie-betrokkenheid-28.png" class="mt-4" v-if="category.id == 2" >
                                                 <img src="/storage/images/ontwikkeling-28.png" class="mt-4" v-if="category.id == 3" >
-                                                <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 4" >
+                                                <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 7" >
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[4].title}}</h3>
@@ -210,9 +214,9 @@
                                             <div class="ribbon-box">
                                                 {{ category.display_name }}
                                                 <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 1" >
-                                                <img src="/storage/images/motivatie-betrokkenheid-28.png"class="mt-4" v-if="category.id == 2" >
+                                                <img src="/storage/images/motivatie-betrokkenheid-28.png" class="mt-4" v-if="category.id == 2" >
                                                 <img src="/storage/images/ontwikkeling-28.png" class="mt-4" v-if="category.id == 3" >
-                                                <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 4" >
+                                                <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 7" >
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[5].title}}</h3>
@@ -237,9 +241,9 @@
                                             <div class="ribbon-box">
                                                 {{ category.display_name }}
                                                 <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 1" >
-                                                <img src="/storage/images/motivatie-betrokkenheid-28.png"class="mt-4" v-if="category.id == 2" >
+                                                <img src="/storage/images/motivatie-betrokkenheid-28.png" class="mt-4" v-if="category.id == 2" >
                                                 <img src="/storage/images/ontwikkeling-28.png" class="mt-4" v-if="category.id == 3" >
-                                                <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 4" >
+                                                <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 7" >
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[6].title}}</h3>
@@ -271,9 +275,9 @@
                                             <div class="ribbon-box">
                                                 {{ category.display_name }}
                                                 <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 1" >
-                                                <img src="/storage/images/motivatie-betrokkenheid-28.png"class="mt-4" v-if="category.id == 2" >
+                                                <img src="/storage/images/motivatie-betrokkenheid-28.png" class="mt-4" v-if="category.id == 2" >
                                                 <img src="/storage/images/ontwikkeling-28.png" class="mt-4" v-if="category.id == 3" >
-                                                <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 4" >
+                                                <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 7" >
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{ workshop.title }}</h3>
