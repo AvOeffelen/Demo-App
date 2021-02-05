@@ -217,4 +217,50 @@ class ArticleController extends Controller
         $articles = Article::whereIn('category_id',['2','3','4'])->With('category')->get();
         return response()->json(['data' => $articles]);
     }
+
+    /**
+     * @param Article $article
+     *
+     * @return bool
+     */
+    public function checkIfUserHasLiked(Article $article): bool
+    {
+        return $article->userFavorites->contains(auth()->user());
+    }
+
+
+    /**
+     * @param Article $article
+     *
+     * @return bool
+     */
+    public function like(Article $article): bool
+    {
+        $user = auth()->user();
+        $article->userFavorites()->attach($user->id);
+
+        if($this->checkIfUserHasLiked($article) === true){
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * @param Article $article
+     *
+     * @return bool
+     */
+    public function dislike(Article $article): bool
+    {
+        $user = auth()->user();
+
+        $article->userFavorites()->detach($user->id);
+
+        $article->fresh();
+
+        if($this->checkIfUserHasLiked($article) === true){
+            return false;
+        }
+        return true;
+    }
 }

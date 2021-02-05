@@ -13,6 +13,7 @@
           content="Dit is een DEMO App.. Dit bevat geen functionaliteiten.">
     <meta name="author" content="RMNDDESIGN">
     <meta name="robots" content="noindex, nofollow">
+    <script src="{{ URL::asset('browserChecker.js') }}"></script>
 
     <link rel="shortcut icon" href="{{ asset('media/favicons/favicon-32x32.png') }}">
     <link rel="icon" sizes="192x192" type="image/png" href="{{ asset('media/favicons/favicon-96x96.png') }}">
