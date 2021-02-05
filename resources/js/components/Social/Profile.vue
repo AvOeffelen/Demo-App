@@ -70,7 +70,10 @@
                                         <label>Geslacht</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>{{user.gender}}</p>
+                                        <p v-if="user.gender === 'woman'">Vrouw</p>
+                                        <p v-else-if="user.gender === 'man'">Man</p>
+                                        <p v-else-if="user.gender === 'different'">Anders</p>
+                                        <p v-else>Zeg ik liever niet</p>
                                     </div>
                                 </div>
                                 <hr>
