@@ -67,7 +67,7 @@
                                         <label>Geslacht</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p></p>
+                                        <p>{{user.gender}}</p>
                                     </div>
                                 </div>
                                 <hr>
