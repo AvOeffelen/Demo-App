@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 // Example Routes
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index')->middleware('verified');
 
 Route::group(['middleware' => ['web']], function () {
 
@@ -39,7 +39,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/download','ActivityCalenderController@downloadActivityCalender')->name('download.calender');
 });
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::group(['prefix' => 'backend/','middleware'=> ['web','admin']], function () {
     Route::get('workshop/overview','WorkshopController@showOverview')->name('workshop.overview');
