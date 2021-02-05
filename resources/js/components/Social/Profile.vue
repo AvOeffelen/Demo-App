@@ -16,7 +16,7 @@
                     <div class="col-md-6">
                         <div class="profile-head">
                                     <h5>
-                                      {{user.firstname}} {{user.lastname}}
+                                      {{user.firstname}} {{user.lastname}}test
                                     </h5>
                                     <h6>
                                         {{user.type}}
@@ -27,6 +27,9 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Workshops</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="article-tab" data-toggle="tab" href="#article" role="tab" aria-controls="article" aria-selected="false">Articles</a>
                                 </li>
                             </ul>
                         </div>
@@ -77,7 +80,6 @@
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        
                                         <h2 class="content-heading">
                                             <i class="si si-star mr-1"></i> Mijn favoriete workshops
                                         </h2>
@@ -108,6 +110,48 @@
                                                   </div>
                                                   <div class="block-content block-content-full">
                                                       <a class="btn btn-sm btn-light" v-bind:href="`/workshop/${workshop.id}/show`">
+                                                          <i class="fa fa-search text-muted mr-1"></i> Bekijk
+                                                      </a>
+                                                  </div>
+                                              </div>
+                                          </b-col>
+                                      </b-row>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="article" role="tabpanel" aria-labelledby="article-tab">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h2 class="content-heading">
+                                            <i class="si si-star mr-1"></i> Mijn favoriete artikelen
+                                        </h2>
+                                      <div v-if="loading">
+                                          <b-row>
+                                              <b-col class="text-center">
+                                                  <b-spinner
+                                                      style="width: 3rem; height: 3rem;"
+                                                      variant="primary"
+                                                      type="grow"
+                                                  ></b-spinner>
+                                              </b-col>
+                                          </b-row>
+                                      </div>
+                                      <b-row>
+                                          <b-col cols="12" sm="12" md="6" xl="4" lg="4" v-for="(article,index) in this.articles" :key="index">
+                                              <div class="block block-rounded text-center">
+                                                  <div class="block-content block-content-full bg-image"
+                                                      v-bind:style="[article.image_link ?
+                                                          {'background': 'url(' +'../../'+ article.image_name + ') center'} :
+                                                          {'background-image': 'url('+ default_image +')'},
+                                                          {'background-size': 'cover'}
+                                                          ]"
+                                                      style="height: 250px;">
+                                                  </div>
+                                                  <div class="block-content block-content-full block-content-sm bg-body-light">
+                                                      <div class="font-w600">{{ article.title }}</div>
+                                                  </div>
+                                                  <div class="block-content block-content-full">
+                                                      <a class="btn btn-sm btn-light" v-bind:href="`/articles/${article.id}/show`">
                                                           <i class="fa fa-search text-muted mr-1"></i> Bekijk
                                                       </a>
                                                   </div>
