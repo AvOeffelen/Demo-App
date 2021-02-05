@@ -151,7 +151,7 @@
                                                       <div class="font-w600">{{ article.title }}</div>
                                                   </div>
                                                   <div class="block-content block-content-full">
-                                                      <a class="btn btn-sm btn-light" v-bind:href="`/articles/${article.id}/show`">
+                                                      <a class="btn btn-sm btn-light" v-bind:href="`/article/${article.id}/show`">
                                                           <i class="fa fa-search text-muted mr-1"></i> Bekijk
                                                       </a>
                                                   </div>
