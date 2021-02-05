@@ -3,7 +3,6 @@ import './bootstrap';
 window.Vue = require('vue');
 
 
-
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import CKEditor from '@ckeditor/ckeditor5-vue';
 import VueFlatPickr from 'vue-flatpickr-component';
@@ -45,8 +44,11 @@ Vue.component('PreviewModal',require('../components/Workshop/Backend/PreviewModa
 const files = require.context('../', true, /\.vue$/i)
 files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
+import router from "../bootstraps/routerBootstrap.js";
+
 const app = new Vue({
     el: '#main-container',
+    router
 });
 
 // App extends Template

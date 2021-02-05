@@ -2,8 +2,10 @@
 
 namespace App;
 
+use App\Model\Activity;
 use App\Model\Workshop;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -17,7 +19,9 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'firstname', 'email', 'password','lastname','infix','type'
+        'firstname', 'email',
+        'password', 'lastname',
+        'infix', 'type', 'gender'
     ];
 
     /**
@@ -40,6 +44,7 @@ class User extends Authenticatable
 
     const ADMIN_TYPE = 'admin';
     const DEFAULT_TYPE = 'default';
+    const MANAGER_TYPE = 'manager';
 
 
     /**
@@ -48,6 +53,14 @@ class User extends Authenticatable
     public function Workshop()
     {
         return $this->belongsToMany(Workshop::class,'user_like_workshop','user_id','workshop_id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function Activities() : HasMany
+    {
+        return $this->hasMany(Activity::class,'user_id','id');
     }
 
     /**
@@ -64,6 +77,14 @@ class User extends Authenticatable
     public function isAdmin(): bool
     {
         return $this->type === self::ADMIN_TYPE;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isManager(): bool
+    {
+        return $this->type === self::MANAGER_TYPE;
     }
 
     /**

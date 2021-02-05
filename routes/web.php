@@ -68,6 +68,17 @@ Route::group(['middleware'=> ['web','default']], function () {
     Route::get('/me','UserController@showProfile')->name('me');
 });
 
+Route::get('management{any}','ManagementController@index')
+    ->where('any', '.*')
+    ->name('management.index');
+
+//Route::group(['prefix' => 'management', 'middleware' => ['web', 'manager']], function () {
+//
+//    Route::get('{any}','ManagementController@index')
+//        ->where('any', '.*')
+//        ->name('management.index');
+//});
+
 
 Route::group(['prefix' => 'axios/workshop', 'namespace' => 'Axios','middleware'=> ['web','default']], function () {
 
