@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Model\Article;
 use App\Model\Workshop;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -48,6 +49,14 @@ class User extends Authenticatable
     public function Workshop()
     {
         return $this->belongsToMany(Workshop::class,'user_like_workshop','user_id','workshop_id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function Article()
+    {
+        return $this->belongsToMany(Article::class,'user_like_article','user_id','article_id');
     }
 
     /**

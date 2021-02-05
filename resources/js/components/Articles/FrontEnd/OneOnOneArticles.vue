@@ -18,7 +18,7 @@
                                 id="filter-input"
                                 v-model="searchString"
                                 type="search"
-                                placeholder="Type om te zoeken">
+                                placeholder="Waar ben je naar op zoek?">
                             </b-form-input>
                         </b-form-group>
                     </b-col>

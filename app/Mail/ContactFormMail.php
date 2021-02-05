@@ -10,15 +10,15 @@ class ContactFormMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $tbd;
+    public $data;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($tbd)
+    public function __construct($data)
     {
-        $this->tbd = $tbd;
+        $this->data = $data;
     }
 
     /**
@@ -38,7 +38,7 @@ class ContactFormMail extends Mailable
             ->subject("Contact formulier ${appName}")
             ->view('email.general',
                 [
-                    'tbd' => $this->tbd,
+                    'tbd' => $this->data,
                 ]
             );
     }

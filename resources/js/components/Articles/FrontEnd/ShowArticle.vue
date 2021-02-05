@@ -65,6 +65,25 @@
                 </b-col>
             </b-row>
         </div>
+        <div class="row py-3" v-show="authenticated">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 text-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="text-center">
+                            <h1 class="h4 font-w600 mb-2 display-5">Acties</h1>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" @click="likeOrDisLikeArticle">
+                    <i class="fa fa-star"
+                       v-bind:class="[currUserHasLiked == true ? 'colorStar' : '']"
+                    >
+                    </i>
+                </button>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
     </div>
 </template>
 
@@ -73,16 +92,28 @@ import { LinkPlugin } from 'bootstrap-vue'
 Vue.use(LinkPlugin)
 export default {
     name: "ShowArticle",
-    props: [
-        'article'
-    ],
+    props: {
+        article:{
+            type: Object,
+            required: true,
+        },
+        user:{
+            type: Object,
+            required: false,
+        }
+    },
     data() {
         return {
+            authenticated: false,
             currUserHasLiked: false,
             fallback: '/storage/images/fallback.jpg',
         };
     },
     created() {
+        if(this.user !== undefined){
+            this.authenticated = true;
+        }
+        this.checkIfUserHasLiked();
     },
     methods: {
         buttonFunction(link){
@@ -90,7 +121,53 @@ export default {
         },
         goBack(){
             history.back();
-        }
+        },
+        checkIfUserHasLiked() {
+            axios.get(`/axios/article/${this.article.id}/checkLikes`)
+                .then(response => {
+                    if (response.data === 1) {
+                        this.currUserHasLiked = true;
+                    } else {
+                        this.currUserHasLiked = false;
+                    }
+                });
+        },
+        likeOrDisLikeArticle() {
+            if (this.currUserHasLiked == false) {
+                this.likeArticle();
+            } else {
+                this.disLikeArticle();
+            }
+        },
+        likeArticle() {
+            axios.post(`/axios/article/${this.article.id}/like`)
+                .then(response => {
+                    if (response.status == 200) {
+                        if (response.data === 1) {
+                            this.currUserHasLiked = true;
+                        }
+                        this.$toast.success(`U heeft ${this.article.title} toegevoegd aan uw favorieten!`);
+                    }
+                });
+        },
+        disLikeArticle() {
+            axios.post(`/axios/article/${this.article.id}/dislike`)
+                .then(response => {
+                    if (response.status == 200) {
+                        console.log(response);
+                        if (response.data === 1) {
+                            this.currUserHasLiked = false;
+                        } else {
+                            console.log("something went wrong!")
+                        }
+                    }
+                });
+        },
     },
 }
 </script>
+<style scoped>
+.colorStar {
+    color: orange;
+}
+</style>

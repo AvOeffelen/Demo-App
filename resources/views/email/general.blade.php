@@ -329,7 +329,7 @@
                                     Naam
                                 </td>
                                 <td class="content-cell">
-                                    <span>{{$tbd['name']}}</span>
+                                    <span>{{$data['name']}}</span>
                                 </td>
                             </tr>
                             <!-- Body content -->
@@ -338,7 +338,7 @@
                                    Email
                                 </td>
                                 <td class="content-cell">
-                                    <span>{{$tbd['email']}}</span>
+                                    <span>{{$data['email']}}</span>
                                 </td>
                             </tr>
                             <!-- Body content -->
@@ -347,7 +347,7 @@
                                     Onderwerp
                                 </td>
                                 <td class="content-cell">
-                                    <span>{{$tbd['subject']}}</span>
+                                    <span>{{$data['subject']}}</span>
                                 </td>
                             </tr>
                             <!-- Body content -->
@@ -356,7 +356,7 @@
                                     Bericht
                                 </td>
                                 <td class="content-cell">
-                                    <span>{{$tbd['message']}}}</span>
+                                    <span>{{$data['message']}}</span>
                                 </td>
                             </tr>
                         </table>

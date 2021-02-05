@@ -17,7 +17,7 @@ class Workshop extends Model
         'start',
         'end',
         'image_location',
-        'image_name',
+        'image_link',
     ];
 
     protected $casts = [
