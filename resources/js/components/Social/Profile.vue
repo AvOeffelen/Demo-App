@@ -80,9 +80,9 @@
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <h2 class="content-heading">
-                                            <i class="si si-star mr-1"></i> Mijn favoriete workshops
-                                        </h2>
+                                        <p>
+                                            <i class="si si-star mr-1 "></i> Mijn favoriete workshops
+                                        </p>
                                       <div v-if="loading">
                                           <b-row>
                                               <b-col class="text-center">
@@ -122,9 +122,9 @@
                             <div class="tab-pane fade" id="article" role="tabpanel" aria-labelledby="article-tab">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <h2 class="content-heading">
-                                            <i class="si si-star mr-1"></i> Mijn favoriete artikelen
-                                        </h2>
+                                        <p>
+                                            <i class="si si-star mr-1 "></i> Mijn favoriete artikkelen
+                                        </p>
                                       <div v-if="loading">
                                           <b-row>
                                               <b-col class="text-center">
