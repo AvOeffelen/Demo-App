@@ -69,7 +69,7 @@ Route::group(['middleware'=> ['web','default']], function () {
 });
 
 
-Route::get('management{any}','ManagementController@index')
+Route::get('backend/management{any}','ManagementController@index')
     ->middleware(['web', 'manager'])
     ->where('any', '.*')
     ->name('management.index');

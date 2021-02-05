@@ -16,7 +16,7 @@ const router = new VueRouter({
     routes: [
 
         {
-            path: '/management',
+            path: '/backend/management',
             component: ManagementLayout,
             children: [
                 {
