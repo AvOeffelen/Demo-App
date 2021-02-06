@@ -94,10 +94,10 @@
                 >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
                         <div class="ribbon-box">
-                            Uw Aanbod
+                            Workshops
                         </div>
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">Uw Aanbod</h3>
+                            <h3 class="h1 font-w700 text-white mb-1">Workshops</h3>
                         </div>
                     </div>
                 </a>
@@ -154,10 +154,10 @@
                 >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
                         <div class="ribbon-box">
-                            Gamification
+                            (na)zorg Corona
                         </div>
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">Gamification</h3>
+                            <h3 class="h1 font-w700 text-white mb-1">(na)zorg Corona</h3>
                         </div>
                     </div>
                 </a>
@@ -244,10 +244,10 @@
                 >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
                         <div class="ribbon-box">
-                            Uw Academy
+                            Goodhabitz
                         </div>
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">Uw Academy</h3>
+                            <h3 class="h1 font-w700 text-white mb-1">Goodhabitz</h3>
                         </div>
                     </div>
                 </a>
