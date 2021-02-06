@@ -16,7 +16,7 @@
     
     <div class="content content-boxed">
         <default></default>
-        <dashboard></dashboard>
+        
     </div>
     <script SameSite="None; Secure" src="https://static.landbot.io/landbot-3/landbot-3.0.0.js"></script>
 <script>
