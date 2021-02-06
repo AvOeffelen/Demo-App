@@ -36,6 +36,10 @@
                                 <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                     <div class="ribbon-box">
                                         {{ article.category.display_name }}
+                                        <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 2" >
+                                            <img src="/storage/images/motivatie-betrokkenheid-28.png" class="mt-4" v-if="category.id == 3" >
+                                            <img src="/storage/images/ontwikkeling-28.png" class="mt-4" v-if="category.id == 4" >
+                                            <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 7" >
                                     </div>
                                     <div class="pt-4 pb-6 px-md-3">
                                         <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{ article.title }}</h3>
@@ -73,6 +77,10 @@
                                     <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             {{ category.display_name }}
+                                            <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 2" >
+                                            <img src="/storage/images/motivatie-betrokkenheid-28.png" class="mt-4" v-if="category.id == 3" >
+                                            <img src="/storage/images/ontwikkeling-28.png" class="mt-4" v-if="category.id == 4" >
+                                            <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 7" >
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -95,6 +103,10 @@
                                         class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             {{ category.display_name }}
+                                            <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 2" >
+                                            <img src="/storage/images/motivatie-betrokkenheid-28.png" class="mt-4" v-if="category.id == 3" >
+                                            <img src="/storage/images/ontwikkeling-28.png" class="mt-4" v-if="category.id == 4" >
+                                            <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 7" >
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -122,6 +134,10 @@
                                         <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
                                                 {{ category.display_name }}
+                                                <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 2" >
+                                            <img src="/storage/images/motivatie-betrokkenheid-28.png" class="mt-4" v-if="category.id == 3" >
+                                            <img src="/storage/images/ontwikkeling-28.png" class="mt-4" v-if="category.id == 4" >
+                                            <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 7" >
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -144,6 +160,10 @@
                                             class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
                                                 {{ category.display_name }}
+                                                <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 2" >
+                                            <img src="/storage/images/motivatie-betrokkenheid-28.png" class="mt-4" v-if="category.id == 3" >
+                                            <img src="/storage/images/ontwikkeling-28.png" class="mt-4" v-if="category.id == 4" >
+                                            <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 7" >
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -169,6 +189,10 @@
                                     <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             {{ category.display_name }}
+                                            <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 2" >
+                                            <img src="/storage/images/motivatie-betrokkenheid-28.png" class="mt-4" v-if="category.id == 3" >
+                                            <img src="/storage/images/ontwikkeling-28.png" class="mt-4" v-if="category.id == 4" >
+                                            <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 7" >
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -191,6 +215,10 @@
                                         class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             {{ category.display_name }}
+                                            <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 2" >
+                                            <img src="/storage/images/motivatie-betrokkenheid-28.png" class="mt-4" v-if="category.id == 3" >
+                                            <img src="/storage/images/ontwikkeling-28.png" class="mt-4" v-if="category.id == 4" >
+                                            <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 7" >
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -218,6 +246,10 @@
                                         <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
                                                 {{ category.display_name }}
+                                                <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 2" >
+                                            <img src="/storage/images/motivatie-betrokkenheid-28.png" class="mt-4" v-if="category.id == 3" >
+                                            <img src="/storage/images/ontwikkeling-28.png" class="mt-4" v-if="category.id == 4" >
+                                            <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 7" >
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -240,6 +272,10 @@
                                             class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                             <div class="ribbon-box">
                                                 {{ category.display_name }}
+                                                <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 2" >
+                                            <img src="/storage/images/motivatie-betrokkenheid-28.png" class="mt-4" v-if="category.id == 3" >
+                                            <img src="/storage/images/ontwikkeling-28.png" class="mt-4" v-if="category.id == 4" >
+                                            <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 7" >
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -269,6 +305,10 @@
                                     <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             {{ category.display_name }}
+                                            <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 2" >
+                                            <img src="/storage/images/motivatie-betrokkenheid-28.png" class="mt-4" v-if="category.id == 3" >
+                                            <img src="/storage/images/ontwikkeling-28.png" class="mt-4" v-if="category.id == 4" >
+                                            <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 7" >
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -291,6 +331,10 @@
                                         class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             {{ category.display_name }}
+                                            <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 2" >
+                                            <img src="/storage/images/motivatie-betrokkenheid-28.png" class="mt-4" v-if="category.id == 3" >
+                                            <img src="/storage/images/ontwikkeling-28.png" class="mt-4" v-if="category.id == 4" >
+                                            <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 7" >
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -319,6 +363,10 @@
                                     <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             {{ category.display_name }}
+                                            <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 2" >
+                                            <img src="/storage/images/motivatie-betrokkenheid-28.png" class="mt-4" v-if="category.id == 3" >
+                                            <img src="/storage/images/ontwikkeling-28.png" class="mt-4" v-if="category.id == 4" >
+                                            <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 7" >
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -341,6 +389,10 @@
                                         class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             {{ category.display_name }}
+                                            <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 2" >
+                                            <img src="/storage/images/motivatie-betrokkenheid-28.png" class="mt-4" v-if="category.id == 3" >
+                                            <img src="/storage/images/ontwikkeling-28.png" class="mt-4" v-if="category.id == 4" >
+                                            <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 7" >
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -369,6 +421,10 @@
                                     <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             {{ category.display_name }}
+                                            <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 2" >
+                                            <img src="/storage/images/motivatie-betrokkenheid-28.png" class="mt-4" v-if="category.id == 3" >
+                                            <img src="/storage/images/ontwikkeling-28.png" class="mt-4" v-if="category.id == 4" >
+                                            <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 7" >
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -391,6 +447,10 @@
                                         class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             {{ category.display_name }}
+                                            <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 2" >
+                                            <img src="/storage/images/motivatie-betrokkenheid-28.png" class="mt-4" v-if="category.id == 3" >
+                                            <img src="/storage/images/ontwikkeling-28.png" class="mt-4" v-if="category.id == 4" >
+                                            <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 7" >
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -419,6 +479,10 @@
                                     <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             {{ category.display_name }}
+                                            <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 2" >
+                                            <img src="/storage/images/motivatie-betrokkenheid-28.png" class="mt-4" v-if="category.id == 3" >
+                                            <img src="/storage/images/ontwikkeling-28.png" class="mt-4" v-if="category.id == 4" >
+                                            <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 7" >
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
@@ -441,6 +505,10 @@
                                         class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
                                         <div class="ribbon-box">
                                             {{ category.display_name }}
+                                            <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 2" >
+                                            <img src="/storage/images/motivatie-betrokkenheid-28.png" class="mt-4" v-if="category.id == 3" >
+                                            <img src="/storage/images/ontwikkeling-28.png" class="mt-4" v-if="category.id == 4" >
+                                            <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 7" >
                                         </div>
                                         <div class="pt-4 pb-6 px-md-3">
                                             <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
