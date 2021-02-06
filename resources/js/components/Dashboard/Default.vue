@@ -63,11 +63,11 @@
                    href="/activiteitenkalender"
                 >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
-                        <div class="ribbon-box">
+                        <!-- <div class="ribbon-box">
                             Activiteitenkalender
-                        </div>
+                        </div> -->
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">Activiteitenkalender</h3>
+                            <h3 class="h1 font-w700 text-white mb-1 text-center text-home">Kalender Gelre Energiek</h3>
                         </div>
                     </div>
                 </a>
@@ -93,11 +93,11 @@
                    href="/workshop"
                 >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
-                        <div class="ribbon-box">
+                        <!-- <div class="ribbon-box">
                             Workshops
-                        </div>
+                        </div> -->
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">Workshops</h3>
+                            <h3 class="h1 font-w700 text-white mb-1 text-center text-home">Workshops</h3>
                         </div>
                     </div>
                 </a>
@@ -123,11 +123,11 @@
                    href="/one-on-one"
                 >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
-                        <div class="ribbon-box">
+                        <!-- <div class="ribbon-box">
                             Persoonlijke begeleiding
-                        </div>
+                        </div> -->
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">Persoonlijke begeleiding</h3>
+                            <h3 class="h1 font-w700 text-white mb-1 text-center text-home">Persoonlijke begeleiding</h3>
                         </div>
                     </div>
                 </a>
@@ -153,11 +153,11 @@
                    href="/covid-19"
                 >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
-                        <div class="ribbon-box">
-                            (na)zorg Corona
-                        </div>
+                        <!-- <div class="ribbon-box">
+                            van Covid naar Go Fit
+                        </div> -->
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">(na)zorg Corona</h3>
+                            <h3 class="h1 font-w700 text-white mb-1 text-center text-home">van Covid naar Go Fit</h3>
                         </div>
                     </div>
                 </a>
@@ -183,11 +183,11 @@
                    href="/vragenlijsten"
                 >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
-                        <div class="ribbon-box">
+                        <!-- <div class="ribbon-box">
                             Vragenlijsten
-                        </div>
+                        </div> -->
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">Vragenlijsten</h3>
+                            <h3 class="h1 font-w700 text-white mb-1 text-center text-home">Vragenlijsten</h3>
                         </div>
                     </div>
                 </a>
@@ -213,11 +213,11 @@
                    href="/articles"
                 >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
-                        <div class="ribbon-box">
+                        <!-- <div class="ribbon-box">
                             Inspiratiemateriaal
-                        </div>
+                        </div> -->
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">Inspiratiemateriaal</h3>
+                            <h3 class="h1 font-w700 text-white mb-1 text-center text-home">Inspiratiemateriaal</h3>
                         </div>
                     </div>
                 </a>
@@ -243,11 +243,11 @@
                    href="/goodhabitz"
                 >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
-                        <div class="ribbon-box">
+                        <!-- <div class="ribbon-box">
                             Goodhabitz
-                        </div>
+                        </div> -->
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">Goodhabitz</h3>
+                            <h3 class="h1 font-w700 text-white mb-1 text-center text-home">Goodhabitz</h3>
                         </div>
                     </div>
                 </a>
@@ -273,11 +273,11 @@
                    href="/topical"
                 >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
-                        <div class="ribbon-box">
+                        <!-- <div class="ribbon-box">
                             Thuiswerken
-                        </div>
+                        </div> -->
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">Thuiswerken</h3>
+                            <h3 class="h1 font-w700 text-white mb-1 text-center text-home">Thuiswerken</h3>
                         </div>
                     </div>
                 </a>
