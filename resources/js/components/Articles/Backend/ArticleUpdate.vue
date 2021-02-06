@@ -97,7 +97,16 @@
                             <p v-if="this.errors.text" class="text-primary">{{ this.errors['text'][0] }}</p>
                         </div>
                     </div>
-                    <div class="row py-3">
+                    <b-row class="py-3">
+                        <b-col cols="12" md="12" lg="12" sm="12" xl="12">
+                            <b-form-checkbox
+                                v-model="showButtons"
+                                name="show-contact-form"
+                                inline
+                            ><p>Button</p></b-form-checkbox>
+                        </b-col>
+                    </b-row>
+                    <div class="row py-3" v-if="showButtons">
                         <div class="col-md-6">
                             <label v-bind:class="[this.errors.button_link ? 'text-primary':'' ]">
                                 Button link 
@@ -168,7 +177,8 @@ export default {
             categories: [],
             changedImage: false,
             image: null,
-            uploadImage: true
+            uploadImage: true,
+            showButtons:false
         };
     },
     mounted() {
@@ -177,6 +187,9 @@ export default {
         });
     },
     created() {
+        if (this.article.button_link !== null || this.article.button_text !== null){
+            this.showButtons = true;
+        }
         if (this.article.has_video === 1) {
             this.uploadImage = false;
         }
