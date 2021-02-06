@@ -13,8 +13,13 @@ class UserController extends Controller
         return view('profile.index');
     }
 
-    public function getFavorited()
+    public function getFavoriteWorkshops()
     {
         return auth()->user()->workshop;
+    }
+
+    public function getFavoriteArticles()
+    {
+        return auth()->user()->article;
     }
 }

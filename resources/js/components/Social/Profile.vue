@@ -5,7 +5,7 @@
                     <div class="col-md-4">
                         <div class="profile-img">
                             <img class="img-avatar img-avatar96 img-avatar-thumb"
-                                v-bind:src="'https://eu.ui-avatars.com/api/?name='+user.firstname+'+'+user.infix+'+'+user.lastname+'?size=128?bold=true?color=FFFFFF'"
+                                v-bind:src="'https://eu.ui-avatars.com/api/?name='+user.firstname+'+'+user.infix+'+'+user.lastname+'?size=128?bold=true?color=#FFFFFF'"
                                 alt="">
                             <!-- <div class="file btn btn-lg btn-primary">
                                 Change Photo
@@ -16,10 +16,10 @@
                     <div class="col-md-6">
                         <div class="profile-head">
                                     <h5>
-                                      {{user.firstname}} {{user.lastname}}test
+                                      {{user.firstname}}{{user.infix}}{{user.lastname}}
                                     </h5>
                                     <h6>
-                                        {{user.type}}
+                                        <span>{{ user.type === 'default' ? "medewerker" : user.type }}</span>
                                     </h6>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
@@ -41,7 +41,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-work">
-                            <b>{{user.type}}</b>
+                            <b>{{ user.type === 'default' ? "medewerker" : user.type }}</b>
                             <hr>
                             <b>Gelre Energiek</b>
                         </div>
@@ -70,7 +70,10 @@
                                         <label>Geslacht</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>{{user.gender}}</p>
+                                        <p v-if="user.gender === 'woman'">Vrouw</p>
+                                        <p v-else-if="user.gender === 'man'">Man</p>
+                                        <p v-else-if="user.gender === 'different'">Anders</p>
+                                        <p v-else>Zeg ik liever niet</p>
                                     </div>
                                 </div>
                                 <hr>
@@ -83,7 +86,7 @@
                                         <p>
                                             <i class="si si-star mr-1 "></i> Mijn favoriete workshops
                                         </p>
-                                      <div v-if="loading">
+                                      <div v-if="loadingWorkshops">
                                           <b-row>
                                               <b-col class="text-center">
                                                   <b-spinner
@@ -94,12 +97,12 @@
                                               </b-col>
                                           </b-row>
                                       </div>
-                                      <b-row>
+                                      <b-row v-else>
                                           <b-col cols="12" sm="12" md="6" xl="4" lg="4" v-for="(workshop,index) in this.workshops" :key="index">
                                               <div class="block block-rounded text-center">
                                                   <div class="block-content block-content-full bg-image"
-                                                      v-bind:style="[workshop.image_name ?
-                                                          {'background': 'url(' +'../../'+ workshop.image_name + ') center'} :
+                                                      v-bind:style="[workshop.image_link ?
+                                                          {'background': 'url(' +'../../'+ workshop.image_link + ') center'} :
                                                           {'background-image': 'url('+ default_image +')'},
                                                           {'background-size': 'cover'}
                                                           ]"
@@ -123,9 +126,10 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <p>
-                                            <i class="si si-star mr-1 "></i> Mijn favoriete artikkelen
+                                            <i class="si si-star mr-1 "></i>
+                                            Mijn favoriete artikelen
                                         </p>
-                                      <div v-if="loading">
+                                      <div v-if="loadingArticles">
                                           <b-row>
                                               <b-col class="text-center">
                                                   <b-spinner
@@ -136,12 +140,12 @@
                                               </b-col>
                                           </b-row>
                                       </div>
-                                      <b-row>
+                                      <b-row v-else>
                                           <b-col cols="12" sm="12" md="6" xl="4" lg="4" v-for="(article,index) in this.articles" :key="index">
                                               <div class="block block-rounded text-center">
                                                   <div class="block-content block-content-full bg-image"
                                                       v-bind:style="[article.image_link ?
-                                                          {'background': 'url(' +'../../'+ article.image_name + ') center'} :
+                                                          {'background': 'url(' +'../../'+ article.image_link + ') center'} :
                                                           {'background-image': 'url('+ default_image +')'},
                                                           {'background-size': 'cover'}
                                                           ]"
@@ -164,11 +168,11 @@
                         </div>
                     </div>
                 </div>
-            </form>           
+            </form>
         </div>
-    
-            
-        
+
+
+
 </template>
 
 <script>
@@ -179,21 +183,35 @@ export default {
     ],
     data() {
         return {
-            loading: true,
+            loadingWorkshops: false,
+            loadingArticles: false,
             default_image: 'https://www.bravissamenvitaal.nl/wp-content/uploads/2020/02/iStock-1058457940-2-495x400.jpg',
-            workshops:[]
+            workshops:[],
+            articles:[]
         };
     },
     created() {
-      this.getFavoritesForUser();
+        this.loadingWorkshops = true
+        this.getFavoriteWorkshops()
+        this.loadingArticles = true
+        this.getFavoriteArticles()
     },
     methods: {
-        getFavoritesForUser() {
-            axios.get('/axios/me/favorited')
+        getFavoriteWorkshops() {
+            axios.get('/axios/me/favorite/workshop')
                 .then(response => {
                     if(response.status === 200){
-                        this.loading = false;
-                        this.workshops = response.data;
+                        this.loadingWorkshops = false
+                        this.workshops = response.data
+                    }
+                });
+        },
+        getFavoriteArticles() {
+            axios.get('/axios/me/favorite/article')
+                .then(response => {
+                    if(response.status === 200){
+                        this.loadingArticles = false
+                        this.articles = response.data
                     }
                 });
         },

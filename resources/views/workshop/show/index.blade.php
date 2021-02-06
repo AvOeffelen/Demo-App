@@ -3,7 +3,11 @@
 @section('content')
     <!-- Page Content -->
     <div class="content">
-        <workshop :workshop="{{$workshop}}"></workshop>
+        @if(auth()->check())
+            <workshop :user="{{auth()->user()}}" :workshop="{{$workshop}}"></workshop>
+        @else
+            <workshop :workshop="{{$workshop}}"></workshop>
+        @endif
     </div>
     <!-- END Page Content -->
 @endsection
