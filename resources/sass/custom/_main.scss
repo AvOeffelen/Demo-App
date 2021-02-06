@@ -42,11 +42,6 @@ main#main-container{
 .mh-286{
 	max-height: 286px;
 }
-
-.article-show-image>img{
-    height: 500px;
-    width: 62%;
-}
 .bg-body-white {
 	background-color: #ffffff;
 }
@@ -54,6 +49,10 @@ main#main-container{
 .text-shadow-workshops {
 	text-shadow: 2px 2px 4px #000000;
 }
+.article-show-image>img{
+    max-width:1000px !important;
+}
+
 /*Persoonlijke Begeleiding / 1 op 1 */
 .oneOnOneimage{
 	height: 350px;
