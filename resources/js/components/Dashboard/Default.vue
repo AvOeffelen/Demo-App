@@ -17,11 +17,11 @@
                 <b-col cols="12" sm="12" md="12" lg="6" xl="6" v-for="(data,index) in filteredData" :key="index">
                     <a class="block block-transparent bg-image h-286"
                        v-bind:style="[data.image_link  ?
-                                    {'background': 'url(' + data.image_link + ')',
+                                    {'background': 'url(/' + data.image_link + ')',
                                         'background-position':'center',
                                         'background-size':'cover',
                                         'background-repeat': 'no-repeat'} :
-                                     {'background-image': 'url('+ default_image +')'}]"
+                                     {'background-image': 'url(/'+ default_image +')'}]"
                        v-bind:href="[data.type === 'workshop' ? '/workshop/'+ data.id+'/show' : '/article/'+ data.id+'/show']"
                        data-toggle="click-ripple">
                         <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
