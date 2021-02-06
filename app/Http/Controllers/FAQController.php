@@ -31,4 +31,8 @@ class FAQController extends Controller
     {
         return view('verhalen.index');
     }
+    public function showContact()
+    {
+        return view('contact.index');
+    }
 }

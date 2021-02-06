@@ -31,6 +31,11 @@
                     <span class="nav-main-link-name">FAQ</span>
                 </a>
             </li>
+            <li class="nav-main-item">
+                <a class="btn btn-dual" href="{{url('contact')}}">
+                    <span class="nav-main-link-name">Contact</span>
+                </a>
+            </li>
         </ul>
     </div>
     <div>
