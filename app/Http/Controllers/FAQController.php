@@ -27,4 +27,8 @@ class FAQController extends Controller
     {
         return view('activiteitenkalender.index');
     }
+    public function showContact()
+    {
+        return view('contact.index');
+    }
 }

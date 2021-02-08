@@ -3,8 +3,12 @@
 @section('content')
     <!-- Page Content -->
     <div class="content">
-        <show-article :article="{{$article}}"></show-article>
+        @if(auth()->check())
+
+            <show-article :user="{{auth()->user()}}" :article="{{$article}}"></show-article>
+        @else
+            <show-article :article="{{$article}}"></show-article>
+        @endif
     </div>
     <!-- END Page Content -->
 @endsection
-@section('js_after')

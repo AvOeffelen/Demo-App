@@ -2,6 +2,7 @@
 
 namespace App\Model;
 
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model
@@ -39,5 +40,13 @@ class Article extends Model
     public function Category()
     {
         return $this->belongsTo(Category::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function userFavorites()
+    {
+        return $this->belongsToMany(User::class, 'user_like_article','article_id','user_id');
     }
 }
