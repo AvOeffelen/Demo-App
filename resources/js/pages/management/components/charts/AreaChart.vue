@@ -1,0 +1,54 @@
+<script>
+import { Line } from "vue-chartjs";
+
+export default {
+    name: "LineChart",
+
+    extends: Line,
+
+    props: ['labels', 'datasets'],
+
+    data() {
+        return {
+            chartColors: {
+                male: "rgba(0, 231, 255, 0.25)",
+                female: "rgba(255, 0, 0, 0.25)",
+                other: "rgba(0, 255, 0, 0.25)"
+            }
+        };
+    },
+
+    mounted() {
+
+        this.renderChart(
+            {
+                labels: this.labels,
+                datasets: this.mapData()
+            },
+            { responsive: true, maintainAspectRatio: false }
+        );
+    },
+
+    methods: {
+
+        mapData() {
+
+            return Object.entries(this.datasets).map(([key, value]) => {
+                return {
+                    label: key.toUpperCase(),
+                    borderColor: "#fff",
+                    pointBackgroundColor: "white",
+                    borderWidth: 1,
+                    pointBorderColor: "white",
+                    backgroundColor: this.chartColors[key],
+                    data: value
+                };
+            });
+        }
+    }
+};
+</script>
+
+<style scoped>
+
+</style>
