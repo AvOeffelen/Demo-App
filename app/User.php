@@ -3,13 +3,24 @@
 namespace App;
 
 use App\Model\Activity;
+use App\Model\Article;
 use App\Model\Workshop;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+/**
+ * Class User
+ * @property string $firstname
+ * @property string $email
+ * @property ?string $infix
+ * @property string $type
+ * @property string $lastname
+ * @property ?string $gender
+ * @package App
+ */
+class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable;
 
@@ -19,9 +30,11 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
+
         'firstname', 'email',
         'password', 'lastname',
-        'infix', 'type', 'gender'
+        'infix', 'type',
+        'gender', 'password'
     ];
 
     /**
@@ -30,6 +43,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
+
         'password', 'remember_token',
     ];
 
@@ -39,6 +53,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $casts = [
+
         'email_verified_at' => 'datetime',
     ];
 
@@ -60,7 +75,15 @@ class User extends Authenticatable
      */
     public function Activities() : HasMany
     {
-        return $this->hasMany(Activity::class,'user_id','id');
+        return $this->hasMany(Activity::class, 'user_id', 'id');
+    }
+
+    /**
+    * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+    */
+    public function Article()
+    {
+        return $this->belongsToMany(Article::class,'user_like_article','user_id','article_id');
     }
 
     /**

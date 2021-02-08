@@ -18,7 +18,8 @@
                             </b-col>
                             <b-col cols="6" sm="6" md="6" lg="6" xl="6">
                                 <label for="example-hosting-vps">Categorie</label>
-                                <select class="custom-select" id="example-hosting-vps" name="example-hosting-vps" v-model="article.category_id">
+                                <select class="custom-select" id="example-hosting-vps" name="example-hosting-vps"
+                                        v-model="article.category_id">
                                     <option v-for="(category,key) in this.categories" :value="category.id" :key="key">
                                         {{ category.name }}
                                     </option>
@@ -84,14 +85,25 @@
                                 <p v-if="this.errors.text" class="text-primary">{{ this.errors['text'][0] }}</p>
                             </div>
                         </div>
-                        <div class="row py-3">
+                        <b-row class="py-3">
+                            <b-col cols="12" md="12" lg="12" sm="12" xl="12">
+                                <b-form-checkbox
+                                    v-model="showButtons"
+                                    name="show-contact-form"
+                                    inline
+                                ><p>Button</p></b-form-checkbox>
+                            </b-col>
+                        </b-row>
+                        <div class="row py-3" v-if="showButtons">
                             <div class="col-md-6">
                                 <label v-bind:class="[this.errors.button_link ? 'text-primary':'' ]">
                                     Button link
                                 </label>
                                 <b-input v-model="article.button_link" type="text" class="form-control" name="title"
                                          v-bind:class="[this.errors.button_link ? 'decoratedErrorField':'' ]"/>
-                                <p v-if="this.errors.button_link" class="text-primary">{{ this.errors['button_link'][0] }}</p>
+                                <p v-if="this.errors.button_link" class="text-primary">{{
+                                        this.errors['button_link'][0]
+                                    }}</p>
                             </div>
                             <div class="col-md-6">
                                 <label v-bind:class="[this.errors.button_text ? 'text-primary':'' ]">
@@ -99,16 +111,18 @@
                                 </label>
                                 <b-input v-model="article.button_text" type="text" class="form-control" name="title"
                                          v-bind:class="[this.errors.button_text ? 'decoratedErrorField':'' ]"/>
-                                <p v-if="this.errors.button_text" class="text-primary">{{ this.errors['button_text'][0] }}</p>
+                                <p v-if="this.errors.button_text" class="text-primary">{{
+                                        this.errors['button_text'][0]
+                                    }}</p>
                             </div>
                         </div>
                         <b-row class="py-3">
                             <b-col cols="12" md="12" lg="12" sm="12" xl="12">
-                                    <b-form-checkbox
-                                        v-model="article.show_contact"
-                                        name="show-contact-form"
-                                        inline
-                                    ><p>Contact formulier</p></b-form-checkbox>
+                                <b-form-checkbox
+                                    v-model="article.show_contact"
+                                    name="show-contact-form"
+                                    inline
+                                ><p>Contact formulier</p></b-form-checkbox>
                             </b-col>
                         </b-row>
                         <b-row class="py-3">
@@ -150,8 +164,8 @@ export default {
                 video_link: '',
                 image_link: '',
                 button_link: '',
-                button_text:'',
-                show_contact:false,
+                button_text: '',
+                show_contact: false,
             },
             image: null,
             categories: [],
@@ -159,6 +173,7 @@ export default {
             showPreview: false,
             editorType: ClassicEditor,
             uploadImage: true,
+            showButtons: false,
         }
     },
     mounted() {
@@ -176,7 +191,7 @@ export default {
             if (this.uploadImage) {
                 data.append('image', this.image)
             }
-            if(this.article.show_contact === true){
+            if (this.article.show_contact === true) {
                 data.append('show_contact', this.article.show_contact);
             }
 
