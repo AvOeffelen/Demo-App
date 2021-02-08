@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Axios;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreAvatarRequest;
 use App\Model\Article;
+use App\Model\Avatar;
 use App\User;
 use http\Env\Request;
 use Illuminate\Http\JsonResponse;
@@ -64,8 +65,10 @@ class UserController extends Controller
 
             $image->storePubliclyAs('avatars', $fileName, 'public');
 
-            $user->avatar->image_link = 'storage/avatars/' . $fileName;
-            $user->avatar->save();
+            $avatar = new Avatar();
+            $avatar->image_link = 'storage/avatars/' . $fileName;
+            $avatar->user_id = $user->id;
+            $avatar->save();
 
             return true;
         } catch (\Exception $e) {

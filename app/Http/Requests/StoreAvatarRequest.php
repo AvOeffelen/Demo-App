@@ -23,9 +23,8 @@ class StoreAvatarRequest extends FormRequest
      */
     public function rules()
     {
-        //TODO:: Add request shizzle here.
         return [
-            //
+            'avatar' => 'required|mimes:jpg,png,jpeg,gif'
         ];
     }
 }

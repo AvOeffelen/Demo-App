@@ -3,12 +3,13 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="profile-img">
-                    <img class="img-avatar img-avatar96 img-avatar-thumb"
+
+                    <img class="img-avatar img-avatar96 img-avatar-thumb" v-if="person.avatar !== null"
                          v-bind:src="'/' + person.avatar.image_link"
                          alt="">
-<!--                    <img class="img-avatar img-avatar96 img-avatar-thumb"-->
-<!--                         v-bind:src="'https://eu.ui-avatars.com/api/?name='+person.firstname+'+'+person.infix+'+'+person.lastname+'?size=128?bold=true?color=#FFFFFF'"-->
-<!--                         alt="">-->
+                    <img class="img-avatar img-avatar96 img-avatar-thumb" v-else
+                         v-bind:src="'https://eu.ui-avatars.com/api/?name='+person.firstname+'+'+person.infix+'+'+person.lastname+'?size=128?bold=true?color=#FFFFFF'"
+                         alt="">
                     <div class="file btn btn-lg btn-primary">
                         Change Photo
                         <b-form-file
