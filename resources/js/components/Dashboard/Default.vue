@@ -17,11 +17,11 @@
                 <b-col cols="12" sm="12" md="12" lg="6" xl="6" v-for="(data,index) in filteredData" :key="index">
                     <a class="block block-transparent bg-image h-286"
                        v-bind:style="[data.image_link  ?
-                                    {'background': 'url(' + data.image_link + ')',
+                                    {'background': 'url(/' + data.image_link + ')',
                                         'background-position':'center',
                                         'background-size':'cover',
                                         'background-repeat': 'no-repeat'} :
-                                     {'background-image': 'url('+ default_image +')'}]"
+                                     {'background-image': 'url(/'+ default_image +')'}]"
                        v-bind:href="[data.type === 'workshop' ? '/workshop/'+ data.id+'/show' : '/article/'+ data.id+'/show']"
                        data-toggle="click-ripple">
                         <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
@@ -94,10 +94,10 @@
                 >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
                         <div class="ribbon-box">
-                            Uw Aanbod
+                            Workshops
                         </div>
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">Uw Aanbod</h3>
+                            <h3 class="h1 font-w700 text-white mb-1">Workshops</h3>
                         </div>
                     </div>
                 </a>
@@ -154,10 +154,10 @@
                 >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
                         <div class="ribbon-box">
-                            Gamification
+                            (na)zorg Corona
                         </div>
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">Gamification</h3>
+                            <h3 class="h1 font-w700 text-white mb-1">(na)zorg Corona</h3>
                         </div>
                     </div>
                 </a>
@@ -244,10 +244,10 @@
                 >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
                         <div class="ribbon-box">
-                            Uw Academy
+                            Goodhabitz
                         </div>
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">Uw Academy</h3>
+                            <h3 class="h1 font-w700 text-white mb-1">Goodhabitz</h3>
                         </div>
                     </div>
                 </a>
