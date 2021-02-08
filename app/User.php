@@ -3,8 +3,11 @@
 namespace App;
 
 use App\Model\Article;
+use App\Model\Avatar;
 use App\Model\Workshop;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -16,6 +19,7 @@ use Illuminate\Notifications\Notifiable;
  * @property string $type
  * @property string $lastname
  * @property ?string $gender
+ * @property Avatar $avatar
  * @package App
  */
 class User extends Authenticatable implements MustVerifyEmail
@@ -47,6 +51,15 @@ class User extends Authenticatable implements MustVerifyEmail
     ];
 
     /**
+     * This automatically retrieves the given relations.
+     *
+     * @var string[]
+     */
+    protected $with = [
+      'Avatar'
+    ];
+
+    /**
      * The attributes that should be cast to native types.
      *
      * @var array
@@ -60,19 +73,24 @@ class User extends Authenticatable implements MustVerifyEmail
 
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     * @return BelongsToMany
      */
-    public function Workshop()
+    public function Workshop(): BelongsToMany
     {
         return $this->belongsToMany(Workshop::class,'user_like_workshop','user_id','workshop_id');
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     * @return BelongsToMany
      */
-    public function Article()
+    public function Article(): BelongsToMany
     {
         return $this->belongsToMany(Article::class,'user_like_article','user_id','article_id');
+    }
+
+    public function Avatar(): HasOne
+    {
+        return $this->hasOne(Avatar::class);
     }
 
     /**
