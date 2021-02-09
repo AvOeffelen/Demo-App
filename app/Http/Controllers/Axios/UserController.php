@@ -39,16 +39,16 @@ class UserController extends Controller
      */
     public function storeAvatar(StoreAvatarRequest $request): JsonResponse
     {
-        $user = User::where('email',$request->get('user'))->first();
+        $user = User::where('email', $request->get('user'))->first();
         $image = $request->file('avatar');
         $uploadedImage = $this->uploadImage($image, $user);
         Log::info("TRYING TO UPload image", [$uploadedImage]);
-        if($uploadedImage){
+        if ($uploadedImage) {
             $user = $user->fresh();
-            return response()->json(['message' => 'Avatar successvol geupload','data' => $user]);
+            return response()->json(['message' => 'Avatar successvol geupload', 'data' => $user]);
         }
 
-        return response()->json(['message' => 'Something went wrong.'],422);
+        return response()->json(['message' => 'Something went wrong.'], 422);
     }
 
 
@@ -65,14 +65,18 @@ class UserController extends Controller
 
             $image->storePubliclyAs('avatars', $fileName, 'public');
 
-            $avatar = new Avatar();
-            $avatar->image_link = 'storage/avatars/' . $fileName;
-            $avatar->user_id = $user->id;
-            $avatar->save();
+            Avatar::updateOrCreate(
+                [
+                    'user_id' => $user->id
+                ],
+                [
+                    'image_link' => 'storage/avatars/' . $fileName,
+                ]
+            );
 
             return true;
         } catch (\Exception $e) {
-            Log::info("[EXCEPTION]",[$e->getMessage()]);
+            Log::info("[EXCEPTION]", [$e->getMessage()]);
             return false;
         }
     }
