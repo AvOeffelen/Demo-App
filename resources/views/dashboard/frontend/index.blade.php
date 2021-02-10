@@ -7,7 +7,7 @@
             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center bravis-logo">
                 <img src="storage/logo/logo.jpg">
                 <div class="text-center justify-content-center">
-                    <p>Deze Gelre Energiek Gids is uitsluitend bestemd voor medewerkers van Gelre ziekenhuizen.</p>
+                    <p></p>
                 </div>
                 <div class=""></div>
             </div>
