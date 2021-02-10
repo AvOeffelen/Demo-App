@@ -139,3 +139,8 @@ Route::group(['prefix' => 'axios/workshop', 'namespace' => 'Axios','middleware'=
 Route::group(['prefix' => 'axios', 'namespace' => 'Axios','middleware'=> ['web']], function () {
     Route::post('/contact/send','ContactController@sendGeneralContactForm')->name('contact.send');
 });
+
+Route::group(['prefix' => 'axios/chart', 'namespace' => 'Axios\Management','middleware'=> ['web','admin']], function() {
+
+    Route::get('/','ChartController@pagesPerVisit')->name('chart.pagesPerVisit');
+});

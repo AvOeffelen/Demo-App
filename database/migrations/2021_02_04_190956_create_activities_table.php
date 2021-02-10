@@ -21,6 +21,7 @@ class CreateActivitiesTable extends Migration
             $table->string('record_class', 50);
             $table->unsignedBigInteger('record_id');
 
+            $table->string('session_id', 255)->nullable();
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign("user_id")
                 ->references("id")

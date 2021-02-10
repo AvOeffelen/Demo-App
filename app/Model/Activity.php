@@ -11,7 +11,7 @@ class Activity extends Model
     protected $fillable = [
 
         'record_class', 'record_id',
-        'user_id', 'user_agent'
+        'user_id', 'user_agent', 'session_id'
     ];
 
     /**

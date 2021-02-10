@@ -1,4 +1,4 @@
-@extends('layouts.backend')
+@extends('layouts.management')
 
 @section('content')
     <router-view></router-view>

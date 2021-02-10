@@ -22,12 +22,18 @@ const router = new VueRouter({
                 {
                     path: '',
                     name: 'management',
-                    component: ManagementDashboard
+                    component: ManagementDashboard,
+                    meta: {
+                        show: true
+                    }
                 },
                 {
                     path: 'users',
-                    name: 'management-users',
-                    component: ManagementUsers
+                    name: 'management.users',
+                    component: ManagementUsers,
+                    meta: {
+                        show: true
+                    }
                 }
             ]
         }

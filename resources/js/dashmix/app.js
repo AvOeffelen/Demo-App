@@ -17,8 +17,7 @@ import "vue-toastification/dist/index.css";
 // Install BootstrapVue
 Vue.use(VueFlatPickr);
 Vue.use(BootstrapVue);
-Vue.use(VueRouter);
-Vue.use( CKEditor );
+Vue.use(CKEditor);
 // Import required modules
 import Tools from './modules/tools';
 import Helpers from './modules/helpers';
@@ -44,11 +43,15 @@ Vue.component('PreviewModal',require('../components/Workshop/Backend/PreviewModa
 const files = require.context('../', true, /\.vue$/i)
 files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-import router from "../bootstraps/routerBootstrap.js";
+//Bootstraps
+import router from "../bootstraps/router.js";
+import vuetify from "../bootstraps/vuetify.js";
 
 const app = new Vue({
+
     el: '#main-container',
-    router
+    router,
+    vuetify
 });
 
 // App extends Template
