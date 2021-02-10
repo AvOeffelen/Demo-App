@@ -48,7 +48,7 @@
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn btn-dual" id="page-header-user-dropdown" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
-                        <img src="{{asset(auth()->user()->avatar->image_link)}}" height="32px" width="32px" class="header-avatar"/>
+                        <!-- <img src="{{asset(auth()->user()->avatar->image_link)}}" height="32px" width="32px" class="header-avatar"/> -->
                     <span class="d-none d-sm-inline-block">{{auth()->user()->getFullname()}}</span>
                     <i class="fa fa-fw fa-angle-down ml-1 d-none d-sm-inline-block"></i>
                 </button>
