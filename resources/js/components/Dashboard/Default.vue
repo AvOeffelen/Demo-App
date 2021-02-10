@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="col-md-12 text-center">
-                <p class="text-orange">Deze Gelre Energiek Gids is uitsluitend bestemd voor medewerkers van Gelre ziekenhuizen. En kan helpen om gezond & vitaal te blijven, je persoonlijke ontwikkeling te stimuleren, te werken aan de balans werk & privé en inzetbaarheid en werkplezier in iedere levensfase te versterken.</p>
+                <p class="text-orange">Deze Gelre Energiek Gids is uitsluitend bestemd voor medewerkers van Gelre ziekenhuizen. Deze Gids helpt om gezond & vitaal te blijven, je persoonlijke ontwikkeling te stimuleren, te werken aan de balans werk & privé en inzetbaarheid en werkplezier in iedere levensfase te versterken.</p>
             </div>
         <b-row>
             <b-col cols="12">
