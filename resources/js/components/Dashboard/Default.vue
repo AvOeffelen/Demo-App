@@ -1,5 +1,8 @@
 <template>
     <div>
+        <div class="col-md-12 text-center">
+                <p>De Gelre Energiek gids kan helpen om gezond & vitaal te blijven, je persoonlijke ontwikkeling te stimuleren, te werken aan de balans werk & privé en inzetbaarheid en werkplezier in iedere levensfase te versterken.</p>
+            </div>
         <b-row>
             <b-col cols="12">
                 <b-form-group size="lg">
@@ -41,6 +44,7 @@
             </b-row>
         </div>
         <!-- TODO::           WHEN NOT HAPPY WITH THE DESIGN OF THE DEFAULT DASHBOARD REPLACE WITHIN THE COMMENT LINES ADD THE !~!!!!!!!!!V-ELSE!!!!!!!!!!!!!!!-->
+        
         <div class="row py-5" v-else>
             <div
                 class="col-md-12 col-xl-6 col-lg-6 col-12 col-xs-12 order-xl-1 order-lg-1 order-md-1 order-sm-1 order-1"
@@ -72,6 +76,7 @@
                     </div>
                 </a>
             </div>
+            
             <div
                 class="col-md-12 col-xl-6 col-lg-6 col-12 col-xs-12 order-xl-2 order-lg-2 order-md-5 order-sm-5 order-5"
                 data-toggle="appear">
