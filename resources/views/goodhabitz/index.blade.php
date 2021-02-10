@@ -75,8 +75,8 @@ Elk thema wordt aangeduid met een logo.</p>
             <div class="col-md-12 col-lg-8 col-xl-8 col-12 col-sm-12 col-xs-12">
                 <alinea class="text-center">
                     <p>Voor onlinetrainingen waar je nooit genoeg van krijgt kun je gaan naar de omgeving van
-                        GoodHabitz. Je vindt hier van toffe documentaires tot interessante magazines en van inspirerende
-                        experts tot uitdagende opdrachten. Je luistert, kijkt of doet allen de onderdelen die passen bij
+                        GoodHabitz. Je vindt hier uiteenlopende onderdelen van toffe documentaires tot interessante magazines en van inspirerende
+                        experts tot uitdagende opdrachten. Je luistert, kijkt of doet alleen de onderdelen die passen bij
                         jouw manier van leren. Alles mag, niets moet: je leert zoals jij dat wilt!
                         <br />
                         <br />
