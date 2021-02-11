@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="w-100">
         <div class="bg-body-light p-4">
             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
                 <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Management Dashboard</h1>
@@ -14,26 +14,52 @@
         </div>
         <div class="content content-full">
             <div class="d-flex justify-content-around w-100">
-                <div class="info-item bg-light p-3 rounded text-center">
+                <div class="info-item bg-primary m-2 col-3 rounded text-center shadow-sm">
+                    <h3 class="mb-1 text-light">Welkom terug</h3>
+                    <p class="mb-0 text-light">Youri van der Sande</p>
+                </div>
+                <div class="info-item bg-light m-2 col-3 rounded text-center shadow-sm">
                    <h3 class="mb-1">Visits</h3>
                     <p class="mb-0">10</p>
                 </div>
-                <div class="info-item bg-light p-3 rounded text-center">
+                <div class="info-item bg-light m-2 col-3 rounded text-center shadow-sm">
                     <h3 class="mb-1">People</h3>
                     <p class="mb-0">10</p>
                 </div>
-                <div class="info-item bg-light p-3 rounded text-center">
+                <div class="info-item bg-light m-2 col-3 rounded text-center shadow-sm">
                     <h3 class="mb-1">Views</h3>
                     <p class="mb-0">10</p>
                 </div>
             </div>
-            <div id="app">
-                <AreaChart :labels="getLabels()" :datasets="getDataSetsArea()"/>
-                <BarChart :labels="getLabels()" :datasets="getDataSetsBar()"/>
+            <div>
+                <div class="d-flex mt-5">
+                    <div class="col-8 mr-2">
+                        <h3>kliks per geslacht</h3>
+                        <AreaChart :labels="getLabels()" :datasets="getDataSetsArea()"/>
+                    </div>
+                    <div class="col-4">
+                        <h3>Bezoekers geslacht</h3>
+                        <DoughnutChart :labels="getLabelsPie()" :datasets="getDataSetsDoughnut()"/>
+                    </div>
+                </div>
+                <div class="d-flex mt-5">
+                    <div class="col-4">
+                        <h3>Artikelen</h3>
+                        <DoughnutChart :labels="getLabelsArticle()" :datasets="getDataSetsDoughnutArticle()"/>
+                    </div>
+                    <div class="col-4">
+                        <h3>Workshops</h3>
+                        <DoughnutChart :labels="getLabelsArticle()" :datasets="getDataSetsDoughnutArticle()"/>
+                    </div>
+                    <div class="col-4">
+                        <h3>Tegels</h3>
+                        <DoughnutChart :labels="getLabelsArticle()" :datasets="getDataSetsDoughnutArticle()"/>
+                    </div>
+                </div>
+<!--                <BarChart :labels="getLabels()" :datasets="getDataSetsBar()"/>
                 <LineChart :labels="getLabels()" :datasets="getDataSetsLine()"/>
                 <PieChart :labels="getLabelsPie()" :datasets="getDataSetsPie()"/>
-                <RadarChart :labels="getLabels()" :datasets="getDataSetsRadar()"/>
-                <DoughnutChart :labels="getLabelsPie()" :datasets="getDataSetsDoughnut()"/>
+                <RadarChart :labels="getLabels()" :datasets="getDataSetsRadar()"/>-->
             </div>
         </div>
     </div>
@@ -107,12 +133,22 @@ export default {
             ];
         },
 
+        getLabelsArticle() {
+
+            return {
+                first: "Gratis training: HersenCoach",
+                second: "Niet thuiszitten, maar thuisbewegen!",
+                third: "Zo krijg je weer sterke longen"
+            }
+        },
+
         getLabelsPie() {
-            return [
-              "male",
-              "female",
-              "other"
-            ];
+
+            return {
+                male: "male",
+                female: "female",
+                other: "other"
+            };
         },
 
         getDataSetsArea() {
@@ -168,11 +204,17 @@ export default {
                     male: 40,
                     female: 20,
                     other: 10
-                },
+                }
+            ];
+        },
+
+        getDataSetsDoughnutArticle() {
+
+            return [
                 {
-                    male: 30,
-                    female: 60,
-                    other: 20
+                    first: 40,
+                    second: 20,
+                    third: 10
                 }
             ];
         }
