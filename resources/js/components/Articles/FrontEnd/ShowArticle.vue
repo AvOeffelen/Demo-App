@@ -4,10 +4,7 @@
             <b-col align-self="center" cols="12" md="12" lg="12" sm="12">
                 <b-button @click="goBack()" variant="primary">Terug</b-button>
                 <div class="text-center w-100">
-                    <div v-if="article.has_video === true">
-                        <div v-html="article.video_link"></div>
-                    </div>
-                    <div v-else-if="article.image_link != null">
+                    <div v-if="article.image_link">
                         <div class="article-show-image">
                             <img class="" v-bind:src="'../../' + article.image_link" />
                         </div>
@@ -30,6 +27,13 @@
                         </div>
                     </div>
                 </div>
+                <b-row v-if="article.type === 'video'">
+                    <b-col col="3"></b-col>
+                    <b-col col="6">
+                        <div v-html="article.video_link"></div>
+                    </b-col>
+                    <b-col col="3"></b-col>
+                </b-row>
                 <b-row>
                     <b-col cols="0" md="1" lg="1" sm="0"></b-col>
                     <b-col align-self="center" cols="12" md="10" lg="19" sm="12">
