@@ -51,11 +51,20 @@ class ArticleController extends Controller
 
             return true;
         } catch (\Exception $e) {
-
+            Log::error("[ARTICLE IMAGE UPLOAD FAILURE] Failed to upload image", [$e->getMessage()]);
             return false;
         }
     }
 
+    function remove_http($url) {
+        $disallowed = array('http://', 'https://');
+        foreach($disallowed as $d) {
+            if(strpos($url, $d) === 0) {
+                return str_replace($d, '', $url);
+            }
+        }
+        return $url;
+    }
     /**
      * @param StoreArticleRequest $request
      *
@@ -63,37 +72,27 @@ class ArticleController extends Controller
      */
     public function store(StoreArticleRequest $request): JsonResponse
     {
-        $hasVideo = false;
-        $uploadSucceed = true;
-
-        $uploadingImage = $request->get('uploadImage');
-
-        if($uploadingImage === "false"){
-            $hasVideo = true;
-        }
+        $buttonlink = $this->remove_http($request->get('button_link'));
 
         $article = Article::create([
+            'type' => $request->get('type'),
             'title' => $request->get('title'),
-            'has_video' => $hasVideo,
             'category_id' => (int) $request->get('category_id'),
             'text' => $request->get('text'),
             'button_text' => $request->get('button_text'),
-            'button_link' => $request->get('button_link'),
+            'button_link' => $buttonlink,
             'video_link' => $request->get('video_link'),
             'show_contact' => $request->get('show_contact') ? 1 : 0 ,
         ]);
 
-        if($uploadingImage === "true"){
-            $image = $request->file('image');
+        $image = $request->file('image');
+        $uploadSucceed = $this->uploadImage($image , $article);
 
-            $uploadSucceed = $this->uploadImage($image , $article);
-        }
-
-        if(! $uploadSucceed) {
+        if(!$uploadSucceed){
             return response()->json(['message' => 'Internal server error'],500);
         }
 
-        return response()->json(['article' => $article]);
+        return response()->json(['message' => 'success']);
     }
 
     /**
@@ -103,29 +102,32 @@ class ArticleController extends Controller
      */
     public function update(UpdateArticleRequest $request): JsonResponse
     {
-        $hasVideo = 0;
-        $uploadingImage = $request->get('uploadImage');
         $changedImage = $request->get('changed_image') ? $request->get('changed_image') : "false" ;
-        if($uploadingImage === "false"){
-            $hasVideo = 1;
-        }
+
+        $buttonlink = $this->remove_http($request->get('button_link'));
 
         $article = Article::updateOrCreate([
             'id' => $request->get('id'),
         ], [
+            'type' => $request->get('type'),
             'title' => $request->get('title'),
             'category_id' => (int) $request->get('category_id'),
             'image_link' => $request->get('image_link'),
             'video_link' => $request->get('video_link'),
             'button_text' => $request->get('button_text'),
-            'button_link' => $request->get('button_link'),
-            'has_video' => $hasVideo,
+            'button_link' => $buttonlink,
             'text' => $request->get('text'),
             'show_contact' => $request->get('show_contact') ? 1 : 0 ,
         ]);
 
-        if($uploadingImage === "true" && $changedImage === "true"){
-            $this->uploadImage($request->file('image_link'), $article);
+        $uploadSucceed = true;
+
+        if($changedImage ==="true") {
+            $uploadSucceed = $this->uploadImage($request->file('image_link'), $article);
+        }
+
+        if(!$uploadSucceed){
+            return response()->json(['message' => 'Internal server error'],500);
         }
 
         return response()->json(['message' => 'success']);

@@ -44,7 +44,7 @@
                 <span class="d-sm-inline-block d-sm-none">Log in</span>
             </a>
         @else
-        
+
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn btn-dual" id="page-header-user-dropdown" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
