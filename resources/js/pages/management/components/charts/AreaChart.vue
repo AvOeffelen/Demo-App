@@ -11,9 +11,9 @@ export default {
     data() {
         return {
             chartColors: {
-                male: "rgba(0, 231, 255, 0.25)",
-                female: "rgba(255, 0, 0, 0.25)",
-                other: "rgba(0, 255, 0, 0.25)"
+                male: "#85d8ff",
+                female: "#ff7e75",
+                other: "#68ed64"
             }
         };
     },
@@ -36,8 +36,8 @@ export default {
             return Object.entries(this.datasets).map(([key, value]) => {
                 return {
                     label: key.toUpperCase(),
-                    borderColor: "#fff",
-                    pointBackgroundColor: "white",
+                    borderColor: "grey",
+                    pointBackgroundColor: "grey",
                     borderWidth: 1,
                     pointBorderColor: "white",
                     backgroundColor: this.chartColors[key],

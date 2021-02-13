@@ -16,7 +16,7 @@
             <div class="d-flex justify-content-around w-100">
                 <div class="info-item bg-primary m-2 col-3 rounded text-center shadow-sm">
                     <h3 class="mb-1 text-light">Welkom terug</h3>
-                    <p class="mb-0 text-light">Youri van der Sande</p>
+                    <p class="mb-0 text-light">Dennis Krijgsman</p>
                 </div>
                 <div class="info-item bg-light m-2 col-3 rounded text-center shadow-sm">
                    <h3 class="mb-1">Visits</h3>
@@ -155,7 +155,8 @@ export default {
 
             return {
                 male: [40, 39, 10, 40, 39, 80, 40],
-                female: [60, 55, 32, 10, 2, 12, 53]
+                female: [60, 55, 32, 10, 2, 12, 53],
+                other: [20, 15, 62, 12, 62, 6, 63]
             };
         },
 

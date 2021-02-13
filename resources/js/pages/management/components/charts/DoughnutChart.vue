@@ -12,14 +12,14 @@ export default {
     data() {
         return {
             chartColors: {
-                male: "rgba(0, 231, 255, 0.5)",
-                female: "rgba(255, 0, 0, 0.5)",
-                other: "rgba(0, 255, 0, 0.5)",
-                first: "rgba(207,181,59, 0.5)",
-                second: "rgba(192,192,192, 0.5)",
-                third: "rgba(139,69,19, 0.5)",
-                fourth: "rgba(0, 231, 255, 0.25)",
-                fifth: "rgba(255, 0, 0, 0.25)"
+                male: "#36b0d9",
+                female: "#f05151",
+                other: "#68ed64",
+                first: "#fa7f4b",
+                second: "#e0c31b",
+                third: "#37b356",
+                fourth: "#e37da2",
+                fifth: "#4494c2"
             }
         };
     },

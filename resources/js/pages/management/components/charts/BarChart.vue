@@ -15,7 +15,7 @@ export default {
                 male: "rgba(0, 231, 255, 0.25)",
                 female: "rgba(255, 0, 0, 0.25)",
                 other: "rgba(0, 255, 0, 0.25)",
-                TopArtikel: "rgba(207,181,59, 0.5)"
+                TopArtikel: "#8dcdf2"
             }
         };
     },
