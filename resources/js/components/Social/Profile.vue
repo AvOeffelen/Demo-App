@@ -33,7 +33,7 @@
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                               aria-controls="home" aria-selected="true">Over</a>
+                               aria-controls="home" aria-selected="true">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
@@ -62,7 +62,7 @@
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <div class="row">
                             <div class="col-md-6">
-                                <label>Naam</label>
+                                <label>Name</label>
                             </div>
                             <div class="col-md-6">
                                 <p>{{ person.firstname }} {{ person.infix }} {{ person.lastname }}</p>
@@ -78,13 +78,13 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <label>Geslacht</label>
+                                <label>Gender</label>
                             </div>
                             <div class="col-md-6">
-                                <p v-if="person.gender === 'woman'">Vrouw</p>
-                                <p v-else-if="person.gender === 'man'">Man</p>
-                                <p v-else-if="person.gender === 'different'">Anders</p>
-                                <p v-else>Zeg ik liever niet</p>
+                                <p v-if="person.gender === 'woman'">Female</p>
+                                <p v-else-if="person.gender === 'man'">Male</p>
+                                <p v-else-if="person.gender === 'different'">Other</p>
+                                <p v-else>I rather don't say</p>
                             </div>
                         </div>
                         <hr>
@@ -95,7 +95,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <p>
-                                    <i class="si si-star mr-1 "></i> Mijn favoriete workshops
+                                    <i class="si si-star mr-1 "></i> My favorite workshops
                                 </p>
                                 <div v-if="loadingWorkshops">
                                     <b-row>
@@ -127,7 +127,7 @@
                                             <div class="block-content block-content-full">
                                                 <a class="btn btn-sm btn-light"
                                                    v-bind:href="`/workshop/${workshop.id}/show`">
-                                                    <i class="fa fa-search text-muted mr-1"></i> Bekijk
+                                                    <i class="fa fa-search text-muted mr-1"></i> Watch
                                                 </a>
                                             </div>
                                         </div>
@@ -141,7 +141,7 @@
                             <div class="col-md-12">
                                 <p>
                                     <i class="si si-star mr-1 "></i>
-                                    Mijn favoriete artikelen
+                                    My favorite articles
                                 </p>
                                 <div v-if="loadingArticles">
                                     <b-row>
@@ -173,7 +173,7 @@
                                             <div class="block-content block-content-full">
                                                 <a class="btn btn-sm btn-light"
                                                    v-bind:href="`/article/${article.id}/show`">
-                                                    <i class="fa fa-search text-muted mr-1"></i> Bekijk
+                                                    <i class="fa fa-search text-muted mr-1"></i> Watch
                                                 </a>
                                             </div>
                                         </div>

@@ -2,7 +2,7 @@
     <div>
         <b-row>
             <b-col align-self="center" cols="12" md="12" lg="12" sm="12">
-                <b-button @click="goBack()" variant="primary">Terug</b-button>
+                <b-button @click="goBack()" variant="primary">Back</b-button>
                 <div class="text-center w-100">
                     <div v-if="workshop.image_link != null">
                         <div class="article-show-image">

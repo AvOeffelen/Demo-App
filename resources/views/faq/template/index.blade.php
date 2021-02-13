@@ -1,15 +1,15 @@
 
 <div class="block block-rounded block-bordered">
     <div class="block-header block-header-default">
-        <h3 class="block-title">Vaak gestelde vragen</h3>
+        <h3 class="block-title">Frequently Asked Questions</h3>
     </div>
     <div class="block-content">
-        <h2 class="content-heading"><strong>1.</strong> Welke vragen kunnen worden gesteld bij FAQ KlantSamenVitaal?
+        <h2 class="content-heading"><strong>1.</strong> Which questions can be asked at FAQ KlantSamenVitaal?
         </h2>
         <div class="row items-push">
             <div class="col-lg-4">
                 <p class="text-muted">
-                   Wij begrijpen natuurlijk dat je vragen hebt. We hebben hier de meest voorkomende opgesomd.
+                We understand, of course, that you have questions. We have listed the most common here.
                 </p>
                 <div class="text-center py-5">
                     <img class="h-250" src="https://www.krijgsmansolutions.nl/wp-content/uploads/2020/12/FAQ_Bravis_KlantSamenVitaal.nl_V1.png" />
@@ -20,14 +20,13 @@
                     <div class="block block-rounded mb-1">
                         <div class="block-header block-header-default" role="tab" id="faq1_h1">
                             <a class="font-w600" data-toggle="collapse" data-parent="#faq1" href="#faq1_q1"
-                               aria-expanded="true" aria-controls="faq1_q1">1.1 Is mijn privacy gewaarborgd?</a>
+                               aria-expanded="true" aria-controls="faq1_q1">1.1 Is my privacy guaranteed?</a>
                         </div>
                         <div id="faq1_q1" class="collapse" role="tabpanel" aria-labelledby="faq1_h1"
                              data-parent="#faq1">
                             <div class="block-content">
                                 <p>
-                                    Wij slaan geen data op. Wanneer je activiteiten onderneemt waarvan persoonsgegevens
-                                    worden opgeslagen, ga je naar een beveiligde omgeving.
+                                We do not store data. When you undertake activities of which personal data are stored, you go to a secure environment.
                                 </p>
                             </div>
                         </div>
@@ -35,13 +34,13 @@
                     <div class="block block-rounded mb-1">
                         <div class="block-header block-header-default" role="tab" id="faq1_h2">
                             <a class="font-w600" data-toggle="collapse" data-parent="#faq1" href="#faq1_q2"
-                               aria-expanded="true" aria-controls="faq1_q2">1.2 Ik heb wat inhoudelijke vragen. Aan wie kan ik die stellen?</a>
+                               aria-expanded="true" aria-controls="faq1_q2">1.2 I have some substantive questions. Who can I contact?</a>
                         </div>
                         <div id="faq1_q2" class="collapse" role="tabpanel" aria-labelledby="faq1_h2"
                              data-parent="#faq1">
                             <div class="block-content">
                                 <p>
-                                    Je kunt een mail sturen aan info@vitalavie.nl
+                                    You can send an email to info@vitalavie.nl
                                 </p>
                             </div>
                         </div>
@@ -49,13 +48,13 @@
                     <div class="block block-rounded mb-1">
                         <div class="block-header block-header-default" role="tab" id="faq1_h3">
                             <a class="font-w600" data-toggle="collapse" data-parent="#faq1" href="#faq1_q3"
-                               aria-expanded="true" aria-controls="faq1_q3">1.3 Ik wil deelnemen aan een online workshop. Hoe werkt dat?</a>
+                               aria-expanded="true" aria-controls="faq1_q3">1.3 I want to participate in an online workshop. How does that work?</a>
                         </div>
                         <div id="faq1_q3" class="collapse" role="tabpanel" aria-labelledby="faq1_h3"
                              data-parent="#faq1">
                             <div class="block-content">
                                 <p>
-                                    Je geeft aan voor welke workshop je in wil schrijven. Je ontvangt een link van een online omgeving waarop je alleen maar hoeft te klikken, waarna de host je toelaat tot de workshop of het gesprek.
+                                You indicate for which workshop you want to register. You will receive a link from an online environment that you just have to click on, after which the host will allow you to join the workshop or conversation.
                                 </p>
                             </div>
                         </div>
@@ -63,7 +62,7 @@
                     <div class="block block-rounded mb-1">
                         <div class="block-header block-header-default" role="tab" id="faq1_h4">
                             <a class="font-w600" data-toggle="collapse" data-parent="#faq1" href="#faq1_q4"
-                               aria-expanded="true" aria-controls="faq1_q6">1.4 Waar worden gegevens opgeslagen?</a>
+                               aria-expanded="true" aria-controls="faq1_q6">1.4 Where does data get stored?</a>
                         </div>
                         <div id="faq1_q4" class="collapse" role="tabpanel" aria-labelledby="faq1_h4"
                              data-parent="#faq1">
@@ -82,13 +81,13 @@
                     <div class="block block-rounded mb-1">
                         <div class="block-header block-header-default" role="tab" id="faq1_h5">
                             <a class="font-w600" data-toggle="collapse" data-parent="#faq1" href="#faq1_q5"
-                               aria-expanded="true" aria-controls="faq1_q5">1.5 Ik heb een tip voor een waardevolle workshop. Met wie kan ik die delen?</a>
+                               aria-expanded="true" aria-controls="faq1_q5">1.5 I have a tip for a valuable workshop. Who can I share it with?</a>
                         </div>
                         <div id="faq1_q5" class="collapse" role="tabpanel" aria-labelledby="faq1_h5"
                              data-parent="#faq1">
                             <div class="block-content">
                                 <p>
-                                    Je mag je tip of advies mailen aan info@vitalavie.nl.
+                                   You can mail you tip or advise to info@vitalavie.nl.
                                 </p>
                             </div>
                         </div>
@@ -96,13 +95,13 @@
                     <div class="block block-rounded mb-1">
                         <div class="block-header block-header-default" role="tab" id="faq1_h15">
                             <a class="font-w600" data-toggle="collapse" data-parent="#faq1" href="#faq1_q6"
-                               aria-expanded="true" aria-controls="faq1_q6">1.6 Ik heb me aangemeld voor een workshop of training. Ontvang ik daarvan nog een bevestiging?</a>
+                               aria-expanded="true" aria-controls="faq1_q6">1.6 I have registered for a workshop or training. Will I receive a confirmation of this?</a>
                         </div>
                         <div id="faq1_q6" class="collapse" role="tabpanel" aria-labelledby="faq1_h6"
                              data-parent="#faq1">
                             <div class="block-content">
                                 <p>
-                                    Ja, een paar dagen voor de workshop ontvang je een bevestiging per mail.
+                                Yes, you will receive a confirmation by email a few days before the workshop.
                                 </p>
                             </div>
                         </div>
@@ -110,13 +109,13 @@
                     <div class="block block-rounded mb-1">
                         <div class="block-header block-header-default" role="tab" id="faq1_h7">
                             <a class="font-w600" data-toggle="collapse" data-parent="#faq1" href="#faq1_q7"
-                               aria-expanded="true" aria-controls="faq1_q16">1.7 Ik ben plotseling verhinderd. Kan ik me afmelden?</a>
+                               aria-expanded="true" aria-controls="faq1_q16">1.7 I am suddenly unable to attend. Can I unsubscribe?</a>
                         </div>
                         <div id="faq1_q7" class="collapse" role="tabpanel" aria-labelledby="faq1_h7"
                              data-parent="#faq1">
                             <div class="block-content">
                                 <p>
-                                    Stuur tijdig, uiterlijk 48 uur voor de datum, een bericht naar info@vitalavie.nl
+                                Send a message to info@vitalavie.nl in good time, no later than 48 hours before the date
                                 </p>
                             </div>
                         </div>
@@ -124,14 +123,14 @@
                     <div class="block block-rounded mb-1">
                         <div class="block-header block-header-default" role="tab" id="faq1_h8">
                             <a class="font-w600" data-toggle="collapse" data-parent="#faq1" href="#faq1_q8"
-                               aria-expanded="true" aria-controls="faq1_q8">1.8 Ik wil gebruik maken van een ander aanbod dan wordt aangeboden, kan dat?
+                               aria-expanded="true" aria-controls="faq1_q8">1.8 I want to make use of a different offer than is being offered, is that possible?
                             </a>
                         </div>
                         <div id="faq1_q8" class="collapse" role="tabpanel" aria-labelledby="faq1_h8"
                              data-parent="#faq1">
                             <div class="block-content">
                                 <p>
-                                    In principe niet. Wij staan natuurlijk graag open voor suggesties.
+                                    Normally not. We are ofcourse open to suggestions.
                                 </p>
                             </div>
                         </div>
@@ -139,14 +138,14 @@
                     <div class="block block-rounded mb-1">
                         <div class="block-header block-header-default" role="tab" id="faq1_h9">
                             <a class="font-w600" data-toggle="collapse" data-parent="#faq1" href="#faq1_q9"
-                               aria-expanded="true" aria-controls="faq1_q9">1.9 Je bij workshops een sterretje waar dient dit voor?
+                               aria-expanded="true" aria-controls="faq1_q9">1.9 You see a star at the workshops, what is that for ?
                             </a>
                         </div>
                         <div id="faq1_q9" class="collapse" role="tabpanel" aria-labelledby="faq1_h9"
                              data-parent="#faq1">
                             <div class="block-content">
                                 <p>
-                                Als je bij KlantSamenVitaal een account maakt kun je favorieten toevoegen, deze kun je terugvinden in jouw profiel. Doormiddel van het sterretje kun je deze toevoegen. Wil je ook een account aanmaken klik dan hier.
+                                If you create an account at KlantSamenVitaal, you can add favorites, which you can find in your profile. You can add it by clicking on the star. If you also want to create an account, click here.
                                 </p>
                             </div>
                         </div>

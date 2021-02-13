@@ -7,7 +7,7 @@
                         id="filter-input"
                         v-model="searchString"
                         type="search"
-                        placeholder="Waar ben je naar op zoek?">
+                        placeholder="What are you looking for?">
                     </b-form-input>
                 </b-form-group>
             </b-col>
@@ -64,10 +64,10 @@
                 >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
                         <div class="ribbon-box">
-                            Activiteitenkalender
+                            Activitycalender
                         </div>
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">Activiteitenkalender</h3>
+                            <h3 class="h1 font-w700 text-white mb-1">Activitycalender</h3>
                         </div>
                     </div>
                 </a>
@@ -124,10 +124,10 @@
                 >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
                         <div class="ribbon-box">
-                            Persoonlijke begeleiding
+                            Personal assistance
                         </div>
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">Persoonlijke begeleiding</h3>
+                            <h3 class="h1 font-w700 text-white mb-1">Personal assistance</h3>
                         </div>
                     </div>
                 </a>
@@ -154,10 +154,10 @@
                 >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
                         <div class="ribbon-box">
-                            (na)zorg Corona
+                            (after) care Corona
                         </div>
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">(na)zorg Corona</h3>
+                            <h3 class="h1 font-w700 text-white mb-1">(after) care Corona</h3>
                         </div>
                     </div>
                 </a>
@@ -184,10 +184,10 @@
                 >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
                         <div class="ribbon-box">
-                            Vragenlijsten
+                            Questionnaires
                         </div>
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">Vragenlijsten</h3>
+                            <h3 class="h1 font-w700 text-white mb-1">Questionnaires</h3>
                         </div>
                     </div>
                 </a>
@@ -214,10 +214,10 @@
                 >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
                         <div class="ribbon-box">
-                            Inspiratiemateriaal
+                            Inspirational material
                         </div>
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">Inspiratiemateriaal</h3>
+                            <h3 class="h1 font-w700 text-white mb-1">Inspirational material</h3>
                         </div>
                     </div>
                 </a>
@@ -274,10 +274,10 @@
                 >
                     <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
                         <div class="ribbon-box">
-                            Thuiswerken
+                            Working from home
                         </div>
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">Thuiswerken</h3>
+                            <h3 class="h1 font-w700 text-white mb-1">Working from home</h3>
                         </div>
                     </div>
                 </a>

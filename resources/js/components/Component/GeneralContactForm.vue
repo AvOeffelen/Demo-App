@@ -2,7 +2,7 @@
     <div>
         <div class="row">
             <div class="col-md-12 col-lg-2 col-xl-2 col-12 col-sm-12 col-xs-12 cols-12">
-                <a href="javascript:history.back()" class="btn btn-primary">Terug</a>
+                <a href="javascript:history.back()" class="btn btn-primary">Back</a>
             </div>
             <div class="col-md-12 col-lg-8 col-xl-8 col-12 col-sm-12 col-xs-12">
                 <h3>Contact</h3>

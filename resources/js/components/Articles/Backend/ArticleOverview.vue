@@ -7,7 +7,7 @@
                         id="filter-input"
                         v-model="filter"
                         type="search"
-                        placeholder="Waar ben je naar op zoek?"
+                        placeholder="What are you looking for?"
                     ></b-form-input>
                     <b-input-group-append>
                         <b-button :disabled="!filter" @click="filter = ''" variant="primary">Reset</b-button>
