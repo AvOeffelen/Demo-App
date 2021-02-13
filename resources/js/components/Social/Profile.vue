@@ -91,18 +91,22 @@
                         <!-- <label class="py-2">Your Bio</label><br/>
                         <p>Your detail description</p> -->
                     </div>
-                    <div class="col-md-8">
-                        <div class="tab-content profile-tab" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label>Naam</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>
-                                            {{user.firstname}}{{user.infix}}{{user.lastname}}
-                                        </p>
-                                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>
+                                    <i class="si si-star mr-1 "></i> Mijn favoriete workshops
+                                </p>
+                                <div v-if="loadingWorkshops">
+                                    <b-row>
+                                        <b-col class="text-center">
+                                            <b-spinner
+                                                style="width: 3rem; height: 3rem;"
+                                                variant="primary"
+                                                type="grow"
+                                            ></b-spinner>
+                                        </b-col>
+                                    </b-row>
                                 </div>
                                 <b-row v-else>
                                     <b-col cols="12" sm="12" md="6" xl="4" lg="4"
