@@ -25,7 +25,7 @@
                             {{ article.title }}
                         </h3>
                         <div class="icon-container ">
-                            <span v-if="article.type === 'video'"><i class="tile-icon fa fa-play fa-2x"></i></span>
+                            <span v-if="article.type === 'video'"><i class="tile-icon fab fa-youtube fa-2x"></i></span>
                             <span v-else-if="article.type === 'podcast'"><i class="tile-icon fas fa-microphone-alt fa-2x"></i></span>
                             <span v-else><i class="tile-icon fas fa-glasses fa-2x"></i></span>
                         </div>

@@ -53,7 +53,6 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="profile-work">
-                    <b>{{ person.type === 'default' ? "medewerker" : person.type }}</b>
                     <hr>
                     <b>Gelre Energiek</b>
                 </div>
