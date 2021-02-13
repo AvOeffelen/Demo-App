@@ -8,8 +8,7 @@
                     </b-col>
                     <b-col cols="12" md="12" lg="6" xl="6" sm="12">
                         <div class="text-center py-3 ">
-                            <h1 class="h1 font-w700 mb-2 text-primary">Persoonlijke
-                                begeleiding</h1>
+                            <h1 class="h1 font-w700 mb-2 text-primary">Personal assistance</h1>
                         </div>
                     </b-col>
                     <b-col cols="12" md="12" lg="3" xl="3" sm="12">

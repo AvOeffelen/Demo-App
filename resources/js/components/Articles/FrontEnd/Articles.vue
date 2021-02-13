@@ -7,7 +7,7 @@
                         <b-button @click="goBack()" variant="primary">Back</b-button></b-col>
                     <b-col cols="12" md="12" lg="6" xl="6" sm="12">
                         <div class="text-center py-3">
-                            <h1 class="h3 font-w700 mb-2">Inspiratie Materiaal</h1>
+                            <h1 class="h3 font-w700 mb-2">Inspiration material</h1>
                         </div>
                     </b-col>
                     <b-col cols="12" md="12" lg="3" xl="3" sm="12">

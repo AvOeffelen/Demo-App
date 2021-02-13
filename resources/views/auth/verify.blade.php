@@ -12,7 +12,7 @@
                             <a>
                                 <img src="storage/logo/logo.png" height="">
                             </a>
-                            <p class="text-uppercase font-w700 font-size-sm text-muted py-3">Verifiëer uw email</p>
+                            <p class="text-uppercase font-w700 font-size-sm text-muted py-3">Verify your email</p>
                         </div>
                     </div>
                     <div class="row no-gutters justify-content-center">
@@ -21,18 +21,18 @@
                                 <div class="col-sm-10 col-xl-8">
                                     @if (session('resent'))
                                         <div class="alert alert-success" role="alert">
-                                            Een nieuwe email met daar in een verificatie link is naar u verstuurd!
+                                            A new email with a verification link has been sent to you!
                                         </div>
                                     @endif
 
-                                    Voordat u verder kunt dient u uw email eerst te verifiëren.
-                                    Als u geen email ontvangen heeft kunt u die hieronder opnieuw aanvragen.
+                                    Before you can continue, you must first verify your email.
+                                    If you have not received an email, you can request it again below.
                                     <form class="d-inline text-center" method="POST" action="{{ route('verification.resend') }}">
                                         @csrf
                                         <button type="submit"
                                                 class="btn btn-sm btn-light d-block d-lg-inline-block mb-1">
                                             <i class="fa fa-paper-plane text-muted mr-1"></i>
-                                            Verificatie email versturen
+                                            Send verification email
                                         </button>
                                     </form>
                                 </div>

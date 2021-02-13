@@ -12,7 +12,7 @@
                             <a>
                                 <img src="storage/logo/logo.png" height="">
                             </a>
-                            <p class="text-uppercase font-w700 font-size-sm text-muted py-3">Registreren</p>
+                            <p class="text-uppercase font-w700 font-size-sm text-muted py-3">Register</p>
                         </div>
                     </div>
                     <div class="row no-gutters justify-content-center">
@@ -21,7 +21,7 @@
                                 @csrf
                                 <div class="py-2">
                                     <div class="form-group">
-                                        <label for="name">Voornaam <span class="text-danger">*</span></label>
+                                        <label for="name">First name <span class="text-danger">*</span></label>
                                         <input type="text"
                                                class="form-control form-control-alt form-control-lg {{ $errors->has('firstname') ? 'is-invalid' : '' }}"
                                                id="name" name="firstname" placeholder="Voornaam" value="{{ old('firstname') }}">
@@ -32,7 +32,7 @@
                                         @endif
                                     </div>
                                     <div class="form-group">
-                                        <label for="addition">Tussenvoegsel</label>
+                                        <label for="addition">Prefix</label>
                                         <input type="text"
                                                class="form-control form-control-alt form-control-lg {{ $errors->has('infix') ? 'is-invalid' : '' }}"
                                                id="addition" name="infix" value="{{ old('infix') }}"
@@ -44,7 +44,7 @@
                                         @endif
                                     </div>
                                     <div class="form-group">
-                                        <label for="lastname">Achternaam <span class="text-danger">*</span></label>
+                                        <label for="lastname">Lastname <span class="text-danger">*</span></label>
                                         <input type="text"
                                                class="form-control form-control-alt form-control-lg {{ $errors->has('lastname') ? 'is-invalid' : '' }}"
                                                id="name" name="lastname" placeholder="Achternaam"
@@ -67,14 +67,14 @@
                                             </span>
                                     @endif
                                     <div class="form-group">
-                                        <label for="lastname">Geslacht <span class="text-danger">*</span></label>
+                                        <label for="lastname">Gender <span class="text-danger">*</span></label>
                                             <select class="form-control {{ $errors->has('gender') ? 'is-invalid' : '' }}"
                                                     id="gender-select"
                                                     name="gender">
-                                                <option value="woman" selected>Vrouw</option>
-                                                <option value="man">Man</option>
-                                                <option value="different">Anders</option>
-                                                <option value="not_disclosed">Zeg ik liever niet</option>
+                                                <option value="woman" selected>Female</option>
+                                                <option value="man">Male</option>
+                                                <option value="different">Other</option>
+                                                <option value="not_disclosed">I rather don't say</option>
                                             </select>
                                         @if ($errors->has('gender'))
                                             <span class="help-block">
@@ -83,7 +83,7 @@
                                         @endif
                                     </div>
                                     <div class="form-group">
-                                        <label for="password">Wachtwoord <span class="text-danger">*</span></label>
+                                        <label for="password">Password <span class="text-danger">*</span></label>
                                         <input type="password"
                                                class="form-control form-control-lg form-control-alt {{ $errors->has('password') ? 'is-invalid' : '' }}"
                                                id="password" name="password"
@@ -95,7 +95,7 @@
                                         @endif
                                     </div>
                                     <div class="form-group">
-                                        <label for="password-confirm">Herhaal wachtwoord <span
+                                        <label for="password-confirm">Repeat password <span
                                                 class="text-danger">*</span></label>
                                         <input type="password"
                                                class="form-control form-control-lg form-control-alt {{ $errors->has('password') ? 'is-invalid' : '' }}"
