@@ -15,12 +15,13 @@
 .article-container .icon-container {
     display:none;
     margin-top: auto;
-    margin-left:50%;
+    margin-left:45%;
     z-index: 6;
 }
 .tile-icon{
-    background-color: red !important;
+    background-color: grey !important;
     padding: 20px;
+    border-radius: 50%;
     color: white;
 }
 
