@@ -5,7 +5,7 @@
 <script>
 export default {
 
-    name: "ManagementDashboard",
+    name: "ManagementUsers",
 
     data() {
         return {

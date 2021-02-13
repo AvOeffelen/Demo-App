@@ -22,7 +22,7 @@
                         </template>
 
                         <v-list dense>
-                            <v-list-item link @click="window.location.href = '/management/me'">
+                            <v-list-item link @click="window.location.href = '/me'">
                                 <v-list-item-icon>
                                     <v-icon>mdi-account</v-icon>
                                 </v-list-item-icon>
@@ -72,12 +72,12 @@
                     <v-divider></v-divider>
 
                     <v-list-item
-                        v-for="route in dashboardRoutes"
+                        v-for="route in displayRoutes"
                         :key="route.name" link
                         :class="{ 'route-active': ($route.name === route.name) }"
                         @click="$router.push({ name: route.name })"
                     >
-                        <v-list-item-icon>
+                        <v-list-item-icon class="mr-2">
                             <v-icon :color="($route.name === route.name) ? 'secondary' : null">{{ route.meta != null && route.meta.icon != null ? route.meta.icon : 'mdi-alert-decagram'}}</v-icon>
                         </v-list-item-icon>
 
@@ -115,9 +115,9 @@ export default {
             user: {
 
                 //TODO: RETRIEVE USER
-                first_name: "TO",
-                infix: "",
-                last_name: "DO",
+                first_name: "Youri",
+                infix: "van der",
+                last_name: "Sande",
                 type: "manager"
             }
         };
@@ -144,7 +144,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+
+    @import '~vuetify/dist/vuetify.min.css';
 
     * {
         margin: 0;
