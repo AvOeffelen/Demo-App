@@ -28,9 +28,6 @@
                                 drop-placeholder="Drop afbeelding hier"
                                 v-bind:class="[this.errors.avatar ? 'decoratedErrorField':'' ]"/>
                         </div>
-                     <div class="mt-5"></div>
-                      <button class="btn btn-primary">Voeg toe +</button>
-                      <button class="btn btn-outline-primary">Bericht</button>
                     </div>
                   </div>
                 </div>
@@ -42,20 +39,12 @@
                     <span class="text-secondary">5</span>
                   </li>
                   <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                    <i class="far fa-heart"> Favoriete Artikelen</i> 
+                    <i class="fas fa-heart"> Favoriete Artikelen</i> 
                     <span class="text-secondary">3</span>
                   </li>
                   <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                      <i class="fas fa-praying-hands"> Een statestiek</i> 
                     <span class="text-secondary">14</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                     <i class="far fa-address-book"> Andere statestiek</i>
-                    <span class="text-secondary">1</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                    <i class="fas fa-balance-scale-left"> Stats hierplaatsen</i> 
-                    <span class="text-secondary">5</span>
                   </li>
                 </ul>
               </div>
@@ -98,7 +87,7 @@
                       <h6 class="mb-0">Geboorte Datum</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      12-11-1996
+                      {{ person.birthday }}
                     </div>
                   </div>
                 </div>
