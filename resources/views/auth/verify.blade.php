@@ -10,7 +10,7 @@
                     <div class="mb-3 text-center">
                         <div class="mb-3 text-center">
                             <a>
-                                <img src="storage/logo/logo.jpg" height="150">
+                                <img src="storage/logo/logo.png" height="">
                             </a>
                             <p class="text-uppercase font-w700 font-size-sm text-muted py-3">Verifiëer uw email</p>
                         </div>
@@ -48,7 +48,7 @@
             <div class="hero-static col-md-6 d-none d-md-flex align-items-md-center justify-content-md-center text-md-center bg-gd-xbrvs">
                 <div class="p-3">
                     <p class="display-4 font-w700 text-xbrvs-lighter mb-3">
-                        Leg de lat op jouw hoogte!
+                        Do work that makes a difference !
                     </p>
                     <p class="font-size-lg font-w600 text-xbrvs-lighter mb-0">
                         Copyright &copy; <span data-toggle="year-copy"></span>

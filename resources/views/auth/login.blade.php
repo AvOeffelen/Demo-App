@@ -10,12 +10,12 @@
                     <div class="mb-3 text-center">
                         <div class="mb-3 text-center">
                              <a>
-                                 <img src="storage/logo/welcome.gif" height="150">
+                                 <img src="storage/logo/logo.png" height="">
                             </a>
                             <p class="text-uppercase font-w700 font-size-sm text-muted py-3">Log in</p>
                         </div>
                         <a tabindex="0" class="btn btn-sm btn-primary text-white" role="button" data-toggle="popover" data-trigger="focus" title="Waarom inloggen ?" data-content="Je kunt hier een account aanmaken wanneer je dat graag wil.
-Wanneer biedt dit voor jou toegevoegde waarde? Dat is wanneer je het leuk vindt dat er een overzicht voor je wordt bijgehouden van welke workshops je gebruik hebt gemaakt, een overzicht van je favorieten. Of wanneer je het prettig vindt dat je op de hoogte wordt gebracht van de nieuwste workshops of de nieuwste artikelen. Dan heb je de mogelijkheid om een persoonlijk dashboard aan te maken waarvoor wij dan wel je mailadres nodig hebben.">Waarom inloggen ?</a>
+Wanneer biedt dit voor jou toegevoegde waarde? Dat is wanneer je het leuk vindt dat er een overzicht voor je wordt bijgehouden van welke workshops je gebruik hebt gemaakt, een overzicht van je favorieten. Of wanneer je het prettig vindt dat je op de hoogte wordt gebracht van de nieuwste workshops of de nieuwste artikelen. Dan heb je de mogelijkheid om een persoonlijk dashboard aan te maken waarvoor wij dan wel je mailadres nodig hebben.">Why login ?</a>
                     </div>
                     <div class="row no-gutters justify-content-center">
                         <div class="col-sm-8 col-xl-6">
@@ -63,7 +63,7 @@ Wanneer biedt dit voor jou toegevoegde waarde? Dat is wanneer je het leuk vindt 
             <div class="hero-static col-md-6 d-none d-md-flex align-items-md-center justify-content-md-center text-md-center bg-gd-xdsv">
                 <div class="p-3">
                     <p class="display-4 font-w700 text-xdsv-lighter mb-3">
-                        Uw slogan hier!
+                        Do work that makes a difference !
                     </p>
                     <p class="font-size-lg font-w600 text-xdsv-lighter mb-0">
                         Copyright &copy; <span data-toggle="year-copy"></span>
