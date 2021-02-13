@@ -17,7 +17,9 @@ export default {
                 other: "rgba(0, 255, 0, 0.5)",
                 first: "rgba(207,181,59, 0.5)",
                 second: "rgba(192,192,192, 0.5)",
-                third: "rgba(139,69,19, 0.5)"
+                third: "rgba(139,69,19, 0.5)",
+                fourth: "rgba(0, 231, 255, 0.25)",
+                fifth: "rgba(255, 0, 0, 0.25)"
             }
         };
     },

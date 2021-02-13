@@ -34,7 +34,7 @@
             <div>
                 <div class="d-flex mt-5">
                     <div class="col-8 mr-2">
-                        <h3>kliks per geslacht</h3>
+                        <h3>Kliks per geslacht</h3>
                         <AreaChart :labels="getLabels()" :datasets="getDataSetsArea()"/>
                     </div>
                     <div class="col-4">
