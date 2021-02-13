@@ -33,7 +33,8 @@ class StoreArticleRequest extends FormRequest
             'video_link' => 'nullable|min:3',
             'button_text' => 'nullable|min:3',
             'button_link' => 'nullable|min:3',
-            'image' => 'sometimes|required|mimes:jpg,png,jpeg,gif'
+            'image' => 'required|mimes:jpg,png,jpeg,gif',
+            'type' => 'required'
         ];
     }
 
@@ -41,7 +42,7 @@ class StoreArticleRequest extends FormRequest
     {
         return [
             'title.required' => "De titel is verplicht.",
-            'text.required' => "Het textveld is verplicht.",
+            'text.required' => "Het tekst veld is verplicht.",
             'category_id.required' => "De categorie is verplicht.",
         ];
     }
