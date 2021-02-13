@@ -1,0 +1,30 @@
+.article-container{
+}
+
+.article-container a{
+    z-index: 0;
+}
+/*
+.article-container:hover{
+    background: coral !important;
+    z-index: 6;
+}
+
+*/
+
+.article-container .icon-container {
+    display:none;
+    margin-top: auto;
+    margin-left:50%;
+    z-index: 6;
+}
+.tile-icon{
+    background-color: red !important;
+    padding: 20px;
+    color: white;
+}
+
+.article-container:hover .icon-container{
+    display:inline-block;
+    z-index: 8;
+}

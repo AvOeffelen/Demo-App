@@ -25,7 +25,7 @@
             <div class="col-md-6">
                 <div class="profile-head">
                     <h5>
-                        {{ person.firstname }}{{ person.infix }}{{ person.lastname }}
+                        {{ person.firstname }} {{ person.infix }} {{ person.lastname }}
                     </h5>
                     <h6>
                         <span>{{ person.type === 'default' ? "medewerker" : person.type }}</span>
@@ -66,7 +66,7 @@
                                 <label>Naam</label>
                             </div>
                             <div class="col-md-6">
-                                <p>{{ person.firstname }} {{ person.lastname }}</p>
+                                <p>{{ person.firstname }} {{ person.infix }} {{ person.lastname }}</p>
                             </div>
                         </div>
                         <div class="row">
