@@ -113,7 +113,7 @@
                       <section>
                         <div class="tab1">
                           <h2>First</h2>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus itaque quidem minus nostrum, voluptatem accusamus aspernatur quia harum ratione, officia laudantium inventore autem doloribus atque labore numquam non. Hic, animi.</p>
+                          <p>Lorem ipsum dolor sit amet, </p>
                         </div>
                         <div class="tab2">
                           <h2>Second</h2>
