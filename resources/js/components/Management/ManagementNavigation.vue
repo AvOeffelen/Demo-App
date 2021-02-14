@@ -38,7 +38,7 @@
                 </li>
 
                 <li class="nav-main-item">
-                    <a class="nav-main-link">
+                    <a class="nav-main-link" href="/backend/dashboard">
 <!--                        :href="route('show.frontend.dashboard')"-->
                         <i class="nav-main-link-icon fas fa-user"></i>
                         <span class="nav-main-link-name ml-2">Admin Dashboard</span>

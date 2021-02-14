@@ -114,4 +114,38 @@ export default {
         outline: none;
     }
 
+    .fill-height {
+
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+
+        height: 100%;
+        min-height: 100%;
+    }
+
+    .info-item:nth-child(1) > div{
+        border-left: 2px solid #3ac47d;
+        color: #3ac47d;
+    }
+
+    .info-item:nth-child(2) > div{
+        border-left: 2px solid #3f6ad8;
+        color: #3f6ad8;
+    }
+
+    .info-item:nth-child(3) > div{
+        border-left: 2px solid #f7b924;
+        color: #f7b924;
+    }
+
+    .info-item:nth-child(4) > div{
+        border-left: 2px solid #d92550;
+        color: #d92550;
+    }
+
+    .info-item i{
+        font-size: 1.5em;
+    }
+
 </style>

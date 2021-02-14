@@ -1,22 +1,54 @@
 <template>
 <div class="w-100 mt-5">
+    <div class="bg-body-light p-4">
+        <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
+            <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Gebruikers Overzicht</h1>
+            <nav aria-label="breadcrumb" class="flex-sm-00-auto ml-sm-3">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">KLANTSAMENVITAAL</li>
+                    <li aria-current="page" class="breadcrumb-item">Management</li>
+                    <li aria-current="page" class="breadcrumb-item active">Dashboard</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
     <div class="content content-full">
-        <div class="d-flex justify-content-around w-100">
-            <div class="info-item bg-light m-2 col-3 rounded text-center shadow-sm">
-                <h3 class="mb-1">Man</h3>
-                <p class="mb-0">12</p>
+        <div class="d-flex flex-wrap justify-content-around w-100">
+            <div class="info-item col-12 col-sm-6 col-md-3">
+                <div class="p-2 bg-light w-100 rounded shadow-sm d-flex justify-content-between align-items-center">
+                    <div>
+                        <p class="mb-1">Man</p>
+                        <h4 class="mb-0">12</h4>
+                    </div>
+                    <i class="fas fa-male"></i>
+                </div>
             </div>
-            <div class="info-item bg-light m-2 col-3 rounded text-center shadow-sm">
-                <h3 class="mb-1">Vrouw</h3>
-                <p class="mb-0">10</p>
+            <div class="info-item col-12 col-sm-6 col-md-3">
+                <div class="p-2 bg-light w-100 rounded shadow-sm d-flex justify-content-between align-items-center">
+                    <div>
+                        <p class="mb-1">Vrouw</p>
+                        <h4 class="mb-0">12</h4>
+                    </div>
+                    <i class="fas fa-female"></i>
+                </div>
             </div>
-            <div class="info-item bg-light m-2 col-3 rounded text-center shadow-sm">
-                <h3 class="mb-1">Nieuwe gebruikers</h3>
-                <p class="mb-0">2</p>
+            <div class="info-item col-12 col-sm-6 col-md-3">
+                <div class="p-2 bg-light w-100 rounded shadow-sm d-flex justify-content-between align-items-center">
+                    <div>
+                        <p class="mb-1">Nieuwe Gebruikers</p>
+                        <h4 class="mb-0">12</h4>
+                    </div>
+                    <i class="fas fa-user"></i>
+                </div>
             </div>
-            <div class="info-item bg-light m-2 col-3 rounded text-center shadow-sm">
-                <h3 class="mb-1">Totaal</h3>
-                <p class="mb-0">22</p>
+            <div class="info-item col-12 col-sm-6 col-md-3">
+                <div class="p-2 bg-light w-100 rounded shadow-sm d-flex justify-content-between align-items-center">
+                    <div>
+                        <p class="mb-1">Totaal</p>
+                        <h4 class="mb-0">12</h4>
+                    </div>
+                    <i class="fas fa-users"></i>
+                </div>
             </div>
         </div>
         <div>
@@ -24,38 +56,38 @@
                 <h3>Inloggen per maand</h3>
                 <LineChart :labels="getLabels()" :datasets="getDataSetsArea()"/>
             </div>
-            <div class="d-flex mt-5">
-                <div class="col-8 mr-2">
+            <div class="d-flex flex-column flex-md-row mt-5">
+                <div class="col-xs-12 col-md-8 mr-2">
                     <h3>Bezoekers per maand</h3>
                     <BarChart :labels="getLabels()" :datasets="getDataSetsBar()"/>
                 </div>
-                <div class="col-4">
+                <div class="col-xs-12 col-md-4">
                     <h3>Bezoekers geslacht</h3>
                     <DoughnutChart :labels="getLabelsPie()" :datasets="getDataSetsDoughnut()"/>
                 </div>
             </div>
-            <div class="d-flex mt-5">
-                <div class="col-4">
+            <div class="d-flex flex-column-reverse flex-md-row mt-5">
+                <div class="col-xs-12 col-md-4">
                     <h3>Unieke bezoekers geslacht</h3>
                     <DoughnutChart :labels="getLabelsPie()" :datasets="getDataSetsDoughnut()"/>
                 </div>
-                <div class="col-8 mr-2">
+                <div class="col-xs-12 col-md-8 mr-2">
                     <h3>Unieke bezoekers per maand</h3>
                     <BarChart :labels="getLabels()" :datasets="getDataSetsBar()"/>
                 </div>
             </div>
             <div class="mt-5">
                 <h2>Man</h2>
-                <div class="d-flex">
-                    <div class="col-4">
+                <div class="d-flex flex-column flex-md-row">
+                    <div class="col-xs-12 col-md-4">
                         <h3>Artikelen</h3>
                         <DoughnutChart :labels="getLabelsArticle()" :datasets="getDataSetsDoughnutArticle()"/>
                     </div>
-                    <div class="col-4">
+                    <div class="col-xs-12 col-md-4">
                         <h3>Workshops</h3>
                         <DoughnutChart :labels="getLabelsArticle()" :datasets="getDataSetsDoughnutArticle()"/>
                     </div>
-                    <div class="col-4">
+                    <div class="col-xs-12 col-md-4">
                         <h3>Tegels</h3>
                         <DoughnutChart :labels="getLabelsArticle()" :datasets="getDataSetsDoughnutArticle()"/>
                     </div>
@@ -63,16 +95,16 @@
             </div>
             <div class="mt-5">
                 <h2>Vrouw</h2>
-                <div class="d-flex">
-                    <div class="col-4">
+                <div class="d-flex flex-column flex-md-row">
+                    <div class="col-xs-12 col-md-4">
                         <h3>Artikelen</h3>
                         <DoughnutChart :labels="getLabelsArticle()" :datasets="getDataSetsDoughnutArticle()"/>
                     </div>
-                    <div class="col-4">
+                    <div class="col-xs-12 col-md-4">
                         <h3>Workshops</h3>
                         <DoughnutChart :labels="getLabelsArticle()" :datasets="getDataSetsDoughnutArticle()"/>
                     </div>
-                    <div class="col-4">
+                    <div class="col-xs-12 col-md-4">
                         <h3>Tegels</h3>
                         <DoughnutChart :labels="getLabelsArticle()" :datasets="getDataSetsDoughnutArticle()"/>
                     </div>
@@ -80,16 +112,16 @@
             </div>
             <div class="mt-5">
                 <h2>Overig</h2>
-                <div class="d-flex">
-                    <div class="col-4">
+                <div class="d-flex flex-column flex-md-row">
+                    <div class="col-xs-12 col-md-4">
                         <h3>Artikelen</h3>
                         <DoughnutChart :labels="getLabelsArticle()" :datasets="getDataSetsDoughnutArticle()"/>
                     </div>
-                    <div class="col-4">
+                    <div class="col-xs-12 col-md-4">
                         <h3>Workshops</h3>
                         <DoughnutChart :labels="getLabelsArticle()" :datasets="getDataSetsDoughnutArticle()"/>
                     </div>
-                    <div class="col-4">
+                    <div class="col-xs-12 col-md-4">
                         <h3>Tegels</h3>
                         <DoughnutChart :labels="getLabelsArticle()" :datasets="getDataSetsDoughnutArticle()"/>
                     </div>
