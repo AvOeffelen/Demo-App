@@ -2,10 +2,12 @@
 
 namespace App;
 
+use App\Model\Activity;
 use App\Model\Article;
 use App\Model\Avatar;
 use App\Model\Workshop;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -32,13 +34,11 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'firstname',
-        'email',
-        'lastname',
-        'infix',
-        'type',
-        'gender',
-        'password'
+
+        'firstname', 'email',
+        'password', 'lastname',
+        'infix', 'type',
+        'gender', 'password'
     ];
 
     /**
@@ -47,6 +47,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $hidden = [
+
         'password', 'remember_token',
     ];
 
@@ -65,11 +66,13 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $casts = [
+
         'email_verified_at' => 'datetime',
     ];
 
     const ADMIN_TYPE = 'admin';
     const DEFAULT_TYPE = 'default';
+    const MANAGER_TYPE = 'manager';
 
 
     /**
@@ -78,6 +81,14 @@ class User extends Authenticatable implements MustVerifyEmail
     public function Workshop(): BelongsToMany
     {
         return $this->belongsToMany(Workshop::class,'user_like_workshop','user_id','workshop_id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function Activities() : HasMany
+    {
+        return $this->hasMany(Activity::class, 'user_id', 'id');
     }
 
     /**
@@ -107,6 +118,14 @@ class User extends Authenticatable implements MustVerifyEmail
     public function isAdmin(): bool
     {
         return $this->type === self::ADMIN_TYPE;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isManager(): bool
+    {
+        return $this->type === self::MANAGER_TYPE;
     }
 
     /**
