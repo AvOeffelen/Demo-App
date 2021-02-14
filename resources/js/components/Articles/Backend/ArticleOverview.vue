@@ -99,8 +99,8 @@ export default {
                     sortable: true,
                 },
                 {
-                    key: 'has_video',
-                    label: 'Bevat video',
+                    key: 'type',
+                    label: 'Type',
                     sortable: true,
                 },
                 {

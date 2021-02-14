@@ -21,7 +21,7 @@
                                 <select class="custom-select" id="example-hosting-vps" name="example-hosting-vps"
                                         v-model="article.category_id">
                                     <option v-for="(category,key) in this.categories" :value="category.id" :key="key">
-                                        {{ category.name }}
+                                        {{ category.display_name }}
                                     </option>
                                 </select>
                             </b-col>

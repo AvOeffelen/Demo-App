@@ -20,7 +20,7 @@
                                 <option v-for="(category,key) in this.categories"
                                         v-bind:value="category.id"
                                         :key="key">
-                                    {{ category.name }}
+                                    {{ category.display_name }}
                                 </option>
                             </select>
                         </div>
