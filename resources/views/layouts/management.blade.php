@@ -14,6 +14,8 @@
     <link rel="icon" sizes="192x192" type="image/png" href="{{ asset('media/favicons/favicon-96x96.png') }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('media/favicons/favicon-96x96.png') }}">
 
+    @routes
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src="{{ URL::asset('browserChecker.js') }}"></script>
@@ -39,7 +41,6 @@
         @csrf
     </form>
     <!-- END Page Container -->
-    @routes
 
     <!-- Dashmix Core JS -->
     <script src="{{ mix('js/dashmix.app.js') }}"></script>

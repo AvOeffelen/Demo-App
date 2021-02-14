@@ -56,11 +56,11 @@
         <!-- END Header -->
 
         <!-- Main Container -->
-        <div>
+        <main class="main-container">
             <transition name="router-fade">
                 <router-view></router-view>
             </transition>
-        </div>
+        </main>
         <!-- END Main Container -->
 
         <!-- Footer -->

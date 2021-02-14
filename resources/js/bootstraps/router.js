@@ -27,7 +27,7 @@ const router = new VueRouter({
                     meta: {
                         show: true,
                         title: () => "Dashboard",
-                        icon: "mdi-finance"
+                        icon: "fas fa-chart-line"
                     }
                 },
                 {
@@ -37,7 +37,7 @@ const router = new VueRouter({
                     meta: {
                         show: true,
                         title: () => "Gebruikersoverzicht",
-                        icon: "mdi-account-multiple"
+                        icon: "fas fa-users"
                     }
                 },
                 {
@@ -47,7 +47,7 @@ const router = new VueRouter({
                     meta: {
                         show: true,
                         title: () => "Activiteitenoverzicht",
-                        icon: "mdi-cursor-default-click"
+                        icon: "fas fa-mouse"
                     }
                 }
             ]

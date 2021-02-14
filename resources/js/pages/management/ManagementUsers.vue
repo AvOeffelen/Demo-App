@@ -1,5 +1,5 @@
 <template>
-<div class="w-100">
+<div class="w-100 mt-5">
     <div class="content content-full">
         <div class="d-flex justify-content-around w-100">
             <div class="info-item bg-light m-2 col-3 rounded text-center shadow-sm">

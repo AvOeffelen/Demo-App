@@ -32,8 +32,16 @@
 
                 <li class="nav-main-item" v-for="route in displayRoutes" :key="route.name">
                     <a class="nav-main-link" :class="{ 'active': ($route.name === route.name) }" @click="$router.push({ name: route.name })">
-                        <i :class="'nav-main-link-icon fa ' + route.meta != null && route.meta.icon != null ? route.meta.icon : ''"></i>
-                        <span class="nav-main-link-name">{{ route.meta != null && route.meta.title != null ? route.meta.title() : route.name }}</span>
+                        <i :class="'nav-main-link-icon ' + route.meta != null && route.meta.icon != null ? route.meta.icon : ''"></i>
+                        <span class="nav-main-link-name ml-2">{{ route.meta != null && route.meta.title != null ? route.meta.title() : route.name }}</span>
+                    </a>
+                </li>
+
+                <li class="nav-main-item">
+                    <a class="nav-main-link">
+<!--                        :href="route('show.frontend.dashboard')"-->
+                        <i class="nav-main-link-icon fas fa-user"></i>
+                        <span class="nav-main-link-name ml-2">Admin Dashboard</span>
                     </a>
                 </li>
 

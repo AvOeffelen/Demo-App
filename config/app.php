@@ -17,6 +17,11 @@ return [
 
     'author' => env('APP_AUTHOR', 'KLANTSAMENVITAAL'),
 
+    'activity' => [
+
+        'interval' => 5
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment
@@ -69,7 +74,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Europe/Amsterdam',
 
     /*
     |--------------------------------------------------------------------------

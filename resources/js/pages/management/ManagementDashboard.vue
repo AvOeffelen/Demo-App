@@ -1,5 +1,5 @@
 <template>
-    <div class="w-100">
+    <div class="w-100 mt-5">
         <div class="bg-body-light p-4">
             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
                 <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Management Dashboard</h1>
