@@ -114,7 +114,6 @@ export default {
         getCategories() {
             axios.get('/axios/article/get-one-on-one-categories')
                 .then(response => {
-                    console.log(this.categories);
                     this.categories = response.data;
                     this.articles = this.categories[0].article;
                     this.loading = false;

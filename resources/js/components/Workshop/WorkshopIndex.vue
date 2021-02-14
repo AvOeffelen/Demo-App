@@ -4,7 +4,8 @@
             <div class="content">
                 <b-row>
                     <b-col cols="12" md="12" lg="3" xl="3" sm="12">
-                        <b-button @click="goBack()" variant="primary">Terug</b-button></b-col>
+                        <b-button @click="goBack()" variant="primary">Terug</b-button>
+                    </b-col>
                     <b-col cols="12" md="12" lg="6" xl="6" sm="12">
                         <div class="text-center py-3">
                             <h1 class="h3 font-w700 mb-2">BESCHIKBARE WORKSHOPS</h1>
@@ -43,9 +44,12 @@
                                         <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 4" >
                                     </div>
                                     <div class="pt-4 pb-6 px-md-3">
-                                        <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{ workshop.title }}</h3>
-                                        <i class="fa fa-calendar appointment-date text-white" aria-hidden="true" v-if="workshop.start !== null">
-                                            {{workshop.start}}
+                                        <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{
+                                                workshop.title
+                                            }}</h3>
+                                        <i class="fa fa-calendar appointment-date text-white" aria-hidden="true"
+                                           v-if="workshop.start !== null">
+                                            {{ workshop.start }}
                                         </i>
                                     </div>
                                 </div>
@@ -54,13 +58,13 @@
                     </b-row>
                 </div>
                 <div v-else>
-                    <b-tabs content-class="py-5" align="center"
+                    <b-tabs v-model="tabs" content-class="py-5" align="center"
                             id="horizontal-navigation-hover-centered py-5 px-1"
                             class=" h5 d-lg-block mt-2 mt-lg-0 nav nav-main nav-main-horizontal nav-main-horizontal-center"
                             v-if="loading == false">
-                        <b-tab :title="category.display_name" v-for="(category, key) in this.categories" :key="key">
+                        <b-tab :title="category.display_name" v-for="(category, key) in this.categories" :key="key" @click="changingTab(category)">
                             <b-row>
-                               <b-col cols="12" sm="12" md="12" lg="6" xl="6"
+                                <b-col cols="12" sm="12" md="12" lg="6" xl="6"
                                        v-if="category.workshop[0]">
                                     <a class="block block-transparent bg-image h-286"
                                        v-bind:style="[category.workshop[0].image_link ?
@@ -71,7 +75,8 @@
                                          {'background-image': 'url('+ default_image +')'}]"
                                        v-bind:href="'/workshop/'+category.workshop[0].id+'/show'"
                                        data-toggle="click-ripple">
-                                        <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
+                                        <div
+                                            class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                             <div class="ribbon-box">
                                                 {{ category.display_name }} 
                                                 <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 1" >
@@ -81,9 +86,11 @@
                                             </div>
                                             
                                             <div class="pt-4 pb-6 px-md-3">
-                                                <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[0].title}}</h3>
-                                                <i class="fa fa-calendar appointment-date text-white" aria-hidden="true" v-if="category.workshop[0].start !== null">
-                                                    {{category.workshop[0].start}}
+                                                <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                                    {{ category.workshop[0].title }}</h3>
+                                                <i class="fa fa-calendar appointment-date text-white" aria-hidden="true"
+                                                   v-if="category.workshop[0].start !== null">
+                                                    {{ category.workshop[0].start }}
                                                 </i>
                                             </div>
                                             
@@ -100,7 +107,8 @@
                                          {'background-image': 'url('+ default_image +')'}]"
                                            v-bind:href="'/workshop/'+category.workshop[1].id+'/show'"
                                            data-toggle="click-ripple">
-                                            <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
+                                            <div
+                                                class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                                 <div class="ribbon-box">
                                                     {{ category.display_name }}
                                                     <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 1" >
@@ -109,9 +117,11 @@
                                                     <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 4" >
                                                 </div>
                                                 <div class="pt-4 pb-6 px-md-3">
-                                                    <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[1].title}}</h3>
-                                                    <i class="fa fa-calendar appointment-date text-white" aria-hidden="true" v-if="category.workshop[1].start !== null">
-                                                        {{category.workshop[1].start}}
+                                                    <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                                        {{ category.workshop[1].title }}</h3>
+                                                    <i class="fa fa-calendar appointment-date text-white"
+                                                       aria-hidden="true" v-if="category.workshop[1].start !== null">
+                                                        {{ category.workshop[1].start }}
                                                     </i>
                                                 </div>
                                             </div>
@@ -129,7 +139,8 @@
                                          {'background-image': 'url('+ default_image +')'}]"
                                        v-bind:href="'/workshop/'+category.workshop[2].id+'/show'"
                                        data-toggle="click-ripple">
-                                        <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
+                                        <div
+                                            class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                             <div class="ribbon-box">
                                                 {{ category.display_name }}
                                                 <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 1" >
@@ -138,9 +149,11 @@
                                                 <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 4" >
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
-                                                <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[2].title}}</h3>
-                                                <i class="fa fa-calendar appointment-date text-white" aria-hidden="true" v-if="category.workshop[2].start !== null">
-                                                    {{category.workshop[2].start}}
+                                                <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                                    {{ category.workshop[2].title }}</h3>
+                                                <i class="fa fa-calendar appointment-date text-white" aria-hidden="true"
+                                                   v-if="category.workshop[2].start !== null">
+                                                    {{ category.workshop[2].start }}
                                                 </i>
                                             </div>
                                         </div>
@@ -155,7 +168,8 @@
                                          {'background-image': 'url('+ default_image +')'}]"
                                            v-bind:href="'/workshop/'+category.workshop[3].id+'/show'"
                                            data-toggle="click-ripple">
-                                            <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
+                                            <div
+                                                class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                                 <div class="ribbon-box">
                                                     {{ category.display_name }}
                                                     <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 1" >
@@ -164,9 +178,11 @@
                                                     <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 4" >
                                                 </div>
                                                 <div class="pt-4 pb-6 px-md-3">
-                                                    <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[3].title}}</h3>
-                                                    <i class="fa fa-calendar appointment-date text-white" aria-hidden="true" v-if="category.workshop[3].start !== null">
-                                                        {{category.workshop[3].start}}
+                                                    <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                                        {{ category.workshop[3].title }}</h3>
+                                                    <i class="fa fa-calendar appointment-date text-white"
+                                                       aria-hidden="true" v-if="category.workshop[3].start !== null">
+                                                        {{ category.workshop[3].start }}
                                                     </i>
                                                 </div>
                                             </div>
@@ -183,7 +199,8 @@
                                          {'background-image': 'url('+ default_image +')'}]"
                                        v-bind:href="'/workshop/'+category.workshop[4].id+'/show'"
                                        data-toggle="click-ripple">
-                                        <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
+                                        <div
+                                            class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                             <div class="ribbon-box">
                                                 {{ category.display_name }}
                                                 <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 1" >
@@ -192,9 +209,11 @@
                                                 <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 4" >
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
-                                                <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[4].title}}</h3>
-                                                <i class="fa fa-calendar appointment-date text-white" aria-hidden="true" v-if="category.workshop[4].start !== null">
-                                                    {{category.workshop[4].start}}
+                                                <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                                    {{ category.workshop[4].title }}</h3>
+                                                <i class="fa fa-calendar appointment-date text-white" aria-hidden="true"
+                                                   v-if="category.workshop[4].start !== null">
+                                                    {{ category.workshop[4].start }}
                                                 </i>
                                             </div>
                                         </div>
@@ -210,7 +229,8 @@
                                          {'background-image': 'url('+ default_image +')'}]"
                                        v-bind:href="'/workshop/'+category.workshop[5].id+'/show'"
                                        data-toggle="click-ripple">
-                                        <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
+                                        <div
+                                            class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                             <div class="ribbon-box">
                                                 {{ category.display_name }}
                                                 <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 1" >
@@ -219,9 +239,11 @@
                                                 <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 4" >
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
-                                                <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[5].title}}</h3>
-                                                <i class="fa fa-calendar appointment-date text-white" aria-hidden="true" v-if="category.workshop[5].start !== null">
-                                                    {{category.workshop[5].start}}
+                                                <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                                    {{ category.workshop[5].title }}</h3>
+                                                <i class="fa fa-calendar appointment-date text-white" aria-hidden="true"
+                                                   v-if="category.workshop[5].start !== null">
+                                                    {{ category.workshop[5].start }}
                                                 </i>
                                             </div>
                                         </div>
@@ -237,7 +259,8 @@
                                          {'background-image': 'url('+ default_image +')'}]"
                                        v-bind:href="'/workshop/'+category.workshop[6].id+'/show'"
                                        data-toggle="click-ripple">
-                                        <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
+                                        <div
+                                            class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                             <div class="ribbon-box">
                                                 {{ category.display_name }}
                                                 <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 1" >
@@ -246,9 +269,11 @@
                                                 <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 4" >
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
-                                                <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{category.workshop[6].title}}</h3>
-                                                <i class="fa fa-calendar appointment-date text-white" aria-hidden="true" v-if="category.workshop[6].start !== null">
-                                                    {{category.workshop[6].start}}
+                                                <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                                    {{ category.workshop[6].title }}</h3>
+                                                <i class="fa fa-calendar appointment-date text-white" aria-hidden="true"
+                                                   v-if="category.workshop[6].start !== null">
+                                                    {{ category.workshop[6].start }}
                                                 </i>
                                             </div>
                                         </div>
@@ -271,7 +296,8 @@
                                          {'background-image': 'url('+ default_image +')'}]"
                                        v-bind:href="'/workshop/'+ workshop.id+'/show'"
                                        data-toggle="click-ripple">
-                                        <div class="block-content ribbon ribbon-bookmark ribbon-secondary ribbon-bottom h-286">
+                                        <div
+                                            class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
                                             <div class="ribbon-box">
                                                 {{ category.display_name }}
                                                 <img src="/storage/images/gezondheid-vitaliteit-28.png" class="mt-4" v-if="category.id == 1" >
@@ -280,9 +306,11 @@
                                                 <img src="/storage/images/wendbaarheid-28.png" class="mt-4" v-if="category.id == 4" >
                                             </div>
                                             <div class="pt-4 pb-6 px-md-3">
-                                                <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{ workshop.title }}</h3>
-                                                <i class="fa fa-calendar appointment-date text-white" aria-hidden="true" v-if="category.workshop[7].start !== null">
-                                                    {{category.workshop[7].start}}
+                                                <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                                    {{ workshop.title }}</h3>
+                                                <i class="fa fa-calendar appointment-date text-white" aria-hidden="true"
+                                                   v-if="category.workshop[7].start !== null">
+                                                    {{ category.workshop[7].start }}
                                                 </i>
                                             </div>
                                         </div>
@@ -303,6 +331,7 @@ export default {
     created() {
         this.getCategories();
         this.getAllWorkshops();
+        this.parameter = this.$route.hash.substr(1);
     },
     data() {
         return {
@@ -313,7 +342,9 @@ export default {
             mentalWorkshops: [],
             growthWorkshops: [],
             default_image: 'https://www.bravissamenvitaal.nl/wp-content/uploads/2020/02/iStock-1058457940-2-495x400.jpg',
-            searchString:'',
+            searchString: '',
+            parameter: null,
+            tabs:0
         };
     },
     computed: {
@@ -329,11 +360,23 @@ export default {
         }
     },
     methods: {
+        changingTab(category){
+            window.location.hash = (category.name)
+        },
+        checkWhichShouldBeActive() {
+            for(let x in this.categories){
+                if(this.categories[x].name === this.parameter){
+                    this.tabs = parseInt(x);
+                }
+            }
+
+        },
         getCategories() {
             axios.get('/axios/workshop/get-categories')
                 .then(response => {
                     this.categories = response.data;
                     this.loading = false;
+                    this.checkWhichShouldBeActive();
                 })
                 .catch(error => {
 
@@ -375,7 +418,7 @@ export default {
 
                 });
         },
-        goBack(){
+        goBack() {
             history.back();
         }
     },
