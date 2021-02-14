@@ -14,7 +14,8 @@ export default {
             chartColors: {
                 male: "rgba(0, 231, 255, 0.25)",
                 female: "rgba(255, 0, 0, 0.25)",
-                other: "rgba(0, 255, 0, 0.25)"
+                other: "rgba(0, 255, 0, 0.25)",
+                TopArtikel: "#8dcdf2"
             }
         };
     },
@@ -23,9 +24,22 @@ export default {
         this.renderChart(
             {
                 labels: this.labels,
-                datasets: this.mapData()
+                datasets: this.mapData(),
             },
-            { responsive: true, maintainAspectRatio: false }
+            { responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    yAxes: [
+                        {
+                            stacked: true,
+                            ticks: {
+                                beginAtZero: true,
+                                min: 0,
+                            },
+                        }
+                    ]
+                }
+            }
         );
     },
 

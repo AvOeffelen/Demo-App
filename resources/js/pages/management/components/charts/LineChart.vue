@@ -12,9 +12,9 @@ export default {
     data() {
         return {
             chartColors: {
-                male: "rgba(0, 231, 255, 1)",
-                female: "rgba(255, 0, 0, 1)",
-                other: "rgba(0, 255, 0, 1)"
+                male: "#36b0d9",
+                female: "#f05151",
+                other: "#68ed64"
             }
         };
     },
@@ -40,8 +40,8 @@ export default {
                 return {
                     label: key.toUpperCase(),
                     borderColor: this.chartColors[key],
-                    pointBackgroundColor: "white",
-                    borderWidth: 1,
+                    pointBackgroundColor: "grey",
+                    borderWidth: 2,
                     pointBorderColor: "white",
                     backgroundColor: "transparent",
                     data: value
