@@ -2,12 +2,29 @@
 
 namespace App;
 
+use App\Model\Activity;
+use App\Model\Article;
+use App\Model\Avatar;
 use App\Model\Workshop;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+/**
+ * Class User
+ * @property string $firstname
+ * @property string $email
+ * @property ?string $infix
+ * @property string $type
+ * @property string $lastname
+ * @property ?string $gender
+ * @property Avatar $avatar
+ * @package App
+ */
+class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable;
 
@@ -17,7 +34,11 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'firstname', 'email', 'password','lastname','infix','type'
+
+        'firstname', 'email',
+        'password', 'lastname',
+        'infix', 'type',
+        'gender', 'password'
     ];
 
     /**
@@ -26,7 +47,17 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
+
         'password', 'remember_token',
+    ];
+
+    /**
+     * This automatically retrieves the given relations.
+     *
+     * @var string[]
+     */
+    protected $with = [
+      'Avatar'
     ];
 
     /**
@@ -35,19 +66,42 @@ class User extends Authenticatable
      * @var array
      */
     protected $casts = [
+
         'email_verified_at' => 'datetime',
     ];
 
     const ADMIN_TYPE = 'admin';
     const DEFAULT_TYPE = 'default';
+    const MANAGER_TYPE = 'manager';
 
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     * @return BelongsToMany
      */
-    public function Workshop()
+    public function Workshop(): BelongsToMany
     {
         return $this->belongsToMany(Workshop::class,'user_like_workshop','user_id','workshop_id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function Activities() : HasMany
+    {
+        return $this->hasMany(Activity::class, 'user_id', 'id');
+    }
+
+    /**
+     * @return BelongsToMany
+     */
+    public function Article(): BelongsToMany
+    {
+        return $this->belongsToMany(Article::class,'user_like_article','user_id','article_id');
+    }
+
+    public function Avatar(): HasOne
+    {
+        return $this->hasOne(Avatar::class);
     }
 
     /**
@@ -64,6 +118,14 @@ class User extends Authenticatable
     public function isAdmin(): bool
     {
         return $this->type === self::ADMIN_TYPE;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isManager(): bool
+    {
+        return $this->type === self::MANAGER_TYPE;
     }
 
     /**
