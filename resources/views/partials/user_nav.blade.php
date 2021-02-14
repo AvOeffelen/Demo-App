@@ -42,11 +42,5 @@
                 <span class="nav-main-link-name">FAQ</span>
             </a>
         </li>
-        <li class="nav-main-item">
-            <a class="nav-main-link" href="{{route('contact')}}">
-                <i class="nav-main-link-icon fa fa-address-book"></i>
-                <span class="nav-main-link-name">Contact</span>
-            </a>
-        </li>
     </ul>
 </div>

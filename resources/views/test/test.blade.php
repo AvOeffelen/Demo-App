@@ -2,9 +2,10 @@
 
 @section('content')
     <!-- Page Content -->
-    <div class="content">
-        <show-article :article="{{$article}}"></show-article>
+    <div class="content content-full">
+        <test></test>
     </div>
     <!-- END Page Content -->
 @endsection
 @section('js_after')
+@endsection

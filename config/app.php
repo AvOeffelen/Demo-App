@@ -15,13 +15,6 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
-    'author' => env('APP_AUTHOR', 'KLANTSAMENVITAAL'),
-
-    'activity' => [
-
-        'interval' => 5
-    ],
-
     /*
     |--------------------------------------------------------------------------
     | Application Environment
@@ -74,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'Europe/Amsterdam',
+    'timezone' => 'UTC',
 
     /*
     |--------------------------------------------------------------------------

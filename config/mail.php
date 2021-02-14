@@ -88,8 +88,6 @@ return [
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
-    'generalContactReceiver' => env('GENERAL_CONTACT_RECEIVER', 'info@krijgsmansolutions.nl'),
-
     /*
     |--------------------------------------------------------------------------
     | Markdown Mail Settings

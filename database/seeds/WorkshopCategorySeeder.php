@@ -25,23 +25,18 @@ class WorkshopCategorySeeder extends Seeder
         ]);
         DB::table('category')->insert([
             'name' => 'Actueel',
-            'display_name' => 'Actueel',
         ]);
         DB::table('category')->insert([
             'name' => 'Fysieke vitaliteit',
-            'display_name' => 'Fysieke vitaliteit',
         ]);
         DB::table('category')->insert([
             'name' => 'Mentale vitaliteit',
-            'display_name' => 'Mentale vitaliteit',
         ]);
         DB::table('category')->insert([
             'name' => 'Ontwikkeling',
-            'display_name' => 'Ontwikkeling',
         ]);
         DB::table('category')->insert([
             'name' => '1 op 1',
-            'display_name' => 'Persoonlijke begeleiding',
         ]);
     }
 }

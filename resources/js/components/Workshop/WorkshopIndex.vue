@@ -25,8 +25,8 @@
                     <b-row>
                         <b-col cols="12" sm="12" md="12" lg="6" xl="6" v-for="(workshop) in filteredWorkshops">
                             <a class="block block-transparent bg-image h-286"
-                               v-bind:style="[workshop.image_link  ?
-                                    {'background': 'url(' + workshop.image_link + ')',
+                               v-bind:style="[workshop.image_name  ?
+                                    {'background': 'url(' + workshop.image_name + ')',
                                         'background-position':'center',
                                         'background-size':'cover',
                                         'background-repeat': 'no-repeat'} :
@@ -58,8 +58,8 @@
                                <b-col cols="12" sm="12" md="12" lg="6" xl="6"
                                        v-if="category.workshop[0]">
                                     <a class="block block-transparent bg-image h-286"
-                                       v-bind:style="[category.workshop[0].image_link ?
-                                        {'background': 'url(' + category.workshop[0].image_link + ')',
+                                       v-bind:style="[category.workshop[0].image_name ?
+                                        {'background': 'url(' + category.workshop[0].image_name + ')',
                                             'background-position':'center',
                                             'background-size':'cover',
                                             'background-repeat': 'no-repeat'} :
@@ -81,8 +81,8 @@
                                     </a>
                                     <div v-if="category.workshop[1]">
                                         <a class="block block-transparent bg-image h-286"
-                                           v-bind:style="[category.workshop[1].image_link  ?
-                                        {'background': 'url(' + category.workshop[1].image_link + ')',
+                                           v-bind:style="[category.workshop[1].image_name  ?
+                                        {'background': 'url(' + category.workshop[1].image_name + ')',
                                             'background-position':'center',
                                             'background-size':'cover',
                                             'background-repeat': 'no-repeat'} :
@@ -106,8 +106,8 @@
                                 <b-col cols="12" sm="12" md="12" lg="6" xl="6"
                                        v-if="category.workshop[2]">
                                     <a class="block block-transparent bg-image h-286"
-                                       v-bind:style="[category.workshop[2].image_link ?
-                                        {'background': 'url(' + category.workshop[2].image_link + ')',
+                                       v-bind:style="[category.workshop[2].image_name ?
+                                        {'background': 'url(' + category.workshop[2].image_name + ')',
                                             'background-position':'center',
                                             'background-size':'cover',
                                             'background-repeat': 'no-repeat'} :
@@ -128,8 +128,8 @@
                                     </a>
                                     <div v-if="category.workshop[3]">
                                         <a class="block block-transparent bg-image h-286"
-                                           v-bind:style="[category.workshop[3].image_link ?
-                                        {'background': 'url(' + category.workshop[3].image_link + ')',
+                                           v-bind:style="[category.workshop[3].image_name ?
+                                        {'background': 'url(' + category.workshop[3].image_name + ')',
                                             'background-position':'center',
                                             'background-size':'cover',
                                             'background-repeat': 'no-repeat'} :
@@ -152,8 +152,8 @@
                                 </b-col>
                                 <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="category.workshop[4]">
                                     <a class="block block-transparent bg-image h-286"
-                                       v-bind:style="[category.workshop[4].image_link ?
-                                        {'background': 'url(' + category.workshop[4].image_link + ')',
+                                       v-bind:style="[category.workshop[4].image_name ?
+                                        {'background': 'url(' + category.workshop[4].image_name + ')',
                                             'background-position':'center',
                                             'background-size':'cover',
                                             'background-repeat': 'no-repeat'} :
@@ -175,8 +175,8 @@
                                 </b-col>
                                 <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="category.workshop[5]">
                                     <a class="block block-transparent bg-image h-286"
-                                       v-bind:style="[category.workshop[5].image_link ?
-                                        {'background': 'url(' + category.workshop[5].image_link + ')',
+                                       v-bind:style="[category.workshop[5].image_name ?
+                                        {'background': 'url(' + category.workshop[5].image_name + ')',
                                             'background-position':'center',
                                             'background-size':'cover',
                                             'background-repeat': 'no-repeat'} :
@@ -198,8 +198,8 @@
                                 </b-col>
                                 <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="category.workshop[6]">
                                     <a class="block block-transparent bg-image h-286"
-                                       v-bind:style="[category.workshop[6].image_link ?
-                                        {'background': 'url(' + category.workshop[6].image_link + ')',
+                                       v-bind:style="[category.workshop[6].image_name ?
+                                        {'background': 'url(' + category.workshop[6].image_name + ')',
                                             'background-position':'center',
                                             'background-size':'cover',
                                             'background-repeat': 'no-repeat'} :
@@ -228,8 +228,8 @@
                                     xl="6"
                                     :key="index">
                                     <a class="block block-transparent bg-image h-286"
-                                       v-bind:style="[workshop.image_link ?
-                                        {'background': 'url(' + workshop.image_link + ')',
+                                       v-bind:style="[workshop.image_name ?
+                                        {'background': 'url(' + workshop.image_name + ')',
                                             'background-position':'center',
                                             'background-size':'cover',
                                             'background-repeat': 'no-repeat'} :
