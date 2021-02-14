@@ -70,19 +70,11 @@ Route::group(['middleware'=> ['web','default']], function () {
     Route::get('/me','UserController@showProfile')->name('me');
 });
 
-
-Route::get('backend/management{any}','ManagementController@index')
-    ->middleware(['web', 'manager'])
-    ->where('any', '.*')
-    ->name('management.index');
-
-
 Route::group(['prefix' => 'axios/workshop', 'namespace' => 'Axios','middleware'=> ['web','default']], function () {
     route::get('{workshop}/checkLikes','WorkshopController@checkIfUserHasLiked')->name('workshop.check.personal.likes');
     route::post('{workshop}/like','WorkshopController@like')->name('workshop.like');
     route::post('{workshop}/dislike','WorkshopController@dislike')->name('workshop.dislike');
 });
-
 
 Route::group(['prefix' => 'axios/article', 'namespace' => 'Axios','middleware'=> ['web','default']], function () {
     route::get('{article}/checkLikes','ArticleController@checkIfUserHasLiked')->name('article.check.personal.likes');
@@ -93,6 +85,7 @@ Route::group(['prefix' => 'axios/article', 'namespace' => 'Axios','middleware'=>
 Route::group(['prefix' => 'axios/me', 'namespace' => 'Axios','middleware'=> ['web','default']], function () {
     route::get('/favorite/workshop','UserController@getFavoriteWorkshops')->name('user.workshop.favorited');
     route::get('/favorite/article','UserController@getFavoriteArticles')->name('user.article.favorited');
+    Route::post('/upload-avatar','UserController@storeAvatar')->name('user.upload.avatar');
 });
 
 Route::group(['prefix' => 'axios/article', 'namespace' => 'Axios','middleware'=> ['web','admin']], function() {
@@ -116,7 +109,6 @@ Route::group(['prefix' => 'axios/article', 'namespace' => 'Axios','middleware'=>
 
     route::post('/{article}/sign-up','ArticleController@signUpForArticle')->name('article.signup');
 });
-
 
 Route::group(['prefix' => 'axios/categories', 'namespace' => 'Axios','middleware'=> ['web','admin']], function() {
     route::get('/article/get-all','CategoryController@getArticleCategories')->name('categories.article.get.all');
@@ -144,3 +136,8 @@ Route::group(['prefix' => 'axios/chart', 'namespace' => 'Axios\Management','midd
 
     Route::get('/','ChartController@pagesPerVisit')->name('chart.pagesPerVisit');
 });
+
+Route::get('backend/management{any}','ManagementController@index')
+    ->middleware(['web', 'manager'])
+    ->where('any', '.*')
+    ->name('management.index');

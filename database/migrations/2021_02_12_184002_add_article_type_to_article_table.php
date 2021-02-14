@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class RenameWorkshopImageColumn extends Migration
+class AddArticleTypeToArticleTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class RenameWorkshopImageColumn extends Migration
      */
     public function up()
     {
-        Schema::table('workshop', function (Blueprint $table) {
-            $table->renameColumn('image_name', 'image_link');
+        Schema::table('article', function (Blueprint $table) {
+           $table->string('type')->default('article')->nullable()->after('show_contact');
         });
     }
 
@@ -25,6 +25,8 @@ class RenameWorkshopImageColumn extends Migration
      */
     public function down()
     {
-
+        Schema::table('article', function (Blueprint $table) {
+            $table->dropColumn('type');
+        });
     }
 }
