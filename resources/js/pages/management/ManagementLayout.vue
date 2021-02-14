@@ -1,111 +1,82 @@
 <template>
-    <div class="screen dashboard-screen">
+    <div id="page-container" class="sidebar-o enable-page-overlay side-scroll page-header-fixed page-header-dark main-content-narrow">
+        <ManagementNavigation></ManagementNavigation>
+        <!-- END Sidebar -->
 
-        <v-app-bar app clipped-left color="primary" dark>
+        <!-- Header -->
+        <header id="page-header">
+            <!-- Header Content -->
+            <div class="content-header">
+                <!-- Left Section -->
+                <div>
+                    <!-- Toggle Sidebar -->
+                    <!-- Layout API, functionality initialized in Template._uiApiLayout()-->
+                    <button type="button" class="btn btn-dual mr-1" data-toggle="layout" data-action="sidebar_toggle">
+                        <i class="fa fa-fw fa-bars"></i>
+                    </button>
+                    <!-- END Toggle Sidebar -->
+                </div>
+                <!-- END Left Section -->
 
-            <v-btn @click="showNavMenu = !showNavMenu" class="d-block d-md-none" icon>
-                <v-icon>mdi-menu</v-icon>
-            </v-btn>
+                <!-- Right Section -->
+                <div>
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn btn-dual" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-fw fa-user d-sm-none"></i>
+                            <span class="d-none d-sm-inline-block">{{ user.first_name }}{{ user.infix ? ` ${ user.infix } ` : '' }}{{ user.last_name }}</span>
+                            <i class="fa fa-fw fa-angle-down ml-1 d-none d-sm-inline-block"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right p-0" aria-labelledby="page-header-user-dropdown">
+                            <a class="dropdown-item">
+<!--                                :href="route('me')"-->
+                                <i class="far fa-fw fa-user mr-1"></i> Profiel
+                            </a>
+                            <div role="separator" class="dropdown-divider"></div>
+                            <a class="dropdown-item" @click="logout()">
+                                <i class="far fa-fw fa-arrow-alt-circle-left mr-1"></i> Uitloggen
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- END User Dropdown -->
+            </div>
+            <!-- END Right Section -->
+            <!-- END Header Content -->
 
-            <span class="app-name" @click="$router.push({ name: 'management' })">BravisSamenVitaal</span>
-            <v-spacer></v-spacer>
-
-            <div class="app-bar-buttons d-flex justify-space-between align-center">
-
-                <div class="action-buttons">
-
-                    <v-menu offset-y transition="scroll-y-transition">
-                        <template v-slot:activator="{ on }">
-                            <v-btn icon v-on="on" class="ml-3">
-                                <v-icon>mdi-dots-vertical</v-icon>
-                            </v-btn>
-                        </template>
-
-                        <v-list dense>
-                            <v-list-item link @click="window.location.href = '/me'">
-                                <v-list-item-icon>
-                                    <v-icon>mdi-account</v-icon>
-                                </v-list-item-icon>
-
-                                <v-list-item-title>Profiel</v-list-item-title>
-                            </v-list-item>
-                            <v-list-item
-                                link @click="logout()"
-                            >
-                                <v-list-item-icon>
-                                    <v-icon>mdi-logout</v-icon>
-                                </v-list-item-icon>
-
-                                <v-list-item-title>Uitloggen</v-list-item-title>
-                            </v-list-item>
-                        </v-list>
-                    </v-menu>
+            <!-- Please check out the Loaders page under Components category to see examples of showing/hiding it -->
+            <div id="page-header-loader" class="overlay-header bg-primary-darker">
+                <div class="content-header">
+                    <div class="w-100 text-center">
+                        <i class="fa fa-fw fa-2x fa-sun fa-spin text-white"></i>
+                    </div>
                 </div>
             </div>
+            <!-- END Header Loader -->
+        </header>
+        <!-- END Header -->
 
-        </v-app-bar>
+        <!-- Main Container -->
+        <div>
+            <transition name="router-fade">
+                <router-view></router-view>
+            </transition>
+        </div>
+        <!-- END Main Container -->
 
-        <v-navigation-drawer app clipped v-model="showNavMenu">
-            <div class="d-flex flex-column justify-space-between fill-height">
-                <v-list dense nav class="flex-grow-1">
-                    <v-list-item two-line class="pa-0">
-                        <v-list-item-content>
-                            <div class="d-flex justify-space-between">
-                                <div class="nav-header-left">
-                                    <v-list-item-title>{{ user.first_name }} {{ user.infix ? `${user.infix} ` : '' }}{{ user.last_name }}</v-list-item-title>
-                                    <v-list-item-subtitle>{{ user.type.toUpperCase() }}</v-list-item-subtitle>
-                                </div>
-                                <div class="nav-header-right">
-                                    <v-tooltip top :open-delay="1000">
-                                        <template v-slot:activator="{ on }">
-                                            <v-btn icon v-on="on" @click="logout()">
-                                                <v-icon>mdi-logout</v-icon>
-                                            </v-btn>
-                                        </template>
-                                        <span>Uitloggen</span>
-                                    </v-tooltip>
-                                </div>
-                            </div>
-                        </v-list-item-content>
-                    </v-list-item>
-
-                    <v-divider></v-divider>
-
-                    <v-list-item
-                        v-for="route in displayRoutes"
-                        :key="route.name" link
-                        :class="{ 'route-active': ($route.name === route.name) }"
-                        @click="$router.push({ name: route.name })"
-                    >
-                        <v-list-item-icon class="mr-2">
-                            <v-icon :color="($route.name === route.name) ? 'secondary' : null">{{ route.meta != null && route.meta.icon != null ? route.meta.icon : 'mdi-alert-decagram'}}</v-icon>
-                        </v-list-item-icon>
-
-                        <v-list-item-content>
-                            <v-list-item-title :class="{ 'secondary--text': ($route.name === route.name) }">{{ route.meta != null && route.meta.title != null ? route.meta.title() : route.name }}</v-list-item-title>
-                        </v-list-item-content>
-                    </v-list-item>
-                </v-list>
-                <v-footer class="nav-footer" inset>
-                    <span class="caption">&copy; {{ new Date().getFullYear() }} <a class="footer-link" target="_blank" :href="'todo'">BravisSamenVitaal</a></span>
-                </v-footer>
-            </div>
-        </v-navigation-drawer>
-
-        <v-main class="main">
-            <v-container fluid class="fill-height overflow-y-auto pa-0">
-                <transition name="router-fade">
-                    <router-view></router-view>
-                </transition>
-            </v-container>
-        </v-main>
+        <!-- Footer -->
+        <ManagementFooter></ManagementFooter>
+        <!-- END Footer -->
     </div>
 </template>
 
 <script>
+import ManagementNavigation from "../../components/Management/ManagementNavigation.vue";
+import ManagementFooter from "../../components/Management/ManagementFooter.vue";
+
 export default {
 
     name: "ManagementLayout",
+    components: { ManagementFooter, ManagementNavigation },
 
     data() {
         return {
@@ -123,17 +94,6 @@ export default {
         };
     },
 
-    computed: {
-
-        displayRoutes() {
-
-            return (this.$router.options.routes.find((r) => r.path === '/backend/management')).children.filter((r) => {
-
-                return r.meta != null && r.meta.show;
-            });
-        }
-    },
-
     methods: {
 
         logout() {
@@ -144,9 +104,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
-
-    @import '~vuetify/dist/vuetify.min.css';
+<style>
 
     * {
         margin: 0;
@@ -154,21 +112,6 @@ export default {
         box-sizing: border-box;
         user-select: none;
         outline: none;
-    }
-
-    main#main-container {
-
-        background-color: unset;
-    }
-
-    .fill-height {
-
-        width: 100%;
-        min-width: 100%;
-        max-width: 100%;
-
-        height: 100%;
-        min-height: 100%;
     }
 
 </style>

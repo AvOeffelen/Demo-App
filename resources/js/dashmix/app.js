@@ -43,15 +43,18 @@ Vue.component('PreviewModal',require('../components/Workshop/Backend/PreviewModa
 const files = require.context('../', true, /\.vue$/i)
 files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
+//Config
+import config from "../config";
+Vue.prototype.$config = config;
+
 //Bootstraps
 import router from "../bootstraps/router.js";
-import vuetify from "../bootstraps/vuetify.js";
+
 
 const app = new Vue({
 
     el: '#main-container',
-    router,
-    vuetify
+    router
 });
 
 // App extends Template
