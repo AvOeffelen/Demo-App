@@ -13,51 +13,71 @@
             </div>
         </div>
         <div class="content content-full">
-            <div class="d-flex justify-content-around w-100">
-                <div class="info-item bg-light m-2 col-3 rounded text-center shadow-sm">
-                    <h3 class="mb-1">Unieke apparaten</h3>
-                    <p class="mb-0">12</p>
+            <div class="d-flex flex-wrap justify-content-around w-100">
+                <div class="info-item col-12 col-sm-6 col-md-3">
+                    <div class="p-2 bg-light w-100 rounded shadow-sm d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="mb-1">Unieke Apparaten</p>
+                            <h4 class="mb-0">12</h4>
+                        </div>
+                        <i class="fas fa-desktop"></i>
+                    </div>
                 </div>
-                <div class="info-item bg-light m-2 col-3 rounded text-center shadow-sm">
-                    <h3 class="mb-1">Kliks Artikelen</h3>
-                    <p class="mb-0">10</p>
+                <div class="info-item col-12 col-sm-6 col-md-3">
+                    <div class="p-2 bg-light w-100 rounded shadow-sm d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="mb-1">Kliks Artikelen</p>
+                            <h4 class="mb-0">10</h4>
+                        </div>
+                        <i class="fas fa-mouse-pointer"></i>
+                    </div>
                 </div>
-                <div class="info-item bg-light m-2 col-3 rounded text-center shadow-sm">
-                    <h3 class="mb-1">Kliks Workshops</h3>
-                    <p class="mb-0">2</p>
+                <div class="info-item col-12 col-sm-6 col-md-3">
+                    <div class="p-2 bg-light w-100 rounded shadow-sm d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="mb-1">Kliks Workshops</p>
+                            <h4 class="mb-0">2</h4>
+                        </div>
+                        <i class="fas fa-mouse-pointer"></i>
+                    </div>
                 </div>
-                <div class="info-item bg-light m-2 col-3 rounded text-center shadow-sm">
-                    <h3 class="mb-1">Kliks Tegels</h3>
-                    <p class="mb-0">22</p>
+                <div class="info-item col-12 col-sm-6 col-md-3">
+                    <div class="p-2 bg-light w-100 rounded shadow-sm d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="mb-1">Kliks Tegels</p>
+                            <h4 class="mb-0">22</h4>
+                        </div>
+                        <i class="fas fa-mouse-pointer"></i>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="d-flex mt-5">
-            <div class="col-8 mr-2">
+        <div class="d-flex flex-column flex-md-row mt-5">
+            <div class="col-xs-12 col-md-8 mr-2">
                 <h3>Top Artikel</h3>
                 <BarChart :labels="getLabels()" :datasets="getDataSetsBar()"/>
             </div>
-            <div class="col-4">
+            <div class="col-xs-12 col-md-4">
                 <h3>Artikelen</h3>
                 <DoughnutChart :labels="getLabelsArticle()" :datasets="getDataSetsDoughnutArticle()"/>
             </div>
         </div>
-        <div class="d-flex mt-5">
-            <div class="col-4">
+        <div class="d-flex flex-column-reverse flex-md-row mt-5">
+            <div class="col-xs-12 col-md-4">
                 <h3>Webshops</h3>
                 <DoughnutChart :labels="getLabelsArticle()" :datasets="getDataSetsDoughnutArticle()"/>
             </div>
-            <div class="col-8 mr-2">
+            <div class="col-xs-12 col-md-8 mr-2">
                 <h3>Top Webshop</h3>
                 <BarChart :labels="getLabels()" :datasets="getDataSetsBar()"/>
             </div>
         </div>
-        <div class="d-flex mt-5">
-            <div class="col-8 mr-2">
+        <div class="d-flex flex-column flex-md-row mt-5">
+            <div class="col-xs-12 col-md-8 mr-2">
                 <h3>Top Tegel</h3>
                 <BarChart :labels="getLabels()" :datasets="getDataSetsBar()"/>
             </div>
-            <div class="col-4">
+            <div class="col-xs-12 col-md-4">
                 <h3>Tegels</h3>
                 <DoughnutChart :labels="getLabelsArticle()" :datasets="getDataSetsDoughnutArticle()"/>
             </div>

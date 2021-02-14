@@ -13,45 +13,65 @@
             </div>
         </div>
         <div class="content content-full">
-            <div class="d-flex justify-content-around w-100">
-                <div class="info-item bg-primary m-2 col-3 rounded text-center shadow-sm">
-                    <h3 class="mb-1 text-light">Welkom terug</h3>
-                    <p class="mb-0 text-light">Dennis Krijgsman</p>
+            <div class="d-flex flex-wrap justify-content-around w-100">
+                <div class="info-item col-12 col-sm-6 col-md-3">
+                    <div class="p-2 bg-light w-100 rounded shadow-sm d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="mb-1">Welkom terug</p>
+                            <h4 class="mb-0">Dennis Krijgsman</h4>
+                        </div>
+                        <i class="fas fa-user"></i>
+                    </div>
                 </div>
-                <div class="info-item bg-light m-2 col-3 rounded text-center shadow-sm">
-                   <h3 class="mb-1">Visits</h3>
-                    <p class="mb-0">10</p>
+                <div class="info-item col-12 col-sm-6 col-md-3">
+                    <div class="p-2 bg-light w-100 rounded shadow-sm d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="mb-1">Visits</p>
+                            <h4 class="mb-0">10</h4>
+                        </div>
+                        <i class="fas fa-suitcase"></i>
+                    </div>
                 </div>
-                <div class="info-item bg-light m-2 col-3 rounded text-center shadow-sm">
-                    <h3 class="mb-1">People</h3>
-                    <p class="mb-0">10</p>
+                <div class="info-item col-12 col-sm-6 col-md-3">
+                    <div class="p-2 bg-light w-100 rounded shadow-sm d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="mb-1">People</p>
+                            <h4 class="mb-0">10</h4>
+                        </div>
+                        <i class="fas fa-users"></i>
+                    </div>
                 </div>
-                <div class="info-item bg-light m-2 col-3 rounded text-center shadow-sm">
-                    <h3 class="mb-1">Views</h3>
-                    <p class="mb-0">10</p>
+                <div class="info-item col-12 col-sm-6 col-md-3">
+                    <div class="p-2 bg-light w-100 rounded shadow-sm d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="mb-1">Views</p>
+                            <h4 class="mb-0">10</h4>
+                        </div>
+                        <i class="far fa-eye"></i>
+                    </div>
                 </div>
             </div>
             <div>
-                <div class="d-flex mt-5">
-                    <div class="col-8 mr-2">
+                <div class="d-flex flex-column flex-md-row mt-5">
+                    <div class="col-xs-12 col-md-8 mr-2">
                         <h3>Kliks per geslacht</h3>
                         <AreaChart :labels="getLabels()" :datasets="getDataSetsArea()"/>
                     </div>
-                    <div class="col-4">
+                    <div class="col-xs-12 col-md-4">
                         <h3>Bezoekers geslacht</h3>
                         <DoughnutChart :labels="getLabelsPie()" :datasets="getDataSetsDoughnut()"/>
                     </div>
                 </div>
-                <div class="d-flex mt-5">
-                    <div class="col-4">
+                <div class="d-flex flex-column flex-md-row mt-5">
+                    <div class="col-xs-12 col-md-4">
                         <h3>Artikelen</h3>
                         <DoughnutChart :labels="getLabelsArticle()" :datasets="getDataSetsDoughnutArticle()"/>
                     </div>
-                    <div class="col-4">
+                    <div class="col-xs-12 col-md-4">
                         <h3>Workshops</h3>
                         <DoughnutChart :labels="getLabelsArticle()" :datasets="getDataSetsDoughnutArticle()"/>
                     </div>
-                    <div class="col-4">
+                    <div class="col-xs-12 col-md-4">
                         <h3>Tegels</h3>
                         <DoughnutChart :labels="getLabelsArticle()" :datasets="getDataSetsDoughnutArticle()"/>
                     </div>
