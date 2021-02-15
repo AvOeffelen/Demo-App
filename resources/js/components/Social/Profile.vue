@@ -19,7 +19,7 @@
                     <div class="">
                       <h4>{{ person.firstname }} {{ person.infix }} {{ person.lastname }}</h4>
                        <div class="file">
-                            Pas foto aan
+                            Pas avatar aan
                             <b-form-file
                                 v-model="avatar"
                                 accept="image/*"
@@ -35,15 +35,15 @@
               <div class="card mt-3">
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                    <i class="fas fa-heart"> Favoriete workshops</i> 
+                    <i class="fas fa-heart"> Favoriete workshops</i>
                     <span class="text-secondary">5</span>
                   </li>
                   <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                    <i class="fas fa-heart"> Favoriete Artikelen</i> 
+                    <i class="fas fa-heart"> Favoriete Artikelen</i>
                     <span class="text-secondary">3</span>
                   </li>
                   <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                     <i class="fas fa-praying-hands"> Een statestiek</i> 
+                     <i class="fas fa-praying-hands"> Een statestiek</i>
                     <span class="text-secondary">14</span>
                   </li>
                 </ul>
@@ -188,7 +188,7 @@
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        
+
                                         <h2 class="content-heading">
                                             <i class="si si-star mr-1"></i> Mijn favoriete workshops
                                         </h2>
@@ -237,7 +237,7 @@
             </div>
             <div class="col-md-1">
                 <!-- <button class="btn btn-primary">
-                    <i class="fas fa-edit">Edit</i>      
+                    <i class="fas fa-edit">Edit</i>
                 </button> -->
             </div>
           </div>
