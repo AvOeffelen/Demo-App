@@ -97,101 +97,68 @@
     background: #fff;
 }
 
+//profile new
+/*
+ CSS for the main interaction
+*/
+.tabset > input[type="radio"] {
+  position: absolute;
+  left: -200vw;
+}
 
-//newprofd
-//profile
-/* Component Needs */
-
-.pc-tab > input,
-.pc-tab section > div {
+.tabset .tab-panel {
   display: none;
 }
 
-#tab1:checked ~ section .tab1,
-#tab2:checked ~ section .tab2,
-#tab3:checked ~ section .tab3 {
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
   display: block;
 }
 
-#tab1:checked ~ nav .tab1,
-#tab2:checked ~ nav .tab2,
-#tab3:checked ~ nav .tab3 {
-  color: red;
+.tabset > label {
+  position: relative;
+  display: inline-block;
+  padding: 15px 15px 25px;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  cursor: pointer;
+  font-weight: 600;
 }
 
-/* Visual Styles */
-
-$activeColor: #ffffff;
-$unactiveColor: #eeeeee;
-$unactiveHoverColor: #dddddd;
-
-
-.pc-tab { 
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    li {
-      label {
-        font-family: "Raleway";
-        float: left;
-        padding: 15px 25px;
-        border: 1px solid #ddd;
-        border-bottom: 0;
-        background: $unactiveColor;
-        color: #444;
-        &:hover {
-          background: $unactiveHoverColor;
-        }
-        &:active {
-          background: $activeColor;
-        }
-      }
-      &:not(:last-child) label {
-         border-right-width: 0; 
-      }
-    }
-  }
-  section {
-    font-family: "Droid Serif";
-    clear: both;
-    div {
-      padding: 20px; 
-      width: 100%;
-      border: 1px solid #ddd;
-      background: #fff;
-      line-height: 1.5em;
-      letter-spacing: 0.3px;
-      color: #444;
-      h2 {
-        margin: 0;
-        font-family: "Raleway";
-        letter-spacing: 1px;
-        color: #34495e;
-      }
-    }
-  }
+.tabset > label::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  bottom: 10px;
+  width: 22px;
+  height: 4px;
+  background: #8d8d8d;
 }
 
-#tab1:checked ~ nav .tab1,
-#tab2:checked ~ nav .tab2,
-#tab3:checked ~ nav .tab3 {
-  label {
-    background: white;
-    color: #111;
-    position: relative;
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      height: 2px;
-      width: 100%;
-      background: $activeColor;
-      left: 0;
-      bottom: -1px;
-    }
-  }
+.tabset > label:hover,
+.tabset > input:focus + label {
+  color: #06c;
 }
+
+.tabset > label:hover::after,
+.tabset > input:focus + label::after,
+.tabset > input:checked + label::after {
+  background: #06c;
+}
+
+.tabset > input:checked + label {
+  border-color: #ccc;
+  border-bottom: 1px solid #fff;
+  margin-bottom: -1px;
+}
+
+.tab-panel {
+  padding: 30px 0;
+  border-top: 1px solid #ccc;
+}
+
+

@@ -92,48 +92,116 @@
                   </div>
                   <hr>
                   <!-- test -->
-                  
-                  <div class="pc-tab">
-                    <input checked="checked" id="tab1" type="radio" name="pct" />
-                    <input id="tab2" type="radio" name="pct" />
-                    <input id="tab3" type="radio" name="pct" />
-                      <nav>
-                        <ul>
-                          <li class="tab1">
-                            <label for="tab1">First Tab</label>
-                          </li>
-                          <li class="tab2">
-                            <label for="tab2">Second Tab</label>
-                          </li>
-                          <li class="tab3">
-                            <label for="tab3">Third Tab</label>
-                          </li>
-                        </ul>
-                      </nav>
-                      <section>
-                        <div class="tab1">
-                          <h2>First</h2>
-                          <p>Lorem ipsum dolor sit amet, </p>
+                  <div class="tabset">
+                    <!-- Tab 1 -->
+                    <input type="radio" name="tabset" id="tab1" aria-controls="marzen" checked>
+                    <label for="tab1">Workshops</label>
+                    <!-- Tab 2 -->
+                    <input type="radio" name="tabset" id="tab2" aria-controls="rauchbier">
+                    <label for="tab2">Artikelen</label>
+                        <div class="tab-panels">
+                            <section id="marzen" class="tab-panel">
+                                <h2>Workshops</h2>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p>
+                                            <i class="si si-star mr-1 "></i> Mijn favoriete workshops
+                                        </p>
+                                        <div v-if="loadingWorkshops">
+                                            <b-row>
+                                                <b-col class="text-center">
+                                                    <b-spinner
+                                                        style="width: 3rem; height: 3rem;"
+                                                        variant="primary"
+                                                        type="grow"
+                                                    ></b-spinner>
+                                                </b-col>
+                                            </b-row>
+                                        </div>
+                                        <b-row v-else>
+                                            <b-col cols="12" sm="12" md="6" xl="4" lg="4"
+                                                v-for="(workshop,index) in this.workshops" :key="index">
+                                                <div class="block block-rounded text-center">
+                                                    <div class="block-content block-content-full bg-image"
+                                                        v-bind:style="[workshop.image_link ?
+                                                                {'background': 'url(' +'../../'+ workshop.image_link + ') center'} :
+                                                                {'background-image': 'url('+ default_image +')'},
+                                                                {'background-size': 'cover'}
+                                                                ]"
+                                                        style="height: 250px;">
+                                                    </div>
+                                                    <div
+                                                        class="block-content block-content-full block-content-sm bg-body-light">
+                                                        <div class="font-w600">{{ workshop.title }}</div>
+                                                    </div>
+                                                    <div class="block-content block-content-full">
+                                                        <a class="btn btn-sm btn-light"
+                                                        v-bind:href="`/workshop/${workshop.id}/show`">
+                                                            <i class="fa fa-search text-muted mr-1"></i> Bekijk
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </b-col>
+                                        </b-row>
+                                    </div>
+                                </div>
+                            </section>
+                            <section id="rauchbier" class="tab-panel">
+                                <h2>Artikelen</h2>
+                                <div class="row">
+                            <div class="col-md-12">
+                                <p>
+                                    <i class="si si-star mr-1 "></i>
+                                    Mijn favoriete artikelen
+                                </p>
+                                <div v-if="loadingArticles">
+                                    <b-row>
+                                        <b-col class="text-center">
+                                            <b-spinner
+                                                style="width: 3rem; height: 3rem;"
+                                                variant="primary"
+                                                type="grow"
+                                            ></b-spinner>
+                                        </b-col>
+                                    </b-row>
+                                </div>
+                                <b-row v-else>
+                                    <b-col cols="12" sm="12" md="6" xl="4" lg="4"
+                                           v-for="(article,index) in this.articles" :key="index">
+                                        <div class="block block-rounded text-center">
+                                            <div class="block-content block-content-full bg-image"
+                                                 v-bind:style="[article.image_link ?
+                                                          {'background': 'url(' +'../../'+ article.image_link + ') center'} :
+                                                          {'background-image': 'url('+ default_image +')'},
+                                                          {'background-size': 'cover'}
+                                                          ]"
+                                                 style="height: 250px;">
+                                            </div>
+                                            <div
+                                                class="block-content block-content-full block-content-sm bg-body-light">
+                                                <div class="font-w600">{{ article.title }}</div>
+                                            </div>
+                                            <div class="block-content block-content-full">
+                                                <a class="btn btn-sm btn-light"
+                                                   v-bind:href="`/article/${article.id}/show`">
+                                                    <i class="fa fa-search text-muted mr-1"></i> Bekijk
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </b-col>
+                                </b-row>
+                            </div>
                         </div>
-                        <div class="tab2">
-                          <h2>Second</h2>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum nesciunt ipsum dolore error repellendus officiis aliquid a, vitae reprehenderit, accusantium vero, ad. Obcaecati numquam sapiente cupiditate. Praesentium eaque, quae error!</p>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, maiores.</p>
-                        </div>
-                        <div class="tab3">
-                          <h2>Third</h2>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, nobis culpa rem, vitae earum aliquid.</p>
-                        </div>
-                      </section>
-                    </div>
-                  <!-- test -->
+                    </section>
+                </div>
+            </div>
                 </div>
               </div>
             </div>
             <div class="col-md-1">
-                <button class="btn btn-primary">
+                <!-- <button class="btn btn-primary">
                     <i class="fas fa-edit">Edit</i>      
-                </button>
+                </button> -->
             </div>
           </div>
         </div>
