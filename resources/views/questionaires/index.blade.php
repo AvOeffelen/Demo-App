@@ -20,8 +20,7 @@
                 <a href="javascript:history.back()" class="btn btn-primary">Terug</a>
             </div>
             <div class="col-md-12 col-lg-8 col-xl-8 col-12 col-sm-12 col-xs-12">
-                
-                <h3 class="text-primary">Vragenlijsten</h3>
+                <h3>Vragenlijsten</h3>
             </div>
             <div class="col-md-12 col-lg-2 col-xl-2 col-12 col-sm-12 col-xs-12 cols-12">
             </div>
@@ -60,7 +59,6 @@
                 <div class="text-center">
                 </div>
             </div>
-            <img class="goodhabitz-image" src="storage/images/VRAGENLIJST_Bravis_KlantSamenVitaal.nl_V1.png" height="400">
         </div>
     </div>
 @endsection

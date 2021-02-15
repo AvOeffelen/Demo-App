@@ -27,8 +27,8 @@ class FAQController extends Controller
     {
         return view('activiteitenkalender.index');
     }
-    public function showZorgverzekeraars()
+    public function showContact()
     {
-        return view('zorgverzekeraars.index');
+        return view('contact.index');
     }
 }
