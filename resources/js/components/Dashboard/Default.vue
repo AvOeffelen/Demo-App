@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="col-md-12 text-center">
-                <p class="text-orange">Deze Bravis Samen Vitaal Gids is uitsluitend bestemd voor medewerkers van Bravis ziekenhuizen. Deze Gids helpt om gezond & vitaal te blijven, je persoonlijke ontwikkeling te stimuleren, te werken aan de balans werk & privé en inzetbaarheid en werkplezier in iedere levensfase te versterken.</p>
+                <p class="text-orange">Deze Bravis Samen Vitaal omgeving is uitsluitend bestemd voor medewerkers van het Bravis ziekenhuis.</p>
             </div>
         <b-row>
             <b-col cols="12">
