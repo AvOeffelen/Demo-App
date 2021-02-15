@@ -41,7 +41,7 @@ class UserController extends Controller
         $user = User::where('email',$request->get('user'))->first();
         $image = $request->file('avatar');
         $uploadedImage = $this->uploadImage($image, $user);
-        Log::info("TRYING TO UPload image", [$uploadedImage]);
+        Log::info("[UPLOADINGA AVATAR]", [$uploadedImage]);
         if($uploadedImage){
             $user = $user->fresh();
             return response()->json(['message' => 'Avatar successvol geupload','data' => $user]);
