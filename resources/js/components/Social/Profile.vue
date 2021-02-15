@@ -13,47 +13,35 @@
                             </div> -->
                         </div>
                     </div>
-                    <div class="">
-                      <h4>{{ person.firstname }} {{ person.infix }} {{ person.lastname }}</h4>
-                       <div class="file">
-                            Pas avatar aan
-                            <b-form-file
-                                v-model="avatar"
-                                accept="image/*"
-                                @change="detectNewAvatar"
-                                placeholder="Kies of drop een afbeelding hier"
-                                drop-placeholder="Drop afbeelding hier"
-                                v-bind:class="[this.errors.avatar ? 'decoratedErrorField':'' ]"/>
+                    <div class="col-md-6">
+                        <div class="profile-head">
+                                    <h5>
+                                      {{user.firstname}} {{user.lastname}}
+                                    </h5>
+                                    <h6>
+                                        {{user.type}}
+                                    </h6>
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Over</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Workshops</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div class="col-md-2">
                         <!-- <a class="btn btn-primary profile-edit-btn text-right" href="#" role="button" >Edit Profile</a> -->
                     </div>
                 </div>
-              </div>
-              <div class="card mt-3">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                    <i class="fas fa-heart"> Favoriete workshops</i>
-                    <span class="text-secondary">5</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                    <i class="fas fa-heart"> Favoriete Artikelen</i>
-                    <span class="text-secondary">3</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                     <i class="fas fa-praying-hands"> Een statestiek</i>
-                    <span class="text-secondary">14</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-7 mt-5">
-              <div class="card mb-3">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Naam</h6>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-work">
+                            <b>{{user.type}}</b>
+                            <hr>
+                            <b>Bravis Samen Vitaal</b>
+                        </div>
                     </div>
                     <div class="col-md-8">
                         <div class="tab-content profile-tab" id="myTabContent">
@@ -89,7 +77,7 @@
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                 <div class="row">
                                     <div class="col-md-12">
-
+                                        
                                         <h2 class="content-heading">
                                             <i class="si si-star mr-1"></i> Mijn favoriete workshops
                                         </h2>
@@ -132,16 +120,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-1">
-                <!-- <button class="btn btn-primary">
-                    <i class="fas fa-edit">Edit</i>
-                </button> -->
-            </div>
-          </div>
+            </form>           
         </div>
     
             
