@@ -1,5 +1,4 @@
 <template>
-
     <div class="row">
         <div class="col-md-12">
             <div class="block">
@@ -27,11 +26,24 @@
                             <label for="example-hosting-vps">Categorie</label>
                             <select class="custom-select" id="example-hosting-vps" name="example-hosting-vps" v-model="article.category_id">
                                 <option v-for="(category,key) in this.categories" :value="category.id" :key="key">
-                                    {{ category.name }}
+                                    {{ category.display_name }}
                                 </option>
                             </select>
                         </div>
                     </div>
+                    <b-row>
+                        <b-col cols="12" sm="12" md="12" lg="12" xl="12">
+                            <label for="article-type">Article type</label>
+                            <select class="custom-select" id="article-type"
+                                    v-bind:class="[this.errors.type ? 'decoratedErrorField':'' ]"
+                                    v-model="article.type" @change="checkTypeSelected($event,article)">
+                                <option v-for="(option,key) in this.articleTypeOptions" :value="option" :key="key">
+                                    {{ option }}
+                                </option>
+                            </select>
+                            <p v-if="this.errors.type" class="text-primary">{{ this.errors['type'][0] }}</p>
+                        </b-col>
+                    </b-row>
                     <b-row class="py-3">
                         <b-col cols="12">
                             <div class="form-group">
@@ -86,6 +98,19 @@
                             </div>
                         </b-col>
                     </b-row>
+                    <b-row v-if="this.article.type === 'video' || selectedType === 'video'" class="pb-5">
+                        <b-col cols="12"
+                               sm="12"
+                               md="12"
+                               xl="12"
+                               lg="12"
+                               class="custom-file py-2">
+                            <label for="example-hosting-vps">Video link</label>
+                            <b-textarea v-model="article.video_link"
+                                        v-bind:placeholder="'Embedded video link'"></b-textarea>
+                        </b-col>
+                    </b-row>
+                    <b-row v-else></b-row>
                     <div class="row py-3">
                         <div class="col-md-12">
                             <label for="text-intro" v-bind:class="[this.errors.text ? 'text-primary':'' ]">
@@ -167,7 +192,14 @@ export default {
             categories: [],
             changedImage: false,
             image: null,
-            uploadImage: true
+            uploadImage: true,
+            showButtons:false,
+            articleTypeOptions:[
+                'article',
+                'video',
+                'podcast'
+            ],
+            selectedType:null,
         };
     },
     mounted() {
@@ -182,6 +214,10 @@ export default {
         this.getCategories();
     },
     methods: {
+        checkTypeSelected(event,article){
+            this.selectedType = event.target.value
+            article.type = event.target.value
+        },
         getCategories() {
             axios.get('/axios/article/get-categories')
                 .then(response => {
@@ -197,7 +233,7 @@ export default {
         cancel() {
             window.location = '/backend/article/overview';
         },
-        submit() {
+        update(){
             this.errors = [];
             let data = new FormData();
 
@@ -208,26 +244,26 @@ export default {
                 data.append('image_link', this.article.image_link)
             }
 
-            if(this.article.video_link !== null){
-                data.append('video_link', this.article.video_link);
-            }
+            data.append('type',this.article.type)
 
-            if(this.article.show_contact == true){
-                data.append('show_contact', this.article.show_contact);
-            }
             if(this.article.button_text !== null){
                 data.append('button_text', this.article.button_text);
             }
             if(this.article.button_link !== null){
                 data.append('button_link', this.article.button_link);
             }
-
-            data.append('uploadImage', this.uploadImage);
+            if (this.article.show_contact === true) {
+                data.append('show_contact', this.article.show_contact);
+            }
             data.append('id', this.article.id);
+            data.append('image', this.image)
             data.append('title', this.article.title);
-            data.append('has_video', this.article.has_video);
             data.append('category_id', this.article.category_id);
             data.append('text', this.article.text);
+            data.append('video_link', this.article.video_link);
+            data.append('button_link', this.article.button_link);
+            data.append('button_text', this.article.button_text);
+
 
             axios.post('/axios/article/put', data)
                 .then(response => {

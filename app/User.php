@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Model\Workshop;
+use Carbon\Carbon;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -17,7 +18,14 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'firstname', 'email', 'password','lastname','infix','type'
+        'firstname',
+        'email',
+        'lastname',
+        'infix',
+        'type',
+        'gender',
+        'birthday',
+        'password'
     ];
 
     /**
@@ -36,6 +44,11 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'birthday' => 'datetime:d-m-Y',
+    ];
+
+    protected $dates = [
+      'birthday'
     ];
 
     const ADMIN_TYPE = 'admin';
@@ -73,4 +86,10 @@ class User extends Authenticatable
     {
         return $this->type === self::DEFAULT_TYPE;
     }
+
+    public function getBirthDay(): string
+    {
+        return Carbon::createFromTimestamp($this->birthday)->format('d-m-Y');
+    }
+
 }

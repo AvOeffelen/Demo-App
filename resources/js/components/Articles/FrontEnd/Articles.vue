@@ -46,13 +46,12 @@
                     </b-row>
                 </div>
                 <div v-else>
-                    <b-tabs content-class="py-5" align="center"
+                    <b-tabs v-model="tabs" content-class="py-5" align="center"
                         id="horizontal-navigation-hover-centered py-5 px-1"
                         class=" h5 d-lg-block mt-2 mt-lg-0 nav nav-main nav-main-horizontal nav-main-horizontal-center"
                         v-if="loading === false">
-                    <b-tab :title="category.display_name" v-for="(category, key) in this.categories" :key="key">
+                    <b-tab :title="category.display_name" v-for="(category, key) in this.categories" :key="key" @click="changingTab(category)">
                         <b-row class="py-3">
-
                             <b-col cols="12" sm="12" md="12" lg="6" xl="6"
                                    v-if="category.article[0]">
                                 <a v-if="category.article[0].has_video === false"
@@ -460,6 +459,7 @@ export default {
     created() {
         this.getCategories();
         this.getAllArticles();
+        this.parameter = this.$route.hash.substr(1);
     },
     data() {
         return {
@@ -468,7 +468,8 @@ export default {
             articles:[],
             default_image: 'storage/images/fallback.jpg',
             searchString:'',
-            video_image: 'storage/images/youtube.png'
+            video_image: 'storage/images/youtube.png',
+            tabs:0
         };
     },
     computed: {
@@ -484,11 +485,23 @@ export default {
         }
     },
     methods: {
+        changingTab(category){
+            window.location.hash = (category.name)
+        },
+        checkWhichShouldBeActive() {
+            for(let x in this.categories){
+                if(this.categories[x].name === this.parameter){
+                    this.tabs = parseInt(x);
+                }
+            }
+
+        },
         getCategories() {
             axios.get('/axios/article/get-all-standard-categories')
                 .then(response => {
                     this.categories = response.data;
                     this.loading = false;
+                    this.checkWhichShouldBeActive();
                 })
                 .catch(error => {
 
