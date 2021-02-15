@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 // Example Routes
-Route::get('/', 'HomeController@index')->middleware('verified');
+Route::get('/', 'HomeController@index')
 Route::get('/update-your-browser','HomeController@BrowserFailure')->name('browser.failure');
 
 Route::group(['middleware' => ['web']], function () {
