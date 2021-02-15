@@ -24,7 +24,24 @@
                 <div v-if="searchString != ''">
                     <b-row>
                         <b-col cols="12" sm="12" md="12" lg="6" xl="6" v-for="(article) in filteredArticles">
-                            <article-tile :article="article" :category="article.category"></article-tile>
+                            <a class="block block-transparent bg-image h-286"
+                               v-bind:style="[article.image_link  ?
+                                    {'background': 'url(' + article.image_link + ')',
+                                        'background-position':'center',
+                                        'background-size':'cover',
+                                        'background-repeat': 'no-repeat'} :
+                                     {'background-image': 'url('+ default_image +')'}]"
+                               v-bind:href="'/article/'+ article.id+'/show'"
+                               data-toggle="click-ripple">
+                                <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                    <div class="ribbon-box">
+                                        {{ article.category.display_name }}
+                                    </div>
+                                    <div class="pt-4 pb-6 px-md-3">
+                                        <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{ article.title }}</h3>
+                                    </div>
+                                </div>
+                            </a>
                         </b-col>
                     </b-row>
                 </div>
@@ -37,29 +54,395 @@
                         <b-row class="py-3">
                             <b-col cols="12" sm="12" md="12" lg="6" xl="6"
                                    v-if="category.article[0]">
-                                    <article-tile :article="category.article[0]" :category="category"></article-tile>
+                                <a v-if="category.article[0].has_video === false"
+                                   class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
+                                   v-bind:style="{
+                                        'background':'url(/' + category.article[0].image_link + ')',
+                                        'background-position': 'center',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',
+                                        }"
+                                   v-bind:href="'/article/'+ category.article[0].id +'/show'"
+                                   data-toggle="click-ripple">
+                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        <div class="ribbon-box">
+                                            {{ category.display_name }}
+                                        </div>
+                                        <div class="pt-4 pb-6 px-md-3">
+                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                                {{ category.article[0].title }}
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a v-else
+                                   class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
+                                   v-bind:style="{
+                                        'background':'url(/' + video_image + ')',
+                                        'background-position': 'center',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',
+                                        }"
+                                   v-bind:href="'/article/'+category.article[0].id +'/show'"
+                                   data-toggle="click-ripple">
+                                    <div
+                                        class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        <div class="ribbon-box">
+                                            {{ category.display_name }}
+                                        </div>
+                                        <div class="pt-4 pb-6 px-md-3">
+                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                                {{ category.article[0].title }}
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div v-if="category.article[1]">
-                                    <article-tile :article="category.article[1]" :category="category"></article-tile>
+                                    <a v-if="category.article[1].has_video === false"
+                                       class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
+                                       v-bind:style="[category.article[1].image_link ?
+                                    {
+                                        'background':'url(/' + category.article[1].image_link + ')',
+                                        'background-position': 'center',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',
+                                    } :
+                                     {'background': 'url(/'+ default_image +')',
+                                        'background-position': 'center',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',}]"
+                                       v-bind:href="'/article/'+category.article[1].id +'/show'"
+                                       data-toggle="click-ripple">
+                                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                            <div class="ribbon-box">
+                                                {{ category.display_name }}
+                                            </div>
+                                            <div class="pt-4 pb-6 px-md-3">
+                                                <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                                    {{ category.article[1].title }}
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a v-else
+                                       class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
+                                       v-bind:style="{
+                                        'background':'url(/' + video_image + ')',
+                                        'background-position': 'center',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',
+                                        }"
+                                       v-bind:href="'/article/'+category.article[1].id +'/show'"
+                                       data-toggle="click-ripple">
+                                        <div
+                                            class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                            <div class="ribbon-box">
+                                                {{ category.display_name }}
+                                            </div>
+                                            <div class="pt-4 pb-6 px-md-3">
+                                                <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                                    {{ category.article[1].title }}
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </b-col>
                             <b-col cols="12" sm="12" md="12" lg="6" xl="6"
                                    v-if="category.article[2]">
-                                    <article-tile :article="category.article[2]" :category="category"></article-tile>
+                                <a v-if="category.article[2].has_video === false"
+                                   class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
+                                   v-bind:style="{
+                                        'background':'url(/' + category.article[2].image_link + ')',
+                                        'background-position': 'center',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',
+                                        }"
+                                   v-bind:href="'/article/'+ category.article[2].id +'/show'"
+                                   data-toggle="click-ripple">
+                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        <div class="ribbon-box">
+                                            {{ category.display_name }}
+                                        </div>
+                                        <div class="pt-4 pb-6 px-md-3">
+                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                                {{ category.article[2].title }}
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a v-else
+                                   class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
+                                   v-bind:style="{
+                                        'background':'url(/' + video_image + ')',
+                                        'background-position': 'center',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',
+                                        }"
+                                   v-bind:href="'/article/'+category.article[2].id +'/show'"
+                                   data-toggle="click-ripple">
+                                    <div
+                                        class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        <div class="ribbon-box">
+                                            {{ category.display_name }}
+                                        </div>
+                                        <div class="pt-4 pb-6 px-md-3">
+                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                                {{ category.article[2].title }}
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div v-if="category.article[3]">
-                                    <article-tile :article="category.article[3]" :category="category"></article-tile>
+                                    <a v-if="category.article[3].has_video === false"
+                                       class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
+                                       v-bind:style="[category.article[3].image_link ?
+                                    {
+                                        'background':'url(/' + category.article[3].image_link + ')',
+                                        'background-position': 'center',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',
+                                    } :
+                                     {'background': 'url(/'+ default_image +')',
+                                        'background-position': 'center',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',}]"
+                                       v-bind:href="'/article/'+category.article[3].id +'/show'"
+                                       data-toggle="click-ripple">
+                                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                            <div class="ribbon-box">
+                                                {{ category.display_name }}
+                                            </div>
+                                            <div class="pt-4 pb-6 px-md-3">
+                                                <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                                    {{ category.article[3].title }}
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a v-else
+                                       class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
+                                       v-bind:style="{
+                                        'background':'url(/' + video_image + ')',
+                                        'background-position': 'center',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',
+                                        }"
+                                       v-bind:href="'/article/'+category.article[3].id +'/show'"
+                                       data-toggle="click-ripple">
+                                        <div
+                                            class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                            <div class="ribbon-box">
+                                                {{ category.display_name }}
+                                            </div>
+                                            <div class="pt-4 pb-6 px-md-3">
+                                                <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                                    {{ category.article[3].title }}
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </b-col>
                             <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="category.article[4]">
-                                <article-tile :article="category.article[4]" :category="category"></article-tile>
+                                <a v-if="category.article[4].has_video === false"
+                                   class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
+                                   v-bind:style="[category.article[4].image_link ?
+                                    {
+                                        'background':'url(/' + category.article[4].image_link + ')',
+                                        'background-position': 'center',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',
+                                    } :
+                                     {'background': 'url(/'+ default_image +')',
+                                        'background-position': 'center',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',}]"
+                                   v-bind:href="'/article/'+category.article[4].id +'/show'"
+                                   data-toggle="click-ripple">
+                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        <div class="ribbon-box">
+                                            {{ category.display_name }}
+                                        </div>
+                                        <div class="pt-4 pb-6 px-md-3">
+                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                                {{ category.article[4].title }}
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a v-else
+                                   class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
+                                   v-bind:style="{
+                                        'background':'url(/' + video_image + ')',
+                                        'background-position': 'center',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',
+                                        }"
+                                   v-bind:href="'/article/'+category.article[4].id +'/show'"
+                                   data-toggle="click-ripple">
+                                    <div
+                                        class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        <div class="ribbon-box">
+                                            {{ category.display_name }}
+                                        </div>
+                                        <div class="pt-4 pb-6 px-md-3">
+                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                                {{ category.article[4].title }}
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </a>
                             </b-col>
                             <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="category.article[5]">
-                                <article-tile :article="category.article[5]" :category="category"></article-tile>
+                                <a v-if="category.article[5].has_video === false"
+                                   class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
+                                   v-bind:style="[category.article[5].image_link ?
+                                    {
+                                        'background':'url(/' + category.article[5].image_link + ')',
+                                        'background-position': 'center',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',
+                                    } :
+                                     {'background': 'url(/'+ default_image +')',
+                                        'background-position': 'center',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',}]"
+                                   v-bind:href="'/article/'+category.article[5].id +'/show'"
+                                   data-toggle="click-ripple">
+                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        <div class="ribbon-box">
+                                            {{ category.display_name }}
+                                        </div>
+                                        <div class="pt-4 pb-6 px-md-3">
+                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                                {{ category.article[5].title }}
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a v-else
+                                   class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
+                                   v-bind:style="{
+                                        'background':'url(/' + video_image + ')',
+                                        'background-position': 'center',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',
+                                        }"
+                                   v-bind:href="'/article/'+category.article[5].id +'/show'"
+                                   data-toggle="click-ripple">
+                                    <div
+                                        class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        <div class="ribbon-box">
+                                            {{ category.display_name }}
+                                        </div>
+                                        <div class="pt-4 pb-6 px-md-3">
+                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                                {{ category.article[5].title }}
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </a>
                             </b-col>
                             <b-col cols="12" sm="12" md="12" lg="4" xl="4" v-if="category.article[6]">
-                                <article-tile :article="category.article[6]" :category="category"></article-tile>
+                                <a v-if="category.article[6].has_video === false"
+                                   class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
+                                   v-bind:style="[category.article[6].image_link ?
+                                    {
+                                        'background':'url(/' + category.article[6].image_link + ')',
+                                        'background-position': 'center',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',
+                                    } :
+                                     {'background': 'url(/'+ default_image +')',
+                                        'background-position': 'center',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',}]"
+                                   v-bind:href="'/article/'+category.article[6].id +'/show'"
+                                   data-toggle="click-ripple">
+                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        <div class="ribbon-box">
+                                            {{ category.display_name }}
+                                        </div>
+                                        <div class="pt-4 pb-6 px-md-3">
+                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                                {{ category.article[6].title }}
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a v-else
+                                   class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
+                                   v-bind:style="{
+                                        'background':'url(/' + video_image + ')',
+                                        'background-position': 'center',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',
+                                        }"
+                                   v-bind:href="'/article/'+category.article[6].id +'/show'"
+                                   data-toggle="click-ripple">
+                                    <div
+                                        class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        <div class="ribbon-box">
+                                            {{ category.display_name }}
+                                        </div>
+                                        <div class="pt-4 pb-6 px-md-3">
+                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                                {{ category.article[6].title }}
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </a>
                             </b-col>
                             <b-col cols="12" sm="12" md="12" lg="6" xl="6" v-for="(article,key) in category.article.slice(7)" :key="key">
-                                <article-tile :article="article" :category="category"></article-tile>
+                                <a v-if="article.has_video === false"
+                                   class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
+                                   v-bind:style="[article.image_link ?
+                                    {
+                                        'background':'url(/' + article.image_link + ')',
+                                        'background-position': 'center',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',
+                                    } :
+                                     {'background': 'url(/'+ default_image +')',
+                                        'background-position': 'center',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',}]"
+                                   v-bind:href="'/article/'+ article.id +'/show'"
+                                   data-toggle="click-ripple">
+                                    <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        <div class="ribbon-box">
+                                            {{ category.display_name }}
+                                        </div>
+                                        <div class="pt-4 pb-6 px-md-3">
+                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                                {{ article.title }}
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a v-else
+                                   class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image h-286"
+                                   v-bind:style="{
+                                        'background':'url(/' + video_image + ')',
+                                        'background-position': 'center',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',
+                                        }"
+                                   v-bind:href="'/article/'+article.id +'/show'"
+                                   data-toggle="click-ripple">
+                                    <div
+                                        class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                        <div class="ribbon-box">
+                                            {{ category.display_name }}
+                                        </div>
+                                        <div class="pt-4 pb-6 px-md-3">
+                                            <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
+                                                {{ article.title }}
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </a>
                             </b-col>
                         </b-row>
                     </b-tab>
@@ -71,10 +454,8 @@
 </template>
 
 <script>
-import ArticleTile from "../../Component/ArticleTile";
 export default {
     name: "Article",
-    components: {ArticleTile},
     created() {
         this.getCategories();
         this.getAllArticles();

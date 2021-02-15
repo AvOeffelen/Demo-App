@@ -853,7 +853,7 @@ export default class Helpers {
      *
      */
     static easyPieChart() {
-        // Init Easy Pie charts (with .js-pie-chart class)
+        // Init Easy Pie Charts (with .js-pie-chart class)
         jQuery('.js-pie-chart:not(.js-pie-chart-enabled)').each((index, element) => {
             let el = jQuery(element);
 
@@ -922,7 +922,7 @@ export default class Helpers {
     }
 
     /*
-     * jQuery Sparkline charts, for more examples you can check out http://omnipotent.net/jquery.sparkline/#s-docs
+     * jQuery Sparkline Charts, for more examples you can check out http://omnipotent.net/jquery.sparkline/#s-docs
      *
      * Helpers.run('sparkline');
      *
@@ -934,7 +934,7 @@ export default class Helpers {
     static sparkline() {
         let self = this;
 
-        // Init jQuery Sparkline charts (with .js-sparkline class)
+        // Init jQuery Sparkline Charts (with .js-sparkline class)
         jQuery('.js-sparkline:not(.js-sparkline-enabled)').each((index, element) => {
             let el      = jQuery(element);
             let type    = el.data('type');

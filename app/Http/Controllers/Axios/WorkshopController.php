@@ -70,7 +70,7 @@ class WorkshopController extends Controller
 
             $image->storePubliclyAs('images', $fileName, 'public');
 
-            $workshop->image_link = 'storage/images/' . $fileName;
+            $workshop->image_name = 'storage/images/' . $fileName;
             $workshop->save();
 
             return true;
@@ -103,7 +103,7 @@ class WorkshopController extends Controller
                 'start' => $request->get('start'),
                 'end' => $request->get('end'),
                 'image_location' => $request->get('image_location'),
-                'image_link' => $request->get('image_link'),
+                'image_name' => $request->get('image_name'),
             ]);
 
         if($changedImage === "true"){
@@ -120,7 +120,7 @@ class WorkshopController extends Controller
      */
     public function delete(Workshop $workshop)
     {
-        $articleFile = str_replace("storage/",'public/',$workshop->image_link);
+        $articleFile = str_replace("storage/",'public/',$workshop->image_name);
 
         Storage::delete($articleFile);
         try {
@@ -131,7 +131,7 @@ class WorkshopController extends Controller
         }
     }
     /**
-     * @param Workshop $workshop
+     * @param Request $request
      *
      * @return bool
      */
@@ -147,7 +147,7 @@ class WorkshopController extends Controller
     }
 
     /**
-     * @param Workshop $workshop
+     * @param Request $request
      *
      * @return bool
      */

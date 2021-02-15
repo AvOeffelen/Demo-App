@@ -2,30 +2,13 @@
 
 namespace App;
 
-use App\Model\Activity;
-use App\Model\Article;
-use App\Model\Avatar;
 use App\Model\Workshop;
 use Carbon\Carbon;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-/**
- * Class User
- * @property string $firstname
- * @property string $email
- * @property ?string $infix
- * @property string $type
- * @property string $lastname
- * @property ?string $gender
- * @property Avatar $avatar
- * @package App
- */
-class User extends Authenticatable implements MustVerifyEmail
+class User extends Authenticatable
 {
     use Notifiable;
 
@@ -51,17 +34,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $hidden = [
-
         'password', 'remember_token',
-    ];
-
-    /**
-     * This automatically retrieves the given relations.
-     *
-     * @var string[]
-     */
-    protected $with = [
-      'Avatar'
     ];
 
     /**
@@ -70,7 +43,6 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $casts = [
-
         'email_verified_at' => 'datetime',
         'birthday' => 'datetime:d-m-Y',
     ];
@@ -81,36 +53,14 @@ class User extends Authenticatable implements MustVerifyEmail
 
     const ADMIN_TYPE = 'admin';
     const DEFAULT_TYPE = 'default';
-    const MANAGER_TYPE = 'manager';
 
 
     /**
-     * @return BelongsToMany
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
-    public function Workshop(): BelongsToMany
+    public function Workshop()
     {
         return $this->belongsToMany(Workshop::class,'user_like_workshop','user_id','workshop_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function Activities() : HasMany
-    {
-        return $this->hasMany(Activity::class, 'user_id', 'id');
-    }
-
-    /**
-     * @return BelongsToMany
-     */
-    public function Article(): BelongsToMany
-    {
-        return $this->belongsToMany(Article::class,'user_like_article','user_id','article_id');
-    }
-
-    public function Avatar(): HasOne
-    {
-        return $this->hasOne(Avatar::class);
     }
 
     /**
@@ -127,14 +77,6 @@ class User extends Authenticatable implements MustVerifyEmail
     public function isAdmin(): bool
     {
         return $this->type === self::ADMIN_TYPE;
-    }
-
-    /**
-     * @return bool
-     */
-    public function isManager(): bool
-    {
-        return $this->type === self::MANAGER_TYPE;
     }
 
     /**

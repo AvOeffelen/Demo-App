@@ -3,11 +3,11 @@
     <div class="bg-body-light">
         <div class="content content-full">
             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
-                <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Generatiemanagement</h1>
+                <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2 ">Generatiemanagement</h1>
                 <nav class="flex-sm-00-auto ml-sm-3" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">KLANTSAMENVITAAL</li>
-                        <li class="breadcrumb-item active" aria-current="page">Generatiemanagement</li>
+                        <li class="breadcrumb-item active text-primary" aria-current="page">Generatiemanagement</li>
                     </ol>
                 </nav>
             </div>
@@ -40,9 +40,9 @@
                     houden. Juist omdat elke generatie anders is, is het belangrijk over goede handvatten te beschikken
                     om hiermee om te gaan. Veel van het aanbod op Bravis Samen Vitaal is generiek. Daarnaast is er
                     sprake van een aanbod wat van toepassing is op een bepaalde generatie.
-                    Hierbij kun je denken aan: overgangsvraagstukken, loopbaanvraagstukken die per generatie kunnen
-                    verschillen, pensioenvraagstukken, van belang afhankelijk van de levensfase, balans werk en privé,
-                    mantelzorg, jonge werkenden ouders, etc
+                    Hierbij kun je denken aan: <a href="/workshop/47/show">overgangsvraagstukken</a>, <a href="/workshop/20/show">loopbaanvraagstukken</a> die per generatie kunnen
+                    verschillen, <a href="/article/128/show">pensioenvraagstukken</a>, van belang afhankelijk van de levensfase, balans <a href="/workshop/61/show">werk en privé</a>,
+                    <a href="/workshop/55/show">mantelzorg</a>, <a href="/workshop/69/show">jonge werkenden ouders</a>, etc
                     Ga op zoek naar wat bij jou past!
                     Mocht je graag iets toegevoegd willen zien, laat het ons dan weten.
                     Stuur een mail naar <a HREF="mailto:info@vitalavie.nl">info@vitalavie.nl</a>

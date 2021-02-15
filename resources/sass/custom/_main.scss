@@ -38,6 +38,10 @@
 .mh-286{
 	max-height: 286px;
 }
+
+.article-show-image>img{
+    max-width:1000px !important;
+}
 .bg-body-white {
 	background-color: #ffffff;
 }
@@ -45,10 +49,6 @@
 .text-shadow-workshops {
 	text-shadow: 2px 2px 4px #000000;
 }
-.article-show-image>img{
-    max-width:1000px !important;
-}
-
 /*Persoonlijke Begeleiding / 1 op 1 */
 .oneOnOneimage{
 	height: 350px;
@@ -79,12 +79,7 @@
 	}
 }
 
-
-
 //profile
-.header-avatar{
-    border-radius:50%;
-}
 .emp-profile{
     padding: 3%;
     margin-top: 3%;
@@ -173,4 +168,3 @@
     font-weight: 600;
     color: #0062cc;
 }
-

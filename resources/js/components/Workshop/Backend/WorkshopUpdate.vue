@@ -183,8 +183,8 @@ export default {
             if(this.image != null){
                 data.append('image_link', this.image)
                 data.append('changed_image', "true")
-            }else if(this.workshop.image_link !== null){
-                data.append('image_link', this.workshop.image_link)
+            }else if(this.workshop.image_name !== null){
+                data.append('image_name', this.workshop.image_name)
             }
 
             if(this.tempWorkshop.agenda_link != null){
