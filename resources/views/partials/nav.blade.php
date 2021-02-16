@@ -116,6 +116,15 @@
                     </li>
                 </ul>
             </li>
+            @if( auth()->user()->isManager() || auth()->user()->isAdmin() )
+                <li class="nav-main-item">
+                    <a class="nav-main-link{{ request()->is('management.index') ? ' active' : '' }}"
+                       href="{{ route('management.index', '/') }}">
+                        <i class="nav-main-link-icon fa fa-chart-line"></i>
+                        <span class="nav-main-link-name">Management</span>
+                    </a>
+                </li>
+            @endif
         </ul>
     </div>
     <!-- END Side Navigation -->
