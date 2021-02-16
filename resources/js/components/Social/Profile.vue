@@ -127,7 +127,7 @@
                                     <div class="col-md-12">
                                         <p>
                                             <i class="si si-star mr-1 "></i>
-                                            Mijn favoriete artikelen
+                                            Mijn favoriete artikelen.
                                         </p>
                                       <div v-if="loadingArticles">
                                           <b-row>
