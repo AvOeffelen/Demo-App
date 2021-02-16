@@ -19,7 +19,7 @@
                     <div class="">
                       <h4>{{ person.firstname }} {{ person.infix }} {{ person.lastname }}</h4>
                        <div class="file">
-                            Pas foto aan
+                            Change picture
                             <b-form-file
                                 v-model="avatar"
                                 class="file-btn-test"
@@ -37,9 +37,9 @@
               <div class="card mt-5">
                 <ul class="list-group list-group-flush">
                 <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                    <i class="fas fa-user-tag"> Type gebruiker:</i> 
+                    <i class="fas fa-user-tag"> User Tyoe:</i> 
                     <span class="text-secondary nostyle-p">
-                        <p v-if="person.type === 'default'">Medewerker</p>
+                        <p v-if="person.type === 'default'">Employee</p>
                         <p v-else>{{person.type}}</p>
                     </span>
                 </li>
@@ -60,7 +60,7 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Naam</h6>
+                      <h6 class="mb-0">Name</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                       {{ person.firstname }} {{ person.infix }} {{ person.lastname }}
@@ -78,19 +78,19 @@
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Geslacht</h6>
+                      <h6 class="mb-0">Gender</h6>
                     </div>
                     <div class="col-sm-9 text-secondary nostyle-p">
-                        <p v-if="person.gender === 'woman'">Vrouw</p>
+                        <p v-if="person.gender === 'woman'">Woman</p>
                         <p v-else-if="person.gender === 'man'">Man</p>
-                        <p v-else-if="person.gender === 'different'">Anders</p>
-                        <p v-else>Zeg ik liever niet</p>
+                        <p v-else-if="person.gender === 'different'">Other</p>
+                        <p v-else>I rather don't say</p>
                     </div>
                   </div>
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Geboorte Datum</h6>
+                      <h6 class="mb-0">Date of birth</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                       {{ person.birthday }}
@@ -104,14 +104,14 @@
                     <label for="tab1">Workshops</label>
                     <!-- Tab 2 -->
                     <input type="radio" name="tabset" id="tab2" aria-controls="rauchbier">
-                    <label for="tab2">Artikelen</label>
+                    <label for="tab2">Articles</label>
                         <div class="tab-panels">
                             <section id="marzen" class="tab-panel">
                                 <h2>Workshops</h2>
                                 <div class="row">
                                     <div class="col-md-12">
                                         <p>
-                                            <i class="si si-star mr-1 "></i> Mijn favoriete workshops
+                                            <i class="si si-star mr-1 "></i> My favorite workshops
                                         </p>
                                         <div v-if="loadingWorkshops">
                                             <b-row>
@@ -143,7 +143,7 @@
                                                     <div class="block-content block-content-full">
                                                         <a class="btn btn-sm btn-light"
                                                         v-bind:href="`/workshop/${workshop.id}/show`">
-                                                            <i class="fa fa-search text-muted mr-1"></i> Bekijk
+                                                            <i class="fa fa-search text-muted mr-1"></i> Watch
                                                         </a>
                                                     </div>
                                                 </div>
@@ -153,7 +153,7 @@
                                 </div>
                             </section>
                             <section id="rauchbier" class="tab-panel">
-                                <h2>Artikelen</h2>
+                                <h2>Articles</h2>
                                 <div class="row">
                             <div class="col-md-12">
                                 <p>
