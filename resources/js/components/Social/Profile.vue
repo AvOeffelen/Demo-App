@@ -34,20 +34,24 @@
                   </div>
                 </div>
               </div>
-              <div class="card mt-3">
+              <div class="card mt-5">
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                    <i class="fas fa-heart"> Favoriete workshops</i> 
+                <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <i class="fas fa-user-tag"> Type gebruiker:</i> 
+                    <span class="text-secondary nostyle-p">
+                        <p v-if="person.type === 'default'">Medewerker</p>
+                        <p v-else>{{person.type}}</p>
+                    </span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <i class="fas fa-heart"> Aantal favoriete workshops:</i> 
                     <span class="text-secondary">5</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                    <i class="fas fa-heart"> Favoriete Artikelen</i> 
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <i class="fas fa-heart"> Aantal favoriete artikelen:</i> 
                     <span class="text-secondary">3</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                     <i class="fas fa-praying-hands"> Een statestiek</i> 
-                    <span class="text-secondary">14</span>
-                  </li>
+                </li>
+                
                 </ul>
               </div>
             </div>
