@@ -19,6 +19,7 @@ return [
 
     'activity' => [
 
+        'monthSpan' => 6,
         'interval' => 1
     ],
 

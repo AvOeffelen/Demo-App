@@ -71,7 +71,7 @@ export default {
 
             return Object.entries(this.datasets).map(([key, value], index) => {
                 return {
-                    label: key.toUpperCase(),
+                    label: key.toLowerCase(),
                     backgroundColor: Array.isArray(this.chartColors) ? this.chartColors[index] : this.chartColors[key],
                     borderColor: "#fff",
                     pointBackgroundColor: Array.isArray(this.chartColors) ? this.chartColors[index] : this.chartColors[key],

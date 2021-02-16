@@ -281,18 +281,17 @@ export default {
                 }
             },
 
-            //@TODO: Ask Dennis about tiles...
-            //{
-            //    variable: "maleVisitsPerTileData",
-            //    url: "/axios/chart/visits-per-record-per-gender",
-            //    options: {
-            //        params: {
-            //
-            //            gender: GenderEnum.MALE,
-            //            type: "Tile"
-            //        }
-            //    }
-            //}
+            {
+                variable: "maleVisitsPerTileData",
+                url: "/axios/chart/visits-per-record-per-gender",
+                options: {
+                    params: {
+
+                        gender: GenderEnum.MALE,
+                        type: "Tile"
+                    }
+                }
+            },
 
             //Female
             {
@@ -319,18 +318,17 @@ export default {
                 }
             },
 
-            //@TODO: Ask Dennis about tiles...
-            //{
-            //    variable: "maleVisitsPerTileData",
-            //    url: "/axios/chart/visits-per-record-per-gender",
-            //    options: {
-            //        params: {
-            //
-            //            gender: GenderEnum.FEMALE,
-            //            type: "Tile"
-            //        }
-            //    }
-            //}
+            {
+                variable: "femaleVisitsPerTileData",
+                url: "/axios/chart/visits-per-record-per-gender",
+                options: {
+                    params: {
+
+                        gender: GenderEnum.FEMALE,
+                        type: "Tile"
+                    }
+                }
+            },
 
             //Other
             {
@@ -357,18 +355,17 @@ export default {
                 }
             },
 
-            //@TODO: Ask Dennis about tiles...
-            //{
-            //    variable: "maleVisitsPerTileData",
-            //    url: "/axios/chart/visits-per-record-per-gender",
-            //    options: {
-            //        params: {
-            //
-            //            gender: GenderEnum.OTHER,
-            //            type: "Tile"
-            //        }
-            //    }
-            //}
+            {
+                variable: "otherVisitsPerTileData",
+                url: "/axios/chart/visits-per-record-per-gender",
+                options: {
+                    params: {
+
+                        gender: GenderEnum.OTHER,
+                        type: "Tile"
+                    }
+                }
+            },
         ]);
     },
 

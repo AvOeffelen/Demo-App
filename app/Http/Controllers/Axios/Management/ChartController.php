@@ -77,7 +77,7 @@ class ChartController extends Controller {
 
     public function visitsPerMonth() {
 
-        $start = Carbon::now()->ceilMonth()->subMonths(6);
+        $start = Carbon::now()->ceilMonth()->subMonths(config("app.activity.monthSpan"));
 
         return Activity::whereDate('created_at', '>', $start)
             ->where("record_class", "!=", User::class)
@@ -101,7 +101,7 @@ class ChartController extends Controller {
 
     public function visitsPerMonthGender() {
 
-        $start = Carbon::now()->ceilMonth()->subMonths(6);
+        $start = Carbon::now()->ceilMonth()->subMonths(config("app.activity.monthSpan"));
 
         return Activity::whereDate('created_at', '>', $start)
             ->where("record_class", "!=", User::class)
@@ -118,7 +118,7 @@ class ChartController extends Controller {
 
     public function visitsPerMonthUnique() {
 
-        $start = Carbon::now()->ceilMonth()->subMonths(6);
+        $start = Carbon::now()->ceilMonth()->subMonths(config("app.activity.monthSpan"));
 
         return Activity::whereDate('created_at', '>', $start)
             ->where("record_class", "!=", User::class)
@@ -152,7 +152,7 @@ class ChartController extends Controller {
 
     public function visitsPerMonthUniqueGender() {
 
-        $start = Carbon::now()->ceilMonth()->subMonths(6);
+        $start = Carbon::now()->ceilMonth()->subMonths(config("app.activity.monthSpan"));
 
         return Activity::whereDate('created_at', '>', $start)
             ->where("record_class", "!=", User::class)
@@ -180,7 +180,7 @@ class ChartController extends Controller {
 
     public function visitsPerRecordTypePerGender(Request $request) {
 
-        $start = Carbon::now()->ceilMonth()->subMonths(6);
+        $start = Carbon::now()->ceilMonth()->subMonths(config("app.activity.monthSpan"));
 
         if ($request->query('type') == null) {
 
@@ -192,7 +192,24 @@ class ChartController extends Controller {
 
         return Activity::whereDate('created_at', '>', $start)
             ->with("User")
-            ->where("record_class", "=", $type)
+            //@TODO: Change following when statements to only '->where("record_class", "=", $type);'.
+            // This ugly solution is required because homepage tiles aren't stored in the database.
+            //->where("record_class", "=", $type)
+            ->when($request->query("type") !== "Tile", function ($q) use ($type) {
+
+                return $q->where("record_class", "=", $type);
+            })
+            ->when($request->query("type") === "Tile", function ($q) {
+
+                return $q->where("route_name", "=", "activiteitenkalender")
+                    ->orWhere("route_name", "=", "workshop")
+                    ->orWhere("route_name", "=", "oneOnOne")
+                    ->orWhere("route_name", "=", "covid")
+                    ->orWhere("route_name", "=", "vragenlijsten")
+                    ->orWhere("route_name", "=", "articles")
+                    ->orWhere("route_name", "=", "goodhabitz")
+                    ->orWhere("route_name", "=", "topical");
+            })
             ->get()
             ->when(
                 $gender != null,
@@ -201,14 +218,23 @@ class ChartController extends Controller {
                     return $q->where('User.gender', '=', $gender);
                 }
             )
-            ->countBy('Record.title')
+            //TODO: See Above
+            //->countBy('Record.title')
+            ->when($request->query("type") !== "Tile", function ($q) use ($type) {
+
+                return $q->countBy('Record.title');
+            })
+            ->when($request->query("type") === "Tile", function ($q) {
+
+                return $q->countBy('route_name');
+            })
             ->sortDesc()
             ->take(intval($request->input("limit", 3)));
     }
 
     public function activityPerRecordTypePerUseragent(Request $request) {
 
-        $start = Carbon::now()->ceilMonth()->subMonths(6);
+        $start = Carbon::now()->ceilMonth()->subMonths(config("app.activity.monthSpan"));
 
         if ($request->query('type') == null) {
 
@@ -222,7 +248,24 @@ class ChartController extends Controller {
 
         return Activity::whereDate('created_at', '>', $start)
             ->with("User")
-            ->where("record_class", "=", $type)
+            //@TODO: Change following when statements to only '->where("record_class", "=", $type);'.
+            // This ugly solution is required because homepage tiles aren't stored in the database.
+            //->where("record_class", "=", $type);
+            ->when($request->query("type") !== "Tile", function ($q) use ($type) {
+
+                return $q->where("record_class", "=", $type);
+            })
+            ->when($request->query("type") === "Tile", function ($q) {
+
+                return $q->where("route_name", "=", "activiteitenkalender")
+                    ->orWhere("route_name", "=", "workshop")
+                    ->orWhere("route_name", "=", "oneOnOne")
+                    ->orWhere("route_name", "=", "covid")
+                    ->orWhere("route_name", "=", "vragenlijsten")
+                    ->orWhere("route_name", "=", "articles")
+                    ->orWhere("route_name", "=", "goodhabitz")
+                    ->orWhere("route_name", "=", "topical");
+            })
             ->get()
             ->when(
                 $gender != null,
@@ -231,7 +274,16 @@ class ChartController extends Controller {
                     return $q->where('User.gender', '=', $gender);
                 }
             )
-            ->groupBy("Record.title")
+            //@TODO: See Above
+            //->groupBy("Record.title")
+            ->when($request->query("type") !== "Tile", function ($q) use ($type) {
+
+                return $q->groupBy('Record.title');
+            })
+            ->when($request->query("type") === "Tile", function ($q) {
+
+                return $q->groupBy('route_name');
+            })
             ->sortDesc()
             ->take(intval($request->input("limit", 3)))
             ->map(function ($group) {
@@ -267,9 +319,19 @@ class ChartController extends Controller {
             });
     }
 
+    public function dashboardData() {
+
+        $start = Carbon::now()->ceilMonth()->subMonths(config("app.activity.monthSpan"));
+
+        $visits = $this->visitsPerMonthUnique()->map(fn($group) => $group->sum())->sum();
+        $views = $this->visitsPerMonth()->map(fn($group) => $group->sum())->sum();
+
+        return compact("visits", "views");
+    }
+
     public function activityData() {
 
-        $start = Carbon::now()->ceilMonth()->subMonths(6);
+        $start = Carbon::now()->ceilMonth()->subMonths(config("app.activity.monthSpan"));
 
         $uniqueDevices = 0;
 
@@ -283,9 +345,23 @@ class ChartController extends Controller {
             ->where("record_class", "=", Workshop::class)
             ->count();
 
+        //TODO: Implement this system instead of the ugly system below.
+        // But for this to work, homepage tiles need to be stored in the database.
+//        $tileClicks = Activity::whereDate('created_at', '>', $start)
+//            ->with("User")
+//            ->where("record_class", "=", Tile::class)
+//            ->count();
+
         $tileClicks = Activity::whereDate('created_at', '>', $start)
             ->with("User")
-            ->where("record_class", "=", Tile::class)
+            ->where("route_name", "=", "activiteitenkalender")
+                ->orWhere("route_name", "=", "workshop")
+                ->orWhere("route_name", "=", "oneOnOne")
+                ->orWhere("route_name", "=", "covid")
+                ->orWhere("route_name", "=", "vragenlijsten")
+                ->orWhere("route_name", "=", "articles")
+                ->orWhere("route_name", "=", "goodhabitz")
+                ->orWhere("route_name", "=", "topical")
             ->count();
 
         return compact(

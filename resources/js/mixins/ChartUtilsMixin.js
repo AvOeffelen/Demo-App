@@ -8,7 +8,8 @@ export default {
 
                 male: "#36b0d9",
                 female: "#f05151",
-                other: "#68ed64"
+                other: "#68ed64",
+                unknown: "#808080"
             },
 
             genericChartColors: [

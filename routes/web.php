@@ -135,6 +135,8 @@ Route::group(['prefix' => 'axios', 'namespace' => 'Axios','middleware'=> ['web']
 
 Route::group(['prefix' => 'axios/chart', 'namespace' => 'Axios\Management','middleware'=> ['web','admin']], function() {
 
+    Route::get('/dashboard-data','ChartController@dashboardData')->name('chart.dashboardData');
+
     Route::get('/user-data','ChartController@userData')->name('chart.userData');
     Route::get('/user-login-data','ChartController@userLoginData')->name('chart.userLoginData');
 

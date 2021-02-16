@@ -78,7 +78,7 @@ export default {
 
             return Object.entries(this.datasets).map(([key, value], index) => {
                 return {
-                    label: key.toUpperCase(),
+                    label: key.toLowerCase(),
                     borderColor: "#fff",
                     pointBackgroundColor: "white",
                     borderWidth: 1,

@@ -35,7 +35,7 @@
                     <div class="p-2 bg-light w-100 rounded shadow-sm d-flex justify-content-between align-items-center">
                         <div>
                             <p class="mb-1">Visits</p>
-                            <h4 class="mb-0">10</h4>
+                            <h4 class="mb-0">{{ dashboardData.visits || 0 }}</h4>
                         </div>
                         <i class="fas fa-suitcase"></i>
                     </div>
@@ -44,7 +44,7 @@
                     <div class="p-2 bg-light w-100 rounded shadow-sm d-flex justify-content-between align-items-center">
                         <div>
                             <p class="mb-1">People</p>
-                            <h4 class="mb-0">10</h4>
+                            <h4 class="mb-0">{{ userTotal || 0 }}</h4>
                         </div>
                         <i class="fas fa-users"></i>
                     </div>
@@ -53,7 +53,7 @@
                     <div class="p-2 bg-light w-100 rounded shadow-sm d-flex justify-content-between align-items-center">
                         <div>
                             <p class="mb-1">Views</p>
-                            <h4 class="mb-0">10</h4>
+                            <h4 class="mb-0">{{ dashboardData.views || 0 }}</h4>
                         </div>
                         <i class="far fa-eye"></i>
                     </div>
@@ -63,31 +63,38 @@
                 <div class="d-flex flex-column flex-md-row mt-5">
                     <div class="col-xs-12 col-md-8 mr-2">
                         <h3>Kliks per geslacht</h3>
-                        <AreaChart :labels="getLabels()" :datasets="getDataSetsArea()"/>
+                        <LineChart :labels="getLabels(visitsPerMonthData ? visitsPerMonthData[0] : {})" :datasets="getGenderMonthDataSets(visitsPerMonthData)" :chart-colors="genderChartColors"/>
                     </div>
                     <div class="col-xs-12 col-md-4">
                         <h3>Bezoekers geslacht</h3>
-                        <DoughnutChart :labels="getLabelsPie()" :datasets="getDataSetsDoughnut()"/>
+                        <DoughnutChart :labels="transformLabels(getLabels(visitsPerMonthGenderData).map(l => GenderFilter.filter(l)), 'donut')" :datasets="[ getGenderDataSets(visitsPerMonthGenderData) ]" :chart-colors="genderChartColors"/>
                     </div>
                 </div>
                 <div class="d-flex flex-column flex-md-row mt-5">
-                    <div class="col-xs-12 col-md-4">
-                        <h3>Artikelen</h3>
-                        <DoughnutChart :labels="getLabelsArticle()" :datasets="getDataSetsDoughnutArticle()"/>
-                    </div>
-                    <div class="col-xs-12 col-md-4">
-                        <h3>Workshops</h3>
-                        <DoughnutChart :labels="getLabelsArticle()" :datasets="getDataSetsDoughnutArticle()"/>
-                    </div>
-                    <div class="col-xs-12 col-md-4">
-                        <h3>Tegels</h3>
-                        <DoughnutChart :labels="getLabelsArticle()" :datasets="getDataSetsDoughnutArticle()"/>
+                    <div class="d-flex flex-column flex-md-row w-100">
+                        <div class="col-xs-12 col-md-4">
+                            <h3>Artikelen</h3>
+                            <DoughnutChart v-if="visitsPerArticleData && Object.keys(visitsPerArticleData).length > 0" :labels="transformLabels(getLabels(visitsPerArticleData), 'donut')" :datasets="[ getDataSets(visitsPerArticleData) ]" :chart-colors="genericChartColors"/>
+                            <div v-else>
+                                <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <h3>Workshops</h3>
+                            <DoughnutChart v-if="visitsPerWorkshopData && Object.keys(visitsPerWorkshopData).length > 0" :labels="transformLabels(getLabels(visitsPerWorkshopData), 'donut')" :datasets="[ getDataSets(visitsPerWorkshopData) ]" :chart-colors="genericChartColors"/>
+                            <div v-else>
+                                <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <h3>Tegels</h3>
+                            <DoughnutChart v-if="visitsPerTileData && Object.keys(visitsPerTileData).length > 0" :labels="transformLabels(getLabels(visitsPerTileData), 'donut')" :datasets="[ getDataSets(visitsPerTileData) ]" :chart-colors="genericChartColors"/>
+                            <div v-else>
+                                <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
+                            </div>
+                        </div>
                     </div>
                 </div>
-<!--                <BarChart :labels="getLabels()" :datasets="getDataSetsBar()"/>
-                <LineChart :labels="getLabels()" :datasets="getDataSetsLine()"/>
-                <PieChart :labels="getLabelsPie()" :datasets="getDataSetsPie()"/>
-                <RadarChart :labels="getLabels()" :datasets="getDataSetsRadar()"/>-->
             </div>
         </div>
     </div>
@@ -100,10 +107,16 @@ import LineChart from "../../components/Management/charts/LineChart.vue"
 import PieChart from "../../components/Management/charts/PieChart.vue"
 import RadarChart from "../../components/Management/charts/RadarChart.vue"
 import DoughnutChart from "../../components/Management/charts/DoughnutChart.vue"
+import AxiosMixin from "../../mixins/AxiosMixin.js";
+import ChartUtilsMixin from "../../mixins/ChartUtilsMixin.js";
+import GenderFilter from "../../filters/GenderFilter.js";
+import GenderEnum from "../../enums/GenderEnum.js";
 
 export default {
 
     name: "ManagementDashboard",
+
+    mixins: [ AxiosMixin, ChartUtilsMixin ],
 
     components: {
         AreaChart,
@@ -114,41 +127,104 @@ export default {
         DoughnutChart
     },
 
-    created() {
+    data() {
 
-        this.getUserTotal();
-        this.getLikeData();
+        return {
 
-        this.loading = false;
+            GenderFilter,
+
+            userData: {},
+            dashboardData: {},
+
+            visitsPerMonthData: {},
+            visitsPerMonthGenderData: {},
+
+            visitsPerArticleData: {},
+            visitsPerWorkshopData: {},
+            visitsPerTileData: {},
+        }
+    },
+
+    beforeMount() {
+
+        this.retrieveAll([
+
+            {
+                variable: "dashboardData",
+                url: "/axios/chart/dashboard-data"
+            },
+
+            {
+                variable: "userData",
+                url: "/axios/chart/user-data"
+            },
+
+            {
+                variable: "visitsPerMonthData",
+                url: "/axios/chart/visits-per-month"
+            },
+
+            {
+                variable: "visitsPerMonthGenderData",
+                url: "/axios/chart/visits-per-month-gender"
+            },
+
+            {
+                variable: "visitsPerArticleData",
+                url: "/axios/chart/visits-per-record-per-gender",
+                options: {
+                    params: {
+
+                        type: "Article"
+                    }
+                }
+            },
+
+            {
+                variable: "visitsPerWorkshopData",
+                url: "/axios/chart/visits-per-record-per-gender",
+                options: {
+                    params: {
+
+                        type: "Workshop"
+                    }
+                }
+            },
+
+            {
+                variable: "visitsPerTileData",
+                url: "/axios/chart/visits-per-record-per-gender",
+                options: {
+                    params: {
+
+                        type: "Tile"
+                    }
+                }
+            },
+        ]);
+    },
+
+    computed: {
+
+        userTotal() {
+
+            return Object.entries(this.userData).reduce((acc, [ key, count ]) => key !== "new" ? acc + count : acc, 0);
+        }
     },
 
     methods: {
 
-        getUserTotal() {
+        getGenderDataSets(data) {
 
-            return axios.get('/axios/management/users/total')
-            .then((response) => {
-
-                if(response.status === 200) {
-
-                    this.userTotal = response.data;
-                }
-            });
+            return this.getDataSets(data, GenderFilter.filter);
         },
 
-        getLikeData() {
+        getGenderMonthDataSets(data) {
 
-            return axios.get('/axios/management/liked')
-            .then((response) => {
-
-                if(response.status === 200) {
-
-                    this.likeData = response.data;
-                }
-            });
+            return this.getDataSets(data, GenderFilter.filter, Object.values);
         },
 
-        getLabels() {
+        getDemoLabels() {
 
             return [
                 "January",

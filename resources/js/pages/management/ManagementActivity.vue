@@ -80,7 +80,7 @@
             <div class="d-flex flex-column flex-md-row mt-5">
                 <div class="col-xs-12 col-md-8 mr-2">
                     <h3>Top Tegel</h3>
-                    <BarChart :labels="getLabels(topTilesUserAgentData ? topTilesUserAgentData[0] : {})" :datasets="getDataSets(topTilesUserAgentData, null, Object.values)" :chart-colors="genericChartColors"/>
+                    <BarChart :labels="getLabels(topTilesUserAgentData ? Object.values(topTilesUserAgentData)[0] : {})" :datasets="getDataSets(topTilesUserAgentData, null, Object.values)" :chart-colors="genericChartColors"/>
                 </div>
                 <div class="col-xs-12 col-md-4">
                     <h3>Tegels</h3>
@@ -204,7 +204,7 @@ export default {
                     params: {
 
                         type: "Article",
-                        limit: 5
+                        limit: 3
                     }
                 }
             },
@@ -216,7 +216,7 @@ export default {
                     params: {
 
                         type: "Workshop",
-                        limit: 5
+                        limit: 3
                     }
                 }
             },
@@ -228,7 +228,7 @@ export default {
                     params: {
 
                         type: "Tile",
-                        limit: 5
+                        limit: 3
                     }
                 }
             }
