@@ -8,7 +8,7 @@ export default {
 
     extends: Doughnut,
 
-    props: ['labels', 'datasets'],
+    props: ['labels', 'datasets', 'chartColors'],
 
     watch: {
 
@@ -40,18 +40,7 @@ export default {
     },
 
     data() {
-        return {
-            chartColors: {
-                male: "#36b0d9",
-                female: "#f05151",
-                other: "#68ed64",
-                first: "#fa7f4b",
-                second: "#e0c31b",
-                third: "#37b356",
-                fourth: "#e37da2",
-                fifth: "#4494c2"
-            }
-        };
+        return {};
     },
 
     mounted() {
@@ -81,11 +70,14 @@ export default {
 
         mapData() {
 
-            return this.datasets.map((item) => {
+            return this.datasets.map((item, index) => {
 
                 return {
 
-                    backgroundColor: Object.entries(this.labels).map(([key, value]) => this.chartColors[key]),
+                    backgroundColor: Array.isArray(this.chartColors)
+                        ? Object.entries(this.labels).map(([key, value], index) => this.chartColors[index])
+                        : Object.entries(this.labels).map(([key, value]) => this.chartColors[key]),
+
                     data: Object.entries(this.labels).map(([key, value]) => item[key])
                 }
             });

@@ -9,7 +9,7 @@ export default {
 
     extends: Line,
 
-    props: [ "labels", "datasets" ],
+    props: [ "labels", "datasets", "chartColors" ],
 
     watch: {
 
@@ -41,13 +41,7 @@ export default {
     },
 
     data() {
-        return {
-            chartColors: {
-                male: "#36b0d9",
-                female: "#f05151",
-                other: "#68ed64"
-            }
-        };
+        return {};
     },
 
     mounted() {
@@ -73,10 +67,10 @@ export default {
 
         mapData() {
 
-            return Object.entries(this.datasets).map(([ key, value ]) => {
+            return Object.entries(this.datasets).map(([ key, value ], index) => {
                 return {
                     label: key.toUpperCase(),
-                    borderColor: this.chartColors[key],
+                    borderColor: Array.isArray(this.chartColors) ? this.chartColors[index] : this.chartColors[key],
                     pointBackgroundColor: "grey",
                     borderWidth: 2,
                     pointBorderColor: "white",

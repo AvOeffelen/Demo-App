@@ -54,26 +54,26 @@
             <div>
                 <div class="col-12 mt-5">
                     <h3>Inloggen per maand</h3>
-                    <LineChart :labels="getLabels(userLoginData ? userLoginData[0] : {})" :datasets="getGenderMonthDataSets(userLoginData)"/>
+                    <LineChart :labels="getLabels(userLoginData ? userLoginData[0] : {})" :datasets="getGenderMonthDataSets(userLoginData)" :chart-colors="genderChartColors"/>
                 </div>
                 <div class="d-flex flex-column flex-md-row mt-5">
                     <div class="col-xs-12 col-md-8 mr-2">
                         <h3>Bezoekers per maand</h3>
-                        <BarChart :labels="getLabels(visitsPerMonthData ? visitsPerMonthData[0] : {})" :datasets="getGenderMonthDataSets(visitsPerMonthData)"/>
+                        <BarChart :labels="getLabels(visitsPerMonthData ? visitsPerMonthData[0] : {})" :datasets="getGenderMonthDataSets(visitsPerMonthData)" :chart-colors="genderChartColors"/>
                     </div>
                     <div class="col-xs-12 col-md-4">
                         <h3>Bezoekers geslacht</h3>
-                        <DoughnutChart :labels="transformLabels(getLabels(visitsPerMonthGenderData).map(l => GenderFilter.filter(l)), 'donut')" :datasets="[ getGenderDataSets(visitsPerMonthGenderData) ]"/>
+                        <DoughnutChart :labels="transformLabels(getLabels(visitsPerMonthGenderData).map(l => GenderFilter.filter(l)), 'donut')" :datasets="[ getGenderDataSets(visitsPerMonthGenderData) ]" :chart-colors="genderChartColors"/>
                     </div>
                 </div>
                 <div class="d-flex flex-column-reverse flex-md-row mt-5">
                     <div class="col-xs-12 col-md-4">
                         <h3>Unieke bezoekers geslacht</h3>
-                        <DoughnutChart :labels="transformLabels(getLabels(visitsPerMonthUniqueGenderData).map(l => GenderFilter.filter(l)), 'donut')" :datasets="[ getGenderDataSets(visitsPerMonthUniqueGenderData) ]"/>
+                        <DoughnutChart :labels="transformLabels(getLabels(visitsPerMonthUniqueGenderData).map(l => GenderFilter.filter(l)), 'donut')" :datasets="[ getGenderDataSets(visitsPerMonthUniqueGenderData) ]" :chart-colors="genderChartColors"/>
                     </div>
                     <div class="col-xs-12 col-md-8 mr-2">
                         <h3>Unieke bezoekers per maand</h3>
-                        <BarChart :labels="getLabels(visitsPerMonthUniqueData ? visitsPerMonthUniqueData[0] : {})" :datasets="getGenderMonthDataSets(visitsPerMonthUniqueData)"/>
+                        <BarChart :labels="getLabels(visitsPerMonthUniqueData ? visitsPerMonthUniqueData[0] : {})" :datasets="getGenderMonthDataSets(visitsPerMonthUniqueData)" :chart-colors="genderChartColors"/>
                     </div>
                 </div>
                 <div class="mt-5">
@@ -81,21 +81,21 @@
                     <div class="d-flex flex-column flex-md-row">
                         <div class="col-xs-12 col-md-4">
                             <h3>Artikelen</h3>
-                            <DoughnutChart v-if="maleVisitsPerArticleData && Object.keys(maleVisitsPerArticleData).length > 0" :labels="transformLabels(getLabels(maleVisitsPerArticleData), 'donut')" :datasets="[ getDataSets(maleVisitsPerArticleData) ]"/>
+                            <DoughnutChart v-if="maleVisitsPerArticleData && Object.keys(maleVisitsPerArticleData).length > 0" :labels="transformLabels(getLabels(maleVisitsPerArticleData), 'donut')" :datasets="[ getDataSets(maleVisitsPerArticleData) ]" :chart-colors="genericChartColors"/>
                             <div v-else>
                                 <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-4">
                             <h3>Workshops</h3>
-                            <DoughnutChart v-if="maleVisitsPerWorkshopData && Object.keys(maleVisitsPerWorkshopData).length > 0" :labels="transformLabels(getLabels(maleVisitsPerWorkshopData), 'donut')" :datasets="[ getDataSets(maleVisitsPerWorkshopData) ]"/>
+                            <DoughnutChart v-if="maleVisitsPerWorkshopData && Object.keys(maleVisitsPerWorkshopData).length > 0" :labels="transformLabels(getLabels(maleVisitsPerWorkshopData), 'donut')" :datasets="[ getDataSets(maleVisitsPerWorkshopData) ]" :chart-colors="genericChartColors"/>
                             <div v-else>
                                 <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-4">
                             <h3>Tegels</h3>
-                            <DoughnutChart v-if="maleVisitsPerTileData && Object.keys(maleVisitsPerTileData).length > 0" :labels="transformLabels(getLabels(maleVisitsPerTileData), 'donut')" :datasets="[ getDataSets(maleVisitsPerTileData) ]"/>
+                            <DoughnutChart v-if="maleVisitsPerTileData && Object.keys(maleVisitsPerTileData).length > 0" :labels="transformLabels(getLabels(maleVisitsPerTileData), 'donut')" :datasets="[ getDataSets(maleVisitsPerTileData) ]" :chart-colors="genericChartColors"/>
                             <div v-else>
                                 <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
                             </div>
@@ -107,21 +107,21 @@
                     <div class="d-flex flex-column flex-md-row">
                         <div class="col-xs-12 col-md-4">
                             <h3>Artikelen</h3>
-                            <DoughnutChart v-if="femaleVisitsPerArticleData && Object.keys(femaleVisitsPerArticleData).length > 0" :labels="transformLabels(getLabels(femaleVisitsPerArticleData), 'donut')" :datasets="[ getDataSets(femaleVisitsPerArticleData) ]"/>
+                            <DoughnutChart v-if="femaleVisitsPerArticleData && Object.keys(femaleVisitsPerArticleData).length > 0" :labels="transformLabels(getLabels(femaleVisitsPerArticleData), 'donut')" :datasets="[ getDataSets(femaleVisitsPerArticleData) ]" :chart-colors="genericChartColors"/>
                             <div v-else>
                                 <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-4">
                             <h3>Workshops</h3>
-                            <DoughnutChart v-if="femaleVisitsPerWorkshopData && Object.keys(femaleVisitsPerWorkshopData).length > 0" :labels="transformLabels(getLabels(femaleVisitsPerWorkshopData), 'donut')" :datasets="[ getDataSets(femaleVisitsPerWorkshopData) ]"/>
+                            <DoughnutChart v-if="femaleVisitsPerWorkshopData && Object.keys(femaleVisitsPerWorkshopData).length > 0" :labels="transformLabels(getLabels(femaleVisitsPerWorkshopData), 'donut')" :datasets="[ getDataSets(femaleVisitsPerWorkshopData) ]" :chart-colors="genericChartColors"/>
                             <div v-else>
                                 <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-4">
                             <h3>Tegels</h3>
-                            <DoughnutChart v-if="femaleVisitsPerTileData && Object.keys(femaleVisitsPerTileData).length > 0" :labels="transformLabels(getLabels(femaleVisitsPerTileData), 'donut')" :datasets="[ getDataSets(femaleVisitsPerTileData) ]"/>
+                            <DoughnutChart v-if="femaleVisitsPerTileData && Object.keys(femaleVisitsPerTileData).length > 0" :labels="transformLabels(getLabels(femaleVisitsPerTileData), 'donut')" :datasets="[ getDataSets(femaleVisitsPerTileData) ]" :chart-colors="genericChartColors"/>
                             <div v-else>
                                 <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
                             </div>
@@ -133,21 +133,21 @@
                     <div class="d-flex flex-column flex-md-row">
                         <div class="col-xs-12 col-md-4">
                             <h3>Artikelen</h3>
-                            <DoughnutChart v-if="otherVisitsPerArticleData && Object.keys(otherVisitsPerArticleData).length > 0" :labels="transformLabels(getLabels(otherVisitsPerArticleData), 'donut')" :datasets="[ getDataSets(otherVisitsPerArticleData) ]"/>
+                            <DoughnutChart v-if="otherVisitsPerArticleData && Object.keys(otherVisitsPerArticleData).length > 0" :labels="transformLabels(getLabels(otherVisitsPerArticleData), 'donut')" :datasets="[ getDataSets(otherVisitsPerArticleData) ]" :chart-colors="genericChartColors"/>
                             <div v-else>
                                 <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-4">
                             <h3>Workshops</h3>
-                            <DoughnutChart v-if="otherVisitsPerWorkshopData && Object.keys(otherVisitsPerWorkshopData).length > 0" :labels="transformLabels(getLabels(otherVisitsPerWorkshopData), 'donut')" :datasets="[ getDataSets(otherVisitsPerWorkshopData) ]"/>
+                            <DoughnutChart v-if="otherVisitsPerWorkshopData && Object.keys(otherVisitsPerWorkshopData).length > 0" :labels="transformLabels(getLabels(otherVisitsPerWorkshopData), 'donut')" :datasets="[ getDataSets(otherVisitsPerWorkshopData) ]" :chart-colors="genericChartColors"/>
                             <div v-else>
                                 <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-4">
                             <h3>Tegels</h3>
-                            <DoughnutChart v-if="otherVisitsPerTileData && Object.keys(otherVisitsPerTileData).length > 0" :labels="transformLabels(getLabels(otherVisitsPerTileData), 'donut')" :datasets="[ getDataSets(otherVisitsPerTileData) ]"/>
+                            <DoughnutChart v-if="otherVisitsPerTileData && Object.keys(otherVisitsPerTileData).length > 0" :labels="transformLabels(getLabels(otherVisitsPerTileData), 'donut')" :datasets="[ getDataSets(otherVisitsPerTileData) ]" :chart-colors="genericChartColors"/>
                             <div v-else>
                                 <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
                             </div>
@@ -390,64 +390,6 @@ export default {
         getGenderMonthDataSets(data) {
 
             return this.getDataSets(data, GenderFilter.filter, Object.values);
-        },
-
-        getLabelsPie() {
-
-            return {
-                male: "male",
-                female: "female",
-                other: "other"
-            };
-        },
-
-        getLabelsArticle() {
-
-            return {
-                first: "Gratis training: HersenCoach",
-                second: "Niet thuiszitten, maar thuisbewegen!",
-                third: "Zo krijg je weer sterke longen"
-            };
-        },
-
-        getDataSetsDoughnut() {
-
-            return [
-                {
-                    male: 40,
-                    female: 20,
-                    other: 10
-                }
-            ];
-        },
-
-        getDataSetsArea() {
-
-            return {
-                male: [ 40, 39, 10, 40, 39, 80, 40 ],
-                female: [ 60, 55, 32, 10, 2, 12, 53 ],
-                other: [ 20, 21, 17, 27, 4, 5, 12 ]
-            };
-        },
-
-        getDataSetsBar() {
-
-            return {
-                male: [ 2, 10, 5, 9, 0, 6, 20 ],
-                female: [ 4, 8, 10, 21, 3, 12, 12 ],
-                other: [ 8, 4, 5, 12, 14, 9, 6 ]
-            };
-        },
-
-        getDataSetsDoughnutArticle() {
-
-            return [
-                {
-                    first: 40,
-                    second: 20,
-                    third: 10
-                }
-            ];
         }
     }
 };

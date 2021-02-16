@@ -7,7 +7,7 @@ export default {
 
     extends: Line,
 
-    props: ['labels', 'datasets'],
+    props: ['labels', 'datasets', 'chartColors'],
 
     watch: {
 
@@ -39,13 +39,7 @@ export default {
     },
 
     data() {
-        return {
-            chartColors: {
-                male: "#85d8ff",
-                female: "#ff7e75",
-                other: "#68ed64"
-            }
-        };
+        return {};
     },
 
     mounted() {
@@ -68,14 +62,14 @@ export default {
 
         mapData() {
 
-            return Object.entries(this.datasets).map(([key, value]) => {
+            return Object.entries(this.datasets).map(([key, value], index) => {
                 return {
                     label: key.toUpperCase(),
                     borderColor: "grey",
                     pointBackgroundColor: "grey",
                     borderWidth: 1,
                     pointBorderColor: "white",
-                    backgroundColor: this.chartColors[key],
+                    backgroundColor: Array.isArray(this.chartColors) ? this.chartColors[index] : this.chartColors[key],
                     data: value
                 };
             });

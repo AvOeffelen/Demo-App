@@ -8,7 +8,7 @@ export default {
 
     extends: Pie,
 
-    props: ['labels', 'datasets'],
+    props: ['labels', 'datasets', "chartColors"],
 
     watch: {
 
@@ -40,13 +40,7 @@ export default {
     },
 
     data() {
-        return {
-            chartColors: {
-                male: "rgba(0, 231, 255, 0.25)",
-                female: "rgba(255, 0, 0, 0.25)",
-                other: "rgba(0, 255, 0, 0.25)"
-            }
-        };
+        return {};
     },
 
     mounted() {
@@ -73,7 +67,10 @@ export default {
 
                 return {
 
-                    backgroundColor: this.labels.map((label) => this.chartColors[label]),
+                    backgroundColor: Array.isArray(this.chartColors)
+                        ? this.labels.map((label, index) => this.chartColors[index])
+                        : this.labels.map((label) => this.chartColors[label]),
+
                     data: this.labels.map((label) => item[label])
                 }
             });

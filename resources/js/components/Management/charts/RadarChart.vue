@@ -69,12 +69,12 @@ export default {
 
         mapData() {
 
-            return Object.entries(this.datasets).map(([key, value]) => {
+            return Object.entries(this.datasets).map(([key, value], index) => {
                 return {
                     label: key.toUpperCase(),
-                    backgroundColor: this.chartColors[key],
+                    backgroundColor: Array.isArray(this.chartColors) ? this.chartColors[index] : this.chartColors[key],
                     borderColor: "#fff",
-                    pointBackgroundColor: this.chartColors[key],
+                    pointBackgroundColor: Array.isArray(this.chartColors) ? this.chartColors[index] : this.chartColors[key],
                     pointBorderColor: "#fff",
                     pointHoverBackgroundColor: "#fff",
                     pointHoverBorderColor: "rgba(179,181,198,1)",

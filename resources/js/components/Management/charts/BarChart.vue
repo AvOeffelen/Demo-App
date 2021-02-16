@@ -8,7 +8,7 @@ export default {
 
     extends: Bar,
 
-    props: ['labels', 'datasets'],
+    props: ['labels', 'datasets', 'chartColors'],
 
     watch: {
 
@@ -40,14 +40,7 @@ export default {
     },
 
     data() {
-        return {
-            chartColors: {
-                male: "rgba(0, 231, 255, 0.25)",
-                female: "rgba(255, 0, 0, 0.25)",
-                other: "rgba(0, 255, 0, 0.25)",
-                TopArtikel: "#8dcdf2"
-            }
-        };
+        return {};
     },
 
     mounted() {
@@ -83,14 +76,14 @@ export default {
 
         mapData() {
 
-            return Object.entries(this.datasets).map(([key, value]) => {
+            return Object.entries(this.datasets).map(([key, value], index) => {
                 return {
                     label: key.toUpperCase(),
                     borderColor: "#fff",
                     pointBackgroundColor: "white",
                     borderWidth: 1,
                     pointBorderColor: "white",
-                    backgroundColor: this.chartColors[key],
+                    backgroundColor: Array.isArray(this.chartColors) ? this.chartColors[index] : this.chartColors[key],
                     data: value
                 };
             });
