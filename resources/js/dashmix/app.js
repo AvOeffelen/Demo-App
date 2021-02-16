@@ -43,18 +43,27 @@ Vue.component('PreviewModal',require('../components/Workshop/Backend/PreviewModa
 const files = require.context('../', true, /\.vue$/i)
 files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-//Config
-import config from "../config";
-Vue.prototype.$config = config;
-
 //Bootstraps
 import router from "../bootstraps/router.js";
+import Vue from "vue";
 
+//Retrieve User Info
+//Normally, this would be done in the beforeCreate of the root component,
+//but as the rest of the app doesn't use Vue Router there is none.
+axios.get("/axios/me")
+.then((response) => {
 
-const app = new Vue({
+    //User
+    Vue.prototype.$user = response.data || {};
 
-    el: '#main-container',
-    router
+    //Config
+    Vue.prototype.$config = window.config;
+
+    const app = new Vue({
+
+        el: '#main-container',
+        router
+    });
 });
 
 // App extends Template

@@ -19,7 +19,7 @@ return [
 
     'activity' => [
 
-        'interval' => 5
+        'interval' => 1
     ],
 
     /*

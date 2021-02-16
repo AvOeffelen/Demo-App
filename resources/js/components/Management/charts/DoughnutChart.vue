@@ -1,5 +1,6 @@
 <script>
 import { Doughnut } from "vue-chartjs";
+import isEqual from "lodash.isequal";
 
 export default {
 
@@ -8,6 +9,35 @@ export default {
     extends: Doughnut,
 
     props: ['labels', 'datasets'],
+
+    watch: {
+
+        labels: {
+
+            deep: true,
+
+            handler(newData, oldData) {
+
+                if (!isEqual(newData, oldData)) {
+
+                    this.render();
+                }
+            }
+        },
+
+        datasets: {
+
+            deep: true,
+
+            handler(newData, oldData) {
+
+                if (!isEqual(newData, oldData)) {
+
+                    this.render();
+                }
+            }
+        }
+    },
 
     data() {
         return {
@@ -25,16 +55,22 @@ export default {
     },
 
     mounted() {
-        this.renderChart(
-            {
-                labels: this.mapLabels(),
-                datasets: this.mapData()
-            },
-            { responsive: true, maintainAspectRatio: false }
-        );
+
+        this.render();
     },
 
     methods: {
+
+        render() {
+
+            this.renderChart(
+                {
+                    labels: this.mapLabels(),
+                    datasets: this.mapData()
+                },
+                { responsive: true, maintainAspectRatio: false }
+            );
+        },
 
         mapLabels() {
 

@@ -5,7 +5,7 @@
                 <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Management Dashboard</h1>
                 <nav aria-label="breadcrumb" class="flex-sm-00-auto ml-sm-3">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item">KLANTSAMENVITAAL</li>
+                        <li class="breadcrumb-item">{{ $config.app.name }}</li>
                         <li aria-current="page" class="breadcrumb-item">Management</li>
                         <li aria-current="page" class="breadcrumb-item active">Dashboard</li>
                     </ol>
@@ -18,7 +18,15 @@
                     <div class="p-2 bg-light w-100 rounded shadow-sm d-flex justify-content-between align-items-center">
                         <div>
                             <p class="mb-1">Welkom terug</p>
-                            <h4 class="mb-0">Dennis Krijgsman</h4>
+                            <h4 class="mb-0">
+                                {{ $user.firstname }}
+                                {{
+                                    $user.infix
+                                        ? ` ${ $user.infix } `
+                                        : ""
+                                }}
+                                {{ $user.lastname }}
+                            </h4>
                         </div>
                         <i class="fas fa-user"></i>
                     </div>
@@ -86,12 +94,12 @@
 </template>
 
 <script>
-import AreaChart from "./components/charts/AreaChart.vue"
-import BarChart from "./components/charts/BarChart.vue"
-import LineChart from "./components/charts/LineChart.vue"
-import PieChart from "./components/charts/PieChart.vue"
-import RadarChart from "./components/charts/RadarChart.vue"
-import DoughnutChart from "./components/charts/DoughnutChart.vue"
+import AreaChart from "../../components/Management/charts/AreaChart.vue"
+import BarChart from "../../components/Management/charts/BarChart.vue"
+import LineChart from "../../components/Management/charts/LineChart.vue"
+import PieChart from "../../components/Management/charts/PieChart.vue"
+import RadarChart from "../../components/Management/charts/RadarChart.vue"
+import DoughnutChart from "../../components/Management/charts/DoughnutChart.vue"
 
 export default {
 
