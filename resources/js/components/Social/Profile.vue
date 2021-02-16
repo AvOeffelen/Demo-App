@@ -11,7 +11,7 @@
                          v-bind:src="'https://eu.ui-avatars.com/api/?name='+person.firstname+'+'+person.infix+'+'+person.lastname+'?size=128?bold=true?color=#FFFFFF'"
                          alt="">
                     <div class="file btn btn-lg btn-primary">
-                        Change Photo
+                        Verander foto
                         <b-form-file
                             v-model="avatar"
                             accept="image/*"
