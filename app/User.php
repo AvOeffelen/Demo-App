@@ -6,6 +6,7 @@ use App\Model\Activity;
 use App\Model\Article;
 use App\Model\Avatar;
 use App\Model\Workshop;
+use Carbon\Carbon;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -34,11 +35,14 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-
-        'firstname', 'email',
-        'password', 'lastname',
-        'infix', 'type',
-        'gender', 'password'
+        'firstname',
+        'email',
+        'lastname',
+        'infix',
+        'type',
+        'gender',
+        'birthday',
+        'password'
     ];
 
     /**
@@ -68,6 +72,11 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
 
         'email_verified_at' => 'datetime',
+        'birthday' => 'datetime:d-m-Y',
+    ];
+
+    protected $dates = [
+      'birthday'
     ];
 
     const ADMIN_TYPE = 'admin';
@@ -135,4 +144,10 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->type === self::DEFAULT_TYPE;
     }
+
+    public function getBirthDay(): string
+    {
+        return Carbon::createFromTimestamp($this->birthday)->format('d-m-Y');
+    }
+
 }

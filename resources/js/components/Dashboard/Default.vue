@@ -290,6 +290,12 @@
 <script>
 export default {
     name: "Default",
+    props:{
+        user:{
+            type: Object,
+            required:false
+        }
+    },
     data() {
         return {
             loading: false,

@@ -10,6 +10,10 @@
         </div>
     </div>
     <div class="content content-boxed">
-        <default></default>
+        @if (Auth()->check())
+            <default :user="{{Auth()->user()}}"></default>
+        @else
+            <default></default>
+        @endif
     </div>
 @endsection

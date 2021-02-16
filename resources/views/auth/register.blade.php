@@ -67,15 +67,26 @@
                                             </span>
                                     @endif
                                     <div class="form-group">
-                                        <label for="lastname">Gender <span class="text-danger">*</span></label>
-                                            <select class="form-control {{ $errors->has('gender') ? 'is-invalid' : '' }}"
-                                                    id="gender-select"
-                                                    name="gender">
-                                                <option value="woman" selected>Female</option>
-                                                <option value="man">Male</option>
-                                                <option value="different">Other</option>
-                                                <option value="not_disclosed">I rather don't say</option>
-                                            </select>
+                                        <label for="birthday">Geboortedatum <span class="text-danger">*</span></label>
+                                        <input type="date"
+                                               class="form-control form-control-lg form-control-alt {{ $errors->has('birthday') ? 'is-invalid' : '' }}"
+                                               id="birthday" name="birthday" value="{{ old('birthday') }}">
+                                        @if ($errors->has('birthday'))
+                                            <span class="help-block">
+                                                <strong class="text-danger">{{ $errors->first('birthday') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastname">Geslacht <span class="text-danger">*</span></label>
+                                        <select class="form-control {{ $errors->has('gender') ? 'is-invalid' : '' }}"
+                                                id="gender-select"
+                                                name="gender">
+                                            <option value="woman" selected>Vrouw</option>
+                                            <option value="man">Man</option>
+                                            <option value="different">Anders</option>
+                                            <option value="not_disclosed">Zeg ik liever niet</option>
+                                        </select>
                                         @if ($errors->has('gender'))
                                             <span class="help-block">
                                                 <strong class="text-danger">{{ $errors->first('gender') }}</strong>

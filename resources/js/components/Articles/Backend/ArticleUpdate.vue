@@ -1,5 +1,4 @@
 <template>
-
     <div class="row">
         <div class="col-md-12">
             <div class="block">
@@ -27,7 +26,7 @@
                             <label for="example-hosting-vps">Categorie</label>
                             <select class="custom-select" id="example-hosting-vps" name="example-hosting-vps" v-model="article.category_id">
                                 <option v-for="(category,key) in this.categories" :value="category.id" :key="key">
-                                    {{ category.name }}
+                                    {{ category.display_name }}
                                 </option>
                             </select>
                         </div>
@@ -37,7 +36,7 @@
                             <label for="article-type">Article type</label>
                             <select class="custom-select" id="article-type"
                                     v-bind:class="[this.errors.type ? 'decoratedErrorField':'' ]"
-                                    v-model="article.type">
+                                    v-model="article.type" @change="checkTypeSelected($event,article)">
                                 <option v-for="(option,key) in this.articleTypeOptions" :value="option" :key="key">
                                     {{ option }}
                                 </option>
@@ -67,7 +66,7 @@
                             </div>
                         </b-col>
                     </b-row>
-                    <b-row v-if="article.type === 'video'" class="pb-5">
+                    <b-row v-if="this.article.type === 'video' || selectedType === 'video'" class="pb-5">
                         <b-col cols="12"
                                sm="12"
                                md="12"
@@ -177,6 +176,7 @@ export default {
                 'video',
                 'podcast'
             ],
+            selectedType:null,
         };
     },
     mounted() {
@@ -194,6 +194,10 @@ export default {
         this.getCategories();
     },
     methods: {
+        checkTypeSelected(event,article){
+            this.selectedType = event.target.value
+            article.type = event.target.value
+        },
         getCategories() {
             axios.get('/axios/article/get-categories')
                 .then(response => {
@@ -221,6 +225,7 @@ export default {
             }
 
             data.append('type',this.article.type)
+
             if(this.article.button_text !== null){
                 data.append('button_text', this.article.button_text);
             }
@@ -239,52 +244,6 @@ export default {
             data.append('button_link', this.article.button_link);
             data.append('button_text', this.article.button_text);
 
-
-            axios.post('/axios/article/put', data)
-                .then(response => {
-                    if (response.status === 200) {
-                        setTimeout(() => {
-                            window.location = '/backend/article/overview';
-                        }, 1000);
-                    }
-                })
-                .catch(error => {
-                    if (error.response.status == 422) {
-                        this.errors = error.response.data.errors;
-                    }
-                });
-        },
-        submit() {
-            this.errors = [];
-            let data = new FormData();
-
-            if (this.image !== null) {
-                data.append('image_link', this.image)
-                data.append('changed_image', "true")
-            } else if (this.article.image_link !== null) {
-                data.append('image_link', this.article.image_link)
-            }
-
-            if(this.article.video_link !== null){
-                data.append('video_link', this.article.video_link);
-            }
-
-            if(this.article.show_contact == true){
-                data.append('show_contact', this.article.show_contact);
-            }
-            if(this.article.button_text !== null){
-                data.append('button_text', this.article.button_text);
-            }
-            if(this.article.button_link !== null){
-                data.append('button_link', this.article.button_link);
-            }
-
-            data.append('uploadImage', this.uploadImage);
-            data.append('id', this.article.id);
-            data.append('title', this.article.title);
-            data.append('has_video', this.article.has_video);
-            data.append('category_id', this.article.category_id);
-            data.append('text', this.article.text);
 
             axios.post('/axios/article/put', data)
                 .then(response => {
