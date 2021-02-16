@@ -22,9 +22,11 @@
                             Pas foto aan
                             <b-form-file
                                 v-model="avatar"
+                                class="file-btn-test"
+                                plain
                                 accept="image/*"
                                 @change="detectNewAvatar"
-                                placeholder="Kies of drop een afbeelding hier"
+                                placeholder="Verander afbeelding"
                                 drop-placeholder="Drop afbeelding hier"
                                 v-bind:class="[this.errors.avatar ? 'decoratedErrorField':'' ]"/>
                         </div>
