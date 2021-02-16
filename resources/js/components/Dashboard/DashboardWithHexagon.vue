@@ -14,13 +14,13 @@
     </a>
   </li>
   <li class="honeycomb-cell">
-    <a href="/workshop">
+    <a href="#">
       <img class="honeycomb-cell__image" src="/storage/vakken/health.jpg">
       <div class="honeycomb-cell__title">Health</div>
     </a>
   </li>
   <li class="honeycomb-cell">
-    <a href="/workshop">
+    <a href="#">
       <img class="honeycomb-cell__image" src="/storage/vakken/wellness.jpg">
       <div class="honeycomb-cell__title">Wellness</div>
     </a>
@@ -38,7 +38,7 @@
     </a>
   </li>
   <li class="honeycomb-cell">
-    <a href="/one-on-one">
+    <a href="#">
       <img class="honeycomb-cell__image" src="/storage/vakken/personal.jpg">
       <div class="honeycomb-cell__title">Personal support</div>
     </a>
