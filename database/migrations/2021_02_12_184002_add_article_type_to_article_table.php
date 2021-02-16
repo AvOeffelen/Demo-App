@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddBirthdayToUsersTable extends Migration
+class AddArticleTypeToArticleTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddBirthdayToUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->timestamp('birthday')->nullable()->after('gender');
+        Schema::table('article', function (Blueprint $table) {
+           $table->string('type')->default('article')->nullable()->after('show_contact');
         });
     }
 
@@ -25,8 +25,8 @@ class AddBirthdayToUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('birthday');
+        Schema::table('article', function (Blueprint $table) {
+            $table->dropColumn('type');
         });
     }
 }

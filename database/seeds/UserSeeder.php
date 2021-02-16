@@ -18,8 +18,6 @@ class UserSeeder extends Seeder
             'infix' => Str::random(3),
             'lastname' => Str::random(10),
             'email' => 'arrieality@gmail.com',
-            'type' => 'admin',
-            'email_verified_at' => \Carbon\Carbon::now(),
             'password' => Hash::make('testing'),
         ]);
         DB::table('users')->insert([
@@ -27,8 +25,6 @@ class UserSeeder extends Seeder
             'infix' => Str::random(3),
             'lastname' => Str::random(10),
             'email' => 'krijgsmansolutions@test.com',
-            'type' => 'admin',
-            'email_verified_at' => \Carbon\Carbon::now(),
             'password' => Hash::make('testing'),
         ]);
     }

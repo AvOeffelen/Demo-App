@@ -13,7 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 // Example Routes
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index')->middleware('verified');
+Route::get('/update-your-browser','HomeController@BrowserFailure')->name('browser.failure');
 
 Route::group(['middleware' => ['web']], function () {
 
@@ -28,10 +29,10 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('article/{article}/show','ArticleController@show')->name('article.show');
     Route::get('/faq','FAQController@showFAQ')->name('faq');
     Route::get('/generatie-management','FAQController@showGenManagement')->name('gen.management');
-    Route::get('/aanbod-zorgverzekeraars','FAQController@showZorgverzekeraars')->name('zorgverzekeraars');
     Route::get('/vragenlijsten','FAQController@showVragenlijsten')->name('vragenlijsten');
     Route::get('/goodhabitz','FAQController@showGoodHabitz')->name('goodhabitz');
     Route::get('/activiteitenkalender','FAQController@showActiviteitenkalender')->name('activiteitenkalender');
+    Route::get('/contact','FAQController@showContact')->name('contact');
 
     Route::get('/home', 'HomeController@index')->name('home');
 
@@ -39,7 +40,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/download','ActivityCalenderController@downloadActivityCalender')->name('download.calender');
 });
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::group(['prefix' => 'backend/','middleware'=> ['web','admin']], function () {
     Route::get('workshop/overview','WorkshopController@showOverview')->name('workshop.overview');
@@ -69,20 +70,22 @@ Route::group(['middleware'=> ['web','default']], function () {
     Route::get('/me','UserController@showProfile')->name('me');
 });
 
-
 Route::group(['prefix' => 'axios/workshop', 'namespace' => 'Axios','middleware'=> ['web','default']], function () {
-
-
     route::get('{workshop}/checkLikes','WorkshopController@checkIfUserHasLiked')->name('workshop.check.personal.likes');
-
     route::post('{workshop}/like','WorkshopController@like')->name('workshop.like');
     route::post('{workshop}/dislike','WorkshopController@dislike')->name('workshop.dislike');
+});
 
-    route::post('{workshop}/like','WorkshopController@like')->name('workshop.like');
+Route::group(['prefix' => 'axios/article', 'namespace' => 'Axios','middleware'=> ['web','default']], function () {
+    route::get('{article}/checkLikes','ArticleController@checkIfUserHasLiked')->name('article.check.personal.likes');
+    route::post('{article}/like','ArticleController@like')->name('article.like');
+    route::post('{article}/dislike','ArticleController@dislike')->name('article.dislike');
 });
 
 Route::group(['prefix' => 'axios/me', 'namespace' => 'Axios','middleware'=> ['web','default']], function () {
-    route::get('/favorited','UserController@getFavorited')->name('user.favorited');
+    route::get('/favorite/workshop','UserController@getFavoriteWorkshops')->name('user.workshop.favorited');
+    route::get('/favorite/article','UserController@getFavoriteArticles')->name('user.article.favorited');
+    Route::post('/upload-avatar','UserController@storeAvatar')->name('user.upload.avatar');
 });
 
 Route::group(['prefix' => 'axios/article', 'namespace' => 'Axios','middleware'=> ['web','admin']], function() {
@@ -107,7 +110,6 @@ Route::group(['prefix' => 'axios/article', 'namespace' => 'Axios','middleware'=>
     route::post('/{article}/sign-up','ArticleController@signUpForArticle')->name('article.signup');
 });
 
-
 Route::group(['prefix' => 'axios/categories', 'namespace' => 'Axios','middleware'=> ['web','admin']], function() {
     route::get('/article/get-all','CategoryController@getArticleCategories')->name('categories.article.get.all');
     route::get('/workshop/get-all','CategoryController@getWorkshopCategories')->name('categories.workshop.get.all');
@@ -124,4 +126,8 @@ Route::group(['prefix' => 'axios/workshop', 'namespace' => 'Axios','middleware'=
     route::get('/get-growth','WorkshopController@getAllGrowthWorkshops')->name('workshop.get.growth');
 
     route::post('/{workshop}/sign-up','WorkshopController@signUpForWorkshop')->name('workshop.signup');
+});
+
+Route::group(['prefix' => 'axios', 'namespace' => 'Axios','middleware'=> ['web']], function () {
+    Route::post('/contact/send','ContactController@sendGeneralContactForm')->name('contact.send');
 });

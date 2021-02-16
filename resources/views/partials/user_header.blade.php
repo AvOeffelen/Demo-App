@@ -27,13 +27,13 @@
                 </a>
             </li>
             <li class="nav-main-item">
-                <a class="btn btn-dual" href="{{route('zorgverzekeraars')}}">
-                    <span class="nav-main-link-name">Aanbod Zorgverzekeraars</span>
+                <a class="btn btn-dual" href="{{url('faq')}}">
+                    <span class="nav-main-link-name">FAQ</span>
                 </a>
             </li>
             <li class="nav-main-item">
-                <a class="btn btn-dual" href="{{url('faq')}}">
-                    <span class="nav-main-link-name">FAQ</span>
+                <a class="btn btn-dual" href="{{url('contact')}}">
+                    <span class="nav-main-link-name">Contact</span>
                 </a>
             </li>
         </ul>
@@ -44,10 +44,11 @@
                 <span class="d-sm-inline-block d-sm-none">Log in</span>
             </a>
         @else
+
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn btn-dual" id="page-header-user-dropdown" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
-                    <i class="fa fa-fw fa-user d-sm-none"></i>
+                    <img src="{{asset(auth()->user()->avatar->image_link)}}" height="32px" width="32px" class="header-avatar"/>
                     <span class="d-none d-sm-inline-block">{{auth()->user()->getFullname()}}</span>
                     <i class="fa fa-fw fa-angle-down ml-1 d-none d-sm-inline-block"></i>
                 </button>
@@ -58,7 +59,7 @@
                     <div role="separator" class="dropdown-divider"></div>
                     <a class="dropdown-item" href="{{ route('logout') }}"
                        onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                       document.getElementById('logout-form').submit();">
                         <i class="far fa-fw fa-arrow-alt-circle-left mr-1"></i> Sign Out
                     </a>
 

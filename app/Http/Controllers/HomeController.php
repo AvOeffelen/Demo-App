@@ -37,4 +37,9 @@ class HomeController extends Controller
         return response()->view('dashboard.frontend.index');
     }
 
+    public function BrowserFailure()
+    {
+        return response()->view('browser.failure');
+    }
+
 }

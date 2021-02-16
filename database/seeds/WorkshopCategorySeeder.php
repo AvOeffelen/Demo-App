@@ -12,38 +12,35 @@ class WorkshopCategorySeeder extends Seeder
     public function run()
     {
         DB::table('workshop_category')->insert([
-            'name' => 'physical_vitality',
-            'display_name' => 'Fysieke vitaliteit',
+            'name' => 'Fysieke vitaliteit',
             'tag' => 'physical'
         ]);
         DB::table('workshop_category')->insert([
-            'name' => 'mental_vitality',
-            'display_name' => 'Mentale vitaliteit',
+            'name' => 'Mentale vitaliteit',
             'tag' => 'mental'
         ]);
         DB::table('workshop_category')->insert([
-            'name' => 'growth',
-            'display_name' => 'Ontwikkeling',
+            'name' => 'Ontwikkeling',
             'tag' => 'growth'
         ]);
         DB::table('category')->insert([
-            'name' => 'topical',
+            'name' => 'Actueel',
             'display_name' => 'Actueel',
         ]);
         DB::table('category')->insert([
-            'name' => 'physical_vitality',
+            'name' => 'Fysieke vitaliteit',
             'display_name' => 'Fysieke vitaliteit',
         ]);
         DB::table('category')->insert([
-            'name' => 'mental_vitality',
+            'name' => 'Mentale vitaliteit',
             'display_name' => 'Mentale vitaliteit',
         ]);
         DB::table('category')->insert([
-            'name' => 'growth',
+            'name' => 'Ontwikkeling',
             'display_name' => 'Ontwikkeling',
         ]);
         DB::table('category')->insert([
-            'name' => 'one_on_one',
+            'name' => '1 op 1',
             'display_name' => 'Persoonlijke begeleiding',
         ]);
     }
