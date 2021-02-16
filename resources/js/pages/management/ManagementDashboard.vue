@@ -67,7 +67,10 @@
                     </div>
                     <div class="col-xs-12 col-md-4">
                         <h3>Bezoekers geslacht</h3>
-                        <DoughnutChart :labels="transformLabels(getLabels(visitsPerMonthGenderData).map(l => GenderFilter.filter(l)), 'donut')" :datasets="[ getGenderDataSets(visitsPerMonthGenderData) ]" :chart-colors="genderChartColors"/>
+                        <DoughnutChart v-if="visitsPerMonthGenderData && Object.keys(visitsPerMonthGenderData).length > 0" :labels="transformLabels(getLabels(visitsPerMonthGenderData).map(l => GenderFilter.filter(l)), 'donut')" :datasets="[ getGenderDataSets(visitsPerMonthGenderData) ]" :chart-colors="genderChartColors"/>
+                        <div v-else>
+                            <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
+                        </div>
                     </div>
                 </div>
                 <div class="d-flex flex-column flex-md-row mt-5">

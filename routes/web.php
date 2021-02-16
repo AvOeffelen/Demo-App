@@ -133,7 +133,7 @@ Route::group(['prefix' => 'axios', 'namespace' => 'Axios','middleware'=> ['web']
     Route::post('/contact/send','ContactController@sendGeneralContactForm')->name('contact.send');
 });
 
-Route::group(['prefix' => 'axios/chart', 'namespace' => 'Axios\Management','middleware'=> ['web','admin']], function() {
+Route::group(['prefix' => 'axios/chart', 'namespace' => 'Axios\Management','middleware'=> ['web','manager']], function() {
 
     Route::get('/dashboard-data','ChartController@dashboardData')->name('chart.dashboardData');
 

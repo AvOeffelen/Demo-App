@@ -63,13 +63,19 @@
                     </div>
                     <div class="col-xs-12 col-md-4">
                         <h3>Bezoekers geslacht</h3>
-                        <DoughnutChart :labels="transformLabels(getLabels(visitsPerMonthGenderData).map(l => GenderFilter.filter(l)), 'donut')" :datasets="[ getGenderDataSets(visitsPerMonthGenderData) ]" :chart-colors="genderChartColors"/>
+                        <DoughnutChart v-if="visitsPerMonthGenderData && Object.keys(visitsPerMonthGenderData).length > 0" :labels="transformLabels(getLabels(visitsPerMonthGenderData).map(l => GenderFilter.filter(l)), 'donut')" :datasets="[ getGenderDataSets(visitsPerMonthGenderData) ]" :chart-colors="genderChartColors"/>
+                        <div v-else>
+                            <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
+                        </div>
                     </div>
                 </div>
                 <div class="d-flex flex-column-reverse flex-md-row mt-5">
                     <div class="col-xs-12 col-md-4">
                         <h3>Unieke bezoekers geslacht</h3>
-                        <DoughnutChart :labels="transformLabels(getLabels(visitsPerMonthUniqueGenderData).map(l => GenderFilter.filter(l)), 'donut')" :datasets="[ getGenderDataSets(visitsPerMonthUniqueGenderData) ]" :chart-colors="genderChartColors"/>
+                        <DoughnutChart v-if="visitsPerMonthUniqueGenderData && Object.keys(visitsPerMonthUniqueGenderData).length > 0" :labels="transformLabels(getLabels(visitsPerMonthUniqueGenderData).map(l => GenderFilter.filter(l)), 'donut')" :datasets="[ getGenderDataSets(visitsPerMonthUniqueGenderData) ]" :chart-colors="genderChartColors"/>
+                        <div v-else>
+                            <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
+                        </div>
                     </div>
                     <div class="col-xs-12 col-md-8 mr-2">
                         <h3>Unieke bezoekers per maand</h3>

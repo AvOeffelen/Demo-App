@@ -37,7 +37,7 @@
                     </a>
                 </li>
 
-                <li class="nav-main-item">
+                <li class="nav-main-item" v-if="$user.type === 'admin'">
                     <a class="nav-main-link" href="/backend/dashboard">
 <!--                        :href="route('show.frontend.dashboard')"-->
                         <i class="nav-main-link-icon fas fa-user"></i>
