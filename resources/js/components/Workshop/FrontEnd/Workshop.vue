@@ -4,9 +4,9 @@
             <b-col align-self="center" cols="12" md="12" lg="12" sm="12">
                 <b-button @click="goBack()" variant="primary">Terug</b-button>
                 <div class="text-center w-100">
-                    <div v-if="workshop.image_link != null">
+                    <div v-if="workshop.image_name != null">
                         <div class="article-show-image">
-                            <img class="" v-bind:src="'../../' + workshop.image_link" />
+                            <img class="" v-bind:src="'../../' + workshop.image_name" />
                         </div>
                     </div>
                     <div v-else>
@@ -56,7 +56,7 @@
             </div>
             <div class="col-md-2"></div>
         </div>
-        <div class="row py-3" v-show="authenticated">
+        <div class="row py-3">
             <div class="col-md-2"></div>
             <div class="col-md-8 text-center">
                 <div class="row">
@@ -81,27 +81,16 @@
 <script>
 export default {
     name: "Workshop",
-    props: {
-        workshop:{
-            type: Object,
-            required: true,
-        },
-        user:{
-            type: Object,
-            required: false,
-        }
-    },
+    props: [
+        'workshop'
+    ],
     data() {
         return {
-            authenticated: false,
             currUserHasLiked: false,
             default_image: 'https://www.bravissamenvitaal.nl/wp-content/uploads/2020/02/iStock-1058457940-2-495x400.jpg',
         };
     },
     created() {
-        if(this.user !== undefined){
-            this.authenticated = true;
-        }
         this.checkIfUserHasLiked();
     },
     methods: {
@@ -129,8 +118,6 @@ export default {
                         if (response.data === 1) {
                             this.currUserHasLiked = true;
                         }
-                        console.log("haaaaaaaaaaaaaaalo?");
-                        this.$toast.success(`U heeft ${this.workshop.title} toegevoegd aan uw favorieten!`);
                     }
                 });
         },

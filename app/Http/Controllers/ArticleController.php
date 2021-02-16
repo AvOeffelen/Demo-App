@@ -49,4 +49,9 @@ class ArticleController extends Controller
     {
         return response()->view('article.backend.crud.update',['article' => $article]);
     }
+
+    public function secretPage()
+    {
+        return response()->view('test.test');
+    }
 }

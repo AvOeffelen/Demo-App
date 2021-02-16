@@ -7,7 +7,7 @@
                 <nav class="flex-sm-00-auto ml-sm-3" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">KLANTSAMENVITAAL</li>
-                        <li class="breadcrumb-item active" aria-current="page">Activiteitenkalender</li>
+                        <li class="breadcrumb-item active text-primary" aria-current="page">Activiteitenkalender</li>
                     </ol>
                 </nav>
             </div>
