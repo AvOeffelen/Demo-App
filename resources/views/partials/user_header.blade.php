@@ -53,7 +53,7 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-right p-0" aria-labelledby="page-header-user-dropdown">
                     <a class="dropdown-item" href="{{url('/me')}}">
-                        <i class="far fa-fw fa-user mr-1"></i> Profiel
+                        <i class="far fa-fw fa-user mr-1"></i> Profile
                     </a>
                     <div role="separator" class="dropdown-divider"></div>
                     <a class="dropdown-item" href="{{ route('logout') }}"
