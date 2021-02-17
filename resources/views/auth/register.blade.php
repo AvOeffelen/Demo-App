@@ -79,13 +79,11 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="lastname">Geslacht <span class="text-danger">*</span></label>
-                                        <select class="form-control {{ $errors->has('gender') ? 'is-invalid' : '' }}"
-                                                id="gender-select"
-                                                name="gender">
-                                            <option value="woman" selected>Vrouw</option>
-                                            <option value="man">Man</option>
-                                            <option value="different">Anders</option>
-                                            <option value="not_disclosed">Zeg ik liever niet</option>
+                                        <select class="form-control {{ $errors->has('gender') ? 'is-invalid' : '' }}" id="gender-select" name="gender">
+                                            <option value="{{ \App\Enums\GenderEnum::MALE }}">Man</option>
+                                            <option value="{{ \App\Enums\GenderEnum::FEMALE }}">Vrouw</option>
+                                            <option value="{{ \App\Enums\GenderEnum::OTHER }}">Anders</option>
+                                            <option value="">Zeg ik liever niet</option>
                                         </select>
                                         @if ($errors->has('gender'))
                                             <span class="help-block">
