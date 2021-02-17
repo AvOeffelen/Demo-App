@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter);
 
-import ManagementLayout from '../pages/management/ManagementLayout.vue'
+import ManagementLayout from '../layouts/management/ManagementLayout.vue'
 
 import ManagementDashboard from '../pages/management/ManagementDashboard.vue'
 import ManagementUsers from '../pages/management/ManagementUsers.vue'
