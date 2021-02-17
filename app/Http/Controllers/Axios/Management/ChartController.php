@@ -17,7 +17,7 @@ use Illuminate\Support\Collection;
 
 class ChartController extends Controller {
 
-    public function userData(): \Illuminate\Database\Eloquent\Collection|array {
+    public function userData() {
 
         return User::all()
             ->countBy(
@@ -66,12 +66,14 @@ class ChartController extends Controller {
             ->get()
             ->groupBy("User.gender")
             ->map(
-                fn($group) => $this->mapActivityGroupByMonth($group, $start)->map(
-                    function ($d) {
+                function($group) use ($start) {
+                    return $this->mapActivityGroupByMonth($group, $start)->map(
+                         function ($d) {
 
-                        return $d->count();
-                    }
-                )
+                             return $d->count();
+                         }
+                     );
+                }
             );
     }
 
@@ -90,12 +92,14 @@ class ChartController extends Controller {
                 }
             )
             ->map(
-                fn($group) => $this->mapActivityGroupByMonth($group, $start)->map(
-                    function ($d) {
+                function($group) use ($start) {
+                    return $this->mapActivityGroupByMonth($group, $start)->map(
+                        function ($d) {
 
-                        return $d->count();
-                    }
-                )
+                            return $d->count();
+                        }
+                    );
+                }
             );
     }
 
@@ -113,7 +117,9 @@ class ChartController extends Controller {
                     return $item->User->gender ?? "unknown";
                 }
             )
-            ->map(fn($group) => $group->count());
+            ->map(function($group) {
+                return $group->count();
+            });
     }
 
     public function visitsPerMonthUnique() {
@@ -130,7 +136,9 @@ class ChartController extends Controller {
                     return $item->User->gender ?? "unknown";
                 }
             )
-            ->map(fn($genderGroup) => $this->mapActivityGroupByMonth($genderGroup, $start))
+            ->map(function ($genderGroup) use ($start) {
+                return $this->mapActivityGroupByMonth($genderGroup, $start);
+            })
             ->map(
                 function ($monthGroup) {
 
@@ -323,8 +331,12 @@ class ChartController extends Controller {
 
         $start = Carbon::now()->ceilMonth()->subMonths(config("app.activity.monthSpan"));
 
-        $visits = $this->visitsPerMonthUnique()->map(fn($group) => $group->sum())->sum();
-        $views = $this->visitsPerMonth()->map(fn($group) => $group->sum())->sum();
+        $visits = $this->visitsPerMonthUnique()->map(function($group) {
+            return $group->sum();
+        })->sum();
+        $views = $this->visitsPerMonth()->map(function($group) {
+            return $group->sum();
+        })->sum();
 
         return compact("visits", "views");
     }

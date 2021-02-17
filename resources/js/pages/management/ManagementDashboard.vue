@@ -63,7 +63,7 @@
                 <div class="d-flex flex-column flex-md-row mt-5">
                     <div class="col-xs-12 col-md-8 mr-2">
                         <h3>Kliks per geslacht</h3>
-                        <LineChart :labels="getLabels(visitsPerMonthData ? visitsPerMonthData[0] : {})" :datasets="getGenderMonthDataSets(visitsPerMonthData)" :chart-colors="genderChartColors"/>
+                        <LineChart :labels="getLabels(visitsPerMonthData ? Object.values(visitsPerMonthData)[0] : {})" :datasets="getGenderMonthDataSets(visitsPerMonthData)" :chart-colors="genderChartColors"/>
                     </div>
                     <div class="col-xs-12 col-md-4">
                         <h3>Bezoekers geslacht</h3>
