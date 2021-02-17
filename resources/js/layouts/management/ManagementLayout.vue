@@ -36,11 +36,6 @@
                             <i class="fa fa-fw fa-angle-down ml-1 d-none d-sm-inline-block"></i>
                         </button>
                         <div class="dropdown-menu dropdown-menu-right p-0" aria-labelledby="page-header-user-dropdown">
-                            <a class="dropdown-item">
-                                <!--                                :href="route('me')"-->
-                                <i class="far fa-fw fa-user mr-1"></i> Profiel
-                            </a>
-                            <div role="separator" class="dropdown-divider"></div>
                             <a class="dropdown-item" @click="logout()">
                                 <i class="far fa-fw fa-arrow-alt-circle-left mr-1"></i> Uitloggen
                             </a>
@@ -121,7 +116,6 @@ export default {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    user-select: none;
     outline: none;
 }
 

@@ -62,7 +62,7 @@ class LoginController extends Controller
 
                 $activity = new Activity([
 
-                    'record_class' => User::class,
+                    'record_class' => get_class(new User()),
                     'record_id' => Auth::user() != null ? Auth::user()->id : null,
                     'user_id' => Auth::user() != null ? Auth::user()->id : null,
                     'user_agent' => $request->userAgent(),

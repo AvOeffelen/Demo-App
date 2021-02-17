@@ -46,7 +46,7 @@ class RecordActivity {
 
             if ($entity != null) {
 
-                $activityOptions->put('record_class', $entity::class);
+                $activityOptions->put('record_class', get_class($entity));
                 $activityOptions->put('record_id', $entity->id);
             }
 
