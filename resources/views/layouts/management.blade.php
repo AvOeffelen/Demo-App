@@ -16,6 +16,17 @@
 
     @routes
 
+    <script>
+        //Pass laravel config to JS
+        window.config = {
+
+            app: {
+
+                name: "{{ config("app.name") }}"
+            }
+        }
+    </script>
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src="{{ URL::asset('browserChecker.js') }}"></script>

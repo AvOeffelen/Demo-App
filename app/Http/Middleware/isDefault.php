@@ -16,12 +16,7 @@ class isDefault
      */
     public function handle($request, Closure $next)
     {
-        
-        if(!auth::check()){
-            return redirect('/login');
-        }
-
-        if (Auth::user() &&  Auth::user()->isDefault() || Auth::user()->isAdmin()) {
+        if (Auth::user() && Auth::user()->isDefault() || Auth::user()->isAdmin() || Auth::user()->isManager()) {
 
             return $next($request);
         }
