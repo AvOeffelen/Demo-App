@@ -54,12 +54,12 @@
             <div>
                 <div class="col-12 mt-5">
                     <h3>Inloggen per maand</h3>
-                    <LineChart :labels="getLabels(userLoginData ? userLoginData[0] : {})" :datasets="getGenderMonthDataSets(userLoginData)" :chart-colors="genderChartColors"/>
+                    <LineChart :labels="getLabels(userLoginData ? Object.values(userLoginData)[0] : {})" :datasets="getGenderMonthDataSets(userLoginData)" :chart-colors="genderChartColors"/>
                 </div>
                 <div class="d-flex flex-column flex-md-row mt-5">
                     <div class="col-xs-12 col-md-8 mr-2">
                         <h3>Bezoekers per maand</h3>
-                        <BarChart :labels="getLabels(visitsPerMonthData ? visitsPerMonthData[0] : {})" :datasets="getGenderMonthDataSets(visitsPerMonthData)" :chart-colors="genderChartColors"/>
+                        <BarChart :labels="getLabels(visitsPerMonthData ? Object.values(visitsPerMonthData)[0] : {})" :datasets="getGenderMonthDataSets(visitsPerMonthData)" :chart-colors="genderChartColors"/>
                     </div>
                     <div class="col-xs-12 col-md-4">
                         <h3>Bezoekers geslacht</h3>
@@ -79,7 +79,7 @@
                     </div>
                     <div class="col-xs-12 col-md-8 mr-2">
                         <h3>Unieke bezoekers per maand</h3>
-                        <BarChart :labels="getLabels(visitsPerMonthUniqueData ? visitsPerMonthUniqueData[0] : {})" :datasets="getGenderMonthDataSets(visitsPerMonthUniqueData)" :chart-colors="genderChartColors"/>
+                        <BarChart :labels="getLabels(visitsPerMonthUniqueData ? Object.values(visitsPerMonthUniqueData)[0] : {})" :datasets="getGenderMonthDataSets(visitsPerMonthUniqueData)" :chart-colors="genderChartColors"/>
                     </div>
                 </div>
                 <div class="mt-5">

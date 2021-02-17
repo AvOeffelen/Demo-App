@@ -12,6 +12,7 @@ const mix = require('laravel-mix');
  */
 
 mix
+    .version()
     /* CSS */
     .sass('resources/sass/main.scss', 'public/css/dashmix.css')
     .sass('resources/sass/dashmix/themes/xeco.scss', 'public/css/themes/')
