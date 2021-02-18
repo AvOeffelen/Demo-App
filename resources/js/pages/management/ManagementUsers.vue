@@ -117,21 +117,21 @@
                     <div class="d-flex flex-column flex-md-row">
                         <div class="col-xs-12 col-md-4">
                             <h3>Artikelen</h3>
-                            <DoughnutChart v-if="femaleVisitsPerArticleData && Object.keys(femaleVisitsPerArticleData).length > 0" :labels="transformLabels(getLabels(femaleVisitsPerArticleData), 'donut')" :datasets="[ getDataSets(femaleVisitsPerArticleData) ]" :chart-colors="genericChartColors"/>
+                            <PieChart v-if="femaleVisitsPerArticleData && Object.keys(femaleVisitsPerArticleData).length > 0" :labels="getLabels(femaleVisitsPerArticleData)" :datasets="[ getDataSets(femaleVisitsPerArticleData) ]" :chart-colors="genericChartColors"/>
                             <div v-else>
                                 <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-4">
                             <h3>Workshops</h3>
-                            <DoughnutChart v-if="femaleVisitsPerWorkshopData && Object.keys(femaleVisitsPerWorkshopData).length > 0" :labels="transformLabels(getLabels(femaleVisitsPerWorkshopData), 'donut')" :datasets="[ getDataSets(femaleVisitsPerWorkshopData) ]" :chart-colors="genericChartColors"/>
+                            <PieChart v-if="femaleVisitsPerWorkshopData && Object.keys(femaleVisitsPerWorkshopData).length > 0" :labels="getLabels(femaleVisitsPerWorkshopData)" :datasets="[ getDataSets(femaleVisitsPerWorkshopData) ]" :chart-colors="genericChartColors"/>
                             <div v-else>
                                 <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-4">
                             <h3>Tegels</h3>
-                            <DoughnutChart v-if="femaleVisitsPerTileData && Object.keys(femaleVisitsPerTileData).length > 0" :labels="transformLabels(getLabels(femaleVisitsPerTileData), 'donut')" :datasets="[ getDataSets(femaleVisitsPerTileData) ]" :chart-colors="genericChartColors"/>
+                            <PieChart v-if="femaleVisitsPerTileData && Object.keys(femaleVisitsPerTileData).length > 0" :labels="getLabels(femaleVisitsPerTileData)" :datasets="[ getDataSets(femaleVisitsPerTileData) ]" :chart-colors="genericChartColors"/>
                             <div v-else>
                                 <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
                             </div>
