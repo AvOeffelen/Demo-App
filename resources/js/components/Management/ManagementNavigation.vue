@@ -5,12 +5,12 @@
             <div class="content-header bg-white-10">
                 <!-- Logo -->
                 <a class="link-fx font-w600 font-size-lg text-white" href="/">
-                            <span class="smini-visible">
-                                <span class="text-white-75">{{ $config.app.name }}</span>
-                            </span>
+                    <span class="smini-visible">
+                        <span class="text-white-75">{{ $config.app.name }}</span>
+                    </span>
                     <span class="smini-hidden">
-                                <span class="text-white-75">{{ $config.app.name }}</span>
-                            </span>
+                        <span class="text-white-75">{{ $config.app.name }}</span>
+                    </span>
                 </a>
                 <!-- END Logo -->
 
@@ -32,16 +32,16 @@
 
                 <li class="nav-main-item" v-for="route in displayRoutes" :key="route.name">
                     <a class="nav-main-link" :class="{ 'active': ($route.name === route.name) }" @click="$router.push({ name: route.name })">
-                        <i :class="'nav-main-link-icon ' + route.meta != null && route.meta.icon != null ? route.meta.icon : ''"></i>
-                        <span class="nav-main-link-name ml-2">{{ route.meta != null && route.meta.title != null ? route.meta.title() : route.name }}</span>
+                        <i :class="['nav-main-link-icon', route.meta != null && route.meta.icon != null ? route.meta.icon : '']"></i>
+                        <span class="nav-main-link-name">{{ route.meta != null && route.meta.title != null ? route.meta.title() : route.name }}</span>
                     </a>
                 </li>
 
-                <li class="nav-main-item">
+                <li class="nav-main-item" v-if="$user.type === 'admin'">
                     <a class="nav-main-link" href="/backend/dashboard">
 <!--                        :href="route('show.frontend.dashboard')"-->
                         <i class="nav-main-link-icon fas fa-user"></i>
-                        <span class="nav-main-link-name ml-2">Admin Dashboard</span>
+                        <span class="nav-main-link-name">Admin Dashboard</span>
                     </a>
                 </li>
 

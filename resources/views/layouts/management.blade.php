@@ -14,7 +14,16 @@
     <link rel="icon" sizes="192x192" type="image/png" href="{{ asset('media/favicons/favicon-96x96.png') }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('media/favicons/favicon-96x96.png') }}">
 
-    @routes
+    <script>
+        //Pass laravel config to JS
+        window.config = {
+
+            app: {
+
+                name: "{{ config("app.name") }}"
+            }
+        }
+    </script>
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">

@@ -16,8 +16,12 @@ class UserController extends Controller
 {
     public function showProfile()
     {
-
         return view('profile.index');
+    }
+
+    public function me() {
+
+        return auth()->user();
     }
 
     public function getFavoriteWorkshops()

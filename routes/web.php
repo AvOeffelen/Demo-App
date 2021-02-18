@@ -17,7 +17,7 @@ Route::get('/', 'HomeController@index');
 // ->middleware('verified');
 Route::get('/update-your-browser','HomeController@BrowserFailure')->name('browser.failure');
 
-Route::group(['middleware' => ['web']], function () {
+Route::group(['middleware' => ['web','recordActivity']], function () {
 
     Route::get('workshop','WorkshopController@showWorkshops')->name('workshop');
     Route::get('workshop/{workshop}/show','WorkshopController@show')->name('workshop.show');
@@ -67,7 +67,7 @@ Route::group(['prefix' => 'axios/workshop', 'namespace' => 'Axios','middleware'=
     route::delete('{workshop}/delete','WorkshopController@delete')->name('workshop.delete');
 });
 
-Route::group(['middleware'=> ['web','default']], function () {
+Route::group(['middleware'=> ['web','default','recordActivity']], function () {
     Route::get('/me','UserController@showProfile')->name('me');
 });
 
@@ -84,6 +84,7 @@ Route::group(['prefix' => 'axios/article', 'namespace' => 'Axios','middleware'=>
 });
 
 Route::group(['prefix' => 'axios/me', 'namespace' => 'Axios','middleware'=> ['web','default']], function () {
+    Route::get("/", "UserController@me")->name("user.me");
     route::get('/favorite/workshop','UserController@getFavoriteWorkshops')->name('user.workshop.favorited');
     route::get('/favorite/article','UserController@getFavoriteArticles')->name('user.article.favorited');
     Route::post('/upload-avatar','UserController@storeAvatar')->name('user.upload.avatar');
@@ -133,9 +134,26 @@ Route::group(['prefix' => 'axios', 'namespace' => 'Axios','middleware'=> ['web']
     Route::post('/contact/send','ContactController@sendGeneralContactForm')->name('contact.send');
 });
 
-Route::group(['prefix' => 'axios/chart', 'namespace' => 'Axios\Management','middleware'=> ['web','admin']], function() {
+Route::group(['prefix' => 'axios/chart', 'namespace' => 'Axios\Management','middleware'=> ['web','manager']], function() {
 
-    Route::get('/','ChartController@pagesPerVisit')->name('chart.pagesPerVisit');
+    Route::get('/dashboard-data','ChartController@dashboardData')->name('chart.dashboardData');
+
+    Route::get('/user-data','ChartController@userData')->name('chart.userData');
+    Route::get('/user-login-data','ChartController@userLoginData')->name('chart.userLoginData');
+
+    Route::get('/visits-per-month','ChartController@visitsPerMonth')->name('chart.visitsPerMonth');
+    Route::get('/visits-per-month-gender','ChartController@visitsPerMonthGender')->name('chart.visitsPerMonthGender');
+
+    Route::get('/visits-per-month-unique','ChartController@visitsPerMonthUnique')->name('chart.visitsPerMonthUnique');
+    Route::get('/visits-per-month-unique-gender','ChartController@visitsPerMonthUniqueGender')->name('chart.visitsPerMonthUniqueGender');
+
+    Route::get('/visits-per-record-per-gender','ChartController@visitsPerRecordTypePerGender')->name('chart.visitsPerRecordTypePerGender');
+
+    Route::get('/activity-data','ChartController@activityData')->name('chart.activityData');
+    Route::get('/activity-per-record-per-useragent','ChartController@activityPerRecordTypePerUseragent')->name('chart.activityPerRecordTypePerUseragent');
+
+    Route::get('/gender-per-record-per-useragent','ChartController@genderPerRecordTypePerUseragent')->name('chart.genderPerRecordTypePerUseragent');
+
 });
 
 Route::get('backend/management{any}','ManagementController@index')
