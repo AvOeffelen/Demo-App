@@ -25,31 +25,39 @@
             <div class="col-md-12 col-lg-2 col-xl-2 col-12 col-sm-12 col-xs-12 cols-12">
             </div>
         </div>
+       
         <div class="row">
             <div class="col-md-12 col-lg-2 col-xl-2 col-12 col-sm-12 col-xs-12 cols-12">
             </div>
             <div class="col-md-12 col-lg-8 col-xl-8 col-12 col-sm-12 col-xs-12">
                 <alinea class="text-center">
-                    <p>Voor onlinetrainingen waar je nooit genoeg van krijgt kun je gaan naar de omgeving van
+                <p>
+                    <br/>
+                        <img src="/storage/images/Bravis_Goodhabitz.jpg" class="mb-3" width="50%" height="50%">
+                    <br/>
+                    Voor onlinetrainingen waar je nooit genoeg van krijgt kun je gaan naar de omgeving van
                         GoodHabitz. Je vindt hier van toffe documentaires tot interessante magazines en van inspirerende
                         experts tot uitdagende opdrachten. Je luistert, kijkt of doet allen de onderdelen die passen bij
                         jouw manier van leren. Alles mag, niets moet: je leert zoals jij dat wilt!
                         <br />
-                        <br />
+                        <img src="/storage/images/Bravis_Goodhabitz2.jpg" class="mt-3 mb-3" width="50%" height="50%">
+                        <br/>
                         Je moet op deze pagina eerst even inloggen en wanneer je dat nog niet hebt gedaan, eerst een
                         account aanmaken. Dit is omdat er persoonlijke gegevens van je worden opgeslagen en om die
                         gegevens te beveiligen is een inlog noodzakelijk.
+                        
                         <br />
-                        <br />
+                        <img src="/storage/images/Bravis_Goodhabitz3.jpg" class="mt-3 mb-3" width="50%" height="50%">
+                        <br/>
                         LET OP:
                         
                         Wanneer je al eerder hebt ingelogd lukt het je nu waarschijnlijk niet om in te loggen. Klik op wachtwoord wijzigen en je kunt weer gewoon bij het aanbod van GoodHabitz.
 
-                        Heb je nog niet eerder een account aangemaakt dan willen wij je verzoeken om een mail te sturen naar <a href="mailto:info@vitalavie.nl" target="_blank">info@vitalavie.nl</a>
+                        Heb je nog niet eerder een account aangemaakt dan willen wij je verzoeken om een mail te sturen naar <a href="mailto:samenvitaal@bravis.nl" target="_blank">samenvitaal@bravis.nl</a>
                         Van een medewerker ontvang je dan een link om een account voor jezelf aan te maken.
 
-                        Mocht bovenstaande onduidelijk zijn en/of vragen oproepen, stuur dan een mail naar <a href="mailto:info@vitalavie.nl" target="_blank">info@vitalavie.nl</a>
-
+                        Mocht bovenstaande onduidelijk zijn en/of vragen oproepen, stuur dan een mail naar <a href="mailto:samenvitaal@bravis.nl" target="_blank">samenvitaal@bravis.nl</a>
+                        
                     </p>
                 </alinea>
             </div>
