@@ -50,21 +50,24 @@ import Vue from "vue";
 //Retrieve User Info
 //Normally, this would be done in the beforeCreate of the root component,
 //but as the rest of the app doesn't use Vue Router there is none.
-axios.get("/axios/me")
-.then((response) => {
+try {
+    axios.get("/axios/me")
+    .then((response) => {
 
-    //User
-    Vue.prototype.$user = response.data || {};
+        //User
+        Vue.prototype.$user = response.data || {};
 
-    //Config
-    Vue.prototype.$config = window.config;
+        //Config
+        Vue.prototype.$config = window.config;
 
-    const app = new Vue({
+        const app = new Vue({
 
-        el: '#main-container',
-        router
+            el: '#main-container',
+            router
+        });
     });
-});
+}
+catch (e) {}
 
 // App extends Template
 export default class App extends Template {
