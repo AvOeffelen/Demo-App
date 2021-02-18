@@ -64,7 +64,12 @@ class ChartController extends Controller {
             ->where("record_class", User::class)
             ->with("User")
             ->get()
-            ->groupBy("User.gender")
+            ->groupBy(
+                function ($item) {
+
+                    return $item->User->gender ?? "unknown";
+                }
+            )
             ->map(
                 function($group) use ($start) {
                     return $this->mapActivityGroupByMonth($group, $start)->map(
@@ -320,6 +325,52 @@ class ChartController extends Controller {
                     if (!$group->has($ua)) {
 
                         $group->put($ua, 0);
+                    }
+                }
+
+                return $group;
+            });
+    }
+
+    public function genderPerRecordTypePerUseragent(Request $request) {
+
+        $start = Carbon::now()->ceilMonth()->subMonths(config("app.activity.monthSpan"));
+        $genders = new Collection();
+
+        return Activity::whereDate('created_at', '>', $start)
+            ->with("User")
+            ->get()
+            ->groupBy(
+                function ($item) {
+
+                    return $item->User->gender ?? "unknown";
+                }
+            )
+            ->map(function ($group) {
+                return $group->countBy(function ($item) {
+
+                    $parseResult = new \WhichBrowser\Parser($item->user_agent);
+
+                    return $parseResult->device->toString() != null && $parseResult->device->toString() !== "" ? $parseResult->device->toString() : $parseResult->getType();
+                });
+            })
+            ->each(function ($group) use ($genders) {
+
+                $group->each(function ($item, $key) use ($genders) {
+
+                    if (!$genders->has($key)) {
+
+                        $genders->push($key);
+                    }
+                });
+            })
+            ->map(function ($group) use ($genders) {
+
+                foreach ($genders as $gender) {
+
+                    if (!$group->has($gender)) {
+
+                        $group->put($gender, 0);
                     }
                 }
 
