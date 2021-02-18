@@ -47,6 +47,10 @@ files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(
 import router from "../bootstraps/router.js";
 import Vue from "vue";
 
+//Filters
+import GenderFilter from "../filters/GenderFilter.js";
+Vue.filter(GenderFilter.key, GenderFilter.filter)
+
 //Retrieve User Info
 //Normally, this would be done in the beforeCreate of the root component,
 //but as the rest of the app doesn't use Vue Router there is none.
