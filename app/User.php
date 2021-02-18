@@ -25,7 +25,7 @@ use Illuminate\Notifications\Notifiable;
  * @property Avatar $avatar
  * @package App
  */
-class User extends Authenticatable implements MustVerifyEmail
+class User extends Authenticatable// implements MustVerifyEmail
 {
     use Notifiable;
 

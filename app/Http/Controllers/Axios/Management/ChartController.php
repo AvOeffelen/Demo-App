@@ -67,7 +67,7 @@ class ChartController extends Controller {
             ->groupBy(
                 function ($item) {
 
-                    return $item->User->gender ?? "unknown";
+                    return $item->User->gender ?? "onbekend";
                 }
             )
             ->map(
@@ -93,7 +93,7 @@ class ChartController extends Controller {
             ->groupBy(
                 function ($item, $key) {
 
-                    return $item->User->gender ?? "unknown";
+                    return $item->User->gender ?? "onbekend";
                 }
             )
             ->map(
@@ -119,7 +119,7 @@ class ChartController extends Controller {
             ->groupBy(
                 function ($item, $key) {
 
-                    return $item->User->gender ?? "unknown";
+                    return $item->User->gender ?? "onbekend";
                 }
             )
             ->map(function($group) {
@@ -138,7 +138,7 @@ class ChartController extends Controller {
             ->groupBy(
                 function ($item, $key) {
 
-                    return $item->User->gender ?? "unknown";
+                    return $item->User->gender ?? "onbekend";
                 }
             )
             ->map(function ($genderGroup) use ($start) {
@@ -174,7 +174,7 @@ class ChartController extends Controller {
             ->groupBy(
                 function ($item, $key) {
 
-                    return $item->User->gender ?? "unknown";
+                    return $item->User->gender ?? "onbekend";
                 }
             )
             ->map(
@@ -343,7 +343,7 @@ class ChartController extends Controller {
             ->groupBy(
                 function ($item) {
 
-                    return $item->User->gender ?? "unknown";
+                    return $item->User->gender ?? "onbekend";
                 }
             )
             ->map(function ($group) {
