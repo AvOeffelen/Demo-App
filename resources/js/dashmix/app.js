@@ -64,7 +64,8 @@ axios.get("/axios/me")
         el: '#main-container',
         router
     });
-});
+})
+.catch((e) => {});
 
 // App extends Template
 export default class App extends Template {
