@@ -1,6 +1,6 @@
 export default {
 
-    MALE: 0,
-    FEMALE: 1,
-    OTHER: 2,
+    MAN: 0,
+    VROUW: 1,
+    ANDERS: 2,
 }
