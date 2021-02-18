@@ -17,7 +17,7 @@ return [
 
     'author' => env('APP_AUTHOR', 'KLANTSAMENVITAAL'),
 
-    'dashmixTheme' => 'xbrvs',
+    'dashmixTheme' => 'xdsv',
 
     'activity' => [
 
