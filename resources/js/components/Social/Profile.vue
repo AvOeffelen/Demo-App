@@ -37,21 +37,21 @@
               <div class="card mt-5">
                 <ul class="list-group list-group-flush">
                 <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                    <i class="fas fa-user-tag"> User Tyoe:</i> 
+                    <i class="fas fa-user-tag"> User Type:</i>
                     <span class="text-secondary nostyle-p">
                         <p v-if="person.type === 'default'">Employee</p>
                         <p v-else>{{person.type}}</p>
                     </span>
                 </li>
                 <!-- <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                    <i class="fas fa-heart"> Aantal favoriete workshops:</i> 
+                    <i class="fas fa-heart"> Aantal favoriete workshops:</i>
                     <span class="text-secondary">5</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                    <i class="fas fa-heart"> Aantal favoriete artikelen:</i> 
+                    <i class="fas fa-heart"> Aantal favoriete artikelen:</i>
                     <span class="text-secondary">3</span>
                 </li> -->
-                
+
                 </ul>
               </div>
             </div>
@@ -81,10 +81,8 @@
                       <h6 class="mb-0">Gender</h6>
                     </div>
                     <div class="col-sm-9 text-secondary nostyle-p">
-                        <p v-if="person.gender === 'woman'">Woman</p>
-                        <p v-else-if="person.gender === 'man'">Man</p>
-                        <p v-else-if="person.gender === 'different'">Other</p>
-                        <p v-else>I rather don't say</p>
+                        <p v-if="person.gender !== null">{{ person.gender | gender }}</p>
+                        <p v-else>Zeg ik liever niet</p>
                     </div>
                   </div>
                   <hr>
@@ -206,7 +204,7 @@
             </div>
             <div class="col-md-1">
                 <!-- <button class="btn btn-primary">
-                    <i class="fas fa-edit">Edit</i>      
+                    <i class="fas fa-edit">Edit</i>
                 </button> -->
             </div>
           </div>
