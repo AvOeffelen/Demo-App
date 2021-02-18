@@ -151,6 +151,8 @@ Route::group(['prefix' => 'axios/chart', 'namespace' => 'Axios\Management','midd
     Route::get('/activity-data','ChartController@activityData')->name('chart.activityData');
     Route::get('/activity-per-record-per-useragent','ChartController@activityPerRecordTypePerUseragent')->name('chart.activityPerRecordTypePerUseragent');
 
+    Route::get('/gender-per-record-per-useragent','ChartController@genderPerRecordTypePerUseragent')->name('chart.genderPerRecordTypePerUseragent');
+
 });
 
 Route::get('backend/management{any}','ManagementController@index')
