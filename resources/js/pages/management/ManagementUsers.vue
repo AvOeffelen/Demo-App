@@ -69,6 +69,10 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-12 mt-5">
+                    <h3>Apparaten per geslacht</h3>
+                    <BarChart :labels="getLabels(genderPerRecordTypePerUseragent ? Object.values(genderPerRecordTypePerUseragent)[0] : {})" :datasets="getGenderMonthDataSets(genderPerRecordTypePerUseragent)" :chart-colors="genderChartColors"/>
+                </div>
                 <div class="d-flex flex-column-reverse flex-md-row mt-5">
                     <div class="col-xs-12 col-md-4">
                         <h3>Unieke bezoekers geslacht</h3>
@@ -210,6 +214,8 @@ export default {
             visitsPerMonthUniqueData: {},
             visitsPerMonthUniqueGenderData: {},
 
+            genderPerRecordTypePerUseragent: {},
+
             maleVisitsPerArticleData: {},
             maleVisitsPerWorkshopData: {},
             maleVisitsPerTileData: {},
@@ -259,6 +265,12 @@ export default {
             {
                 variable: "visitsPerMonthUniqueGenderData",
                 url: "/axios/chart/visits-per-month-unique-gender"
+            },
+
+            // Devices per gender
+            {
+                variable: "genderPerRecordTypePerUseragent",
+                url: "/axios/chart/gender-per-record-per-useragent"
             },
 
             //Gender per Record Type
