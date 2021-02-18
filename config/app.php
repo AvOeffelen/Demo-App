@@ -17,6 +17,8 @@ return [
 
     'author' => env('APP_AUTHOR', 'KLANTSAMENVITAAL'),
 
+    'dashmixTheme' => 'xbrvs',
+
     'activity' => [
 
         'monthSpan' => 6,
