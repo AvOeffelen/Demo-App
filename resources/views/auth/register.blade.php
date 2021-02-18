@@ -80,9 +80,9 @@
                                     <div class="form-group">
                                         <label for="lastname">Geslacht <span class="text-danger">*</span></label>
                                         <select class="form-control {{ $errors->has('gender') ? 'is-invalid' : '' }}" id="gender-select" name="gender">
-                                            <option value="{{ \App\Enums\GenderEnum::MALE }}">Man</option>
-                                            <option value="{{ \App\Enums\GenderEnum::FEMALE }}">Vrouw</option>
-                                            <option value="{{ \App\Enums\GenderEnum::OTHER }}">Anders</option>
+                                            <option value="{{ \App\Enums\GenderEnum::MAN }}">Man</option>
+                                            <option value="{{ \App\Enums\GenderEnum::VROUW }}">Vrouw</option>
+                                            <option value="{{ \App\Enums\GenderEnum::ANDERS }}">Anders</option>
                                             <option value="">Zeg ik liever niet</option>
                                         </select>
                                         @if ($errors->has('gender'))
