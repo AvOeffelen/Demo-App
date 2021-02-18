@@ -32,7 +32,7 @@
     </a>
   </li>
   <li class="honeycomb-cell">
-    <a href="/dashboard">
+    <a href="/backend/management/">
       <img class="honeycomb-cell__image" src="/storage/vakken/analysis.jpg">
       <div class="honeycomb-cell__title">Management information</div>
     </a>
