@@ -17,8 +17,8 @@
                 <div class="info-item col-12 col-sm-6 col-md-3">
                     <div class="p-2 bg-light w-100 rounded shadow-sm d-flex justify-content-between align-items-center">
                         <div>
-                            <p class="mb-1">Unieke Apparaten</p>
-                            <h4 class="mb-0">{{ activityData.uniqueDevices || 0 }}</h4>
+                            <p class="mb-1">Meest gebruikte apparaat</p>
+                            <h4 class="mb-0">{{ activityData.topDevice || "Laden..." }}</h4>
                         </div>
                         <i class="fas fa-desktop"></i>
                     </div>

@@ -396,7 +396,18 @@ class ChartController extends Controller {
 
         $start = Carbon::now()->ceilMonth()->subMonths(config("app.activity.monthSpan"));
 
-        $uniqueDevices = 0;
+        $topDevice = Activity::whereDate('created_at', '>', $start)
+            ->get()
+            ->groupBy(function ($item) {
+
+                return (new \WhichBrowser\Parser($item->user_agent))->getType();
+            })
+            ->sortDesc()
+            ->map(function ($item, $key) {
+
+                return $key;
+            })
+            ->first();
 
         $articleClicks = Activity::whereDate('created_at', '>', $start)
             ->with("User")
@@ -428,7 +439,7 @@ class ChartController extends Controller {
             ->count();
 
         return compact(
-            "uniqueDevices", "articleClicks",
+            "topDevice", "articleClicks",
             "workshopClicks", "tileClicks"
         );
     }
