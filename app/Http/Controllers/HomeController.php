@@ -22,9 +22,13 @@ class HomeController extends Controller
     public function index()
     {
         if (Auth::check()) {
-            if(auth()->user()->isAdmin()){
+            if(auth()->user()->isAdmin()) {
                 return response()->view('workshop.admin.overview.index');
-            }else {
+            }
+            else if(auth()->user()->isManager()) {
+                return response()->redirectToAction("ManagementController@index", ["/"]);
+            }
+            else {
                 return response()->view('dashboard.frontend.index');
             }
         }

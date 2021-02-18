@@ -17,9 +17,12 @@ return [
 
     'author' => env('APP_AUTHOR', 'KLANTSAMENVITAAL'),
 
+    'dashmixTheme' => 'xbrvs',
+
     'activity' => [
 
-        'interval' => 5
+        'monthSpan' => 6,
+        'interval' => 1
     ],
 
     /*
@@ -74,7 +77,7 @@ return [
     |
     */
 
-    'timezone' => 'Europe/Amsterdam',
+    'timezone' => 'UTC', //Europe/Amsterdam
 
     /*
     |--------------------------------------------------------------------------
@@ -87,7 +90,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'nl',
 
     /*
     |--------------------------------------------------------------------------
@@ -113,7 +116,7 @@ return [
     |
     */
 
-    'faker_locale' => 'en_US',
+    'faker_locale' => 'nl_NL',
 
     /*
     |--------------------------------------------------------------------------

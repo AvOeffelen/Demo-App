@@ -5,6 +5,7 @@ namespace App\Http;
 use App\Http\Middleware\isAdmin;
 use App\Http\Middleware\isDefault;
 use App\Http\Middleware\isManager;
+use App\Http\Middleware\RecordActivity;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -70,5 +71,6 @@ class Kernel extends HttpKernel
         'admin' => isAdmin::class,
         'manager'=> isManager::class,
         'default' => isDefault::class,
+        'recordActivity' => RecordActivity::class
     ];
 }
