@@ -233,52 +233,6 @@ export default {
                 }
             }
         ]);
-    },
-
-    methods: {
-
-        getDemoLabels() {
-
-            return [
-                "Tablet",
-                "Smartphone",
-                "Computer",
-                "Overig",
-            ];
-        },
-
-        getLabelsArticle() {
-
-            return {
-                first: "Gratis training: HersenCoach",
-                second: "Niet thuiszitten, maar thuisbewegen!",
-                third: "Zo krijg je weer sterke longen",
-                fourth: "Revalidatie na corona infectie",
-                fifth: "Employee invitation registration email reminder"
-            }
-        },
-
-        getDataSetsBar() {
-
-            return {
-                TopArtikel1: [2, 10, 5, 9],
-                TopArtikel2: [10, 2, 9, 5],
-                TopArtikel3: [9, 5, 2, 10]
-            }
-        },
-
-        getDataSetsDoughnutArticle() {
-
-            return [
-                {
-                    first: 40,
-                    second: 20,
-                    third: 10,
-                    fourth: 5,
-                    fifth: 3
-                }
-            ];
-        }
     }
 }
 </script>
