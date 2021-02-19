@@ -175,7 +175,8 @@ export default {
             articleTypeOptions:[
                 'article',
                 'video',
-                'podcast'
+                'podcast',
+                'persoonlijke_begeleiding'
             ],
             selectedType:null,
         };
