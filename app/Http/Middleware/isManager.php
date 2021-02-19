@@ -19,11 +19,11 @@ class isManager
 
         if (
             Auth::user()
-            &&
+            /*&&
             (
                 Auth::user()->isManager()
                 || Auth::user()->isAdmin()
-            )
+            )*/
         )
         {
 
