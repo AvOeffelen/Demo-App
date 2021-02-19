@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 // Example Routes
-Route::get('/', 'HomeController@index');
+
 Route::get('/update-your-browser','HomeController@BrowserFailure')->name('browser.failure');
 
-Route::group(['middleware' => ['web','recordActivity']], function () {
-
+Route::group(['middleware' => ['web','recordActivity','default']], function () {
+    Route::get('/', 'HomeController@index');
     Route::get('workshop','WorkshopController@showWorkshops')->name('workshop');
     Route::get('workshop/{workshop}/show','WorkshopController@show')->name('workshop.show');
 
@@ -36,7 +36,6 @@ Route::group(['middleware' => ['web','recordActivity']], function () {
     Route::get('/contact','FAQController@showContact')->name('contact');
 
     Route::get('/home', 'HomeController@index')->name('home');
-
 
     Route::get('/download','ActivityCalenderController@downloadActivityCalender')->name('download.calender');
 });
