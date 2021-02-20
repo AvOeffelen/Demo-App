@@ -34,20 +34,22 @@
                 <p>
                     <br/>
                         <img src="/storage/images/Bravis_Goodhabitz.jpg" class="mb-3" width="50%" height="50%">
+                        <img src="/storage/images/Bravis_Goodhabitz2.jpg" class="mt-3 mb-3" width="50%" height="50%">
+                        <img src="/storage/images/Bravis_Goodhabitz3.jpg" class="mt-3 mb-3" width="50%" height="50%">
                     <br/>
                     Voor onlinetrainingen waar je nooit genoeg van krijgt kun je gaan naar de omgeving van
                         GoodHabitz. Je vindt hier van toffe documentaires tot interessante magazines en van inspirerende
                         experts tot uitdagende opdrachten. Je luistert, kijkt of doet allen de onderdelen die passen bij
                         jouw manier van leren. Alles mag, niets moet: je leert zoals jij dat wilt!
                         <br />
-                        <img src="/storage/images/Bravis_Goodhabitz2.jpg" class="mt-3 mb-3" width="50%" height="50%">
+                        
                         <br/>
                         Je moet op deze pagina eerst even inloggen en wanneer je dat nog niet hebt gedaan, eerst een
                         account aanmaken. Dit is omdat er persoonlijke gegevens van je worden opgeslagen en om die
                         gegevens te beveiligen is een inlog noodzakelijk.
                         
                         <br />
-                        <img src="/storage/images/Bravis_Goodhabitz3.jpg" class="mt-3 mb-3" width="50%" height="50%">
+                        
                         <br/>
                         LET OP:
                         
