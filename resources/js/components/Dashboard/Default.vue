@@ -336,7 +336,7 @@ export default {
                 });
         },
         getAllArticles() {
-            axios.get('/axios/article/get-all-articles-for-standard-categories')
+            axios.get('/axios/article/get-all')
                 .then(response => {
                     this.article = response.data.data;
                     this.loading = false;
