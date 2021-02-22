@@ -213,11 +213,11 @@
                     background-image : url('/storage/vakken/Vak08.jpg');
                     "
                     data-toggle="click-ripple"
-                    href="/topical"
+                    href="/backend/management/"
                 >
                 <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
                         <div class="ribbon-box">
-                            Thuiswerken
+                            Management Informatie
                         </div>
                         <div class="pt-4 pb-6 px-md-3">
                             <!-- <h3 class="h1 font-w700 text-white mb-1">Thuiswerken</h3> -->
