@@ -6,7 +6,7 @@
         <div class="content content-full">
             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center bravis-logo">
                 <img src="/storage/logo/logo.jpg">
-                <marquee width="100%" direction="left">Tip van de week: Blijf sporten. Ook al beweeg je op de werkvloer.</marquee>
+                <marquee width="100%" direction="left">Tip van de week: Neem bij hectische diensten een korte time out van 2 minuten.</marquee>
                 <div></div>
             </div>
         </div>
