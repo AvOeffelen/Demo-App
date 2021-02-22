@@ -77,7 +77,7 @@ return [
     |
     */
 
-    'timezone' => 'Europe/Amsterdam', //Europe/Amsterdam
+    'timezone' => 'UTC', //Europe/Amsterdam
 
     /*
     |--------------------------------------------------------------------------
