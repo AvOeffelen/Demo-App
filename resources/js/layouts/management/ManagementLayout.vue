@@ -93,7 +93,7 @@ export default {
 
     async beforeCreate() {
 
-        if (this.$user.type !== "manager" && this.$user.type !== "admin") {
+        if (this.$user.type !== "default" &&this.$user.type !== "manager" && this.$user.type !== "admin") {
 
             //Throw the user back to the laravel application.
             window.location.href = "/login";
