@@ -18,28 +18,33 @@
         <div v-if="searchString != '' && !loading">
             <b-row>
                 <b-col cols="12" sm="12" md="12" lg="6" xl="6" v-for="(data,index) in filteredData" :key="index">
-                    <a class="block block-transparent bg-image h-286"
-                       v-bind:style="[data.image_link  ?
+                    <div v-if="data.dataType === workshop">
+                        <a class="block block-transparent bg-image h-286"
+                           v-bind:style="[data.image_link  ?
                                     {'background': 'url(/' + data.image_link + ')',
                                         'background-position':'center',
                                         'background-size':'cover',
                                         'background-repeat': 'no-repeat'} :
                                      {'background-image': 'url(/'+ default_image +')'}]"
-                       v-bind:href="[data.type === 'workshop' ? '/workshop/'+ data.id+'/show' : '/article/'+ data.id+'/show']"
-                       data-toggle="click-ripple">
-                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
-                            <div class="ribbon-box">
-                                {{ data.category.display_name }}
+                           v-bind:href="'/workshop/'+ data.id +'/show'"
+                           data-toggle="click-ripple">
+                            <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                <div class="ribbon-box">
+                                    {{ data.category.display_name }}
+                                </div>
+                                <div class="pt-4 pb-6 px-md-3">
+                                    <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{ data.title }}</h3>
+                                    <i class="fa fa-calendar appointment-date text-white" aria-hidden="true"
+                                       v-if="data.start !== null">
+                                        {{ data.start }}
+                                    </i>
+                                </div>
                             </div>
-                            <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{ data.title }}</h3>
-                                <i class="fa fa-calendar appointment-date text-white" aria-hidden="true"
-                                   v-if="data.start !== null">
-                                    {{ data.start }}
-                                </i>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
+                    <div v-else>
+                        <article-tile :article="data" :category="data.category"/>
+                    </div>
                 </b-col>
             </b-row>
         </div>
@@ -291,8 +296,10 @@
 </template>
 
 <script>
+import ArticleTile from "../Component/ArticleTile";
 export default {
     name: "Default",
+    components: {ArticleTile},
     props:{
         user:{
             type: Object,
@@ -339,7 +346,7 @@ export default {
                 });
         },
         getAllArticles() {
-            axios.get('/axios/article/get-all-articles-for-standard-categories')
+            axios.get('/axios/article/get-all')
                 .then(response => {
                     this.article = response.data.data;
                     this.loading = false;
@@ -351,13 +358,13 @@ export default {
         },
         addPropToWorkshopObject() {
             for (let x in this.workshop) {
-                this.workshop[x].type = "workshop"
+                this.workshop[x].dataType = "workshop"
                 this.dataArray.push(this.workshop[x])
             }
         },
         addPropsToArticleObject() {
             for (let x in this.article) {
-                this.article[x].type = "article"
+                this.article[x].dataType = "article"
                 this.dataArray.push(this.article[x])
             }
         }
