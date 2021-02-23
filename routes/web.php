@@ -30,6 +30,7 @@ Route::group(['middleware' => ['web','recordActivity']], function () {
     Route::get('/faq','FAQController@showFAQ')->name('faq');
     Route::get('/generatie-management','FAQController@showGenManagement')->name('gen.management');
     Route::get('/vragenlijsten','FAQController@showVragenlijsten')->name('vragenlijsten');
+    Route::get('/aanbod-zorgverzekeraars','FAQController@showZorgverzekeraars')->name('zorgverzekeraars');
     Route::get('/goodhabitz','FAQController@showGoodHabitz')->name('goodhabitz');
     Route::get('/activiteitenkalender','FAQController@showActiviteitenkalender')->name('activiteitenkalender');
     Route::get('/contact','FAQController@showContact')->name('contact');

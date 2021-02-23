@@ -31,4 +31,8 @@ class FAQController extends Controller
     {
         return view('contact.index');
     }
+    public function showZorgverzekeraars()
+    {
+        return view('zorgverzekeraars.index');
+    }
 }

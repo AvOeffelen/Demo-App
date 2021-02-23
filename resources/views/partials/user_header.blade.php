@@ -27,6 +27,11 @@
                 </a>
             </li>
             <li class="nav-main-item">
+                <a class="btn btn-dual" href="{{route('zorgverzekeraars')}}">
+                    <span class="nav-main-link-name">Aanbod Zorgverzekeraars</span>
+                </a>
+            </li>
+            <li class="nav-main-item">
                 <a class="btn btn-dual" href="{{url('faq')}}">
                     <span class="nav-main-link-name">FAQ</span>
                 </a>
