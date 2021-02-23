@@ -64,6 +64,7 @@ class ChartController extends Controller {
             ->where("record_class", User::class)
             ->with("User")
             ->get()
+            ->whereNotNull("User.gender")
             ->groupBy(
                 function ($item) {
 
@@ -90,6 +91,7 @@ class ChartController extends Controller {
             ->where("record_class", "!=", User::class)
             ->with("User")
             ->get()
+            ->whereNotNull("User.gender")
             ->groupBy(
                 function ($item, $key) {
 
@@ -116,6 +118,7 @@ class ChartController extends Controller {
             ->where("record_class", "!=", User::class)
             ->with("User")
             ->get()
+            ->whereNotNull("User.gender")
             ->groupBy(
                 function ($item, $key) {
 
@@ -135,6 +138,7 @@ class ChartController extends Controller {
             ->where("record_class", "!=", User::class)
             ->with("User")
             ->get()
+            ->whereNotNull("User.gender")
             ->groupBy(
                 function ($item, $key) {
 
@@ -171,6 +175,7 @@ class ChartController extends Controller {
             ->where("record_class", "!=", User::class)
             ->with("User")
             ->get()
+            ->whereNotNull("User.gender")
             ->groupBy(
                 function ($item, $key) {
 
@@ -340,6 +345,7 @@ class ChartController extends Controller {
         return Activity::whereDate('created_at', '>', $start)
             ->with("User")
             ->get()
+            ->whereNotNull("User.gender")
             ->groupBy(
                 function ($item) {
 
