@@ -151,14 +151,11 @@ class ArticleController extends Controller
         }
     }
 
-    /**
-     * @return JsonResponse
-     */
-    public function getAllArticles():JsonResponse
+    public function getAllArticles()
     {
         $articles = Article::with('Category')->get();
 
-        return response()->json(['data' => $articles]);
+        return $articles;
     }
 
     public function getAllCategories()

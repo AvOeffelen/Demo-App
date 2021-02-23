@@ -44,14 +44,10 @@
                 <span class="d-sm-inline-block d-sm-none">Log in</span>
             </a>
         @else
+
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn btn-dual" id="page-header-user-dropdown" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
-                    @if(auth()->user()->avatar)
-                        <img src="{{asset(auth()->user()->avatar->image_link)}}" class="avatar-menu"/>
-                    @else
-                        <img src="https://eu.ui-avatars.com/api/?name={{auth()->user()->getFullname()}}" class="avatar-menu" alt="">
-                    @endif
                     <span class="d-none d-sm-inline-block">{{auth()->user()->getFullname()}}</span>
                     <i class="fa fa-fw fa-angle-down ml-1 d-none d-sm-inline-block"></i>
                 </button>
