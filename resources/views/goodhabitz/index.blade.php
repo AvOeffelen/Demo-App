@@ -32,6 +32,7 @@
             <div class="col-md-12 col-lg-8 col-xl-8 col-12 col-sm-12 col-xs-12">
                 <alinea class="text-center">
                 <p>
+                Onderstaand hebben wij een greep uit de online trainingen voor je geselecteerd, passend bij de thema's. In de omgeving van GoodHabitz zijn natuurlijk veel meer trainingen terug te vinden.
                     <br/>
                         <img src="/storage/images/Bravis_Goodhabitz.jpg" class="mb-3" width="50%" height="50%">
                         <img src="/storage/images/Bravis_Goodhabitz2.jpg" class="mt-3 mb-3" width="50%" height="50%">
