@@ -166,7 +166,7 @@ export default {
             axios.get('/axios/article/get-all')
                 .then(response => {
                     console.log("response",response);
-                    this.items = response.data;
+                    this.items = response.data.data;
                     this.totalRows = this.items.length
                 }).catch(error => {
 
