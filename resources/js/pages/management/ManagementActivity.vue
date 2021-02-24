@@ -192,7 +192,7 @@ export default {
                     params: {
 
                         type: "Tile",
-                        limit: 5
+                        limit: 8
                     }
                 }
             },
