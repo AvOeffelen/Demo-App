@@ -271,7 +271,7 @@
                                                     {{ workshop.title }}</h3>
                                                 <i class="fa fa-calendar appointment-date text-white" aria-hidden="true"
                                                    v-if="category.workshop.start !== null">
-                                                    {{ category.workshop.start }}
+                                                    {{ category.workshop[7].start }}
                                                 </i>
                                             </div>
                                         </div>
