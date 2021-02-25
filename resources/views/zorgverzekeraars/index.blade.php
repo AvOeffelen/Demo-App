@@ -22,6 +22,7 @@
             <div class="col-md-12 col-lg-8 col-xl-8 col-12 col-sm-12 col-xs-12">
                 
                 <h3>Aanbod zorgverzekeraars</h3>
+                <p>Ook al ben je niet verzekers bij CZ of VGZ, op de websites van deze zorgverzeraars is voor iedereen heel veel nuttige gratis informatie te vinden.</p>
             </div>
             <div class="col-md-12 col-lg-2 col-xl-2 col-12 col-sm-12 col-xs-12 cols-12">
             </div>
@@ -41,7 +42,20 @@
                 <h5 class="py-4">CZ</h5>
                 <p>Vitaliteit, gezondheid en leefstijl als inspiratie
 Het FitzMe portal is in de basis een platform dat bezoekers inspireert om de regie in eigen handen te nemen rondom thema's als vitaliteit, gezondheid en leefstijl.  De content inspireert en verleidt je tot gezonde keuzes.</p>
-                <a class="btn btn-primary" href="https://fitzme.nl/cz/home" role="button" target="_blank">Ga naar CZ</a>
+                <a class="btn btn-primary" href="https://www.cz.nl/extra" role="button" target="_blank">Ga naar CZ</a>
+            </div>
+            <div class="col-sm-6 col-lg-2">
+            </div>
+        </div>
+        <div class="row content content-full text-center">
+        <div class="col-sm-6 col-lg-2">
+            </div>
+            <div class="col-sm-6 col-lg-8">
+                <img src="storage/images/fitzme.png" class="img-fluid">
+                <h5 class="py-4">Fitzme</h5>
+                <p>Het FitzMe portal is in de basis een platform dat bezoekers inspireert om de regie in eigen handen te nemen rondom thema's als vitaliteit, gezondheid en leefstijl. ... De content inspireert en verleidt je tot gezonde keuzes. Op het portal maak je kennis met Fitz, jouw persoonlijke MyVitality-assistant. </p>
+                <p>Het FitzMe vitaliteitsportaal wordt aangeboden door CZ</p>
+                <a class="btn btn-primary" href="https://www.cz.nl/extra" role="button" target="_blank">Ga naar CZ</a>
             </div>
             <div class="col-sm-6 col-lg-2">
             </div>
