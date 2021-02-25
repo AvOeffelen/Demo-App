@@ -270,8 +270,8 @@
                                                 <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">
                                                     {{ workshop.title }}</h3>
                                                 <i class="fa fa-calendar appointment-date text-white" aria-hidden="true"
-                                                   v-if="category.workshop[7].start !== null">
-                                                    {{ category.workshop[7].start }}
+                                                   v-if="category.workshop.start !== null">
+                                                    {{ category.workshop.start }}
                                                 </i>
                                             </div>
                                         </div>
