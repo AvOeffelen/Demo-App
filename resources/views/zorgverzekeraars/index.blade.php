@@ -55,7 +55,7 @@ Het FitzMe portal is in de basis een platform dat bezoekers inspireert om de reg
                 <h5 class="py-4">Fitzme</h5>
                 <p>Het FitzMe portal is in de basis een platform dat bezoekers inspireert om de regie in eigen handen te nemen rondom thema's als vitaliteit, gezondheid en leefstijl. ... De content inspireert en verleidt je tot gezonde keuzes. Op het portal maak je kennis met Fitz, jouw persoonlijke MyVitality-assistant. </p>
                 <p>Het FitzMe vitaliteitsportaal wordt aangeboden door CZ</p>
-                <a class="btn btn-primary" href="https://www.cz.nl/extra" role="button" target="_blank">Ga naar CZ</a>
+                <a class="btn btn-primary" href="https://www.cz.nl/extra" role="button" target="_blank">Ga naar FitzMe</a>
             </div>
             <div class="col-sm-6 col-lg-2">
             </div>
