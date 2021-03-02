@@ -39,7 +39,7 @@
   <li class="honeycomb-cell">
     <a href="/goodhabitz">
       <img class="honeycomb-cell__image" src="https://source.unsplash.com/random/7">
-      <div class="honeycomb-cell__title">Uw acedemy</div>
+      <div class="honeycomb-cell__title">Uw academy</div>
     </a>
   </li>
   <li class="honeycomb-cell honeycomb__placeholder"></li>
