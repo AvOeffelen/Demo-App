@@ -243,8 +243,6 @@ export default {
             data.append('category_id', this.article.category_id);
             data.append('text', this.article.text);
             data.append('video_link', this.article.video_link);
-            data.append('button_link', this.article.button_link);
-            data.append('button_text', this.article.button_text);
 
 
             axios.post('/axios/article/put', data)
