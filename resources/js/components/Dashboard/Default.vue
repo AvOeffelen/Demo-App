@@ -15,7 +15,7 @@
         <div v-if="searchString != '' && !loading">
             <b-row>
                 <b-col cols="12" sm="12" md="12" lg="6" xl="6" v-for="(data,index) in filteredData" :key="index">
-                    <div v-if="data.dataType === workshop">
+                    <div v-if="data.dataType === 'workshop'">
                         <a class="block block-transparent bg-image h-286"
                            v-bind:style="[data.image_link  ?
                                     {'background': 'url(/' + data.image_link + ')',
