@@ -356,13 +356,13 @@ export default {
         },
         addPropToWorkshopObject() {
             for (let x in this.workshop) {
-                this.workshop[x].type = "workshop"
+                this.workshop[x].dataType = "workshop"
                 this.dataArray.push(this.workshop[x])
             }
         },
         addPropsToArticleObject() {
             for (let x in this.article) {
-                this.article[x].type = "article"
+                this.article[x].dataType = "article"
                 this.dataArray.push(this.article[x])
             }
         }
