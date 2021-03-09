@@ -169,7 +169,8 @@ export default {
             articleTypeOptions:[
                 'article',
                 'video',
-                'podcast'
+                'podcast',
+                'persoonlijke_begeleiding'
             ],
             image: null,
             categories: [],
