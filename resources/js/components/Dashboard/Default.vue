@@ -26,21 +26,25 @@
                                         'background-size':'cover',
                                         'background-repeat': 'no-repeat'} :
                                      {'background-image': 'url(/'+ default_image +')'}]"
-                       v-bind:href="[data.type === 'workshop' ? '/workshop/'+ data.id+'/show' : '/article/'+ data.id+'/show']"
-                       data-toggle="click-ripple">
-                        <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
-                            <div class="ribbon-box">
-                                {{ data.category.display_name }}
+                           v-bind:href="'/workshop/'+ data.id +'/show'"
+                           data-toggle="click-ripple">
+                            <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-286">
+                                <div class="ribbon-box">
+                                    {{ data.category.display_name }}
+                                </div>
+                                <div class="pt-4 pb-6 px-md-3">
+                                    <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{ data.title }}</h3>
+                                    <i class="fa fa-calendar appointment-date text-white" aria-hidden="true"
+                                       v-if="data.start !== null">
+                                        {{ data.start }}
+                                    </i>
+                                </div>
                             </div>
-                            <div class="pt-4 pb-6 px-md-3">
-                                <h3 class="h1 font-w700 text-white mb-1 text-shadow-workshops">{{ data.title }}</h3>
-                                <i class="fa fa-calendar appointment-date text-white" aria-hidden="true"
-                                   v-if="data.start !== null">
-                                    {{ data.start }}
-                                </i>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
+                    <div v-else>
+                        <article-tile :article="data" :category="data.category"/>
+                    </div>
                 </b-col>
             </b-row>
         </div>
