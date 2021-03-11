@@ -105,14 +105,14 @@
                     background-image : url('/storage/vakken/Vak04.jpg');
                     "
                     data-toggle="click-ripple"
-                    href="/covid-19"
+                    href="/backend/management/"
                 >
                 <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
                         <div class="ribbon-box">
-                            Gamification
+                            Management Informatie
                         </div>
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">Gamification</h3>
+                            <h3 class="h1 font-w700 text-white mb-1">Management Informatie</h3>
                         </div>
                     </div>
                 </a>
@@ -196,10 +196,10 @@
                 >
                 <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom h-250">
                         <div class="ribbon-box">
-                            Uw Academy
+                            GoodHabitz
                         </div>
                         <div class="pt-4 pb-6 px-md-3">
-                            <h3 class="h1 font-w700 text-white mb-1">Uw Academy</h3>
+                            <h3 class="h1 font-w700 text-white mb-1">GoodHabitz</h3>
                         </div>
                     </div>
                 </a>
