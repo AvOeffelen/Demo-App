@@ -14,9 +14,8 @@
                             </a>
                             <p class="text-uppercase font-w700 font-size-sm text-muted py-3">Log in</p>
                         </div>
-                        <a tabindex="0" class="btn btn-sm btn-primary text-white" role="button" data-toggle="popover" data-trigger="focus" title="Why logging in ?" data-content="
-You can create an account here if you want.
-When does this provide added value for you? That's when you like the fact that an overview is kept for you of which workshops you have used, an overview of your favorites. Or if you would like to be informed of the latest workshops or the latest articles. Then you have the option to create a personal dashboard for which we need your email address.">Why login ?</a>
+                        <a tabindex="0" class="btn btn-sm btn-primary text-white" role="button" data-toggle="popover" data-trigger="focus" title="Waarom inloggen ?" data-content="Je kunt hier een account aanmaken wanneer je dat graag wil.
+Wanneer biedt dit voor jou toegevoegde waarde? Dat is wanneer je het leuk vindt dat er een overzicht voor je wordt bijgehouden van welke workshops je gebruik hebt gemaakt, een overzicht van je favorieten. Of wanneer je het prettig vindt dat je op de hoogte wordt gebracht van de nieuwste workshops of de nieuwste artikelen. Dan heb je de mogelijkheid om een persoonlijk dashboard aan te maken waarvoor wij dan wel je mailadres nodig hebben.">Waarom inloggen ?</a>
                     </div>
                     <div class="row no-gutters justify-content-center">
                         <div class="col-sm-8 col-xl-6">
