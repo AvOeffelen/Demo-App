@@ -6,9 +6,9 @@
         <div class="content content-full">
             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
                 <img src="/storage/logo/logo.png" height="">
-                <marquee width="60%" direction="left">Tip of the week: Keep exercising. Even if you move in the workplace.</marquee>
+                <marquee width="60%" direction="left">Tip van de week: Vermijd koffie als je hoofdpijn hebt.</marquee>
                 <a href="/topical">
-                    <i class="fas fa-feather-alt "> Stories & Articles</i>
+                    <i class="fas fa-feather-alt "> Nieuws</i>
                 </a>
             </div>
         </div>

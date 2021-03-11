@@ -7,7 +7,7 @@
                         id="filter-input"
                         v-model="searchString"
                         type="search"
-                        placeholder="What are you looking for?">
+                        placeholder="Waar ben je naar op zoek?">
                     </b-form-input>
                 </b-form-group>
             </b-col>
@@ -46,7 +46,7 @@
             </b-row>
         </div>
         <!-- TODO::           WHEN NOT HAPPY WITH THE DESIGN OF THE DEFAULT DASHBOARD REPLACE WITHIN THE COMMENT LINES ADD THE !~!!!!!!!!!V-ELSE!!!!!!!!!!!!!!!-->
-        <dashboard-with-hexagon></dashboard-with-hexagon>
+        <dashboard-with-round-corners></dashboard-with-round-corners>
         <!--            WHEN NOT HAPPY WITH THE DESIGN OF THE DEFAULT DASHBOARD REPLACE WITHIN THE COMMENT LINES-->
     </div>
 </template>
