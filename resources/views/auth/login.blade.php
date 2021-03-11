@@ -38,7 +38,7 @@ Wanneer biedt dit voor jou toegevoegde waarde? Dat is wanneer je het leuk vindt 
                                     <div class="form-group">
                                         <p class="mt-3 mb-0 d-lg-flex justify-content-lg-between">
                                             <a class="btn btn-sm btn-light d-block d-lg-inline-block mb-1" href="#">
-                                                <i class="fa fa-exclamation-triangle text-muted mr-1"></i> Forgot password
+                                                <i class="fa fa-exclamation-triangle text-muted mr-1"></i> Wachtwoord vergeten
                                             </a>
                                         </p>
                                     </div>
@@ -47,7 +47,7 @@ Wanneer biedt dit voor jou toegevoegde waarde? Dat is wanneer je het leuk vindt 
                                     <div class="form-group">
                                         <p class="mt-3 mb-0 d-lg-flex justify-content-lg-between">
                                                 <a class="btn btn-sm btn-light d-block d-lg-inline-block mb-1" href="/register">
-                                                    <i class="fa fa-user-plus text-muted mr-1"></i> Register
+                                                    <i class="fa fa-user-plus text-muted mr-1"></i> Registeren
                                                 </a>
                                             </p>
                                     </div>
