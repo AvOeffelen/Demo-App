@@ -6,7 +6,7 @@
         <div class="content content-full">
             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center bravis-logo">
                 <img src="/storage/logo/logo.jpg">
-                <marquee width="100%" direction="left">Tip voor thuiswerkers: neem vaak een korte pauze.</marquee>
+                <marquee width="100%" direction="left">Tip voor een betere nachtrust: zorg voor een rustige, koele en donkere slaapkamer.</marquee>
                 <div></div>
             </div>
         </div>
