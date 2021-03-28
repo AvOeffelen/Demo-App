@@ -6,7 +6,7 @@
         <div class="content content-full">
             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center bravis-logo">
                 <img src="/storage/logo/logo.jpg">
-                <marquee width="100%" direction="left">Tip voor een betere nachtrust: zorg voor een rustige, koele en donkere slaapkamer.</marquee>
+                <marquee width="100%" direction="left">Zorg voor mensen om je heen waarmee je kunt lachen of waarvan jij vindt dat ze humor hebben.</marquee>
                 <div></div>
             </div>
         </div>
