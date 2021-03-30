@@ -13,6 +13,7 @@ use Carbon\Carbon;
 use Carbon\CarbonPeriod;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
+use App\Enums\GenderEnum;
 
 
 class ChartController extends Controller {
@@ -64,7 +65,6 @@ class ChartController extends Controller {
             ->where("record_class", User::class)
             ->with("User")
             ->get()
-            ->whereNotNull("User.gender")
             ->groupBy(
                 function ($item) {
 
@@ -90,7 +90,6 @@ class ChartController extends Controller {
         return Activity::whereDate('created_at', '>', $start)
             ->with("User")
             ->get()
-            ->whereNotNull("User.gender")
             ->groupBy(
                 function ($item, $key) {
 
@@ -116,7 +115,6 @@ class ChartController extends Controller {
         return Activity::whereDate('created_at', '>', $start)
             ->with("User")
             ->get()
-            ->whereNotNull("User.gender")
             ->groupBy(
                 function ($item, $key) {
 
@@ -135,7 +133,6 @@ class ChartController extends Controller {
         return Activity::whereDate('created_at', '>', $start)
             ->with("User")
             ->get()
-            ->whereNotNull("User.gender")
             ->groupBy(
                 function ($item, $key) {
 
@@ -171,7 +168,6 @@ class ChartController extends Controller {
         return Activity::whereDate('created_at', '>', $start)
             ->with("User")
             ->get()
-            ->whereNotNull("User.gender")
             ->groupBy(
                 function ($item, $key) {
 
@@ -228,7 +224,6 @@ class ChartController extends Controller {
             ->when(
                 $gender != null,
                 function ($q) use ($gender) {
-
                     return $q->where('User.gender', '=', $gender);
                 }
             )
@@ -341,7 +336,6 @@ class ChartController extends Controller {
         return Activity::whereDate('created_at', '>', $start)
             ->with("User")
             ->get()
-            ->whereNotNull("User.gender")
             ->groupBy(
                 function ($item) {
 

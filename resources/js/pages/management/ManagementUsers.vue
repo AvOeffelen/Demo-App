@@ -281,7 +281,7 @@ export default {
                 options: {
                     params: {
 
-                        gender: GenderEnum.MALE,
+                        gender: GenderEnum.MAN,
                         type: "Article"
                     }
                 }
@@ -293,7 +293,7 @@ export default {
                 options: {
                     params: {
 
-                        gender: GenderEnum.MALE,
+                        gender: GenderEnum.MAN,
                         type: "Workshop"
                     }
                 }
@@ -305,7 +305,7 @@ export default {
                 options: {
                     params: {
 
-                        gender: GenderEnum.MALE,
+                        gender: GenderEnum.MAN,
                         type: "Tile"
                     }
                 }
@@ -318,7 +318,7 @@ export default {
                 options: {
                     params: {
 
-                        gender: GenderEnum.FEMALE,
+                        gender: GenderEnum.VROUW,
                         type: "Article"
                     }
                 }
@@ -330,7 +330,7 @@ export default {
                 options: {
                     params: {
 
-                        gender: GenderEnum.FEMALE,
+                        gender: GenderEnum.VROUW,
                         type: "Workshop"
                     }
                 }
@@ -342,7 +342,7 @@ export default {
                 options: {
                     params: {
 
-                        gender: GenderEnum.FEMALE,
+                        gender: GenderEnum.VROUW,
                         type: "Tile"
                     }
                 }
@@ -355,7 +355,7 @@ export default {
                 options: {
                     params: {
 
-                        gender: GenderEnum.OTHER,
+                        gender: GenderEnum.ANDERS,
                         type: "Article"
                     }
                 }
@@ -367,7 +367,7 @@ export default {
                 options: {
                     params: {
 
-                        gender: GenderEnum.OTHER,
+                        gender: GenderEnum.ANDERS,
                         type: "Workshop"
                     }
                 }
@@ -379,7 +379,7 @@ export default {
                 options: {
                     params: {
 
-                        gender: GenderEnum.OTHER,
+                        gender: GenderEnum.ANDERS,
                         type: "Tile"
                     }
                 }
