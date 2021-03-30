@@ -139,6 +139,7 @@ Route::group(['prefix' => 'axios/chart', 'namespace' => 'Axios\Management','midd
 
     Route::get('/user-data','ChartController@userData')->name('chart.userData');
     Route::get('/user-login-data','ChartController@userLoginData')->name('chart.userLoginData');
+    Route::get('/unique-user-login-data','ChartController@uniqueUserLoginData')->name('chart.uniqueUserLoginData');
 
     Route::get('/visits-per-month','ChartController@visitsPerMonth')->name('chart.visitsPerMonth');
     Route::get('/visits-per-month-gender','ChartController@visitsPerMonthGender')->name('chart.visitsPerMonthGender');

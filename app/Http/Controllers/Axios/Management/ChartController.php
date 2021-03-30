@@ -67,7 +67,7 @@ class ChartController extends Controller {
             ->groupBy(
                 function ($item) {
 
-                    return $item->User->gender ?? "unknown";
+                    return $item->User->gender ?? "onbekend";
                 }
             )
             ->map(
@@ -82,6 +82,42 @@ class ChartController extends Controller {
             );
     }
 
+    public function uniqueUserLoginData() {
+
+        $start = Carbon::now()->ceilMonth()->subYear();
+
+        return Activity::whereDate('created_at', '>', $start)
+            ->where("record_class", User::class)
+            ->with("User")
+            ->get()
+            ->groupBy(
+                function ($item) {
+
+                    return $item->User->gender ?? "onbekend";
+                }
+            )
+            ->map(function ($genderGroup) use ($start) {
+                return $this->mapActivityGroupByMonth($genderGroup, $start);
+            })
+            ->map(
+                function ($monthGroup) {
+
+                    return $monthGroup->map(
+                        function ($activityGroup) {
+
+                            return $activityGroup->groupBy(
+                                function ($item, $key) {
+
+                                    return $item->user_id != null ? $item->user_id : $item->session_id;
+                                }
+                            )
+                                ->count();
+                        }
+                    );
+                }
+            );
+    }
+
     public function visitsPerMonth() {
 
         $start = Carbon::now()->ceilMonth()->subMonths(config("app.activity.monthSpan"));
@@ -92,7 +128,7 @@ class ChartController extends Controller {
             ->groupBy(
                 function ($item, $key) {
 
-                    return $item->User->gender ?? "unknown";
+                    return $item->User->gender ?? "onbekend";
                 }
             )
             ->map(
@@ -117,7 +153,7 @@ class ChartController extends Controller {
             ->groupBy(
                 function ($item, $key) {
 
-                    return $item->User->gender ?? "unknown";
+                    return $item->User->gender ?? "onbekend";
                 }
             )
             ->map(function($group) {
@@ -135,7 +171,7 @@ class ChartController extends Controller {
             ->groupBy(
                 function ($item, $key) {
 
-                    return $item->User->gender ?? "unknown";
+                    return $item->User->gender ?? "onbekend";
                 }
             )
             ->map(function ($genderGroup) use ($start) {
@@ -170,7 +206,7 @@ class ChartController extends Controller {
             ->groupBy(
                 function ($item, $key) {
 
-                    return $item->User->gender ?? "unknown";
+                    return $item->User->gender ?? "onbekend";
                 }
             )
             ->map(
@@ -305,7 +341,7 @@ class ChartController extends Controller {
                         ? $parseResult->os->toString()
                         : ($parseResult->getType() != null && trim($parseResult->getType()) !== ""
                             ? $parseResult->getType()
-                            : "unknown"
+                            : "onbekend"
                         );
                 });
             })
@@ -344,7 +380,7 @@ class ChartController extends Controller {
             ->groupBy(
                 function ($item) {
 
-                    return $item->User->gender ?? "unknown";
+                    return $item->User->gender ?? "onbekend";
                 }
             )
             ->map(function ($group) {
@@ -398,17 +434,29 @@ class ChartController extends Controller {
         $start = Carbon::now()->ceilMonth()->subMonths(config("app.activity.monthSpan"));
 
         $topDevice = Activity::whereDate('created_at', '>', $start)
+            ->with("User")
             ->get()
-            ->groupBy(function ($item) {
+            ->groupBy(
+                function ($item, $key) {
 
-                return (new \WhichBrowser\Parser($item->user_agent))->getType();
-            })
-            ->sortDesc()
-            ->map(function ($item, $key) {
+                    return $item->user_id != null ? $item->user_id : $item->session_id;
+                }
+            )
+            ->map(function ($group) {
+                return $group->countBy(function ($item) {
 
-                return $key;
+                    $parseResult = new \WhichBrowser\Parser($item->user_agent);
+
+                    return $parseResult->os->toString() != null && !empty(trim($parseResult->os->toString())) ? $parseResult->os->toString() : $parseResult->getType();
+                });
             })
-            ->first();
+            ->countBy(function ($group) {
+
+                dd($group);
+
+                return $group;
+            })
+        ;
 
         $articleClicks = Activity::whereDate('created_at', '>', $start)
             ->with("User")

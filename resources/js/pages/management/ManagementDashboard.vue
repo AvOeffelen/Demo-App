@@ -34,7 +34,7 @@
                 <div class="info-item col-12 col-sm-6 col-md-3">
                     <div class="p-2 bg-light w-100 rounded shadow-sm d-flex justify-content-between align-items-center">
                         <div>
-                            <p class="mb-1">Visits</p>
+                            <p class="mb-1">Bezoeken</p>
                             <h4 class="mb-0">{{ dashboardData.visits || 0 }}</h4>
                         </div>
                         <i class="fas fa-suitcase"></i>
@@ -43,7 +43,7 @@
                 <div class="info-item col-12 col-sm-6 col-md-3">
                     <div class="p-2 bg-light w-100 rounded shadow-sm d-flex justify-content-between align-items-center">
                         <div>
-                            <p class="mb-1">People</p>
+                            <p class="mb-1">Gebruikers</p>
                             <h4 class="mb-0">{{ userTotal || 0 }}</h4>
                         </div>
                         <i class="fas fa-users"></i>
@@ -52,7 +52,7 @@
                 <div class="info-item col-12 col-sm-6 col-md-3">
                     <div class="p-2 bg-light w-100 rounded shadow-sm d-flex justify-content-between align-items-center">
                         <div>
-                            <p class="mb-1">Views</p>
+                            <p class="mb-1">Kliks</p>
                             <h4 class="mb-0">{{ dashboardData.views || 0 }}</h4>
                         </div>
                         <i class="far fa-eye"></i>
@@ -169,7 +169,7 @@ export default {
 
             {
                 variable: "visitsPerMonthGenderData",
-                url: "/axios/chart/visits-per-month-gender"
+                url: "/axios/chart/visits-per-month-unique-gender"
             },
 
             {
@@ -252,32 +252,32 @@ export default {
         getLabelsPie() {
 
             return {
-                male: "male",
-                female: "female",
-                other: "other"
+                man: "man",
+                vrouw: "vrouw",
+                anders: "anders"
             };
         },
 
         getDataSetsArea() {
 
             return {
-                male: [40, 39, 10, 40, 39, 80, 40],
-                female: [60, 55, 32, 10, 2, 12, 53],
-                other: [20, 15, 62, 12, 62, 6, 63]
+                man: [40, 39, 10, 40, 39, 80, 40],
+                vrouw: [60, 55, 32, 10, 2, 12, 53],
+                anders: [20, 15, 62, 12, 62, 6, 63]
             };
         },
 
         getDataSetsBar() {
 
             return {
-                male: [2, 10, 5, 9, 0, 6, 20]
+                man: [2, 10, 5, 9, 0, 6, 20]
             }
         },
 
         getDataSetsLine() {
 
             return {
-                male: [2, 10, 5, 9, 0, 6, 20]
+                man: [2, 10, 5, 9, 0, 6, 20]
             };
         },
 
@@ -285,14 +285,14 @@ export default {
 
             return [
                 {
-                    male: 40,
-                    female: 20,
-                    other: 10
+                    man: 40,
+                    vrouw: 20,
+                    anders: 10
                 },
                 {
-                    male: 30,
-                    female: 60,
-                    other: 20
+                    man: 30,
+                    vrouw: 60,
+                    anders: 20
                 }
             ];
         },
@@ -300,8 +300,8 @@ export default {
         getDataSetsRadar() {
 
             return {
-                male: [65, 59, 90, 81, 56, 55, 40],
-                female: [28, 48, 40, 19, 96, 27, 100]
+                man: [65, 59, 90, 81, 56, 55, 40],
+                vrouw: [28, 48, 40, 19, 96, 27, 100]
             };
         },
 
@@ -309,9 +309,9 @@ export default {
 
             return [
                 {
-                    male: 40,
-                    female: 20,
-                    other: 10
+                    man: 40,
+                    vrouw: 20,
+                    anders: 10
                 }
             ];
         },

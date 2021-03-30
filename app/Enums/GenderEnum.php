@@ -4,7 +4,7 @@ namespace App\Enums;
 
 final class GenderEnum
 {
-    const MALE = 0;
-    const FEMALE = 1;
-    const OTHER = 2;
+    const MAN = 0;
+    const VROUW = 1;
+    const ANDERS = 2;
 }
