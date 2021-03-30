@@ -56,20 +56,20 @@
                     <h3>Totale inloggen per maand</h3>
                     <LineChart :labels="getLabels(userLoginData ? Object.values(userLoginData)[0] : {})" :datasets="getGenderMonthDataSets(userLoginData)" :chart-colors="genderChartColors"/>
                 </div>
-                <div class="col-12 mt-5">
-                    <h3>Unieke inloggen per maand</h3>
-                    <LineChart :labels="getLabels(uniqueUserLoginData ? Object.values(uniqueUserLoginData)[0] : {})" :datasets="getGenderMonthDataSets(uniqueUserLoginData)" :chart-colors="genderChartColors"/>
-                </div>
+<!--                <div class="col-12 mt-5">-->
+<!--                    <h3>Unieke inloggen per maand</h3>-->
+<!--                    <LineChart :labels="getLabels(uniqueUserLoginData ? Object.values(uniqueUserLoginData)[0] : {})" :datasets="getGenderMonthDataSets(uniqueUserLoginData)" :chart-colors="genderChartColors"/>-->
+<!--                </div>-->
                 <div class="d-flex flex-column-reverse flex-md-row mt-5">
                     <div class="col-12 mr-2">
                         <h3>Unieke bezoekers per maand</h3>
                         <BarChart :labels="getLabels(visitsPerMonthUniqueData ? Object.values(visitsPerMonthUniqueData)[0] : {})" :datasets="getGenderMonthDataSets(visitsPerMonthUniqueData)" :chart-colors="genderChartColors"/>
                     </div>
                 </div>
-                <div class="col-12 mt-5">
-                    <h3>Apparaten per geslacht</h3>
-                    <BarChart :labels="getLabels(genderPerRecordTypePerUseragent ? Object.values(genderPerRecordTypePerUseragent)[0] : {})" :datasets="getGenderMonthDataSets(genderPerRecordTypePerUseragent)" :chart-colors="genderChartColors"/>
-                </div>
+<!--                <div class="col-12 mt-5">-->
+<!--                    <h3>Apparaten per geslacht</h3>-->
+<!--                    <BarChart :labels="getLabelsSorted(genderPerRecordTypePerUseragent ? Object.values(genderPerRecordTypePerUseragent)[0] : {})" :datasets="getGenderMonthDataSetsSorted(genderPerRecordTypePerUseragent)" :chart-colors="genderChartColors"/>-->
+<!--                </div>-->
             </div>
         </div>
     </div>
@@ -193,6 +193,11 @@ export default {
         getGenderMonthDataSets(data) {
 
             return this.getDataSets(data, GenderFilter.filter, Object.values);
+        },
+
+        getGenderMonthDataSetsSorted(data) {
+
+            return this.getDataSetsSorted(data, GenderFilter.filter, Object.values);
         }
     }
 };

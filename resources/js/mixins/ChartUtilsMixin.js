@@ -46,6 +46,40 @@ export default {
             return Object.keys(data || {});
         },
 
+        getLabelsSorted(data) {
+
+            return Object.keys(data || {}).sort(this.stringSorter);
+        },
+
+        getDataSetsSorted(data, keyTransform, valueTransform) {
+
+            return Object.entries(data).map(([key, value]) => {
+
+                return [
+
+                    key,
+
+                    Object.keys(value).sort(this.stringSorter).reduce(
+
+                        (obj, key) => {
+
+                            obj[key] = value[key];
+                            return obj;
+                        },
+                        {}
+                    )
+                ]
+            })
+            .reduce(
+                (acc, [ key, value ]) => {
+
+                    acc[keyTransform ? keyTransform(key) : key] = valueTransform ? valueTransform(value) : value;
+                    return acc;
+                },
+                {}
+            );
+        },
+
         getDataSets(data, keyTransform, valueTransform) {
 
             return Object.entries(data).reduce(
@@ -56,6 +90,25 @@ export default {
                 },
                 {}
             );
+        },
+
+        stringSorter(a, b) {
+
+            return this.getStringID(a) - this.getStringID(b);
+        },
+
+        getStringID(s) {
+
+            return Array.from(s).reduce(
+
+                (acc, c) => {
+
+                    return acc + c.charCodeAt(0);
+                },
+                0
+            )
+            *
+            s.length;
         }
     }
 };
