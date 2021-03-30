@@ -88,7 +88,6 @@ class ChartController extends Controller {
         $start = Carbon::now()->ceilMonth()->subMonths(config("app.activity.monthSpan"));
 
         return Activity::whereDate('created_at', '>', $start)
-            ->where("record_class", "!=", User::class)
             ->with("User")
             ->get()
             ->whereNotNull("User.gender")
@@ -115,7 +114,6 @@ class ChartController extends Controller {
         $start = Carbon::now()->ceilMonth()->subMonths(config("app.activity.monthSpan"));
 
         return Activity::whereDate('created_at', '>', $start)
-            ->where("record_class", "!=", User::class)
             ->with("User")
             ->get()
             ->whereNotNull("User.gender")
@@ -135,7 +133,6 @@ class ChartController extends Controller {
         $start = Carbon::now()->ceilMonth()->subMonths(config("app.activity.monthSpan"));
 
         return Activity::whereDate('created_at', '>', $start)
-            ->where("record_class", "!=", User::class)
             ->with("User")
             ->get()
             ->whereNotNull("User.gender")
@@ -172,7 +169,6 @@ class ChartController extends Controller {
         $start = Carbon::now()->ceilMonth()->subMonths(config("app.activity.monthSpan"));
 
         return Activity::whereDate('created_at', '>', $start)
-            ->where("record_class", "!=", User::class)
             ->with("User")
             ->get()
             ->whereNotNull("User.gender")
