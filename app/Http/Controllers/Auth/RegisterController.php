@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Model\Activity;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -76,5 +79,19 @@ class RegisterController extends Controller
             'birthday' => $data['birthday'],
             'password' => Hash::make($data['password']),
         ]);
+    }
+
+    protected function registered(Request $request, $user) {
+
+        $activity = new Activity([
+
+            'record_class' => $user != null ? get_class($user) : null,
+            'record_id' => $user != null ? $user->id : null,
+            'user_id' => $user != null ? $user->id : null,
+            'user_agent' => $request->userAgent(),
+            'session_id' => $request->session() != null ? $request->session()->getId() : null
+        ]);
+
+        $activity->save();
     }
 }
