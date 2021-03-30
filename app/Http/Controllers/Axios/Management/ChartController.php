@@ -13,6 +13,7 @@ use Carbon\Carbon;
 use Carbon\CarbonPeriod;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
+use WhichBrowser\Parser;
 
 
 class ChartController extends Controller {
@@ -335,13 +336,14 @@ class ChartController extends Controller {
 
                 return $group->countBy(function ($item) {
 
-                    $parseResult = new \WhichBrowser\Parser($item->user_agent);
+                    $parseResult = new Parser($item->user_agent);
 
-                    return $parseResult->os->toString() != null && trim($parseResult->os->toString()) !== ""
-                        ? $parseResult->os->toString()
-                        : ($parseResult->getType() != null && trim($parseResult->getType()) !== ""
+                    return $parseResult->device->toString() != null && !empty(trim($parseResult->device->toString()))
+                        ? $parseResult->device->toString()
+                        : (
+                            $parseResult->getType() != null && !empty(trim($parseResult->getType()))
                             ? $parseResult->getType()
-                            : "onbekend"
+                            : "Onbekend"
                         );
                 });
             })
@@ -386,9 +388,15 @@ class ChartController extends Controller {
             ->map(function ($group) {
                 return $group->countBy(function ($item) {
 
-                    $parseResult = new \WhichBrowser\Parser($item->user_agent);
+                    $parseResult = new Parser($item->user_agent);
 
-                    return $parseResult->os->toString() != null && !empty(trim($parseResult->os->toString())) ? $parseResult->os->toString() : $parseResult->getType();
+                    return $parseResult->os->toString() != null && !empty(trim($parseResult->os->toString()))
+                        ? $parseResult->os->toString()
+                        : (
+                            $parseResult->getType() != null && !empty(trim($parseResult->getType()))
+                            ? $parseResult->getType()
+                            : "Onbekend"
+                        );
                 });
             })
             ->each(function ($group) use ($genders) {
@@ -443,19 +451,26 @@ class ChartController extends Controller {
                 }
             )
             ->map(function ($group) {
+
                 return $group->countBy(function ($item) {
 
-                    $parseResult = new \WhichBrowser\Parser($item->user_agent);
+                    $parseResult = new Parser($item->user_agent);
 
-                    return $parseResult->os->toString() != null && !empty(trim($parseResult->os->toString())) ? $parseResult->os->toString() : $parseResult->getType();
-                });
+                    return $parseResult->device->toString() != null && !empty(trim($parseResult->device->toString()))
+                        ? $parseResult->device->toString()
+                        : (
+                            $parseResult->getType() != null && !empty(trim($parseResult->getType()))
+                                ? $parseResult->getType()
+                                : "Onbekend"
+                        );
+                })
+                ->keys();
             })
-            ->countBy(function ($group) {
-
-                dd($group);
-
-                return $group;
-            })
+            ->flatten()
+            ->countBy()
+            ->sortDesc()
+            ->keys()
+            ->first()
         ;
 
         $articleClicks = Activity::whereDate('created_at', '>', $start)
