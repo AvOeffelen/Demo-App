@@ -66,10 +66,10 @@
                         <BarChart :labels="getLabels(visitsPerMonthUniqueData ? Object.values(visitsPerMonthUniqueData)[0] : {})" :datasets="getGenderMonthDataSets(visitsPerMonthUniqueData)" :chart-colors="genderChartColors"/>
                     </div>
                 </div>
-<!--                <div class="col-12 mt-5">-->
-<!--                    <h3>Apparaten per geslacht</h3>-->
-<!--                    <BarChart :labels="getLabelsSorted(genderPerRecordTypePerUseragent ? Object.values(genderPerRecordTypePerUseragent)[0] : {})" :datasets="getGenderMonthDataSetsSorted(genderPerRecordTypePerUseragent)" :chart-colors="genderChartColors"/>-->
-<!--                </div>-->
+                <div class="col-12 mt-5">
+                    <h3>Apparaten per geslacht</h3>
+                    <BarChart :labels="getLabelsSorted(genderPerRecordTypePerUseragent ? Object.values(genderPerRecordTypePerUseragent)[0] : {})" :datasets="getGenderMonthDataSetsSorted(genderPerRecordTypePerUseragent)" :chart-colors="genderChartColors"/>
+                </div>
             </div>
         </div>
     </div>
