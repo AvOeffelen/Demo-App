@@ -53,10 +53,10 @@
             </div>
             <div>
                 <div class="col-12 mt-5">
-                    <h3>Inloggen per maand</h3>
+                    <h3>Totale inloggen per maand</h3>
                     <LineChart :labels="getLabels(userLoginData ? Object.values(userLoginData)[0] : {})" :datasets="getGenderMonthDataSets(userLoginData)" :chart-colors="genderChartColors"/>
                 </div>
-                <div class="d-flex flex-column flex-md-row mt-5">
+<!--                <div class="d-flex flex-column flex-md-row mt-5">
                     <div class="col-xs-12 col-md-8 mr-2">
                         <h3>Bezoekers per maand</h3>
                         <BarChart :labels="getLabels(visitsPerMonthData ? Object.values(visitsPerMonthData)[0] : {})" :datasets="getGenderMonthDataSets(visitsPerMonthData)" :chart-colors="genderChartColors"/>
@@ -68,11 +68,7 @@
                             <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 mt-5">
-                    <h3>Apparaten per geslacht</h3>
-                    <BarChart :labels="getLabels(genderPerRecordTypePerUseragent ? Object.values(genderPerRecordTypePerUseragent)[0] : {})" :datasets="getGenderMonthDataSets(genderPerRecordTypePerUseragent)" :chart-colors="genderChartColors"/>
-                </div>
+                </div>-->
                 <div class="d-flex flex-column-reverse flex-md-row mt-5">
                     <div class="col-xs-12 col-md-4">
                         <h3>Unieke bezoekers geslacht</h3>
@@ -85,6 +81,10 @@
                         <h3>Unieke bezoekers per maand</h3>
                         <BarChart :labels="getLabels(visitsPerMonthUniqueData ? Object.values(visitsPerMonthUniqueData)[0] : {})" :datasets="getGenderMonthDataSets(visitsPerMonthUniqueData)" :chart-colors="genderChartColors"/>
                     </div>
+                </div>
+                <div class="col-12 mt-5">
+                    <h3>Apparaten per geslacht</h3>
+                    <BarChart :labels="getLabels(genderPerRecordTypePerUseragent ? Object.values(genderPerRecordTypePerUseragent)[0] : {})" :datasets="getGenderMonthDataSets(genderPerRecordTypePerUseragent)" :chart-colors="genderChartColors"/>
                 </div>
                 <div class="mt-5">
                     <h2>Man</h2>
@@ -281,7 +281,7 @@ export default {
                 options: {
                     params: {
 
-                        gender: GenderEnum.MALE,
+                        gender: GenderEnum.MAN,
                         type: "Article"
                     }
                 }
@@ -293,7 +293,7 @@ export default {
                 options: {
                     params: {
 
-                        gender: GenderEnum.MALE,
+                        gender: GenderEnum.MAN,
                         type: "Workshop"
                     }
                 }
@@ -305,7 +305,7 @@ export default {
                 options: {
                     params: {
 
-                        gender: GenderEnum.MALE,
+                        gender: GenderEnum.MAN,
                         type: "Tile"
                     }
                 }
@@ -318,7 +318,7 @@ export default {
                 options: {
                     params: {
 
-                        gender: GenderEnum.FEMALE,
+                        gender: GenderEnum.VROUW,
                         type: "Article"
                     }
                 }
@@ -330,7 +330,7 @@ export default {
                 options: {
                     params: {
 
-                        gender: GenderEnum.FEMALE,
+                        gender: GenderEnum.VROUW,
                         type: "Workshop"
                     }
                 }
@@ -342,7 +342,7 @@ export default {
                 options: {
                     params: {
 
-                        gender: GenderEnum.FEMALE,
+                        gender: GenderEnum.VROUW,
                         type: "Tile"
                     }
                 }
@@ -355,7 +355,7 @@ export default {
                 options: {
                     params: {
 
-                        gender: GenderEnum.OTHER,
+                        gender: GenderEnum.ANDERS,
                         type: "Article"
                     }
                 }
@@ -367,7 +367,7 @@ export default {
                 options: {
                     params: {
 
-                        gender: GenderEnum.OTHER,
+                        gender: GenderEnum.ANDERS,
                         type: "Workshop"
                     }
                 }
@@ -379,7 +379,7 @@ export default {
                 options: {
                     params: {
 
-                        gender: GenderEnum.OTHER,
+                        gender: GenderEnum.ANDERS,
                         type: "Tile"
                     }
                 }

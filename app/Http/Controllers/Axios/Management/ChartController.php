@@ -13,6 +13,7 @@ use Carbon\Carbon;
 use Carbon\CarbonPeriod;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
+use App\Enums\GenderEnum;
 
 
 class ChartController extends Controller {
@@ -64,7 +65,6 @@ class ChartController extends Controller {
             ->where("record_class", User::class)
             ->with("User")
             ->get()
-            ->whereNotNull("User.gender")
             ->groupBy(
                 function ($item) {
 
@@ -88,10 +88,8 @@ class ChartController extends Controller {
         $start = Carbon::now()->ceilMonth()->subMonths(config("app.activity.monthSpan"));
 
         return Activity::whereDate('created_at', '>', $start)
-            ->where("record_class", "!=", User::class)
             ->with("User")
             ->get()
-            ->whereNotNull("User.gender")
             ->groupBy(
                 function ($item, $key) {
 
@@ -115,10 +113,8 @@ class ChartController extends Controller {
         $start = Carbon::now()->ceilMonth()->subMonths(config("app.activity.monthSpan"));
 
         return Activity::whereDate('created_at', '>', $start)
-            ->where("record_class", "!=", User::class)
             ->with("User")
             ->get()
-            ->whereNotNull("User.gender")
             ->groupBy(
                 function ($item, $key) {
 
@@ -135,10 +131,8 @@ class ChartController extends Controller {
         $start = Carbon::now()->ceilMonth()->subMonths(config("app.activity.monthSpan"));
 
         return Activity::whereDate('created_at', '>', $start)
-            ->where("record_class", "!=", User::class)
             ->with("User")
             ->get()
-            ->whereNotNull("User.gender")
             ->groupBy(
                 function ($item, $key) {
 
@@ -172,10 +166,8 @@ class ChartController extends Controller {
         $start = Carbon::now()->ceilMonth()->subMonths(config("app.activity.monthSpan"));
 
         return Activity::whereDate('created_at', '>', $start)
-            ->where("record_class", "!=", User::class)
             ->with("User")
             ->get()
-            ->whereNotNull("User.gender")
             ->groupBy(
                 function ($item, $key) {
 
@@ -232,7 +224,6 @@ class ChartController extends Controller {
             ->when(
                 $gender != null,
                 function ($q) use ($gender) {
-
                     return $q->where('User.gender', '=', $gender);
                 }
             )
@@ -310,7 +301,12 @@ class ChartController extends Controller {
 
                     $parseResult = new \WhichBrowser\Parser($item->user_agent);
 
-                    return $parseResult->device->toString() != null && $parseResult->device->toString() !== "" ? $parseResult->device->toString() : $parseResult->getType();
+                    return $parseResult->os->toString() != null && trim($parseResult->os->toString()) !== ""
+                        ? $parseResult->os->toString()
+                        : ($parseResult->getType() != null && trim($parseResult->getType()) !== ""
+                            ? $parseResult->getType()
+                            : "unknown"
+                        );
                 });
             })
             ->each(function ($group) use ($deviceUAKeys) {
@@ -345,7 +341,6 @@ class ChartController extends Controller {
         return Activity::whereDate('created_at', '>', $start)
             ->with("User")
             ->get()
-            ->whereNotNull("User.gender")
             ->groupBy(
                 function ($item) {
 
@@ -357,7 +352,7 @@ class ChartController extends Controller {
 
                     $parseResult = new \WhichBrowser\Parser($item->user_agent);
 
-                    return $parseResult->device->toString() != null && $parseResult->device->toString() !== "" ? $parseResult->device->toString() : $parseResult->getType();
+                    return $parseResult->os->toString() != null && !empty(trim($parseResult->os->toString())) ? $parseResult->os->toString() : $parseResult->getType();
                 });
             })
             ->each(function ($group) use ($genders) {
