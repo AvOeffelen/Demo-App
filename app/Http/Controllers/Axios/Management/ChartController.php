@@ -301,7 +301,12 @@ class ChartController extends Controller {
 
                     $parseResult = new \WhichBrowser\Parser($item->user_agent);
 
-                    return $parseResult->device->toString() != null && $parseResult->device->toString() !== "" ? $parseResult->device->toString() : $parseResult->getType();
+                    return $parseResult->os->toString() != null && trim($parseResult->os->toString()) !== ""
+                        ? $parseResult->os->toString()
+                        : ($parseResult->getType() != null && trim($parseResult->getType()) !== ""
+                            ? $parseResult->getType()
+                            : "unknown"
+                        );
                 });
             })
             ->each(function ($group) use ($deviceUAKeys) {
@@ -347,7 +352,7 @@ class ChartController extends Controller {
 
                     $parseResult = new \WhichBrowser\Parser($item->user_agent);
 
-                    return $parseResult->device->toString() != null && $parseResult->device->toString() !== "" ? $parseResult->device->toString() : $parseResult->getType();
+                    return $parseResult->os->toString() != null && !empty(trim($parseResult->os->toString())) ? $parseResult->os->toString() : $parseResult->getType();
                 });
             })
             ->each(function ($group) use ($genders) {
