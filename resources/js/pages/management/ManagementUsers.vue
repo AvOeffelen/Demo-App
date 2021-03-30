@@ -27,7 +27,7 @@
                     <div class="p-2 bg-light w-100 rounded shadow-sm d-flex justify-content-between align-items-center">
                         <div>
                             <p class="mb-1">Vrouw</p>
-                            <h4 class="mb-0">{{ userData[GenderEnum.FEMALE] || 0 }}</h4>
+                            <h4 class="mb-0">{{ userData[GenderEnum.VROUW] || 0 }}</h4>
                         </div>
                         <i class="fas fa-female"></i>
                     </div>
