@@ -56,114 +56,20 @@
                     <h3>Totale inloggen per maand</h3>
                     <LineChart :labels="getLabels(userLoginData ? Object.values(userLoginData)[0] : {})" :datasets="getGenderMonthDataSets(userLoginData)" :chart-colors="genderChartColors"/>
                 </div>
-<!--                <div class="d-flex flex-column flex-md-row mt-5">
-                    <div class="col-xs-12 col-md-8 mr-2">
-                        <h3>Bezoekers per maand</h3>
-                        <BarChart :labels="getLabels(visitsPerMonthData ? Object.values(visitsPerMonthData)[0] : {})" :datasets="getGenderMonthDataSets(visitsPerMonthData)" :chart-colors="genderChartColors"/>
-                    </div>
-                    <div class="col-xs-12 col-md-4">
-                        <h3>Bezoekers geslacht</h3>
-                        <DoughnutChart v-if="visitsPerMonthGenderData && Object.keys(visitsPerMonthGenderData).length > 0" :labels="transformLabels(getLabels(visitsPerMonthGenderData).map(l => GenderFilter.filter(l)), 'donut')" :datasets="[ getGenderDataSets(visitsPerMonthGenderData) ]" :chart-colors="genderChartColors"/>
-                        <div v-else>
-                            <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
-                        </div>
-                    </div>
-                </div>-->
+                <div class="col-12 mt-5">
+                    <h3>Unieke inloggen per maand</h3>
+                    <LineChart :labels="getLabels(uniqueUserLoginData ? Object.values(uniqueUserLoginData)[0] : {})" :datasets="getGenderMonthDataSets(uniqueUserLoginData)" :chart-colors="genderChartColors"/>
+                </div>
                 <div class="d-flex flex-column-reverse flex-md-row mt-5">
-                    <div class="col-xs-12 col-md-4">
-                        <h3>Unieke bezoekers geslacht</h3>
-                        <DoughnutChart v-if="visitsPerMonthUniqueGenderData && Object.keys(visitsPerMonthUniqueGenderData).length > 0" :labels="transformLabels(getLabels(visitsPerMonthUniqueGenderData).map(l => GenderFilter.filter(l)), 'donut')" :datasets="[ getGenderDataSets(visitsPerMonthUniqueGenderData) ]" :chart-colors="genderChartColors"/>
-                        <div v-else>
-                            <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-8 mr-2">
+                    <div class="col-12 mr-2">
                         <h3>Unieke bezoekers per maand</h3>
                         <BarChart :labels="getLabels(visitsPerMonthUniqueData ? Object.values(visitsPerMonthUniqueData)[0] : {})" :datasets="getGenderMonthDataSets(visitsPerMonthUniqueData)" :chart-colors="genderChartColors"/>
                     </div>
                 </div>
-                <div class="col-12 mt-5">
+<!--                <div class="col-12 mt-5">
                     <h3>Apparaten per geslacht</h3>
                     <BarChart :labels="getLabels(genderPerRecordTypePerUseragent ? Object.values(genderPerRecordTypePerUseragent)[0] : {})" :datasets="getGenderMonthDataSets(genderPerRecordTypePerUseragent)" :chart-colors="genderChartColors"/>
-                </div>
-                <div class="mt-5">
-                    <h2>Man</h2>
-                    <div class="d-flex flex-column flex-md-row">
-                        <div class="col-xs-12 col-md-4">
-                            <h3>Artikelen</h3>
-                            <DoughnutChart v-if="maleVisitsPerArticleData && Object.keys(maleVisitsPerArticleData).length > 0" :labels="transformLabels(getLabels(maleVisitsPerArticleData), 'donut')" :datasets="[ getDataSets(maleVisitsPerArticleData) ]" :chart-colors="genericChartColors"/>
-                            <div v-else>
-                                <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-4">
-                            <h3>Workshops</h3>
-                            <DoughnutChart v-if="maleVisitsPerWorkshopData && Object.keys(maleVisitsPerWorkshopData).length > 0" :labels="transformLabels(getLabels(maleVisitsPerWorkshopData), 'donut')" :datasets="[ getDataSets(maleVisitsPerWorkshopData) ]" :chart-colors="genericChartColors"/>
-                            <div v-else>
-                                <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-4">
-                            <h3>Tegels</h3>
-                            <DoughnutChart v-if="maleVisitsPerTileData && Object.keys(maleVisitsPerTileData).length > 0" :labels="transformLabels(getLabels(maleVisitsPerTileData), 'donut')" :datasets="[ getDataSets(maleVisitsPerTileData) ]" :chart-colors="genericChartColors"/>
-                            <div v-else>
-                                <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-5">
-                    <h2>Vrouw</h2>
-                    <div class="d-flex flex-column flex-md-row">
-                        <div class="col-xs-12 col-md-4">
-                            <h3>Artikelen</h3>
-                            <PieChart v-if="femaleVisitsPerArticleData && Object.keys(femaleVisitsPerArticleData).length > 0" :labels="getLabels(femaleVisitsPerArticleData)" :datasets="[ getDataSets(femaleVisitsPerArticleData) ]" :chart-colors="genericChartColors"/>
-                            <div v-else>
-                                <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-4">
-                            <h3>Workshops</h3>
-                            <PieChart v-if="femaleVisitsPerWorkshopData && Object.keys(femaleVisitsPerWorkshopData).length > 0" :labels="getLabels(femaleVisitsPerWorkshopData)" :datasets="[ getDataSets(femaleVisitsPerWorkshopData) ]" :chart-colors="genericChartColors"/>
-                            <div v-else>
-                                <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-4">
-                            <h3>Tegels</h3>
-                            <PieChart v-if="femaleVisitsPerTileData && Object.keys(femaleVisitsPerTileData).length > 0" :labels="getLabels(femaleVisitsPerTileData)" :datasets="[ getDataSets(femaleVisitsPerTileData) ]" :chart-colors="genericChartColors"/>
-                            <div v-else>
-                                <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-5">
-                    <h2>Overig</h2>
-                    <div class="d-flex flex-column flex-md-row">
-                        <div class="col-xs-12 col-md-4">
-                            <h3>Artikelen</h3>
-                            <DoughnutChart v-if="otherVisitsPerArticleData && Object.keys(otherVisitsPerArticleData).length > 0" :labels="transformLabels(getLabels(otherVisitsPerArticleData), 'donut')" :datasets="[ getDataSets(otherVisitsPerArticleData) ]" :chart-colors="genericChartColors"/>
-                            <div v-else>
-                                <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-4">
-                            <h3>Workshops</h3>
-                            <DoughnutChart v-if="otherVisitsPerWorkshopData && Object.keys(otherVisitsPerWorkshopData).length > 0" :labels="transformLabels(getLabels(otherVisitsPerWorkshopData), 'donut')" :datasets="[ getDataSets(otherVisitsPerWorkshopData) ]" :chart-colors="genericChartColors"/>
-                            <div v-else>
-                                <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-4">
-                            <h3>Tegels</h3>
-                            <DoughnutChart v-if="otherVisitsPerTileData && Object.keys(otherVisitsPerTileData).length > 0" :labels="transformLabels(getLabels(otherVisitsPerTileData), 'donut')" :datasets="[ getDataSets(otherVisitsPerTileData) ]" :chart-colors="genericChartColors"/>
-                            <div v-else>
-                                <h6>Er zijn momenteel geen gegevens om weer te geven.</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>
@@ -207,6 +113,7 @@ export default {
 
             userLoginData: {},
             userData: {},
+            uniqueUserLoginData: {},
 
             visitsPerMonthData: {},
             visitsPerMonthGenderData: {},
@@ -215,18 +122,6 @@ export default {
             visitsPerMonthUniqueGenderData: {},
 
             genderPerRecordTypePerUseragent: {},
-
-            maleVisitsPerArticleData: {},
-            maleVisitsPerWorkshopData: {},
-            maleVisitsPerTileData: {},
-
-            femaleVisitsPerArticleData: {},
-            femaleVisitsPerWorkshopData: {},
-            femaleVisitsPerTileData: {},
-
-            otherVisitsPerArticleData: {},
-            otherVisitsPerWorkshopData: {},
-            otherVisitsPerTileData: {},
         };
     },
 
@@ -243,6 +138,11 @@ export default {
             {
                 variable: "userLoginData",
                 url: "/axios/chart/user-login-data"
+            },
+
+            {
+                variable: "uniqueUserLoginData",
+                url: "/axios/chart/unique-user-login-data"
             },
 
             // Visits
@@ -271,118 +171,6 @@ export default {
             {
                 variable: "genderPerRecordTypePerUseragent",
                 url: "/axios/chart/gender-per-record-per-useragent"
-            },
-
-            //Gender per Record Type
-            //Male
-            {
-                variable: "maleVisitsPerArticleData",
-                url: "/axios/chart/visits-per-record-per-gender",
-                options: {
-                    params: {
-
-                        gender: GenderEnum.MAN,
-                        type: "Article"
-                    }
-                }
-            },
-
-            {
-                variable: "maleVisitsPerWorkshopData",
-                url: "/axios/chart/visits-per-record-per-gender",
-                options: {
-                    params: {
-
-                        gender: GenderEnum.MAN,
-                        type: "Workshop"
-                    }
-                }
-            },
-
-            {
-                variable: "maleVisitsPerTileData",
-                url: "/axios/chart/visits-per-record-per-gender",
-                options: {
-                    params: {
-
-                        gender: GenderEnum.MAN,
-                        type: "Tile"
-                    }
-                }
-            },
-
-            //Female
-            {
-                variable: "femaleVisitsPerArticleData",
-                url: "/axios/chart/visits-per-record-per-gender",
-                options: {
-                    params: {
-
-                        gender: GenderEnum.VROUW,
-                        type: "Article"
-                    }
-                }
-            },
-
-            {
-                variable: "femaleVisitsPerWorkshopData",
-                url: "/axios/chart/visits-per-record-per-gender",
-                options: {
-                    params: {
-
-                        gender: GenderEnum.VROUW,
-                        type: "Workshop"
-                    }
-                }
-            },
-
-            {
-                variable: "femaleVisitsPerTileData",
-                url: "/axios/chart/visits-per-record-per-gender",
-                options: {
-                    params: {
-
-                        gender: GenderEnum.VROUW,
-                        type: "Tile"
-                    }
-                }
-            },
-
-            //Other
-            {
-                variable: "otherVisitsPerArticleData",
-                url: "/axios/chart/visits-per-record-per-gender",
-                options: {
-                    params: {
-
-                        gender: GenderEnum.ANDERS,
-                        type: "Article"
-                    }
-                }
-            },
-
-            {
-                variable: "otherVisitsPerWorkshopData",
-                url: "/axios/chart/visits-per-record-per-gender",
-                options: {
-                    params: {
-
-                        gender: GenderEnum.ANDERS,
-                        type: "Workshop"
-                    }
-                }
-            },
-
-            {
-                variable: "otherVisitsPerTileData",
-                url: "/axios/chart/visits-per-record-per-gender",
-                options: {
-                    params: {
-
-                        gender: GenderEnum.ANDERS,
-                        type: "Tile"
-                    }
-                }
             },
         ]);
     },

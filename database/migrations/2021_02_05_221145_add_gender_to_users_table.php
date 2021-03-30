@@ -15,7 +15,7 @@ class AddGenderToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->unsignedTinyInteger('gender')->default(GenderEnum::OTHER);
+            $table->unsignedTinyInteger('gender')->default(GenderEnum::ANDERS);
         });
     }
 
