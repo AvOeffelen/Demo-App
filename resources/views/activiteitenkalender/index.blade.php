@@ -29,7 +29,7 @@
             </div>
             <div class="col-md-12 col-lg-8 col-xl-8 col-12 col-sm-12 col-xs-12">
             <alinea>
-            <iframe src="{{URL::to('/storage/pdf/activiteitenkalender.pdf')}}" width="100%" height="800"></iframe>
+            <!-- <iframe src="{{URL::to('/storage/pdf/activiteitenkalender.pdf')}}" width="100%" height="800"></iframe> -->
                 <p><b>Betrokken medewerkers</b> staan aan de basis van productiviteit. Wanneer medewerkers minder betrokken zijn bij het werk en de organisatie, zal dit een impact hebben op de productiviteit. </p>
                 <p><b>Fitte medewerkers</b> kunnen hun werk beter aan.
     Ze hebben meer energie, zijn creatiever en socialer.
